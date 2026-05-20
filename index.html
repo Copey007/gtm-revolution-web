@@ -339,10 +339,29 @@
     .pricing-card {
       border: 2px solid var(--brand-primary);
       border-radius: 20px;
-      padding: 3rem;
+      padding: 2.5rem;
       text-align: center;
-      max-width: 500px;
+      flex: 1;
+    }
+    
+    .pricing-grid {
+      display: flex;
+      gap: 2rem;
+      max-width: 900px;
       margin: 0 auto;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    
+    .pricing-desc {
+      color: var(--text-gray);
+      font-size: 0.9rem;
+      margin: 0.5rem 0 1.5rem;
+    }
+    
+    .pricing-card .btn {
+      margin-top: 1.5rem;
+      width: 100%;
     }
     
     .pricing-card.popular {
@@ -562,21 +581,37 @@
 
 <!-- Pricing -->
 <section class="pricing" id="pricing">
-  <h2>Service + SaaS</h2>
-  <p class="pricing-subtitle">Custom-built agent, fully managed for you</p>
-  <div class="pricing-card popular">
-    <span class="badge">Custom Solution</span>
-    <h3>Built for Your Team</h3>
-    <div class="price">Let's Talk<span></span></div>
-    <ul class="features-list">
-      <li>Custom agent trained on your workflows</li>
-      <li>We host and manage everything</li>
-      <li>Unlimited accounts &amp; email credits</li>
-      <li>CRM integration (HubSpot/Salesforce)</li>
-      <li>Dedicated support &amp; optimization</li>
-      <li>SaaS dashboard access</li>
-    </ul>
-    <a href="https://t.me/OpenClawSalesBot" class="btn btn-primary">Talk to Us</a>
+  <h2>AI GTM Services</h2>
+  <p class="pricing-subtitle">Two paths to AI-powered revenue execution</p>
+  
+  <div class="pricing-grid">
+    <div class="pricing-card">
+      <span class="badge">Most Popular</span>
+      <h3>AI FOUNDATION</h3>
+      <div class="price">$12,500<span>/month</span></div>
+      <p class="pricing-desc">Start your AI journey with a solid base.</p>
+      <ul class="features-list">
+        <li>Initial workflow evaluation via A-Gent</li>
+        <li>Up to 2 managed GTM Agents</li>
+        <li>Weekly reporting</li>
+        <li>Scaling opportunities identified</li>
+      </ul>
+      <a href="https://t.me/OpenClawSalesBot" class="btn btn-primary">Get Started</a>
+    </div>
+    
+    <div class="pricing-card popular">
+      <span class="badge">Full Service</span>
+      <h3>AI ACCELERATE</h3>
+      <div class="price">$18,000<span>/month</span></div>
+      <p class="pricing-desc">Established teams ready to lead.</p>
+      <ul class="features-list">
+        <li>Full AI readiness reports</li>
+        <li>Revised headcount + process plans</li>
+        <li>3 managed GTM Agents</li>
+        <li>Ongoing optimization</li>
+      </ul>
+      <a href="https://t.me/OpenClawSalesBot" class="btn btn-primary">Get Started</a>
+    </div>
   </div>
 </section>
 
