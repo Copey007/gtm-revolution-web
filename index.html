@@ -135,6 +135,87 @@
       box-shadow: 0 20px 60px rgba(0,0,0,0.1);
     }
     
+    /* GTM Today */
+    .gtm-today {
+      padding: 5rem 5%;
+      background: var(--bg-light);
+    }
+    
+    .gtm-content {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    
+    .gtm-content h2 {
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+    
+    .gtm-intro {
+      font-size: 1.2rem;
+      color: var(--text-dark);
+      margin-bottom: 1rem;
+      line-height: 1.8;
+    }
+    
+    .gtm-sub {
+      font-size: 1rem;
+      color: var(--text-gray);
+      margin-bottom: 2rem;
+      font-style: italic;
+    }
+    
+    .gtm-content h3 {
+      font-size: 1.5rem;
+      margin: 2.5rem 0 1rem;
+      color: var(--brand-accent);
+    }
+    
+    .gtm-opportunity {
+      font-size: 1.1rem;
+      color: var(--text-gray);
+      margin-bottom: 2rem;
+      line-height: 1.7;
+    }
+    
+    .opportunity-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    
+    .opportunity-card {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 12px;
+      border: 1px solid #eee;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    
+    .opportunity-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    }
+    
+    .opp-icon {
+      font-size: 2rem;
+      margin-bottom: 0.75rem;
+    }
+    
+    .opportunity-card h4 {
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+      color: var(--brand-primary);
+    }
+    
+    .opportunity-card p {
+      font-size: 0.9rem;
+      color: var(--text-gray);
+      line-height: 1.6;
+    }
+    
     /* Features */
     .features {
       padding: 5rem 5%;
@@ -372,21 +453,61 @@
 <nav>
   <a href="/"><img src="icons/logo.jpg" alt="GTM Revolution" height="40"></a>
   <ul>
-    <li><a href="#features">Features</a></li>
+    <li><a href="#gtm-today">What's Changing</a></li>
     <li><a href="#how">How it Works</a></li>
     <li><a href="#pricing">Pricing</a></li>
-    <li><a href="/dashboard">Dashboard</a></li>
+    
   </ul>
   <a href="https://t.me/OpenClawSalesBot" class="btn btn-primary">Talk to Agent</a>
 </nav>
 
 <!-- Hero -->
 <section class="hero">
-  <h1>Your Custom AI Sales Agent<br><span class="accent">Built for Your Workflow</span></h1>
-  <p>We build, host, and manage a dedicated AI agent trained on your specific sales process. Powered by the A-Gent learning engine — no setup required on your end.</p>
+  <h1>GTM is Changing.<br><span class="accent">We'll Help You Lead.</span></h1>
+  <p>AI is reshaping how revenue teams operate. We build custom AI agents trained on your workflows — so you can stay ahead of the disruption without the implementation risk.</p>
   <div class="hero-buttons">
     <a href="https://t.me/OpenClawSalesBot" class="btn btn-primary">Chat with Agent</a>
-    <a href="#how" class="btn btn-outline">See How it Works</a>
+    <a href="#gtm-today" class="btn btn-outline">See What's Changing</a>
+  </div>
+</section>
+
+<!-- GTM Today -->
+<section class="gtm-today" id="gtm-today">
+  <div class="gtm-content">
+    <h2>What's Going on in GTM Today?</h2>
+    <p class="gtm-intro">AI is for sure going to be a force multiplier and also a disruptor in GTM. Revenue Leaders know AI needs to be embraced — but how do you do that while still operating? Which AI bets do you place?</p>
+    <p class="gtm-sub">Some AI tools are not ready for primetime and will introduce more risk than you can afford. Sound familiar?</p>
+    
+    <h3>The Opportunity is Massive</h3>
+    <p class="gtm-opportunity">When the tech matures, there will be huge opportunities to change everything — Unit Economics, Growth Drivers, PipeGen, Sales Process, Sales Execution, Headcount Drivers.</p>
+    
+    <div class="opportunity-grid">
+      <div class="opportunity-card">
+        <div class="opp-icon">🚀</div>
+        <h4>Super ICs</h4>
+        <p>2-3x quotas with a smaller team by leveraging AI as your force multiplier.</p>
+      </div>
+      <div class="opportunity-card">
+        <div class="opp-icon">🛒</div>
+        <h4>Rep-less Journeys</h4>
+        <p>Can customers experience your technology without speaking to a rep?</p>
+      </div>
+      <div class="opportunity-card">
+        <div class="opp-icon">⚡</div>
+        <h4>Hyper Execution</h4>
+        <p>In-call battlecards and real-time sales playbooks that nudge reps to win.</p>
+      </div>
+      <div class="opportunity-card">
+        <div class="opp-icon">🎯</div>
+        <h4>Hyper Target</h4>
+        <p>Leapfrog intent data and build propensity models from all historical wins.</p>
+      </div>
+      <div class="opportunity-card">
+        <div class="opp-icon">🔗</div>
+        <h4>Connected Flows</h4>
+        <p>Connect the sales process to downstream teams for seamless handoffs.</p>
+      </div>
+    </div>
   </div>
 </section>
 
