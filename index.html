@@ -95,36 +95,52 @@
     }
     
     /* Hero */
+    /* Hero - two column layout */
     .hero {
-      text-align: center;
-      padding: 6rem 5% 4rem;
-      background: linear-gradient(135deg, #fafafa 0%, #f0f0f0 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 4rem;
+      text-align: left;
+      padding: 4rem 5%;
+    }
+    
+    .hero-logo {
+      flex: 0 0 300px;
+    }
+    
+    .hero-logo img {
+      width: 100%;
+      height: auto;
+      border-radius: 16px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+    }
+    
+    .hero-content {
+      flex: 1;
+      max-width: 600px;
     }
     
     .hero h1 {
-      font-size: 3.5rem;
-      font-weight: 700;
+      font-size: 3rem;
       margin-bottom: 1.5rem;
-      line-height: 1.1;
     }
     
     .hero h1 .accent {
-      color: var(--brand-accent);
-      font-family: 'Caveat', cursive;
-      font-size: 4rem;
+      font-size: 3.5rem;
     }
     
     .hero p {
       font-size: 1.25rem;
       color: var(--text-gray);
-      max-width: 600px;
-      margin: 0 auto 2.5rem;
+      margin: 0 0 2rem 0;
+      text-align: left;
     }
     
     .hero-buttons {
       display: flex;
       gap: 1rem;
-      justify-content: center;
+      justify-content: flex-start;
       flex-wrap: wrap;
     }
     
@@ -133,6 +149,20 @@
       margin: 3rem auto 0;
       border-radius: 16px;
       box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+    }
+    
+    @media (max-width: 768px) {
+      .hero {
+        flex-direction: column;
+        text-align: center;
+      }
+      .hero-logo {
+        flex: 0 0 auto;
+        width: 200px;
+      }
+      .hero-buttons {
+        justify-content: center;
+      }
     }
     
     /* GTM Today */
@@ -506,11 +536,16 @@
 
 <!-- Hero -->
 <section class="hero">
-  <h1>GTM is Changing.<br><span class="accent">We'll Help You Lead.</span></h1>
-  <p>AI is reshaping how revenue teams operate. We build custom AI agents trained on your workflows — so you can stay ahead of the disruption without the implementation risk.</p>
-  <div class="hero-buttons">
-    <a href="https://t.me/OpenClawSalesBot" class="btn btn-primary">Chat with Agent</a>
-    <a href="#gtm-today" class="btn btn-outline">See What's Changing</a>
+  <div class="hero-logo">
+    <img src="icons/logo.jpg" alt="GTM Revolution">
+  </div>
+  <div class="hero-content">
+    <h1>GTM is Changing.<br><span class="accent">We'll Help You Lead.</span></h1>
+    <p>AI is reshaping how revenue teams operate. We build custom AI agents trained on your workflows — so you can stay ahead of the disruption without the implementation risk.</p>
+    <div class="hero-buttons">
+      <a href="https://t.me/OpenClawSalesBot" class="btn btn-primary">Chat with Agent</a>
+      <a href="#gtm-today" class="btn btn-outline">See What's Changing</a>
+    </div>
   </div>
 </section>
 
