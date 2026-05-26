@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your AI Maturity Results — A-Gent</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --brand-primary: #111;
+      --brand-accent: #d44a9a;
+      --brand-accent-light: #f5d0e8;
+      --bg-light: #f7f7f7;
+      --text-dark: #1a1a1a;
+      --text-gray: #6b6b6b;
+      --white: #ffffff;
+      --border: #e5e5e5;
+      --success: #22c55e;
+      --warning: #f59e0b;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--text-dark);
+      background: var(--white);
+      line-height: 1.6;
+    }
+
+    .logo-text { font-family: 'Caveat', cursive; font-size: 2rem; font-weight: 700; color: var(--brand-primary); }
+    .logo-text span { color: var(--brand-accent); }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.5rem 5%;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+    nav ul { display: flex; list-style: none; gap: 2rem; }
+    nav a { text-decoration: none; color: var(--text-dark); font-weight: 500; font-size: 0.95rem; }
+    nav a:hover { color: var(--brand-accent); }
+
+    /* Main layout */
+    .results-wrapper {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 2rem 5% 4rem;
+    }
+
+    /* Hero split */
+    .results-hero {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      margin-bottom: 4rem;
+      align-items: start;
+    }
+
+    @media (max-width: 700px) {
+      .results-hero { grid-template-columns: 1fr; }
+    }
+
+    .score-card {
+      background: linear-gradient(135deg, var(--brand-primary) 0%, #2a2a2a 100%);
+      border-radius: 20px;
+      padding: 2.5rem;
+      color: white;
+      text-align: center;
+    }
+
+    .score-label { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1.5px; opacity: 0.7; margin-bottom: 0.75rem; }
+    .score-number { font-size: 5rem; font-weight: 700; line-height: 1; margin-bottom: 0.5rem; color: white; }
+    .score-max { font-size: 1.1rem; opacity: 0.5; }
+    .score-level { font-size: 1.6rem; font-weight: 600; color: var(--brand-accent); margin-top: 1rem; }
+    .score-sub { font-size: 0.95rem; opacity: 0.8; margin-top: 0.75rem; line-height: 1.5; }
+
+    .your-email {
+      font-size: 0.85rem;
+      color: var(--text-gray);
+      word-break: break-all;
+      margin-bottom: 1.5rem;
+    }
+
+    .cta-stack { display: flex; flex-direction: column; gap: 0.75rem; }
+    .btn {
+      padding: 0.85rem 1.5rem;
+      border-radius: 10px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+      border: none;
+      font-size: 0.95rem;
+      font-family: 'Inter', sans-serif;
+      text-align: center;
+    }
+    .btn-primary { background: var(--brand-accent); color: white; }
+    .btn-primary:hover { background: #c03d87; transform: translateY(-1px); }
+    .btn-outline { background: transparent; border: 2px solid white; color: white; }
+    .btn-outline:hover { background: rgba(255,255,255,0.1); }
+    .btn-large { padding: 1rem 2rem; font-size: 1.05rem; }
+
+    /* Benchmarks chart */
+    .chart-section h2 { font-size: 1.5rem; font-weight: 700; margin-bottom: 0.25rem; }
+    .chart-section .chart-sub { color: var(--text-gray); margin-bottom: 2rem; font-size: 0.95rem; }
+
+    .benchmark-row {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+    .benchmark-label { width: 120px; font-size: 0.9rem; font-weight: 500; flex-shrink: 0; }
+    .benchmark-bars { flex: 1; position: relative; }
+    .bar-track { height: 32px; border-radius: 8px; margin-bottom: 6px; position: relative; overflow: hidden; }
+    .bar-fill { height: 100%; border-radius: 8px; transition: width 1s ease; }
+    .bar-you { background: var(--brand-accent); }
+    .bar-avg { background: var(--border); margin-bottom: 0; }
+    .bar-top { background: #e8f5e9; }
+
+    .bar-labels { display: flex; justify-content: space-between; font-size: 0.75rem; color: var(--text-gray); }
+    .bar-score { font-weight: 600; font-size: 0.8rem; color: white; position: absolute; right: 8px; top: 50%; transform: translateY(-50%); }
+    .bar-score-dark { font-weight: 600; font-size: 0.8rem; color: var(--text-dark); position: absolute; right: 8px; top: 50%; transform: translateY(-50%); }
+
+    .legend { display: flex; gap: 2rem; margin-bottom: 2.5rem; }
+    .legend-item { display: flex; align-items: center; gap: 0.5rem; font-size: 0.85rem; color: var(--text-gray); }
+    .legend-dot { width: 10px; height: 10px; border-radius: 50%; }
+
+    /* Recommendations */
+    .recs-section { margin-top: 3rem; }
+    .recs-section h2 { font-size: 1.5rem; font-weight: 700; margin-bottom: 1.5rem; }
+    .rec-card {
+      display: flex;
+      gap: 1.25rem;
+      padding: 1.5rem;
+      border: 2px solid var(--border);
+      border-radius: 14px;
+      margin-bottom: 1rem;
+      transition: all 0.2s;
+    }
+    .rec-card:hover { border-color: var(--brand-accent); transform: translateY(-2px); }
+    .rec-icon { font-size: 1.8rem; flex-shrink: 0; }
+    .rec-title { font-weight: 600; font-size: 1.05rem; margin-bottom: 0.25rem; }
+    .rec-desc { font-size: 0.9rem; color: var(--text-gray); }
+
+    /* Share / Login */
+    .share-section { margin-top: 3rem; text-align: center; padding: 2.5rem; background: var(--bg-light); border-radius: 16px; }
+    .share-section h2 { font-size: 1.5rem; font-weight: 700; margin-bottom: 0.5rem; }
+    .share-section p { color: var(--text-gray); margin-bottom: 1.5rem; }
+    .login-form { display: flex; gap: 0.75rem; justify-content: center; margin-top: 1rem; }
+    .login-input {
+      padding: 0.85rem 1.25rem;
+      border: 2px solid var(--border);
+      border-radius: 10px;
+      font-size: 0.95rem;
+      font-family: 'Inter', sans-serif;
+      width: 220px;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    .login-input:focus { border-color: var(--brand-accent); }
+    .login-btn {
+      padding: 0.85rem 2rem;
+      background: var(--brand-primary);
+      color: white;
+      border: none;
+      border-radius: 10px;
+      font-weight: 600;
+      cursor: pointer;
+      font-family: 'Inter', sans-serif;
+      transition: all 0.2s;
+    }
+    .login-btn:hover { background: #333; }
+    .login-error { color: #ef4444; font-size: 0.85rem; margin-top: 0.75rem; display: none; }
+    .login-success { color: var(--success); font-size: 0.9rem; margin-top: 0.75rem; display: none; }
+
+    footer { text-align: center; padding: 2rem 5%; color: var(--text-gray); font-size: 0.85rem; margin-top: 4rem; }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="logo-text">a<span>-gent</span></div>
+  <ul>
+    <li><a href="https://dashboard.a-gent.co/">Dashboard</a></li>
+    <li><a href="https://dashboard.a-gent.co/#features">Features</a></li>
+    <li><a href="assessment.html">Assessment</a></li>
+  </ul>
+</nav>
+
+<div class="results-wrapper">
+  <!-- Hero score + CTA -->
+  <div class="results-hero">
+    <div class="score-card">
+      <div class="score-label">Your AI Maturity Score</div>
+      <div class="score-number" id="scoreNum">—</div>
+      <div class="score-max">out of 30</div>
+      <div class="score-level" id="scoreLevel">—</div>
+      <div class="score-sub" id="scoreDesc">—</div>
+    </div>
+
+    <div>
+      <p class="your-email" id="userEmail">Results for: —</p>
+      <div class="cta-stack">
+        <a href="https://dashboard.a-gent.co/?ref=assessment" class="btn btn-primary btn-large">Install A-Gent Free →</a>
+        <a href="https://dashboard.a-gent.co/?ref=assessment#features" class="btn btn-outline btn-large">See How It Works</a>
+      </div>
+      <div class="share-section" style="margin-top: 2.5rem; background: transparent; padding: 0;">
+        <p style="color: var(--text-gray); font-size: 0.9rem; margin-bottom: 0.5rem;">Access your detailed results + daily tracking:</p>
+        <form onsubmit="handleLogin(event)" class="login-form">
+          <input type="email" class="login-input" id="loginEmail" placeholder="Email used for assessment" required>
+          <button type="submit" class="login-btn" id="loginBtn">View Dashboard →</button>
+        </form>
+        <div class="login-error" id="loginError">No results found for this email. Try submitting the assessment first.</div>
+        <div class="login-success" id="loginSuccess">✓ Found! Redirecting to dashboard...</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Benchmark chart -->
+  <div class="chart-section">
+    <h2>📊 You vs Industry</h2>
+    <p class="chart-sub">How you stack up across each workflow category</p>
+
+    <div class="legend">
+      <div class="legend-item"><div class="legend-dot" style="background: var(--brand-accent);"></div>Your Score</div>
+      <div class="legend-item"><div class="legend-dot" style="background: #d1d1d1;"></div>Average Rep</div>
+      <div class="legend-item"><div class="legend-dot" style="background: #bbf7d0;"></div>Top Performers</div>
+    </div>
+
+    <div id="benchmarkChart"></div>
+  </div>
+
+  <!-- Recommendations -->
+  <div class="recs-section">
+    <h2>🚀 Your Personalized Action Plan</h2>
+    <div id="recsCards"></div>
+  </div>
+
+  <!-- Share + Login -->
+  <div class="share-section">
+    <h2>📋 Access Your Full Dashboard</h2>
+    <p>Login to track your AI maturity over time, get daily insights, and compare yourself to top performers.</p>
+    <form onsubmit="handleLogin(event)" class="login-form">
+      <input type="email" class="login-input" id="loginEmail2" placeholder="Email used for assessment" required>
+      <button type="submit" class="login-btn" id="loginBtn2">View Dashboard →</button>
+    </form>
+    <div class="login-error" id="loginError2">No results found for this email.</div>
+    <div class="login-success" id="loginSuccess2">✓ Found! Redirecting...</div>
+  </div>
+</div>
+
+<footer>
+  <p>© 2026 A-Gent — Built for sales teams ready to stop wasting time.</p>
+</footer>
+
+<script>
+  // Parse URL params
+  const params = new URLSearchParams(window.location.search);
+  const score = parseInt(params.get('score')) || 0;
+  const level = decodeURIComponent(params.get('level') || 'Unknown');
+  const desc = decodeURIComponent(params.get('desc') || '');
+  const email = decodeURIComponent(params.get('email') || '');
+
+  // Animate score
+  document.getElementById('scoreNum').textContent = score;
+  document.getElementById('scoreLevel').textContent = level;
+  document.getElementById('scoreDesc').textContent = desc;
+  document.getElementById('userEmail').textContent = email ? `Results for: ${email}` : '';
+
+  // Benchmark data (5-point scale mapped to categories)
+  const benchmarks = [
+    { cat: 'Research',       you: 0, avg: 2.1, top: 4.5 },
+    { cat: 'CRM Management', you: 0, avg: 1.8, top: 4.7 },
+    { cat: 'Meeting Prep',   you: 0, avg: 2.3, top: 4.6 },
+    { cat: 'Email',          you: 0, avg: 2.5, top: 4.4 },
+    { cat: 'Documents',      you: 0, avg: 2.0, top: 4.3 },
+    { cat: 'Admin / Time',   you: 0, avg: 2.2, top: 4.5 },
+  ];
+
+  // Reconstruct answers from localStorage if available
+  const saved = localStorage.getItem('aGentAssessment');
+  if (saved) {
+    try {
+      const data = JSON.parse(saved);
+      if (data.email === email && data.answers) {
+        const vals = { A: 1, B: 2, C: 3, D: 4, E: 5 };
+        Object.values(data.answers).forEach((l, i) => {
+          if (benchmarks[i]) benchmarks[i].you = vals[l] || 0;
+        });
+      }
+    } catch(e) {}
+  }
+
+  // Build benchmark chart
+  const chartContainer = document.getElementById('benchmarkChart');
+  benchmarks.forEach(b => {
+    const row = document.createElement('div');
+    row.className = 'benchmark-row';
+    row.innerHTML = `
+      <div class="benchmark-label">${b.cat}</div>
+      <div class="benchmark-bars">
+        <div class="bar-track">
+          <div class="bar-fill bar-you" style="width: 0%;" data-width="${(b.you / 5) * 100}%"></div>
+          <span class="bar-score">You: ${b.you}/5</span>
+        </div>
+        <div class="bar-labels">
+          <span style="color: #d1d1d1;">Avg: ${b.avg}/5</span>
+          <span style="color: #86efac;">Top: ${b.top}/5</span>
+        </div>
+      </div>
+    `;
+    chartContainer.appendChild(row);
+  });
+
+  // Animate bars after a tick
+  setTimeout(() => {
+    document.querySelectorAll('.bar-fill.bar-you').forEach(bar => {
+      bar.style.width = bar.dataset.width;
+    });
+  }, 300);
+
+  // Recommendations based on score + answers
+  const recs = [];
+  if (score < 13) {
+    recs.push({ icon: '⏱️', title: 'Reclaim 3+ Hours Per Day', desc: 'You\'re spending too much time on manual tasks. AI agents can handle research, CRM, and follow-ups automatically.' });
+    recs.push({ icon: '🔬', title: 'Start with Research Automation', desc: 'Your biggest time sink is prospect research. A-Gent can deliver brief summaries before every call.' });
+    recs.push({ icon: '📊', title: 'Install the Free Extension', desc: 'Track how you actually spend your day — most reps are surprised by where their time goes.' });
+  } else if (score < 20) {
+    recs.push({ icon: '⚡', title: 'Bridge the Gap to Top Performers', desc: 'You\'re doing well but still losing hours to manual CRM entry and meeting prep. AI can close that gap.' });
+    recs.push({ icon: '🔄', title: 'Automate Your Workflow Triggers' , desc: 'Your workflow pattern is: Email → Research → CRM Entry. Top reps reverse this — AI can help.' });
+    recs.push({ icon: '📈', title: 'Get Daily AI Insights', desc: 'Add A-Gent to see how you compare vs top performers every single day.' });
+  } else if (score < 26) {
+    recs.push({ icon: '🚀', title: 'Scale Without Adding Headcount', desc: 'You\'re AI-accelerated. A-Gent keeps you there and helps you handle more deals with the same calendar.' });
+    recs.push({ icon: '🤖', title: 'Try Managed AI Agents', desc: 'You\'ve reached the point where managed agents pay for themselves. Book a demo to see how.' });
+  } else {
+    recs.push({ icon: '🏆', title: 'You\'re a Top Performer', desc: 'A-Gent helps you stay ahead of the curve and brings the rest of your team up to your level.' });
+    recs.push({ icon: '📈', title: 'Share Your Results', desc: 'Help your team level up by sharing your secret: AI-first workflows + A-Gent agents.' });
+  }
+
+  const recsContainer = document.getElementById('recsCards');
+  recs.slice(0, 3).forEach(r => {
+    const card = document.createElement('div');
+    card.className = 'rec-card';
+    card.innerHTML = `<div class="rec-icon">${r.icon}</div><div><div class="rec-title">${r.title}</div><div class="rec-desc">${r.desc}</div></div>`;
+    recsContainer.appendChild(card);
+  });
+
+  // Login handler
+  async function handleLogin(e) {
+    e.preventDefault();
+    const emailInput = e.target.querySelector('input[type="email"]').value.trim();
+    const loginError = document.getElementById('loginError') || document.getElementById('loginError2');
+    const loginSuccess = document.getElementById('loginSuccess') || document.getElementById('loginSuccess2');
+    const loginBtn = document.getElementById('loginBtn') || document.getElementById('loginBtn2');
+
+    loginError.style.display = 'none';
+    loginBtn.disabled = true;
+    loginBtn.textContent = 'Checking...';
+
+    // Check localStorage first
+    const saved = localStorage.getItem('aGentAssessment');
+    if (saved) {
+      const data = JSON.parse(saved);
+      if (data.email === emailInput) {
+        loginSuccess.style.display = 'block';
+        setTimeout(() => { window.location.href = `https://dashboard.a-gent.co/?ref=assessment&email=${encodeURIComponent(emailInput)}`; }, 800);
+        return;
+      }
+    }
+
+    // TODO: Check Supabase — for now, show error
+    loginError.textContent = 'No results found for this email. Please complete the assessment first.';
+    loginError.style.display = 'block';
+    loginBtn.disabled = false;
+    loginBtn.textContent = 'View Dashboard →';
+  }
+</script>
+
+</body>
+</html>
