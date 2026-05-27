@@ -1,6 +1,2 @@
-# Extension results dashboard
-/dashboard    /dashboard/index.html    200
-
-# Assessment flow
-/assessment    /assessment.html    200
-/assessment-results    /assessment-results.html    200
+# Redirect /dashboard to the dashboard subdomain
+/dashboard    https://dashboard.a-gent.co/    301
