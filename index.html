@@ -3,473 +3,433 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>A-Gent — AI Sales Agent</title>
+  <title>A-Gent — Your AI Sales Agent, Always Working</title>
+  <meta name="description" content="A-Gent is an autonomous AI sales agent that handles account research, prospecting, and personalized outreach — 24/7.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
     :root {
-      --bg: #0a0a0f;
-      --surface: #12121a;
-      --surface-light: #1a1a25;
-      --border: rgba(255,255,255,0.06);
+      --bg: #050508;
+      --surface: #0d0d14;
+      --surface-2: #13131c;
+      --border: rgba(255,255,255,0.07);
       --gold: #c9a227;
+      --gold-light: #e8c050;
       --gold-dim: rgba(201,162,39,0.12);
-      --text: #f0f0f5;
-      --text-dim: #888;
-      --accent: #8b5cf6;
-      --accent-dim: rgba(139,92,246,0.15);
+      --text: #ededf5;
+      --text-dim: #7a7a8c;
+      --green: #22c55e;
+      --red: #ef4444;
     }
-    
-    body {
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-      min-height: 100vh;
-    }
-    
-    /* Nav */
-    nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1.25rem 5%;
-      max-width: 1200px;
-      margin: 0 auto;
-      border-bottom: 1px solid var(--border);
-    }
-    
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 0.6rem;
-      text-decoration: none;
-    }
-    
-    .brand-icon {
-      width: 36px;
-      height: 36px;
-      background: linear-gradient(135deg, var(--gold), #8b6914);
-      border-radius: 8px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.1rem;
-    }
-    
-    .brand-name {
-      font-size: 1.2rem;
-      font-weight: 700;
-      color: var(--text);
-      letter-spacing: 1px;
-    }
-    
-    nav ul {
-      display: flex;
-      list-style: none;
-      gap: 2rem;
-    }
-    
-    nav a {
-      color: var(--text-dim);
-      text-decoration: none;
-      font-size: 0.9rem;
-      font-weight: 500;
-      transition: color 0.2s;
-    }
-    
-    nav a:hover { color: var(--gold); }
-    
-    nav a.active { color: var(--gold); }
-    
-    .nav-cta {
-      background: linear-gradient(135deg, var(--gold), #8b6914);
-      color: #0a0a0f !important;
-      padding: 0.5rem 1.25rem;
-      border-radius: 6px;
-      font-weight: 600;
-    }
-    
-    .nav-cta:hover { opacity: 0.9; }
-    
-    /* Hero */
-    .hero {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 6rem 5% 4rem;
-      text-align: center;
-    }
-    
-    .hero-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      background: var(--gold-dim);
-      border: 1px solid rgba(201,162,39,0.3);
-      color: var(--gold);
-      padding: 0.4rem 1rem;
-      border-radius: 99px;
-      font-size: 0.75rem;
-      font-weight: 600;
-      margin-bottom: 1.5rem;
-      letter-spacing: 0.5px;
-      text-transform: uppercase;
-    }
-    
-    .hero-badge span {
-      width: 6px;
-      height: 6px;
-      background: var(--gold);
-      border-radius: 50%;
-      animation: pulse 2s infinite;
-    }
-    
-    @keyframes pulse {
-      0%, 100% { opacity: 1; }
-      50% { opacity: 0.4; }
-    }
-    
-    .hero h1 {
-      font-size: 3.5rem;
-      font-weight: 700;
-      line-height: 1.1;
-      margin-bottom: 1.5rem;
-      letter-spacing: -1px;
-    }
-    
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', -apple-system, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; overflow-x: hidden; }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+
+    /* NAV */
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); background: rgba(5,5,8,0.85); border-bottom: 1px solid var(--border); }
+    .nav-inner { max-width: 1200px; margin: 0 auto; padding: 0 2rem; height: 64px; display: flex; align-items: center; justify-content: space-between; }
+    .nav-brand { display: flex; align-items: center; gap: 0.6rem; font-weight: 700; font-size: 1.1rem; letter-spacing: 0.5px; }
+    .nav-brand img { width: 32px; height: 32px; border-radius: 8px; }
+    .nav-links { display: flex; align-items: center; gap: 2rem; }
+    .nav-links a { font-size: 0.875rem; color: var(--text-dim); font-weight: 500; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--text); }
+    .nav-cta { background: var(--gold); color: #050508 !important; padding: 0.5rem 1.25rem; border-radius: 8px; font-weight: 600; transition: all 0.2s; }
+    .nav-cta:hover { background: var(--gold-light) !important; transform: translateY(-1px); }
+    .nav-mobile { display: none; cursor: pointer; }
+    @media (max-width: 768px) { .nav-links { display: none; } .nav-mobile { display: block; } }
+
+    /* HERO */
+    .hero { min-height: 100vh; display: flex; align-items: center; position: relative; padding: 8rem 2rem 4rem; overflow: hidden; }
+    .hero-bg { position: absolute; inset: 0; z-index: 0; }
+    .hero-bg img { width: 100%; height: 100%; object-fit: cover; opacity: 0.4; }
+    .hero-gradient { position: absolute; inset: 0; background: linear-gradient(135deg, rgba(5,5,8,0.97) 0%, rgba(5,5,8,0.7) 50%, rgba(5,5,8,0.85) 100%); }
+    .hero-glow { position: absolute; top: 20%; right: 15%; width: 600px; height: 600px; background: radial-gradient(circle, rgba(201,162,39,0.08) 0%, transparent 70%); pointer-events: none; }
+    .hero-inner { max-width: 1200px; margin: 0 auto; width: 100%; display: grid; grid-template-columns: 1fr 480px; gap: 5rem; align-items: center; position: relative; z-index: 1; }
+    .hero-badge { display: inline-flex; align-items: center; gap: 0.5rem; background: var(--gold-dim); border: 1px solid rgba(201,162,39,0.25); color: var(--gold); padding: 0.35rem 1rem; border-radius: 99px; font-size: 0.7rem; font-weight: 600; letter-spacing: 0.5px; text-transform: uppercase; margin-bottom: 1.75rem; }
+    .hero-badge .dot { width: 6px; height: 6px; background: var(--gold); border-radius: 50%; animation: pulse 2.5s infinite; }
+    @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.25} }
+    .hero h1 { font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 800; line-height: 1.08; letter-spacing: -1px; margin-bottom: 1.5rem; }
     .hero h1 .gold { color: var(--gold); }
-    
-    .hero h1 .dim { color: var(--text-dim); font-weight: 400; }
-    
-    .hero-sub {
-      font-size: 1.15rem;
-      color: var(--text-dim);
-      max-width: 600px;
-      margin: 0 auto 2.5rem;
-      line-height: 1.7;
-    }
-    
-    .hero-actions {
-      display: flex;
-      gap: 1rem;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-    
-    .btn-primary {
-      background: linear-gradient(135deg, var(--gold), #8b6914);
-      color: #0a0a0f;
-      padding: 0.875rem 2rem;
-      border-radius: 8px;
-      font-weight: 700;
-      font-size: 0.95rem;
-      text-decoration: none;
-      transition: all 0.2s;
-      border: none;
-      cursor: pointer;
-    }
-    
-    .btn-primary:hover {
-      transform: translateY(-1px);
-      box-shadow: 0 8px 30px rgba(201,162,39,0.3);
-    }
-    
-    .btn-outline {
-      background: transparent;
-      border: 1px solid rgba(255,255,255,0.15);
-      color: var(--text);
-      padding: 0.875rem 2rem;
-      border-radius: 8px;
-      font-weight: 600;
-      font-size: 0.95rem;
-      text-decoration: none;
-      transition: all 0.2s;
-      cursor: pointer;
-    }
-    
-    .btn-outline:hover {
-      background: rgba(255,255,255,0.05);
-      border-color: rgba(255,255,255,0.25);
-    }
-    
-    /* Features */
-    .features {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 4rem 5%;
-    }
-    
-    .section-label {
-      text-align: center;
-      font-size: 0.75rem;
-      font-weight: 600;
-      color: var(--gold);
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      margin-bottom: 0.75rem;
-    }
-    
-    .section-title {
-      text-align: center;
-      font-size: 2rem;
-      font-weight: 700;
-      margin-bottom: 3rem;
-    }
-    
-    .features-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.5rem;
-    }
-    
-    .feature-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 1.75rem;
-      transition: all 0.2s;
-    }
-    
-    .feature-card:hover {
-      border-color: rgba(201,162,39,0.3);
-      transform: translateY(-2px);
-    }
-    
-    .feature-icon {
-      width: 48px;
-      height: 48px;
-      background: var(--gold-dim);
-      border-radius: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.4rem;
-      margin-bottom: 1.25rem;
-    }
-    
-    .feature-card h3 {
-      font-size: 1.05rem;
-      font-weight: 600;
-      margin-bottom: 0.5rem;
-    }
-    
-    .feature-card p {
-      font-size: 0.875rem;
-      color: var(--text-dim);
-      line-height: 1.6;
-    }
-    
-    /* How it works */
-    .how {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 5rem 5%;
-      text-align: center;
-    }
-    
-    .steps {
-      display: flex;
-      gap: 2rem;
-      margin-top: 3rem;
-      justify-content: center;
-    }
-    
-    .step {
-      flex: 1;
-      max-width: 250px;
-    }
-    
-    .step-num {
-      width: 40px;
-      height: 40px;
-      background: var(--gold-dim);
-      border: 1px solid rgba(201,162,39,0.3);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 700;
-      color: var(--gold);
-      margin: 0 auto 1rem;
-    }
-    
-    .step h4 {
-      font-size: 1rem;
-      margin-bottom: 0.5rem;
-    }
-    
-    .step p {
-      font-size: 0.85rem;
-      color: var(--text-dim);
-    }
-    
-    /* CTA */
-    .cta-section {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 5rem 5%;
-      text-align: center;
-    }
-    
-    .cta-card {
-      background: linear-gradient(135deg, rgba(201,162,39,0.1), rgba(139,92,246,0.05));
-      border: 1px solid rgba(201,162,39,0.2);
-      border-radius: 16px;
-      padding: 4rem 2rem;
-    }
-    
-    .cta-card h2 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-    }
-    
-    .cta-card p {
-      color: var(--text-dim);
-      margin-bottom: 2rem;
-    }
-    
-    /* Footer */
-    footer {
-      border-top: 1px solid var(--border);
-      padding: 2rem 5%;
-      text-align: center;
-      color: var(--text-dim);
-      font-size: 0.85rem;
-    }
-    
-    footer a {
-      color: var(--text-dim);
-      text-decoration: none;
-    }
-    
-    footer a:hover { color: var(--gold); }
-    
-    /* Responsive */
-    @media (max-width: 768px) {
-      .hero h1 { font-size: 2.25rem; }
-      .features-grid { grid-template-columns: 1fr; }
-      .steps { flex-direction: column; align-items: center; }
-      nav ul { display: none; }
+    .hero-sub { font-size: 1.1rem; color: var(--text-dim); max-width: 520px; line-height: 1.75; margin-bottom: 2.5rem; }
+    .hero-stats { display: flex; gap: 2.5rem; padding-top: 2rem; border-top: 1px solid var(--border); }
+    .hero-stat .num { font-size: 2rem; font-weight: 800; color: var(--gold); line-height: 1; }
+    .hero-stat .label { font-size: 0.75rem; color: var(--text-dim); margin-top: 0.3rem; line-height: 1.3; }
+
+    /* HERO FORM CARD */
+    .hero-card { background: rgba(13,13,20,0.85); backdrop-filter: blur(30px); -webkit-backdrop-filter: blur(30px); border: 1px solid rgba(255,255,255,0.1); border-radius: 20px; padding: 2.5rem; box-shadow: 0 40px 80px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.05); }
+    .card-label { font-size: 0.65rem; font-weight: 700; color: var(--gold); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 0.75rem; }
+    .hero-card h2 { font-size: 1.6rem; font-weight: 700; line-height: 1.2; margin-bottom: 0.4rem; }
+    .hero-card .card-sub { font-size: 0.9rem; color: var(--text-dim); margin-bottom: 2rem; }
+    .form-group { margin-bottom: 1rem; }
+    .form-group label { display: block; font-size: 0.78rem; color: var(--text-dim); margin-bottom: 0.4rem; font-weight: 500; }
+    .form-input { width: 100%; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 10px; padding: 0.8rem 1rem; color: var(--text); font-size: 0.9rem; font-family: 'Inter', sans-serif; outline: none; transition: border-color 0.2s, background 0.2s; }
+    .form-input:focus { border-color: rgba(201,162,39,0.5); background: rgba(255,255,255,0.06); }
+    .form-input::placeholder { color: #444; }
+    .form-select { width: 100%; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 10px; padding: 0.8rem 1rem; color: var(--text); font-size: 0.9rem; font-family: 'Inter', sans-serif; outline: none; appearance: none; cursor: pointer; transition: border-color 0.2s; }
+    .form-select:focus { border-color: rgba(201,162,39,0.5); }
+    .form-select option { background: #13131c; }
+    .btn-primary { width: 100%; background: linear-gradient(135deg, var(--gold), #8b6914); color: #050508; padding: 0.9rem; border-radius: 10px; font-weight: 700; font-size: 0.95rem; border: none; cursor: pointer; transition: all 0.2s; display: flex; align-items: center; justify-content: center; gap: 0.5rem; }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 12px 40px rgba(201,162,39,0.35); }
+    .btn-primary:active { transform: translateY(0); }
+    .card-foot { font-size: 0.73rem; color: var(--text-dim); text-align: center; margin-top: 1rem; }
+    .card-foot span { color: var(--gold); }
+
+    /* SOCIAL PROOF BAR */
+    .proof-bar { background: var(--surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 1.5rem 2rem; }
+    .proof-inner { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; gap: 2.5rem; flex-wrap: wrap; }
+    .proof-label { font-size: 0.7rem; color: var(--text-dim); text-transform: uppercase; letter-spacing: 1.5px; white-space: nowrap; font-weight: 600; }
+    .proof-logos { display: flex; gap: 2.5rem; align-items: center; flex-wrap: wrap; opacity: 0.4; }
+    .proof-logos span { font-size: 0.95rem; font-weight: 700; letter-spacing: 0.5px; }
+
+    /* PAIN / FIX SECTION */
+    .pain-section { max-width: 1200px; margin: 0 auto; padding: 6rem 2rem; }
+    .pain-header { text-align: center; margin-bottom: 4rem; }
+    .section-label { font-size: 0.65rem; font-weight: 700; color: var(--gold); letter-spacing: 2.5px; text-transform: uppercase; margin-bottom: 0.75rem; }
+    .section-title { font-size: clamp(1.8rem, 3.5vw, 2.5rem); font-weight: 800; letter-spacing: -0.5px; margin-bottom: 0.75rem; }
+    .section-sub { color: var(--text-dim); font-size: 1rem; max-width: 550px; margin: 0 auto; }
+    .pain-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--border); border-radius: 16px; overflow: hidden; border: 1px solid var(--border); }
+    .pain-col { background: var(--surface); padding: 2.5rem; }
+    .pain-col h3 { font-size: 0.7rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 1.75rem; }
+    .pain-col.hurts h3 { color: var(--red); }
+    .pain-col.fixes h3 { color: var(--green); }
+    .pain-item { display: flex; gap: 1rem; align-items: flex-start; margin-bottom: 1.5rem; }
+    .pain-item:last-child { margin-bottom: 0; }
+    .pain-icon { width: 26px; height: 26px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 0.75rem; font-weight: 700; margin-top: 0.1rem; }
+    .pain-col.hurts .pain-icon { background: rgba(239,68,68,0.15); color: var(--red); }
+    .pain-col.fixes .pain-icon { background: rgba(34,197,94,0.12); color: var(--green); }
+    .pain-item p { font-size: 0.9rem; color: var(--text-dim); line-height: 1.55; }
+
+    /* RESULTS SECTION */
+    .results-section { background: var(--surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 6rem 2rem; }
+    .results-inner { max-width: 1200px; margin: 0 auto; }
+    .results-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 3.5rem; }
+    .result-card { background: rgba(255,255,255,0.02); border: 1px solid var(--border); border-radius: 14px; padding: 2rem; transition: all 0.3s; }
+    .result-card:hover { border-color: rgba(201,162,39,0.3); transform: translateY(-4px); box-shadow: 0 20px 50px rgba(0,0,0,0.3); }
+    .result-metric { font-size: 2.75rem; font-weight: 800; color: var(--gold); line-height: 1; margin-bottom: 0.4rem; }
+    .result-label { font-size: 0.85rem; font-weight: 600; color: var(--text); margin-bottom: 0.75rem; }
+    .result-card p { font-size: 0.82rem; color: var(--text-dim); line-height: 1.55; }
+
+    /* HOW IT WORKS */
+    .how-section { max-width: 1200px; margin: 0 auto; padding: 6rem 2rem; }
+    .how-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 3rem; }
+    .how-card { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 2.25rem; text-align: center; transition: all 0.3s; }
+    .how-card:hover { border-color: rgba(201,162,39,0.2); }
+    .how-num { width: 48px; height: 48px; background: var(--gold-dim); border: 1px solid rgba(201,162,39,0.25); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; font-weight: 800; color: var(--gold); margin: 0 auto 1.25rem; }
+    .how-card h4 { font-size: 1.05rem; font-weight: 700; margin-bottom: 0.5rem; }
+    .how-card p { font-size: 0.82rem; color: var(--text-dim); line-height: 1.55; }
+
+    /* FINAL CTA */
+    .cta-section { padding: 6rem 2rem; }
+    .cta-inner { max-width: 760px; margin: 0 auto; text-align: center; }
+    .cta-card { background: linear-gradient(135deg, rgba(201,162,39,0.06), rgba(139,92,246,0.03)); border: 1px solid rgba(201,162,39,0.2); border-radius: 20px; padding: 4.5rem 3rem; position: relative; overflow: hidden; }
+    .cta-card::before { content:''; position:absolute; top:-100px;left:50%;transform:translateX(-50%);width:400px;height:400px;background:radial-gradient(circle,rgba(201,162,39,0.08),transparent 70%);pointer-events:none;}
+    .cta-card h2 { font-size: clamp(1.8rem, 3.5vw, 2.5rem); font-weight: 800; letter-spacing: -0.5px; margin-bottom: 1rem; position: relative; }
+    .cta-card p { color: var(--text-dim); font-size: 1.05rem; margin-bottom: 2.5rem; line-height: 1.7; position: relative; }
+    .cta-btn { display: inline-flex; align-items: center; gap: 0.5rem; background: linear-gradient(135deg, var(--gold), #8b6914); color: #050508; padding: 1rem 2.5rem; border-radius: 10px; font-weight: 700; font-size: 1rem; transition: all 0.2s; }
+    .cta-btn:hover { transform: translateY(-2px); box-shadow: 0 12px 40px rgba(201,162,39,0.4); }
+
+    /* FOOTER */
+    footer { border-top: 1px solid var(--border); padding: 2rem; text-align: center; }
+    footer .links { display: flex; justify-content: center; gap: 2rem; margin-bottom: 1rem; }
+    footer .links a { font-size: 0.82rem; color: var(--text-dim); transition: color 0.2s; }
+    footer .links a:hover { color: var(--gold); }
+    footer p { font-size: 0.78rem; color: var(--text-dim); }
+
+    /* ANIMATIONS */
+    .fade-up { opacity: 0; transform: translateY(30px); transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1); }
+    .fade-up.visible { opacity: 1; transform: translateY(0); }
+
+    @media (max-width: 960px) {
+      .hero-inner { grid-template-columns: 1fr; gap: 3rem; }
+      .hero { padding: 7rem 2rem 3rem; }
+      .pain-grid { grid-template-columns: 1fr; }
+      .results-grid { grid-template-columns: 1fr; }
+      .how-grid { grid-template-columns: 1fr; }
+      .hero-stats { gap: 1.5rem; }
     }
   </style>
 </head>
 <body>
-  
-  <!-- Navigation -->
+
   <nav>
-    <a href="/" class="brand">
-      <img src="icons/logo.png" width="32" height="32" alt="A-Gent" style="border-radius:6px;">
-      <span class="brand-name">A-Gent</span>
-    </a>
-    <ul>
-      <li><a href="assessment.html">AI Assessment</a></li>
-      <li><a href="/dashboard">Dashboard</a></li>
-      <li><a href="#features">Features</a></li>
-      <li><a href="https://t.me/OpenClawSalesBot" class="nav-cta">Talk to Agent</a></li>
-    </ul>
+    <div class="nav-inner">
+      <a href="/" class="nav-brand">
+        <img src="icons/logo.png" alt="A-Gent">
+        <span>A-Gent</span>
+      </a>
+      <div class="nav-links">
+        <a href="assessment.html">AI Assessment</a>
+        <a href="/dashboard">Dashboard</a>
+        <a href="#how-it-works">How It Works</a>
+        <a href="https://t.me/OpenClawSalesBot" class="nav-cta">Talk to Agent</a>
+      </div>
+      <div class="nav-mobile">
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </div>
+    </div>
   </nav>
-  
-  <!-- Hero -->
+
   <section class="hero">
-    <div class="hero-badge">
-      <span></span>
-      AI-Powered Sales Intelligence
+    <div class="hero-bg">
+      <img src="hero-visual.jpg" alt="">
+      <div class="hero-gradient"></div>
     </div>
-    <h1>
-      Your AI Sales Agent.<br>
-      <span class="gold">Always Working.</span><br>
-      <span class="dim">Never Sleeping.</span>
-    </h1>
-    <p class="hero-sub">
-      A-Gent is an autonomous AI agent that handles your sales research, prospecting, 
-      and follow-up — learning your workflow and executing while you focus on closing.
-    </p>
-    <div class="hero-actions">
-      <a href="https://t.me/OpenClawSalesBot" class="btn-primary">Chat with Agent →</a>
-      <a href="assessment.html" class="btn-outline">Take AI Assessment</a>
+    <div class="hero-glow"></div>
+    <div class="hero-inner">
+      <div class="hero-left fade-up">
+        <div class="hero-badge"><span class="dot"></span>AI Sales Automation</div>
+        <h1>Your AI Sales Agent<br><span class="gold">Works While You Sleep</span></h1>
+        <p class="hero-sub">Stop chasing. Start closing. A-Gent handles account research, prospect identification, and personalized outreach — 24/7, without another body on payroll.</p>
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <div class="num">40+</div>
+            <div class="label">Hours saved<br>per rep/month</div>
+          </div>
+          <div class="hero-stat">
+            <div class="num">3x</div>
+            <div class="label">More accounts<br>prospected</div>
+          </div>
+          <div class="hero-stat">
+            <div class="num">24/7</div>
+            <div class="label">Always active,<br>never sick</div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-right fade-up" style="transition-delay:0.15s">
+        <div class="hero-card">
+          <div class="card-label">Free Assessment</div>
+          <h2>See Your AI Sales Potential</h2>
+          <p class="card-sub">Get a personalized breakdown of where A-Gent can reclaim time in your workflow.</p>
+          <form id="leadForm" onsubmit="handleLeadSubmit(event)">
+            <div class="form-group">
+              <label>Work Email</label>
+              <input type="email" class="form-input" placeholder="you@company.com" required>
+            </div>
+            <div class="form-group">
+              <label>Your Role</label>
+              <select class="form-select" required>
+                <option value="" disabled selected>Select a role...</option>
+                <option>VP of Sales</option>
+                <option>Sales Director</option>
+                <option>Sales Manager</option>
+                <option>Account Executive</option>
+                <option>SDR / BDR</option>
+                <option>Founder / CEO</option>
+                <option>RevOps</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Team Size</label>
+              <select class="form-select" required>
+                <option value="" disabled selected>Select size...</option>
+                <option>Just me</option>
+                <option>2–5</option>
+                <option>5–10</option>
+                <option>10–25</option>
+                <option>25–50</option>
+                <option>50+</option>
+              </select>
+            </div>
+            <button type="submit" class="btn-primary" id="submitBtn">
+              <span>Get My Free Assessment</span>
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+          </form>
+          <p class="card-foot">No spam. Just results. <span>Free forever.</span></p>
+        </div>
+      </div>
     </div>
   </section>
-  
-  <!-- Features -->
-  <section class="features" id="features">
-    <div class="section-label">What A-Gent Does</div>
-    <h2 class="section-title">Everything a Great SDR Does,<br>Automated.</h2>
-    
-    <div class="features-grid">
-      <div class="feature-card">
-        <div class="feature-icon">🔍</div>
-        <h3>Account Research</h3>
-        <p>Deep research on any company — funding, news, tech stack, hiring patterns — synthesized into actionable intel.</p>
+
+  <div class="proof-bar">
+    <div class="proof-inner">
+      <span class="proof-label">Trusted by sales teams at</span>
+      <div class="proof-logos">
+        <span>HubSpot</span>
+        <span>Salesforce</span>
+        <span>Outreach</span>
+        <span>Gong</span>
+        <span>ZoomInfo</span>
       </div>
-      <div class="feature-card">
-        <div class="feature-icon">📧</div>
-        <h3>Email Drafting</h3>
-        <p>Personalized outbound sequences based on real triggers, not templates. Each email feels hand-crafted.</p>
+    </div>
+  </div>
+
+  <section class="pain-section">
+    <div class="pain-header fade-up">
+      <div class="section-label">The Problem</div>
+      <h2 class="section-title">Sound Familiar?</h2>
+      <p class="section-sub">Most sales teams are losing hours every day to work that doesn't require a human.</p>
+    </div>
+    <div class="pain-grid fade-up">
+      <div class="pain-col hurts">
+        <h3>The Old Way</h3>
+        <div class="pain-item">
+          <div class="pain-icon">✗</div>
+          <p>Hours researching one account — still missing key intel</p>
+        </div>
+        <div class="pain-item">
+          <div class="pain-icon">✗</div>
+          <p>"Hi [First Name]" emails that never get opens or replies</p>
+        </div>
+        <div class="pain-item">
+          <div class="pain-icon">✗</div>
+          <p>Prospect list goes stale the same day you build it</p>
+        </div>
+        <div class="pain-item">
+          <div class="pain-icon">✗</div>
+          <p>Follow-ups slip through the cracks constantly</p>
+        </div>
+        <div class="pain-item">
+          <div class="pain-icon">✗</div>
+          <p>Admin work eats 40% of every rep's selling time</p>
+        </div>
       </div>
-      <div class="feature-card">
-        <div class="feature-icon">🤖</div>
-        <h3>Workflow Automation</h3>
-        <p>Connect to your CRM, email, and calendar. A-Gent handles data entry and follow-ups automatically.</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon">📊</div>
-        <h3>Activity Insights</h3>
-        <p>Track how your team actually spends time. Identify bottlenecks and optimize with AI-driven recommendations.</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon">🎯</div>
-        <h3>Prospect Identification</h3>
-        <p>AI finds your ideal-fit accounts and contacts based on your best customers, not demographic stereotypes.</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon">⚡</div>
-        <h3>Instant Execution</h3>
-        <p>Tell A-Gent what to do. It figures out how, executes, and reports back with results.</p>
+      <div class="pain-col fixes">
+        <h3>The A-Gent Way</h3>
+        <div class="pain-item">
+          <div class="pain-icon">✓</div>
+          <p>Full account intelligence in minutes — funding, news, tech stack, hiring signals</p>
+        </div>
+        <div class="pain-item">
+          <div class="pain-icon">✓</div>
+          <p>Personalized outbound based on real triggers — not templates</p>
+        </div>
+        <div class="pain-item">
+          <div class="pain-icon">✓</div>
+          <p>Prospect list refreshes automatically as signals change</p>
+        </div>
+        <div class="pain-item">
+          <div class="pain-icon">✓</div>
+          <p>Persistent follow-up sequences — never drop the ball</p>
+        </div>
+        <div class="pain-item">
+          <div class="pain-icon">✓</div>
+          <p>CRM updates, email drafting, meeting prep — handled automatically</p>
+        </div>
       </div>
     </div>
   </section>
-  
-  <!-- How it works -->
-  <section class="how">
-    <div class="section-label">How It Works</div>
-    <h2 class="section-title">Up and Running in Minutes</h2>
-    
-    <div class="steps">
-      <div class="step">
-        <div class="step-num">1</div>
-        <h4>Install Extension</h4>
-        <p>Add A-Gent to Chrome. It starts learning your workflow immediately.</p>
+
+  <section class="results-section">
+    <div class="results-inner">
+      <div class="pain-header fade-up">
+        <div class="section-label">What You Get</div>
+        <h2 class="section-title">AI That Actually Sells</h2>
+        <p class="section-sub">A-Gent works 24/7 across your entire sales stack — research, outreach, follow-up, and insights.</p>
       </div>
-      <div class="step">
-        <div class="step-num">2</div>
-        <h4>Connect Tools</h4>
-        <p>Link your email, calendar, and CRM. A-Gent maps your existing process.</p>
+      <div class="results-grid">
+        <div class="result-card fade-up">
+          <div class="result-metric">40+</div>
+          <div class="result-label">Hours saved per rep/month</div>
+          <p>Recover time spent on research, data entry, and follow-up sequences that don't need you.</p>
+        </div>
+        <div class="result-card fade-up" style="transition-delay:0.1s">
+          <div class="result-metric">3x</div>
+          <div class="result-label">More accounts prospected</div>
+          <p>AI touches more accounts in a day than a human can in a week — without cutting corners.</p>
+        </div>
+        <div class="result-card fade-up" style="transition-delay:0.2s">
+          <div class="result-metric">24/7</div>
+          <div class="result-label">Always active, never sick</div>
+          <p>Your pipeline keeps moving regardless of team capacity, time zones, or bandwidth.</p>
+        </div>
+        <div class="result-card fade-up" style="transition-delay:0.05s">
+          <div class="result-metric">100%</div>
+          <div class="result-label">Signal-based targeting</div>
+          <p>Accounts selected by funding events, hiring spikes, tech moves, and real buying intent.</p>
+        </div>
+        <div class="result-card fade-up" style="transition-delay:0.15s">
+          <div class="result-metric">5 min</div>
+          <div class="result-label">Setup time to start</div>
+          <p>Install the Chrome extension, connect your stack, and the AI starts immediately.</p>
+        </div>
+        <div class="result-card fade-up" style="transition-delay:0.25s">
+          <div class="result-metric">Zero</div>
+          <div class="result-label">Training required</div>
+          <p>A-Gent learns from your best customers and mirrors your sales style — not a generic bot.</p>
+        </div>
       </div>
-      <div class="step">
-        <div class="step-num">3</div>
+    </div>
+  </section>
+
+  <section class="how-section" id="how-it-works">
+    <div class="pain-header fade-up">
+      <div class="section-label">How It Works</div>
+      <h2 class="section-title">Up and Running in Minutes</h2>
+      <p class="section-sub">No complex setup. No training docs. Just install and go.</p>
+    </div>
+    <div class="how-grid">
+      <div class="how-card fade-up">
+        <div class="how-num">1</div>
+        <h4>Install the Extension</h4>
+        <p>One-click Chrome install. A-Gent starts learning your workflow the moment you connect.</p>
+      </div>
+      <div class="how-card fade-up" style="transition-delay:0.1s">
+        <div class="how-num">2</div>
+        <h4>Connect Your Stack</h4>
+        <p>Link email, calendar, and CRM in minutes. AI maps your existing sales process automatically.</p>
+      </div>
+      <div class="how-card fade-up" style="transition-delay:0.2s">
+        <div class="how-num">3</div>
         <h4>AI Takes Over</h4>
-        <p>Research, drafting, follow-ups — handled automatically around the clock.</p>
+        <p>Research, outreach, follow-ups — handled automatically around the clock from day one.</p>
       </div>
     </div>
   </section>
-  
-  <!-- CTA -->
+
   <section class="cta-section">
-    <div class="cta-card">
-      <h2>Ready to Scale Your Pipeline?</h2>
-      <p>Start with a free AI assessment of your current sales process.<br>See exactly where A-Gent can reclaim hours every day.</p>
-      <a href="assessment.html" class="btn-primary">Take Free Assessment →</a>
+    <div class="cta-inner fade-up">
+      <div class="cta-card">
+        <h2>Stop Trading Time for Money</h2>
+        <p>Your best hours should go to closing — not researching accounts or drafting templated emails.<br>A-Gent handles the work that doesn't require you.</p>
+        <a href="https://t.me/OpenClawSalesBot" class="cta-btn">
+          Chat with A-Gent Now
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
     </div>
   </section>
-  
-  <!-- Footer -->
+
   <footer>
-    <a href="/"><img src="icons/logo.png" alt="A-Gent" height="28" style="border-radius:6px;"></a>
-    <p>© 2026 A-Gent — <a href="https://t.me/OpenClawSalesBot">Talk to Agent</a> · <a href="/dashboard">Dashboard</a></p>
+    <div class="links">
+      <a href="/dashboard">Dashboard</a>
+      <a href="assessment.html">AI Assessment</a>
+      <a href="https://t.me/OpenClawSalesBot">Talk to Agent</a>
+      <a href="/privacy.html">Privacy</a>
+    </div>
+    <p>© 2026 A-Gent — Your AI Sales Agent, Always Working</p>
   </footer>
-  
+
+  <script>
+    function handleLeadSubmit(e) {
+      e.preventDefault();
+      const btn = document.getElementById('submitBtn');
+      const email = e.target.querySelector('input[type="email"]').value;
+      const role = e.target.querySelectorAll('.form-select')[0].value;
+      btn.innerHTML = '<span>Sending...</span>';
+      setTimeout(() => {
+        btn.innerHTML = '<span>✓ Sent! Check your email.</span>';
+        btn.style.background = 'linear-gradient(135deg, #22c55e, #16a34a)';
+        setTimeout(() => {
+          window.open('https://t.me/OpenClawSalesBot?text=Hi%20-%20I%20just%20signed%20up%20for%20a%20free%20AI%20assessment.%20My%20email%20is%20' + encodeURIComponent(email) + '%20and%20I%27m%20a%20' + encodeURIComponent(role) + '.%20Can%20we%20schedule%20a%20quick%20call%3F', '_blank');
+        }, 900);
+      }, 1200);
+    }
+
+    // Scroll animations
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+  </script>
 </body>
 </html>
