@@ -184,12 +184,12 @@
 <body>
 
 <nav>
-  <a href="https://dashboard.a-gent.co/" style="display:flex;align-items:center;text-decoration:none;gap:0.6rem;">
+  <a href="https://a-gent.co/" style="display:flex;align-items:center;text-decoration:none;gap:0.6rem;">
     <img src="icons/logo.png" alt="A-Gent" style="height:2.8rem;width:auto;">
   </a>
   <ul>
-    <li><a href="https://dashboard.a-gent.co/">Dashboard</a></li>
-    <li><a href="https://dashboard.a-gent.co/#features">Features</a></li>
+    <li><a href="https://a-gent.co/">Home</a></li>
+    <li><a href="https://a-gent.co/#features">Features</a></li>
     <li><a href="assessment.html">Assessment</a></li>
   </ul>
 </nav>
@@ -208,8 +208,8 @@
     <div>
       <p class="your-email" id="userEmail">Results for: —</p>
       <div class="cta-stack">
-        <a href="https://dashboard.a-gent.co/?ref=assessment" class="btn btn-primary btn-large">Install A-Gent Free →</a>
-        <a href="https://dashboard.a-gent.co/?ref=assessment#features" class="btn btn-outline btn-large">See How It Works</a>
+        <a href="https://a-gent.co/?ref=assessment" class="btn btn-primary btn-large">Install A-Gent Free →</a>
+        <a href="https://a-gent.co/?ref=assessment#features" class="btn btn-outline btn-large">See How It Works</a>
       </div>
       <div class="share-section" style="margin-top: 2.5rem; background: transparent; padding: 0;">
         <p style="color: var(--text-gray); font-size: 0.9rem; margin-bottom: 0.5rem;">Access your detailed results + daily tracking:</p>
@@ -370,7 +370,7 @@
       const data = JSON.parse(saved);
       if (data.email === emailInput) {
         loginSuccess.style.display = 'block';
-        setTimeout(() => { window.location.href = `https://dashboard.a-gent.co/?ref=assessment&email=${encodeURIComponent(emailInput)}`; }, 800);
+        setTimeout(() => { window.location.href = `https://a-gent.co/?ref=assessment&email=${encodeURIComponent(emailInput)}`; }, 800);
         return;
       }
     }

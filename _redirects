@@ -1,0 +1,6 @@
+# Extension results dashboard
+/dashboard    /dashboard/index.html    200
+
+# Assessment flow
+/assessment    /assessment.html    200
+/assessment-results    /assessment-results.html    200

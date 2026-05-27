@@ -6,46 +6,65 @@
   <title>A-Gent — AI Sales Agent</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
-    :root {
-      --brand-primary: #111;
-      --brand-accent: #d44a9a;
-      --brand-accent-light: #f5d0e8;
-      --bg-light: #f7f7f7;
-      --text-dark: #1a1a1a;
-      --text-gray: #6b6b6b;
-      --white: #ffffff;
-    }
-    
     * { margin: 0; padding: 0; box-sizing: border-box; }
     
+    :root {
+      --bg: #0a0a0f;
+      --surface: #12121a;
+      --surface-light: #1a1a25;
+      --border: rgba(255,255,255,0.06);
+      --gold: #c9a227;
+      --gold-dim: rgba(201,162,39,0.12);
+      --text: #f0f0f5;
+      --text-dim: #888;
+      --accent: #8b5cf6;
+      --accent-dim: rgba(139,92,246,0.15);
+    }
+    
     body {
-      font-family: 'Inter', sans-serif;
-      color: var(--text-dark);
-      background: var(--white);
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg);
+      color: var(--text);
       line-height: 1.6;
+      min-height: 100vh;
     }
     
-    .logo-text {
-      font-family: 'Caveat', cursive;
-      font-size: 2rem;
-      font-weight: 700;
-      color: var(--brand-primary);
-    }
-    
-    .logo-text span {
-      color: var(--brand-accent);
-    }
-    
-    /* Navigation */
+    /* Nav */
     nav {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 1.5rem 5%;
-      max-width: 1400px;
+      padding: 1.25rem 5%;
+      max-width: 1200px;
       margin: 0 auto;
+      border-bottom: 1px solid var(--border);
+    }
+    
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      text-decoration: none;
+    }
+    
+    .brand-icon {
+      width: 36px;
+      height: 36px;
+      background: linear-gradient(135deg, var(--gold), #8b6914);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+    }
+    
+    .brand-name {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--text);
+      letter-spacing: 1px;
     }
     
     nav ul {
@@ -55,621 +74,401 @@
     }
     
     nav a {
+      color: var(--text-dim);
       text-decoration: none;
-      color: var(--text-dark);
+      font-size: 0.9rem;
       font-weight: 500;
-      font-size: 0.95rem;
+      transition: color 0.2s;
     }
     
-    nav a:hover { color: var(--brand-accent); }
+    nav a:hover { color: var(--gold); }
     
-    .btn {
-      padding: 0.75rem 1.5rem;
-      border-radius: 8px;
+    nav a.active { color: var(--gold); }
+    
+    .nav-cta {
+      background: linear-gradient(135deg, var(--gold), #8b6914);
+      color: #0a0a0f !important;
+      padding: 0.5rem 1.25rem;
+      border-radius: 6px;
       font-weight: 600;
-      cursor: pointer;
-      transition: all 0.2s;
-      border: none;
-      font-size: 0.95rem;
     }
     
-    .btn-primary {
-      background: var(--brand-accent);
-      color: white;
-    }
-    
-    .btn-primary:hover {
-      background: #c03d87;
-      transform: translateY(-1px);
-    }
-    
-    .btn-outline {
-      background: transparent;
-      border: 2px solid var(--brand-primary);
-      color: var(--brand-primary);
-    }
-    
-    .btn-outline:hover {
-      background: var(--brand-primary);
-      color: white;
-    }
+    .nav-cta:hover { opacity: 0.9; }
     
     /* Hero */
     .hero {
-      text-align: center;
+      max-width: 1200px;
+      margin: 0 auto;
       padding: 6rem 5% 4rem;
-      background: linear-gradient(135deg, #fafafa 0%, #f0f0f0 100%);
+      text-align: center;
+    }
+    
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--gold-dim);
+      border: 1px solid rgba(201,162,39,0.3);
+      color: var(--gold);
+      padding: 0.4rem 1rem;
+      border-radius: 99px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+    
+    .hero-badge span {
+      width: 6px;
+      height: 6px;
+      background: var(--gold);
+      border-radius: 50%;
+      animation: pulse 2s infinite;
+    }
+    
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.4; }
     }
     
     .hero h1 {
       font-size: 3.5rem;
       font-weight: 700;
-      margin-bottom: 1.5rem;
       line-height: 1.1;
+      margin-bottom: 1.5rem;
+      letter-spacing: -1px;
     }
     
-    .hero h1 .accent {
-      color: var(--brand-accent);
-      font-family: 'Caveat', cursive;
-      font-size: 4rem;
-    }
+    .hero h1 .gold { color: var(--gold); }
     
-    .hero p {
-      font-size: 1.25rem;
-      color: var(--text-gray);
+    .hero h1 .dim { color: var(--text-dim); font-weight: 400; }
+    
+    .hero-sub {
+      font-size: 1.15rem;
+      color: var(--text-dim);
       max-width: 600px;
       margin: 0 auto 2.5rem;
+      line-height: 1.7;
     }
     
-    .hero-buttons {
+    .hero-actions {
       display: flex;
       gap: 1rem;
       justify-content: center;
       flex-wrap: wrap;
     }
     
-    .hero-img {
-      max-width: 800px;
-      margin: 3rem auto 0;
-      border-radius: 16px;
-      box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+    .btn-primary {
+      background: linear-gradient(135deg, var(--gold), #8b6914);
+      color: #0a0a0f;
+      padding: 0.875rem 2rem;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 0.95rem;
+      text-decoration: none;
+      transition: all 0.2s;
+      border: none;
+      cursor: pointer;
     }
     
-    /* GTM Today */
-    .gtm-today {
-      padding: 5rem 5%;
-      background: var(--bg-light);
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 8px 30px rgba(201,162,39,0.3);
     }
     
-    .gtm-content {
-      max-width: 900px;
-      margin: 0 auto;
+    .btn-outline {
+      background: transparent;
+      border: 1px solid rgba(255,255,255,0.15);
+      color: var(--text);
+      padding: 0.875rem 2rem;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      text-decoration: none;
+      transition: all 0.2s;
+      cursor: pointer;
     }
     
-    .gtm-content h2 {
-      font-size: 2.5rem;
-      margin-bottom: 2rem;
-      text-align: center;
-    }
-    
-    .gtm-intro {
-      font-size: 1.2rem;
-      color: var(--text-dark);
-      margin-bottom: 1rem;
-      line-height: 1.8;
-    }
-    
-    .gtm-sub {
-      font-size: 1rem;
-      color: var(--text-gray);
-      margin-bottom: 2rem;
-      font-style: italic;
-    }
-    
-    .gtm-content h3 {
-      font-size: 1.5rem;
-      margin: 2.5rem 0 1rem;
-      color: var(--brand-accent);
-    }
-    
-    .gtm-opportunity {
-      font-size: 1.1rem;
-      color: var(--text-gray);
-      margin-bottom: 2rem;
-      line-height: 1.7;
-    }
-    
-    .opportunity-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1.5rem;
-      margin-top: 2rem;
-    }
-    
-    .opportunity-card {
-      background: white;
-      padding: 1.5rem;
-      border-radius: 12px;
-      border: 1px solid #eee;
-      transition: transform 0.2s, box-shadow 0.2s;
-    }
-    
-    .opportunity-card:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-    }
-    
-    .opp-icon {
-      font-size: 2rem;
-      margin-bottom: 0.75rem;
-    }
-    
-    .opportunity-card h4 {
-      font-size: 1.1rem;
-      margin-bottom: 0.5rem;
-      color: var(--brand-primary);
-    }
-    
-    .opportunity-card p {
-      font-size: 0.9rem;
-      color: var(--text-gray);
-      line-height: 1.6;
+    .btn-outline:hover {
+      background: rgba(255,255,255,0.05);
+      border-color: rgba(255,255,255,0.25);
     }
     
     /* Features */
     .features {
-      padding: 5rem 5%;
       max-width: 1200px;
       margin: 0 auto;
+      padding: 4rem 5%;
     }
     
-    .features h2 {
+    .section-label {
       text-align: center;
-      font-size: 2.5rem;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--gold);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 0.75rem;
+    }
+    
+    .section-title {
+      text-align: center;
+      font-size: 2rem;
+      font-weight: 700;
       margin-bottom: 3rem;
     }
     
     .features-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 2rem;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
     }
     
     .feature-card {
-      padding: 2rem;
-      border-radius: 16px;
-      background: var(--bg-light);
-      transition: transform 0.2s;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.75rem;
+      transition: all 0.2s;
     }
     
     .feature-card:hover {
-      transform: translateY(-4px);
+      border-color: rgba(201,162,39,0.3);
+      transform: translateY(-2px);
     }
     
     .feature-icon {
-      width: 60px;
-      height: 60px;
-      border-radius: 12px;
-      background: var(--brand-accent-light);
+      width: 48px;
+      height: 48px;
+      background: var(--gold-dim);
+      border-radius: 10px;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 1.5rem;
-      margin-bottom: 1.5rem;
+      font-size: 1.4rem;
+      margin-bottom: 1.25rem;
     }
     
     .feature-card h3 {
-      font-size: 1.25rem;
-      margin-bottom: 0.75rem;
+      font-size: 1.05rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
     }
     
     .feature-card p {
-      color: var(--text-gray);
-      font-size: 0.95rem;
+      font-size: 0.875rem;
+      color: var(--text-dim);
+      line-height: 1.6;
     }
     
     /* How it works */
-    .how-it-works {
+    .how {
+      max-width: 900px;
+      margin: 0 auto;
       padding: 5rem 5%;
-      background: var(--brand-primary);
-      color: white;
-    }
-    
-    .how-it-works h2 {
       text-align: center;
-      font-size: 2.5rem;
-      margin-bottom: 3rem;
     }
     
     .steps {
       display: flex;
+      gap: 2rem;
+      margin-top: 3rem;
       justify-content: center;
-      gap: 3rem;
-      flex-wrap: wrap;
-      max-width: 1000px;
-      margin: 0 auto;
     }
     
     .step {
-      text-align: center;
+      flex: 1;
       max-width: 250px;
     }
     
     .step-num {
-      width: 50px;
-      height: 50px;
+      width: 40px;
+      height: 40px;
+      background: var(--gold-dim);
+      border: 1px solid rgba(201,162,39,0.3);
       border-radius: 50%;
-      background: var(--brand-accent);
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 1.5rem;
       font-weight: 700;
+      color: var(--gold);
       margin: 0 auto 1rem;
     }
     
-    .step h3 {
+    .step h4 {
+      font-size: 1rem;
       margin-bottom: 0.5rem;
     }
     
     .step p {
-      color: #aaa;
-      font-size: 0.9rem;
-    }
-    
-    /* Pricing */
-    .pricing {
-      padding: 5rem 5%;
-      max-width: 900px;
-      margin: 0 auto;
-    }
-    
-    .pricing h2 {
-      text-align: center;
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-    }
-    
-    .pricing-subtitle {
-      text-align: center;
-      color: var(--text-gray);
-      margin-bottom: 3rem;
-    }
-    
-    .pricing-card {
-      border: 2px solid var(--brand-primary);
-      border-radius: 20px;
-      padding: 2.5rem;
-      text-align: center;
-      flex: 1;
-    }
-    
-    .pricing-grid {
-      display: flex;
-      gap: 2rem;
-      max-width: 900px;
-      margin: 0 auto;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-    
-    .pricing-desc {
-      color: var(--text-gray);
-      font-size: 0.9rem;
-      margin: 0.5rem 0 1.5rem;
-    }
-    
-    .pricing-card .btn {
-      margin-top: 1.5rem;
-      width: 100%;
-    }
-    
-    .pricing-card.accent {
-      border-color: var(--brand-primary);
-      background: var(--brand-primary);
-      color: white;
-    }
-    
-    .pricing-card.accent .features-list li::before {
-      color: white;
-    }
-    
-    .pricing-card.accent .badge {
-      background: white;
-      color: var(--brand-primary);
-    }
-    
-    .pricing-card.accent .btn-primary {
-      background: white;
-      color: var(--brand-primary);
-    }
-    
-    .pricing-card.accent .btn-primary:hover {
-      background: #f0f0f0;
-    }
-    
-    .pricing-card.popular {
-      border-color: var(--brand-accent);
-      position: relative;
-    }
-    
-    .badge {
-      position: absolute;
-      top: -15px;
-      left: 50%;
-      transform: translateX(-50%);
-      background: var(--brand-accent);
-      color: white;
-      padding: 0.5rem 1.5rem;
-      border-radius: 20px;
       font-size: 0.85rem;
-      font-weight: 600;
-    }
-    
-    .price {
-      font-size: 3rem;
-      font-weight: 700;
-      margin: 1.5rem 0;
-    }
-    
-    .price span {
-      font-size: 1rem;
-      color: var(--text-gray);
-      font-weight: 400;
-    }
-    
-    .features-list {
-      list-style: none;
-      text-align: left;
-      margin: 2rem 0;
-    }
-    
-    .features-list li {
-      padding: 0.75rem 0;
-      border-bottom: 1px solid #eee;
-    }
-    
-    .features-list li::before {
-      content: "✓";
-      color: var(--brand-accent);
-      margin-right: 0.75rem;
-      font-weight: 600;
+      color: var(--text-dim);
     }
     
     /* CTA */
-    .cta {
-      text-align: center;
+    .cta-section {
+      max-width: 800px;
+      margin: 0 auto;
       padding: 5rem 5%;
-      background: var(--brand-accent-light);
+      text-align: center;
     }
     
-    .cta h2 {
-      font-size: 2.5rem;
+    .cta-card {
+      background: linear-gradient(135deg, rgba(201,162,39,0.1), rgba(139,92,246,0.05));
+      border: 1px solid rgba(201,162,39,0.2);
+      border-radius: 16px;
+      padding: 4rem 2rem;
+    }
+    
+    .cta-card h2 {
+      font-size: 2rem;
       margin-bottom: 1rem;
     }
     
-    .cta p {
-      color: var(--text-gray);
+    .cta-card p {
+      color: var(--text-dim);
       margin-bottom: 2rem;
     }
     
     /* Footer */
     footer {
+      border-top: 1px solid var(--border);
       padding: 2rem 5%;
       text-align: center;
-      border-top: 1px solid #eee;
+      color: var(--text-dim);
+      font-size: 0.85rem;
     }
     
-    footer p {
-      color: var(--text-gray);
-      font-size: 0.9rem;
-    }
-    
-    /* Telegram Button */
-    .telegram-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      background: #0088cc;
-      color: white;
-      padding: 1rem 2rem;
-      border-radius: 50px;
+    footer a {
+      color: var(--text-dim);
       text-decoration: none;
-      font-weight: 600;
-      font-size: 1.1rem;
-      transition: transform 0.2s;
     }
     
-    .telegram-btn:hover {
-      transform: scale(1.05);
-    }
+    footer a:hover { color: var(--gold); }
     
-    .telegram-btn svg {
-      width: 24px;
-      height: 24px;
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 2.25rem; }
+      .features-grid { grid-template-columns: 1fr; }
+      .steps { flex-direction: column; align-items: center; }
+      nav ul { display: none; }
     }
   </style>
 </head>
 <body>
-
-<!-- Navigation -->
-<nav>
-  <a href="/"><img src="icons/logo.jpg" alt="A-Gent" height="40"></a>
-  <ul>
-    <li><a href="assessment.html">AI Assessment</a></li>
-    <li><a href="https://dashboard.a-gent.co/dashboard">Dashboard</a></li>
-    <li><a href="#gtm-today">What's Changing</a></li>
-    <li><a href="#how">How it Works</a></li>
-    <li><a href="#pricing">Pricing</a></li>
-  </ul>
-  <a href="https://t.me/OpenClawSalesBot" class="btn btn-primary">Talk to Agent</a>
-</nav>
-
-<!-- Hero -->
-<section class="hero">
-  <h1>Your AI Sales Agent.<br><span class="accent">Work smarter. Close more.</span></h1>
-  <p>A-Gent is an autonomous AI agent that handles your sales research, prospecting, and follow-up — built from your workflow patterns and always learning.</p>
-  <div class="hero-buttons">
-    <a href="https://t.me/OpenClawSalesBot" class="btn btn-primary">Chat with Agent</a>
-    <a href="#gtm-today" class="btn btn-outline">See What's Changing</a>
-  </div>
-</section>
-
-<!-- GTM Today -->
-<section class="gtm-today" id="gtm-today">
-  <div class="gtm-content">
-    <h2>What's Going on in GTM Today?</h2>
-    <p class="gtm-intro">AI is for sure going to be a force multiplier and also a disruptor in GTM. Revenue Leaders know AI needs to be embraced — but how do you do that while still operating? Which AI bets do you place?</p>
-    <p class="gtm-sub">Some AI tools are not ready for primetime and will introduce more risk than you can afford. Sound familiar?</p>
-    
-    <h3>The Opportunity is Massive</h3>
-    <p class="gtm-opportunity">When the tech matures, there will be huge opportunities to change everything — Unit Economics, Growth Drivers, PipeGen, Sales Process, Sales Execution, Headcount Drivers.</p>
-    
-    <div class="opportunity-grid">
-      <div class="opportunity-card">
-        <div class="opp-icon">🚀</div>
-        <h4>Super ICs</h4>
-        <p>2-3x quotas with a smaller team by leveraging AI as your force multiplier.</p>
-      </div>
-      <div class="opportunity-card">
-        <div class="opp-icon">🛒</div>
-        <h4>Rep-less Journeys</h4>
-        <p>Can customers experience your technology without speaking to a rep?</p>
-      </div>
-      <div class="opportunity-card">
-        <div class="opp-icon">⚡</div>
-        <h4>Hyper Execution</h4>
-        <p>In-call battlecards and real-time sales playbooks that nudge reps to win.</p>
-      </div>
-      <div class="opportunity-card">
-        <div class="opp-icon">🎯</div>
-        <h4>Hyper Target</h4>
-        <p>Leapfrog intent data and build propensity models from all historical wins.</p>
-      </div>
-      <div class="opportunity-card">
-        <div class="opp-icon">🔗</div>
-        <h4>Connected Flows</h4>
-        <p>Connect the sales process to downstream teams for seamless handoffs.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Features -->
-<section class="features" id="features">
-  <h2>What the Agent Does</h2>
-  <div class="features-grid">
-    <div class="feature-card">
-      <div class="feature-icon">🔍</div>
-      <h3>Account Research</h3>
-      <p>Automatically gathers company info, key contacts, tech stack, funding events, and organizational changes from across the web.</p>
-    </div>
-    <div class="feature-card">
-      <div class="feature-icon">📧</div>
-      <h3>AI SDR Outreach</h3>
-      <p>Personalized email campaigns at scale. Finds decision-makers, crafts compelling messages, and sends from your domain.</p>
-    </div>
-    <div class="feature-card">
-      <div class="feature-icon">📡</div>
-      <h3>Signal Detection</h3>
-      <p>Monitors your accounts for intent signals — funding rounds, new hires, executive changes, expansion news — and triggers action.</p>
-    </div>
-    <div class="feature-card">
-      <div class="feature-icon">🔄</div>
-      <h3>CRM Sync</h3>
-      <p>Writes research, contacts, and activity directly to your HubSpot or Salesforce. One source of truth, always up to date.</p>
-    </div>
-  </div>
-</section>
-
-<!-- How it Works -->
-<section class="how-it-works" id="how">
-  <h2>How it Works</h2>
-  <div class="steps">
-    <div class="step">
-      <div class="step-num">1</div>
-      <h3>A-Gent Maps Your Workflow</h3>
-      <p>We install A-Gent to learn how your team works</p>
-    </div>
-    <div class="step">
-      <div class="step-num">2</div>
-      <h3>We Build Your Agent</h3>
-      <p>Custom AI agent trained on your specific process</p>
-    </div>
-    <div class="step">
-      <div class="step-num">3</div>
-      <h3>We Host & Manage</h3>
-      <p>Full hosting, monitoring, and optimization included</p>
-    </div>
-  </div>
-</section>
-
-<!-- Pricing -->
-<section class="pricing" id="pricing">
-  <h2>AI GTM Services</h2>
-  <p class="pricing-subtitle">Two paths to AI-powered revenue execution</p>
   
-  <div class="pricing-grid">
-    <div class="pricing-card">
-      <span class="badge">Most Popular</span>
-      <h3>AI FOUNDATION</h3>
-      <div class="price">$12,500<span>/month</span></div>
-      <p class="pricing-desc">Start your AI journey with a solid base.</p>
-      <ul class="features-list">
-        <li>Initial workflow evaluation via A-Gent</li>
-        <li>Up to 2 managed GTM Agents</li>
-        <li>Weekly reporting</li>
-        <li>Scaling opportunities identified</li>
-      </ul>
-      <a href="https://t.me/OpenClawSalesBot" class="btn btn-primary">Get Started</a>
+  <!-- Navigation -->
+  <nav>
+    <a href="/" class="brand">
+      <div class="brand-icon">🎩</div>
+      <span class="brand-name">A-Gent</span>
+    </a>
+    <ul>
+      <li><a href="assessment.html">AI Assessment</a></li>
+      <li><a href="/dashboard">Dashboard</a></li>
+      <li><a href="#features">Features</a></li>
+      <li><a href="https://t.me/OpenClawSalesBot" class="nav-cta">Talk to Agent</a></li>
+    </ul>
+  </nav>
+  
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-badge">
+      <span></span>
+      AI-Powered Sales Intelligence
     </div>
+    <h1>
+      Your AI Sales Agent.<br>
+      <span class="gold">Always Working.</span><br>
+      <span class="dim">Never Sleeping.</span>
+    </h1>
+    <p class="hero-sub">
+      A-Gent is an autonomous AI agent that handles your sales research, prospecting, 
+      and follow-up — learning your workflow and executing while you focus on closing.
+    </p>
+    <div class="hero-actions">
+      <a href="https://t.me/OpenClawSalesBot" class="btn-primary">Chat with Agent →</a>
+      <a href="assessment.html" class="btn-outline">Take AI Assessment</a>
+    </div>
+  </section>
+  
+  <!-- Features -->
+  <section class="features" id="features">
+    <div class="section-label">What A-Gent Does</div>
+    <h2 class="section-title">Everything a Great SDR Does,<br>Automated.</h2>
     
-    <div class="pricing-card popular">
-      <span class="badge">Full Service</span>
-      <h3>AI ACCELERATE</h3>
-      <div class="price">$18,000<span>/month</span></div>
-      <p class="pricing-desc">Established teams ready to lead.</p>
-      <ul class="features-list">
-        <li>Full AI readiness reports</li>
-        <li>Revised headcount + process plans</li>
-        <li>3 managed GTM Agents</li>
-        <li>Ongoing optimization</li>
-      </ul>
-      <a href="https://t.me/OpenClawSalesBot" class="btn btn-primary">Get Started</a>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">🔍</div>
+        <h3>Account Research</h3>
+        <p>Deep research on any company — funding, news, tech stack, hiring patterns — synthesized into actionable intel.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">📧</div>
+        <h3>Email Drafting</h3>
+        <p>Personalized outbound sequences based on real triggers, not templates. Each email feels hand-crafted.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🤖</div>
+        <h3>Workflow Automation</h3>
+        <p>Connect to your CRM, email, and calendar. A-Gent handles data entry and follow-ups automatically.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">📊</div>
+        <h3>Activity Insights</h3>
+        <p>Track how your team actually spends time. Identify bottlenecks and optimize with AI-driven recommendations.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🎯</div>
+        <h3>Prospect Identification</h3>
+        <p>AI finds your ideal-fit accounts and contacts based on your best customers, not demographic stereotypes.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">⚡</div>
+        <h3>Instant Execution</h3>
+        <p>Tell A-Gent what to do. It figures out how, executes, and reports back with results.</p>
+      </div>
     </div>
+  </section>
+  
+  <!-- How it works -->
+  <section class="how">
+    <div class="section-label">How It Works</div>
+    <h2 class="section-title">Up and Running in Minutes</h2>
     
-    <div class="pricing-card accent">
-      <h3>AI SCALE</h3>
-      <div class="price">$35,000<span>/month</span></div>
-      <p class="pricing-desc">Fractional AIOps — 1 day/week on-site.</p>
-      <ul class="features-list">
-        <li>5 managed GTM Agents</li>
-        <li>A-Gent platform access</li>
-        <li>Full AI Foundation plan</li>
-        <li>Weekly executive meetings</li>
-        <li>Optional board support</li>
-      </ul>
-      <a href="https://t.me/OpenClawSalesBot" class="btn btn-primary">Get Started</a>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <h4>Install Extension</h4>
+        <p>Add A-Gent to Chrome. It starts learning your workflow immediately.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <h4>Connect Tools</h4>
+        <p>Link your email, calendar, and CRM. A-Gent maps your existing process.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <h4>AI Takes Over</h4>
+        <p>Research, drafting, follow-ups — handled automatically around the clock.</p>
+      </div>
     </div>
-  </div>
-</section>
-
-<!-- CTA -->
-<section class="cta">
-  <h2>Ready to Build Your Agent?</h2>
-  <p>Tell us about your sales process — we'll show you what's possible</p>
-  <a href="https://t.me/OpenClawSalesBot" class="telegram-btn">
-    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
-    Chat on Telegram
-  </a>
-  <p style="margin-top: 1rem; font-size: 0.85rem; color: #888;">Or email hello@a-gent.co</p>
-</section>
-
-<!-- Footer -->
-<footer>
-  <img src="icons/logo.jpg" alt="A-Gent" style="margin-bottom: 1rem; height:40px;">
-  <p>AI-powered sales automation for modern revenue teams</p>
-</footer>
-
+  </section>
+  
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="cta-card">
+      <h2>Ready to Scale Your Pipeline?</h2>
+      <p>Start with a free AI assessment of your current sales process.<br>See exactly where A-Gent can reclaim hours every day.</p>
+      <a href="assessment.html" class="btn-primary">Take Free Assessment →</a>
+    </div>
+  </section>
+  
+  <!-- Footer -->
+  <footer>
+    <p>© 2026 A-Gent — <a href="https://t.me/OpenClawSalesBot">Talk to Agent</a> · <a href="/dashboard">Dashboard</a></p>
+  </footer>
+  
 </body>
 </html>
