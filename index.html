@@ -405,19 +405,37 @@
   </footer>
 
   <script>
-    function handleLeadSubmit(e) {
+    const API_BASE = window.location.hostname === 'localhost' 
+      ? 'http://localhost:3000' 
+      : 'https://a-gent-provisioner.onrender.com';
+
+    async function handleLeadSubmit(e) {
       e.preventDefault();
       const btn = document.getElementById('submitBtn');
       const email = e.target.querySelector('input[type="email"]').value;
       const role = e.target.querySelectorAll('.form-select')[0].value;
+      const company = e.target.querySelectorAll('.form-select')[1].value;
       btn.innerHTML = '<span>Sending...</span>';
-      setTimeout(() => {
-        btn.innerHTML = '<span>✓ Sent! Check your email.</span>';
-        btn.style.background = 'linear-gradient(135deg, #22c55e, #16a34a)';
+      try {
+        const resp = await fetch(API_BASE + '/api/signup', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ name: email.split('@')[0], email, company, utm: 'direct' }),
+        });
+        const result = await resp.json();
+        if (!resp.ok) throw new Error(result.error || 'Failed');
         setTimeout(() => {
-          window.open('https://t.me/OpenClawSalesBot?text=Hi%20-%20I%20just%20signed%20up%20for%20a%20free%20AI%20assessment.%20My%20email%20is%20' + encodeURIComponent(email) + '%20and%20I%27m%20a%20' + encodeURIComponent(role) + '.%20Can%20we%20schedule%20a%20quick%20call%3F', '_blank');
-        }, 900);
-      }, 1200);
+          btn.innerHTML = '<span>✓ Sent! Check your email.</span>';
+          btn.style.background = 'linear-gradient(135deg, #22c55e, #16a34a)';
+        }, 800);
+      } catch (err) {
+        btn.innerHTML = '<span>Error — try again</span>';
+        btn.style.background = 'linear-gradient(135deg, #ef4444, #dc2626)';
+        setTimeout(() => {
+          btn.innerHTML = '<span>Send</span>';
+          btn.style.background = '';
+        }, 2000);
+      }
     }
 
     // Scroll animations
