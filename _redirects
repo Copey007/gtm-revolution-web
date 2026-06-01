@@ -1,2 +1,5 @@
 # Redirect /dashboard to the dashboard subdomain
 /dashboard    https://dashboard.a-gent.co/    301
+
+# Signup page
+/signup    /signup.html    200

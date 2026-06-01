@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>A-Gent Dashboard | AI Workstamp</title>
+  <title>A-Gent Dashboard</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -20,10 +20,7 @@
       --text-dim: #888;
       --green: #22c55e;
       --blue: #3b82f6;
-      --purple: #8b5cf6;
-      --cyan: #06b6d4;
-      --amber: #f59e0b;
-      --pink: #ec4899;
+      --red: #ef4444;
     }
     
     body {
@@ -106,12 +103,13 @@
       display: inline-flex;
       align-items: center;
       gap: 0.4rem;
+      border: none;
+      font-family: inherit;
     }
     
     .btn-primary {
       background: var(--gold);
       color: var(--bg);
-      border: none;
     }
     
     .btn-primary:hover {
@@ -123,6 +121,11 @@
       background: transparent;
       border: 1px solid var(--gold);
       color: var(--gold);
+    }
+    
+    .btn-danger {
+      background: var(--red);
+      color: white;
     }
     
     /* Hero Stats */
@@ -138,6 +141,7 @@
       border: 1px solid var(--border);
       border-radius: 12px;
       padding: 1.25rem;
+      text-align: center;
     }
     
     .stat-label {
@@ -160,13 +164,47 @@
       margin-top: 0.25rem;
     }
     
-    /* Grid Layout */
-    .dashboard-grid {
-      display: grid;
-      grid-template-columns: 2fr 1fr;
-      gap: 1.5rem;
+    /* Tabs */
+    .tabs {
+      display: flex;
+      gap: 0.5rem;
+      margin-bottom: 1.5rem;
     }
     
+    .tab {
+      padding: 0.625rem 1.25rem;
+      background: transparent;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      color: var(--text-dim);
+      font-size: 0.8rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+      font-family: inherit;
+    }
+    
+    .tab.active {
+      background: var(--gold-dim);
+      border-color: var(--gold);
+      color: var(--gold);
+    }
+    
+    .tab:hover:not(.active) {
+      border-color: rgba(255,255,255,0.2);
+      color: var(--text);
+    }
+    
+    /* Tab Panels */
+    .tab-panel {
+      display: none;
+    }
+    
+    .tab-panel.active {
+      display: block;
+    }
+    
+    /* Cards */
     .card {
       background: var(--surface);
       border: 1px solid var(--border);
@@ -175,292 +213,259 @@
       margin-bottom: 1.5rem;
     }
     
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+    
     .card-title {
       font-size: 0.7rem;
       font-weight: 600;
       color: var(--text-dim);
       text-transform: uppercase;
       letter-spacing: 1px;
-      margin-bottom: 1rem;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
     }
     
-    /* AI Insights */
-    .insight-card {
-      background: var(--gold-dim);
-      border-radius: 10px;
-      padding: 1rem;
-      margin-bottom: 0.75rem;
-      display: flex;
-      gap: 0.75rem;
-      align-items: flex-start;
-      border-left: 3px solid var(--gold);
-    }
-    
-    .insight-icon {
-      font-size: 1.25rem;
-    }
-    
-    .insight-content {
-      flex: 1;
-    }
-    
-    .insight-text {
-      font-size: 0.8rem;
-      color: var(--text);
-      line-height: 1.4;
-    }
-    
-    .insight-type {
-      font-size: 0.6rem;
+    .card-action {
+      font-size: 0.75rem;
       color: var(--gold);
-      margin-top: 0.4rem;
+      cursor: pointer;
+      background: none;
+      border: none;
+      font-family: inherit;
+      font-weight: 600;
+    }
+    
+    .card-action:hover {
+      text-decoration: underline;
+    }
+    
+    /* Table */
+    .table-wrapper {
+      overflow-x: auto;
+    }
+    
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    
+    th, td {
+      text-align: left;
+      padding: 0.75rem 1rem;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.8rem;
+    }
+    
+    th {
+      color: var(--text-dim);
+      font-weight: 600;
       text-transform: uppercase;
+      font-size: 0.65rem;
       letter-spacing: 0.5px;
     }
     
-    /* Category Chart */
-    .category-bar {
-      margin-bottom: 0.875rem;
+    tr:last-child td {
+      border-bottom: none;
     }
     
-    .category-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 0.35rem;
+    tr:hover td {
+      background: rgba(255,255,255,0.02);
     }
     
-    .category-name {
-      font-size: 0.8rem;
-      color: var(--text);
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-    
-    .category-dot {
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-    }
-    
-    .category-time {
-      font-size: 0.75rem;
-      color: var(--text-dim);
-    }
-    
-    .bar-bg {
-      height: 6px;
-      background: rgba(255,255,255,0.08);
-      border-radius: 3px;
-      overflow: hidden;
-    }
-    
-    .bar-fill {
-      height: 100%;
-      border-radius: 3px;
-      transition: width 0.5s ease;
-    }
-    
-    /* Sequence Flow */
-    .sequence-flow {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      padding: 0.75rem;
-      background: rgba(255,255,255,0.03);
-      border-radius: 8px;
-      margin-bottom: 0.5rem;
-      font-size: 0.8rem;
-    }
-    
-    .sequence-step {
-      background: var(--surface);
-      padding: 0.35rem 0.75rem;
+    .status-badge {
+      display: inline-block;
+      padding: 0.2rem 0.5rem;
       border-radius: 4px;
-      color: var(--text);
-    }
-    
-    .sequence-arrow {
-      color: var(--gold);
-      font-size: 0.7rem;
-    }
-    
-    .sequence-count {
-      margin-left: auto;
       font-size: 0.65rem;
-      color: var(--text-dim);
+      font-weight: 600;
+      text-transform: uppercase;
     }
     
-    /* Upsell Section */
-    .upsell-section {
-      background: linear-gradient(135deg, rgba(201,162,39,0.12), rgba(139,105,20,0.08));
-      border: 1px solid rgba(201,162,39,0.25);
-      border-radius: 12px;
-      padding: 1.5rem;
-      margin-bottom: 1.5rem;
-    }
+    .status-new { background: rgba(59,130,246,0.2); color: var(--blue); }
+    .status-contacted { background: rgba(245,158,11,0.2); color: #f59e0b; }
+    .status-qualified { background: rgba(34,197,94,0.2); color: var(--green); }
+    .status-proposal { background: rgba(139,92,246,0.2); color: #8b5cf6; }
+    .status-won { background: rgba(34,197,94,0.3); color: var(--green); }
+    .status-lost { background: rgba(239,68,68,0.2); color: var(--red); }
     
-    .upsell-header {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      margin-bottom: 1rem;
-    }
-    
-    .upsell-icon {
-      font-size: 1.5rem;
-    }
-    
-    .upsell-title {
-      font-size: 1rem;
+    .deal-value {
       font-weight: 700;
       color: var(--gold);
     }
     
-    .upsell-subtitle {
+    .action-cell {
+      display: flex;
+      gap: 0.5rem;
+    }
+    
+    .btn-small {
+      padding: 0.3rem 0.6rem;
       font-size: 0.7rem;
+      border-radius: 4px;
+      border: none;
+      cursor: pointer;
+      font-family: inherit;
+      font-weight: 600;
+    }
+    
+    .btn-edit {
+      background: rgba(255,255,255,0.1);
       color: var(--text-dim);
     }
     
-    .upsell-benefits {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 0.75rem;
+    .btn-delete {
+      background: rgba(239,68,68,0.15);
+      color: var(--red);
+    }
+    
+    /* Modal */
+    .modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0,0,0,0.7);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+      display: none;
+    }
+    
+    .modal-overlay.show {
+      display: flex;
+    }
+    
+    .modal {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 2rem;
+      width: 100%;
+      max-width: 500px;
+    }
+    
+    .modal-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+    }
+    
+    .form-group {
       margin-bottom: 1rem;
     }
     
-    .benefit-item {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      font-size: 0.8rem;
-      color: var(--text);
-    }
-    
-    .benefit-icon { color: var(--green); }
-    
-    .upsell-cta {
-      display: flex;
-      gap: 0.75rem;
-      align-items: center;
-    }
-    
-    .upsell-note {
+    .form-group label {
+      display: block;
       font-size: 0.7rem;
+      font-weight: 600;
       color: var(--text-dim);
-      margin-left: auto;
+      margin-bottom: 0.4rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
     }
     
-    /* Benchmark Comparison */
-    .benchmark-row {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 0.75rem 0;
-      border-bottom: 1px solid var(--border);
-    }
-    
-    .benchmark-row:last-child { border-bottom: none; }
-    
-    .benchmark-label {
-      font-size: 0.8rem;
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 0.7rem 0.875rem;
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 6px;
+      background: var(--bg);
       color: var(--text);
+      font-size: 0.85rem;
+      font-family: inherit;
+      outline: none;
     }
     
-    .benchmark-values {
-      display: flex;
-      align-items: center;
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: var(--gold);
+    }
+    
+    .form-group textarea {
+      resize: vertical;
+      min-height: 80px;
+    }
+    
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
       gap: 1rem;
     }
     
-    .benchmark-you {
-      font-size: 0.75rem;
-      color: var(--text-dim);
+    .modal-actions {
+      display: flex;
+      gap: 0.75rem;
+      justify-content: flex-end;
+      margin-top: 1.5rem;
     }
     
-    .benchmark-you span {
+    .btn-cancel {
+      padding: 0.6rem 1.25rem;
+      background: transparent;
+      border: 1px solid var(--border);
+      color: var(--text-dim);
+      border-radius: 6px;
+      font-size: 0.8rem;
       font-weight: 600;
-      color: var(--text);
+      cursor: pointer;
+      font-family: inherit;
     }
     
-    .benchmark-avg {
-      font-size: 0.65rem;
-      color: var(--text-dim);
-      background: var(--surface);
-      padding: 0.2rem 0.5rem;
-      border-radius: 4px;
+    .btn-save {
+      padding: 0.6rem 1.25rem;
+      background: var(--gold);
+      border: none;
+      color: var(--bg);
+      border-radius: 6px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      cursor: pointer;
+      font-family: inherit;
     }
-    
-    .benchmark-indicator {
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-    }
-    
-    .indicator-up { background: var(--green); }
-    .indicator-down { background: #ef4444; }
-    .indicator-neutral { background: var(--amber); }
     
     /* Empty State */
     .empty-state {
       text-align: center;
-      padding: 2rem;
+      padding: 2.5rem;
       color: var(--text-dim);
-      font-size: 0.85rem;
     }
     
     .empty-icon {
-      font-size: 2rem;
-      margin-bottom: 0.75rem;
-      opacity: 0.5;
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      opacity: 0.4;
     }
     
-    /* Demo Mode Banner */
-    .demo-banner {
-      background: linear-gradient(135deg, rgba(99,102,241,0.15), rgba(99,102,241,0.08));
-      border: 1px solid rgba(99,102,241,0.3);
-      border-radius: 10px;
-      padding: 1rem 1.25rem;
-      margin-bottom: 1.5rem;
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-    }
-    
-    .demo-icon { font-size: 1.25rem; }
-    
-    .demo-text {
-      flex: 1;
-    }
-    
-    .demo-title {
-      font-size: 0.8rem;
+    .empty-title {
+      font-size: 1rem;
       font-weight: 600;
+      margin-bottom: 0.5rem;
       color: var(--text);
     }
     
-    .demo-sub {
-      font-size: 0.7rem;
+    .empty-text {
+      font-size: 0.8rem;
+      margin-bottom: 1.25rem;
+    }
+    
+    /* Loading */
+    .loading {
+      text-align: center;
+      padding: 2rem;
       color: var(--text-dim);
     }
     
-    .demo-actions {
-      display: flex;
-      gap: 0.5rem;
-    }
-    
-    @media (max-width: 900px) {
-      .dashboard-grid { grid-template-columns: 1fr; }
+    @media (max-width: 768px) {
       .hero-stats { grid-template-columns: 1fr 1fr; }
-    }
-    
-    @media (max-width: 600px) {
-      .hero-stats { grid-template-columns: 1fr; }
-      .upsell-benefits { grid-template-columns: 1fr; }
+      .form-row { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -468,246 +473,483 @@
   <div class="container">
     <header>
       <div class="brand">
-        <div class="brand-icon"><img src="icons/logo.png" width="40" height="40" alt="A-Gent" style="border-radius:50%;object-fit:contain;"></div>
+        <div class="brand-icon">🤖</div>
         <div>
           <div class="brand-name">A-Gent</div>
           <div class="brand-tagline">AI Workstamp</div>
         </div>
       </div>
       <div class="header-actions">
-        <span class="email-badge" id="userEmail">demo@agent.dev</span>
-        <button class="btn btn-outline" onclick="installExtension()">Install Extension</button>
-        <button class="btn btn-primary" onclick="startTrial()">Start Free Trial</button>
+        <span class="email-badge" id="userEmail">Loading...</span>
+        <button class="btn btn-outline" id="logoutBtn">Sign Out</button>
       </div>
     </header>
-    
-    <!-- Demo Banner -->
-    <div class="demo-banner">
-      <span class="demo-icon">📊</span>
-      <div class="demo-text">
-        <div class="demo-title">Demo Mode — Sample Data Shown</div>
-        <div class="demo-sub">Install the A-Gent extension to see your real activity data</div>
-      </div>
-      <div class="demo-actions">
-        <button class="btn btn-primary" onclick="installExtension()">Get Extension</button>
-      </div>
-    </div>
     
     <!-- Hero Stats -->
     <div class="hero-stats">
       <div class="stat-card">
-        <div class="stat-label">Hours Tracked Today</div>
-        <div class="stat-value" id="statHours">5.2</div>
-        <div class="stat-sub">vs 4.1 avg for sales</div>
+        <div class="stat-label">Total Contacts</div>
+        <div class="stat-value" id="statContacts">—</div>
+        <div class="stat-sub">in your CRM</div>
       </div>
       <div class="stat-card">
-        <div class="stat-label">Sessions</div>
-        <div class="stat-value" id="statSessions">47</div>
-        <div class="stat-sub">visits today</div>
+        <div class="stat-label">New Leads</div>
+        <div class="stat-value" id="statNew">—</div>
+        <div class="stat-sub">awaiting follow-up</div>
       </div>
       <div class="stat-card">
-        <div class="stat-label">Top Focus</div>
-        <div class="stat-value" id="statFocus">Research</div>
-        <div class="stat-sub">42% of time</div>
+        <div class="stat-label">Active Deals</div>
+        <div class="stat-value" id="statDeals">—</div>
+        <div class="stat-sub">in pipeline</div>
       </div>
       <div class="stat-card">
-        <div class="stat-label">AI Score</div>
-        <div class="stat-value" id="statScore">87</div>
-        <div class="stat-sub">top performer</div>
+        <div class="stat-label">Pipeline Value</div>
+        <div class="stat-value" id="statValue">—</div>
+        <div class="stat-sub">total deal value</div>
       </div>
     </div>
     
-    <!-- Main Grid -->
-    <div class="dashboard-grid">
-      <!-- Left Column -->
-      <div class="left-col">
-        
-        <!-- AI Insights Card -->
-        <div class="card">
-          <div class="card-title">🎯 AI Insights</div>
-          <div id="insightsList">
-            <div class="insight-card">
-              <span class="insight-icon">⚡</span>
-              <div class="insight-content">
-                <div class="insight-text">You spend 2.1h/day on prospecting vs top performers who spend 45min and close 23% more. Consider using AI to automate research.</div>
-                <div class="insight-type">Opportunity Area</div>
-              </div>
-            </div>
-            <div class="insight-card">
-              <span class="insight-icon">🔄</span>
-              <div class="insight-content">
-                <div class="insight-text">Your most common workflow: Email → Research → CRM Entry. Top reps reverse this — they research first.</div>
-                <div class="insight-type">Pattern Detected</div>
-              </div>
-            </div>
-            <div class="insight-card">
-              <span class="insight-icon">💡</span>
-              <div class="insight-content">
-                <div class="insight-text">High CRM time (1.4h) suggests manual data entry. Our managed agent can handle CRM updates automatically.</div>
-                <div class="insight-type">Agent Opportunity</div>
-              </div>
-            </div>
-          </div>
+    <!-- Tabs -->
+    <div class="tabs">
+      <button class="tab active" data-tab="contacts">Contacts</button>
+      <button class="tab" data-tab="deals">Deals</button>
+    </div>
+    
+    <!-- Contacts Panel -->
+    <div class="tab-panel active" id="contacts-panel">
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title">All Contacts</div>
+          <button class="card-action" id="addContactBtn">+ Add Contact</button>
         </div>
-        
-        <!-- Time Breakdown -->
-        <div class="card">
-          <div class="card-title">⏱️ Time Breakdown</div>
-          <div id="categoryChart">
-            <div class="category-bar">
-              <div class="category-header">
-                <span class="category-name"><span class="category-dot" style="background:#f59e0b"></span>Research</span>
-                <span class="category-time">2.1h (42%)</span>
-              </div>
-              <div class="bar-bg"><div class="bar-fill" style="width:42%;background:#f59e0b"></div></div>
-            </div>
-            <div class="category-bar">
-              <div class="category-header">
-                <span class="category-name"><span class="category-dot" style="background:#8b5cf6"></span>CRM Entry</span>
-                <span class="category-time">1.4h (28%)</span>
-              </div>
-              <div class="bar-bg"><div class="bar-fill" style="width:28%;background:#8b5cf6"></div></div>
-            </div>
-            <div class="category-bar">
-              <div class="category-header">
-                <span class="category-name"><span class="category-dot" style="background:#06b6d4"></span>Communication</span>
-                <span class="category-time">1.1h (22%)</span>
-              </div>
-              <div class="bar-bg"><div class="bar-fill" style="width:22%;background:#06b6d4"></div></div>
-            </div>
-            <div class="category-bar">
-              <div class="category-header">
-                <span class="category-name"><span class="category-dot" style="background:#3b82f6"></span>Email</span>
-                <span class="category-time">0.4h (8%)</span>
-              </div>
-              <div class="bar-bg"><div class="bar-fill" style="width:8%;background:#3b82f6"></div></div>
-            </div>
-          </div>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Company</th>
+                <th>Email</th>
+                <th>Status</th>
+                <th>Source</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="contactsTable">
+              <tr><td colspan="6" class="loading">Loading contacts...</td></tr>
+            </tbody>
+          </table>
         </div>
-        
-        <!-- Top Workflows -->
-        <div class="card">
-          <div class="card-title">🔄 Top Workflows</div>
-          <div class="sequence-flow">
-            <span class="sequence-step">Email</span>
-            <span class="sequence-arrow">→</span>
-            <span class="sequence-step">Research</span>
-            <span class="sequence-arrow">→</span>
-            <span class="sequence-step">CRM</span>
-            <span class="sequence-count">14 times</span>
-          </div>
-          <div class="sequence-flow">
-            <span class="sequence-step">Research</span>
-            <span class="sequence-arrow">→</span>
-            <span class="sequence-step">LinkedIn</span>
-            <span class="sequence-arrow">→</span>
-            <span class="sequence-step">Email</span>
-            <span class="sequence-count">9 times</span>
-          </div>
-          <div class="sequence-flow">
-            <span class="sequence-step">CRM</span>
-            <span class="sequence-arrow">→</span>
-            <span class="sequence-step">Email</span>
-            <span class="sequence-arrow">→</span>
-            <span class="sequence-step">Call</span>
-            <span class="sequence-count">7 times</span>
-          </div>
-        </div>
-        
       </div>
-      
-      <!-- Right Column -->
-      <div class="right-col">
-        
-        <!-- Upsell Card -->
-        <div class="upsell-section">
-          <div class="upsell-header">
-            <span class="upsell-icon">🚀</span>
-            <div>
-              <div class="upsell-title">Reclaim 3+ Hours Daily</div>
-              <div class="upsell-subtitle">Managed AI Agents built from YOUR workflow</div>
-            </div>
-          </div>
-          <div class="upsell-benefits">
-            <div class="benefit-item"><span class="benefit-icon">✓</span> Automatic research on prospects</div>
-            <div class="benefit-item"><span class="benefit-icon">✓</span> AI-powered follow-up sequences</div>
-            <div class="benefit-item"><span class="benefit-icon">✓</span> Zero manual CRM entry</div>
-            <div class="benefit-item"><span class="benefit-icon">✓</span> Call prep notes before every meeting</div>
-          </div>
-          <div class="upsell-cta">
-            <button class="btn btn-primary" onclick="startTrial()">Book Discovery Call</button>
-            <span class="upsell-note">Or install free extension first</span>
-          </div>
+    </div>
+    
+    <!-- Deals Panel -->
+    <div class="tab-panel" id="deals-panel">
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title">All Deals</div>
+          <button class="card-action" id="addDealBtn">+ Add Deal</button>
         </div>
-        
-        <!-- Benchmark Comparison -->
-        <div class="card">
-          <div class="card-title">📈 You vs Industry</div>
-          <div class="benchmark-row">
-            <span class="benchmark-label">Prospecting</span>
-            <div class="benchmark-values">
-              <span class="benchmark-you">You: <span>2.1h</span></span>
-              <span class="benchmark-avg">Avg: 0.8h</span>
-              <span class="benchmark-indicator indicator-down"></span>
-            </div>
-          </div>
-          <div class="benchmark-row">
-            <span class="benchmark-label">CRM Entry</span>
-            <div class="benchmark-values">
-              <span class="benchmark-you">You: <span>1.4h</span></span>
-              <span class="benchmark-avg">Avg: 0.5h</span>
-              <span class="benchmark-indicator indicator-down"></span>
-            </div>
-          </div>
-          <div class="benchmark-row">
-            <span class="benchmark-label">Email</span>
-            <div class="benchmark-values">
-              <span class="benchmark-you">You: <span>0.4h</span></span>
-              <span class="benchmark-avg">Avg: 1.2h</span>
-              <span class="benchmark-indicator indicator-up"></span>
-            </div>
-          </div>
-          <div class="benchmark-row">
-            <span class="benchmark-label">Research</span>
-            <div class="benchmark-values">
-              <span class="benchmark-you">You: <span>0.8h</span></span>
-              <span class="benchmark-avg">Avg: 1.0h</span>
-              <span class="benchmark-indicator indicator-neutral"></span>
-            </div>
-          </div>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>Title</th>
+                <th>Contact</th>
+                <th>Value</th>
+                <th>Stage</th>
+                <th>Created</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="dealsTable">
+              <tr><td colspan="6" class="loading">Loading deals...</td></tr>
+            </tbody>
+          </table>
         </div>
-        
-        <!-- How It Works -->
-        <div class="card">
-          <div class="card-title">🔧 How It Works</div>
-          <div style="font-size:0.8rem;color:var(--text-dim);line-height:1.6;">
-            <p style="margin-bottom:0.75rem;"><strong style="color:var(--gold)">1.</strong> Install A-Gent extension (free)</p>
-            <p style="margin-bottom:0.75rem;"><strong style="color:var(--gold)">2.</strong> Browse normally — AI tracks activity</p>
-            <p style="margin-bottom:0.75rem;"><strong style="color:var(--gold)">3.</strong> Get personalized AI insights daily</p>
-            <p style="margin-bottom:0;"><strong style="color:var(--gold)">4.</strong> Upskill with managed agents (paid)</p>
-          </div>
-        </div>
-        
       </div>
     </div>
   </div>
   
+  <!-- Contact Modal -->
+  <div class="modal-overlay" id="contactModal">
+    <div class="modal">
+      <div class="modal-title" id="contactModalTitle">Add Contact</div>
+      <form id="contactForm">
+        <input type="hidden" id="contactId">
+        <div class="form-group">
+          <label for="contactName">Name *</label>
+          <input type="text" id="contactName" required>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="contactEmail">Email</label>
+            <input type="email" id="contactEmail">
+          </div>
+          <div class="form-group">
+            <label for="contactPhone">Phone</label>
+            <input type="text" id="contactPhone">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="contactCompany">Company</label>
+            <input type="text" id="contactCompany">
+          </div>
+          <div class="form-group">
+            <label for="contactStatus">Status</label>
+            <select id="contactStatus">
+              <option value="new">New</option>
+              <option value="contacted">Contacted</option>
+              <option value="qualified">Qualified</option>
+              <option value="proposal">Proposal</option>
+              <option value="won">Won</option>
+              <option value="lost">Lost</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="contactSource">Source</label>
+          <input type="text" id="contactSource" placeholder="e.g. extension_signup, referral">
+        </div>
+        <div class="form-group">
+          <label for="contactNotes">Notes</label>
+          <textarea id="contactNotes"></textarea>
+        </div>
+        <div class="modal-actions">
+          <button type="button" class="btn-cancel" id="contactCancelBtn">Cancel</button>
+          <button type="submit" class="btn-save">Save Contact</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  
+  <!-- Deal Modal -->
+  <div class="modal-overlay" id="dealModal">
+    <div class="modal">
+      <div class="modal-title" id="dealModalTitle">Add Deal</div>
+      <form id="dealForm">
+        <input type="hidden" id="dealId">
+        <div class="form-group">
+          <label for="dealTitle">Title *</label>
+          <input type="text" id="dealTitle" required>
+        </div>
+        <div class="form-group">
+          <label for="dealContact">Contact</label>
+          <select id="dealContact">
+            <option value="">— None —</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="dealValue">Value ($)</label>
+            <input type="number" id="dealValue" min="0" step="100">
+          </div>
+          <div class="form-group">
+            <label for="dealStage">Stage</label>
+            <select id="dealStage">
+              <option value="lead">Lead</option>
+              <option value="contacted">Contacted</option>
+              <option value="qualified">Qualified</option>
+              <option value="proposal">Proposal</option>
+              <option value="won">Won</option>
+              <option value="lost">Lost</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="dealNotes">Notes</label>
+          <textarea id="dealNotes"></textarea>
+        </div>
+        <div class="modal-actions">
+          <button type="button" class="btn-cancel" id="dealCancelBtn">Cancel</button>
+          <button type="submit" class="btn-save">Save Deal</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  
   <script>
-    function installExtension() {
-      window.open('https://chrome.google.com/webstore', '_blank');
+    const API_BASE = window.location.hostname === 'localhost' 
+      ? 'http://localhost:3000' 
+      : 'https://a-gent-provisioner.onrender.com';
+    
+    const SESSION_KEY = 'agent_session';
+    
+    // ─── Auth Check ─────────────────────────────────────────────────────────────
+    function getSession() {
+      try {
+        const session = localStorage.getItem(SESSION_KEY);
+        if (!session) throw new Error('No session');
+        const { token, expiry } = JSON.parse(session);
+        if (Date.now() > expiry) throw new Error('Session expired');
+        return JSON.parse(session);
+      } catch {
+        window.location.href = 'login.html';
+        return null;
+      }
     }
     
-    function startTrial() {
-      window.open('https://a-gent.co', '_blank');
+    function getToken() {
+      return getSession()?.token;
     }
     
-    // Simulate live data updates
-    function updateStats() {
-      // In production, this would fetch from extension storage
-      setTimeout(updateStats, 30000);
+    function getUser() {
+      return getSession()?.user;
     }
     
-    updateStats();
+    // ─── API Helper ─────────────────────────────────────────────────────────────
+    async function api(method, endpoint, body) {
+      const res = await fetch(API_BASE + endpoint, {
+        method,
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': 'Bearer ' + getToken()
+        },
+        body: body ? JSON.stringify(body) : undefined
+      });
+      if (res.status === 401) {
+        localStorage.removeItem(SESSION_KEY);
+        window.location.href = 'login.html';
+        return null;
+      }
+      return res.json();
+    }
+    
+    // ─── Render Helpers ─────────────────────────────────────────────────────────
+    function statusBadge(status) {
+      return `<span class="status-badge status-${status}">${status}</span>`;
+    }
+    
+    function formatDate(dateStr) {
+      return new Date(dateStr).toLocaleDateString('en-US', { 
+        month: 'short', day: 'numeric', year: 'numeric' 
+      });
+    }
+    
+    function formatCurrency(val) {
+      return '$' + (Number(val) || 0).toLocaleString();
+    }
+    
+    // ─── Tab Switching ──────────────────────────────────────────────────────────
+    document.querySelectorAll('.tab').forEach(tab => {
+      tab.addEventListener('click', () => {
+        document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+        document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+        tab.classList.add('active');
+        document.getElementById(tab.dataset.tab + '-panel').classList.add('active');
+      });
+    });
+    
+    // ─── Logout ─────────────────────────────────────────────────────────────────
+    document.getElementById('logoutBtn').addEventListener('click', () => {
+      localStorage.removeItem(SESSION_KEY);
+      window.location.href = 'login.html';
+    });
+    
+    // ─── Load Stats ─────────────────────────────────────────────────────────────
+    async function loadStats() {
+      const data = await api('GET', '/api/crm/stats');
+      if (!data) return;
+      document.getElementById('statContacts').textContent = data.stats.totalContacts;
+      document.getElementById('statNew').textContent = data.stats.newContacts;
+      document.getElementById('statDeals').textContent = data.stats.activeDeals;
+      document.getElementById('statValue').textContent = formatCurrency(data.stats.totalDealValue);
+    }
+    
+    // ─── Load Contacts ───────────────────────────────────────────────────────────
+    async function loadContacts() {
+      const data = await api('GET', '/api/crm/contacts');
+      const tbody = document.getElementById('contactsTable');
+      if (!data || !data.contacts.length) {
+        tbody.innerHTML = `<tr><td colspan="6">
+          <div class="empty-state">
+            <div class="empty-icon">👤</div>
+            <div class="empty-title">No contacts yet</div>
+            <div class="empty-text">Add your first contact to get started</div>
+          </div>
+        </td></tr>`;
+        return;
+      }
+      tbody.innerHTML = data.contacts.map(c => `
+        <tr>
+          <td><strong>${c.name}</strong></td>
+          <td>${c.company || '—'}</td>
+          <td>${c.email || '—'}</td>
+          <td>${statusBadge(c.status)}</td>
+          <td>${c.source || '—'}</td>
+          <td class="action-cell">
+            <button class="btn-small btn-edit" onclick="editContact(${c.id})">Edit</button>
+            <button class="btn-small btn-delete" onclick="deleteContact(${c.id})">Delete</button>
+          </td>
+        </tr>
+      `).join('');
+    }
+    
+    // ─── Load Deals ──────────────────────────────────────────────────────────────
+    async function loadDeals() {
+      const data = await api('GET', '/api/crm/deals');
+      const tbody = document.getElementById('dealsTable');
+      if (!data || !data.deals.length) {
+        tbody.innerHTML = `<tr><td colspan="6">
+          <div class="empty-state">
+            <div class="empty-icon">💰</div>
+            <div class="empty-title">No deals yet</div>
+            <div class="empty-text">Add your first deal to start tracking revenue</div>
+          </div>
+        </td></tr>`;
+        return;
+      }
+      tbody.innerHTML = data.deals.map(d => `
+        <tr>
+          <td><strong>${d.title}</strong></td>
+          <td>${d.contact_name || '—'}</td>
+          <td class="deal-value">${formatCurrency(d.value)}</td>
+          <td>${statusBadge(d.stage)}</td>
+          <td>${formatDate(d.created_at)}</td>
+          <td class="action-cell">
+            <button class="btn-small btn-edit" onclick="editDeal(${d.id})">Edit</button>
+            <button class="btn-small btn-delete" onclick="deleteDeal(${d.id})">Delete</button>
+          </td>
+        </tr>
+      `).join('');
+    }
+    
+    // ─── Contact Form Modal ──────────────────────────────────────────────────────
+    let editingContactId = null;
+    
+    function openContactModal(existing = null) {
+      editingContactId = existing?.id || null;
+      document.getElementById('contactModalTitle').textContent = editingContactId ? 'Edit Contact' : 'Add Contact';
+      document.getElementById('contactId').value = '';
+      document.getElementById('contactName').value = existing?.name || '';
+      document.getElementById('contactEmail').value = existing?.email || '';
+      document.getElementById('contactPhone').value = existing?.phone || '';
+      document.getElementById('contactCompany').value = existing?.company || '';
+      document.getElementById('contactStatus').value = existing?.status || 'new';
+      document.getElementById('contactSource').value = existing?.source || '';
+      document.getElementById('contactNotes').value = existing?.notes || '';
+      document.getElementById('contactModal').classList.add('show');
+    }
+    
+    function closeContactModal() {
+      document.getElementById('contactModal').classList.remove('show');
+      editingContactId = null;
+    }
+    
+    async function editContact(id) {
+      const data = await api('GET', '/api/crm/contacts');
+      const contact = data?.contacts.find(c => c.id === id);
+      if (contact) openContactModal(contact);
+    }
+    
+    async function deleteContact(id) {
+      if (!confirm('Delete this contact?')) return;
+      await api('DELETE', '/api/crm/contacts/' + id);
+      loadContacts();
+      loadStats();
+    }
+    
+    document.getElementById('contactForm').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const payload = {
+        name: document.getElementById('contactName').value.trim(),
+        email: document.getElementById('contactEmail').value.trim(),
+        phone: document.getElementById('contactPhone').value.trim(),
+        company: document.getElementById('contactCompany').value.trim(),
+        status: document.getElementById('contactStatus').value,
+        source: document.getElementById('contactSource').value.trim(),
+        notes: document.getElementById('contactNotes').value.trim(),
+      };
+      
+      if (editingContactId) {
+        await api('PUT', '/api/crm/contacts/' + editingContactId, payload);
+      } else {
+        await api('POST', '/api/crm/contacts', payload);
+      }
+      
+      closeContactModal();
+      loadContacts();
+      loadStats();
+    });
+    
+    document.getElementById('addContactBtn').addEventListener('click', () => openContactModal());
+    document.getElementById('contactCancelBtn').addEventListener('click', closeContactModal);
+    
+    // ─── Deal Form Modal ─────────────────────────────────────────────────────────
+    let editingDealId = null;
+    
+    async function openDealModal(existing = null) {
+      editingDealId = existing?.id || null;
+      document.getElementById('dealModalTitle').textContent = editingDealId ? 'Edit Deal' : 'Add Deal';
+      document.getElementById('dealId').value = '';
+      document.getElementById('dealTitle').value = existing?.title || '';
+      document.getElementById('dealValue').value = existing?.value || '';
+      document.getElementById('dealStage').value = existing?.stage || 'lead';
+      document.getElementById('dealNotes').value = existing?.notes || '';
+      
+      // Populate contacts dropdown
+      const contactsData = await api('GET', '/api/crm/contacts');
+      const select = document.getElementById('dealContact');
+      select.innerHTML = '<option value="">— None —</option>';
+      if (contactsData?.contacts) {
+        contactsData.contacts.forEach(c => {
+          select.innerHTML += `<option value="${c.id}" ${existing?.contact_id == c.id ? 'selected' : ''}>${c.name}${c.company ? ' — ' + c.company : ''}</option>`;
+        });
+      }
+      
+      document.getElementById('dealModal').classList.add('show');
+    }
+    
+    function closeDealModal() {
+      document.getElementById('dealModal').classList.remove('show');
+      editingDealId = null;
+    }
+    
+    async function editDeal(id) {
+      const data = await api('GET', '/api/crm/deals');
+      const deal = data?.deals.find(d => d.id === id);
+      if (deal) openDealModal(deal);
+    }
+    
+    async function deleteDeal(id) {
+      if (!confirm('Delete this deal?')) return;
+      await api('DELETE', '/api/crm/deals/' + id);
+      loadDeals();
+      loadStats();
+    }
+    
+    document.getElementById('dealForm').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const payload = {
+        title: document.getElementById('dealTitle').value.trim(),
+        contact_id: document.getElementById('dealContact').value || null,
+        value: parseFloat(document.getElementById('dealValue').value) || 0,
+        stage: document.getElementById('dealStage').value,
+        notes: document.getElementById('dealNotes').value.trim(),
+      };
+      
+      if (editingDealId) {
+        await api('PUT', '/api/crm/deals/' + editingDealId, payload);
+      } else {
+        await api('POST', '/api/crm/deals', payload);
+      }
+      
+      closeDealModal();
+      loadDeals();
+      loadStats();
+    });
+    
+    document.getElementById('addDealBtn').addEventListener('click', () => openDealModal());
+    document.getElementById('dealCancelBtn').addEventListener('click', closeDealModal);
+    
+    // ─── Init ───────────────────────────────────────────────────────────────────
+    const user = getUser();
+    if (user) {
+      document.getElementById('userEmail').textContent = user.email;
+      loadStats();
+      loadContacts();
+      loadDeals();
+    }
   </script>
 </body>
 </html>
