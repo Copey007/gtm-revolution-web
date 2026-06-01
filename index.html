@@ -32,7 +32,7 @@
     nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); background: rgba(5,5,8,0.85); border-bottom: 1px solid var(--border); }
     .nav-inner { max-width: 1200px; margin: 0 auto; padding: 0 2rem; height: 64px; display: flex; align-items: center; justify-content: space-between; }
     .nav-brand { display: flex; align-items: center; gap: 0.6rem; font-weight: 700; font-size: 1.1rem; letter-spacing: 0.5px; }
-    .nav-brand img { width: 32px; height: 32px; border-radius: 8px; }
+    .nav-brand img { width: 48px; height: 48px; border-radius: 10px; }
     .nav-links { display: flex; align-items: center; gap: 2rem; }
     .nav-links a { font-size: 0.875rem; color: var(--text-dim); font-weight: 500; transition: color 0.2s; }
     .nav-links a:hover { color: var(--text); }
@@ -122,7 +122,23 @@
     .how-card p { font-size: 0.82rem; color: var(--text-dim); line-height: 1.55; }
 
     /* FINAL CTA */
-    .cta-section { padding: 6rem 2rem; }
+    /* CONSULTING / PRICING SECTION */
+    .consulting-section { max-width: 1200px; margin: 0 auto; padding: 6rem 2rem; }
+    .pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-top: 3rem; }
+    .pricing-card { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 2.5rem; text-align: center; transition: all 0.2s; }
+    .pricing-card:hover { border-color: rgba(201,162,39,0.3); transform: translateY(-4px); }
+    .pricing-card.featured { border-color: var(--gold); background: linear-gradient(135deg, rgba(201,162,39,0.08), var(--surface)); }
+    .pricing-label { font-size: 0.65rem; font-weight: 700; color: var(--gold); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 0.75rem; }
+    .pricing-price { font-size: 2.5rem; font-weight: 800; color: var(--text); margin-bottom: 1.5rem; }
+    .pricing-price span { font-size: 1rem; font-weight: 400; color: var(--text-dim); }
+    .pricing-features { list-style: none; padding: 0; margin-bottom: 2rem; text-align: left; }
+    .pricing-features li { font-size: 0.875rem; color: var(--text-dim); padding: 0.5rem 0; border-bottom: 1px solid var(--border); }
+    .pricing-features li:last-child { border-bottom: none; }
+    .pricing-btn { display: inline-block; width: 100%; background: var(--surface-2); color: var(--text); padding: 0.9rem; border-radius: 10px; font-weight: 600; font-size: 0.875rem; border: 1px solid var(--border); transition: all 0.2s; }
+    .pricing-btn:hover { border-color: var(--gold); color: var(--gold); }
+    .pricing-btn.featured-btn { background: var(--gold); color: #050508; border-color: var(--gold); }
+    .pricing-btn.featured-btn:hover { background: var(--gold-light); }
+    @media (max-width: 900px) { .pricing-grid { grid-template-columns: 1fr; } }
     .cta-inner { max-width: 760px; margin: 0 auto; text-align: center; }
     .cta-card { background: linear-gradient(135deg, rgba(201,162,39,0.06), rgba(139,92,246,0.03)); border: 1px solid rgba(201,162,39,0.2); border-radius: 20px; padding: 4.5rem 3rem; position: relative; overflow: hidden; }
     .cta-card::before { content:''; position:absolute; top:-100px;left:50%;transform:translateX(-50%);width:400px;height:400px;background:radial-gradient(circle,rgba(201,162,39,0.08),transparent 70%);pointer-events:none;}
@@ -161,9 +177,9 @@
         <span>A-Gent</span>
       </a>
       <div class="nav-links">
+        <a href="#agents">Prebuilt Agents</a>
+        <a href="#consulting">AI Consulting</a>
         <a href="assessment.html">AI Assessment</a>
-        <a href="/dashboard">Dashboard</a>
-        <a href="#how-it-works">How It Works</a>
         <a href="https://t.me/OpenClawSalesBot" class="nav-cta">Talk to Agent</a>
       </div>
       <div class="nav-mobile">
@@ -173,10 +189,6 @@
   </nav>
 
   <section class="hero">
-    <div class="hero-bg">
-      <img src="hero-visual.jpg" alt="">
-      <div class="hero-gradient"></div>
-    </div>
     <div class="hero-glow"></div>
     <div class="hero-inner">
       <div class="hero-left fade-up">
@@ -245,19 +257,6 @@
     </div>
   </section>
 
-  <div class="proof-bar">
-    <div class="proof-inner">
-      <span class="proof-label">Trusted by sales teams at</span>
-      <div class="proof-logos">
-        <span>HubSpot</span>
-        <span>Salesforce</span>
-        <span>Outreach</span>
-        <span>Gong</span>
-        <span>ZoomInfo</span>
-      </div>
-    </div>
-  </div>
-
   <section class="pain-section">
     <div class="pain-header fade-up">
       <div class="section-label">The Problem</div>
@@ -314,7 +313,7 @@
     </div>
   </section>
 
-  <section class="results-section">
+  <section class="results-section" id="agents">
     <div class="results-inner">
       <div class="pain-header fade-up">
         <div class="section-label">What You Get</div>
@@ -377,6 +376,58 @@
         <div class="how-num">3</div>
         <h4>AI Takes Over</h4>
         <p>Research, outreach, follow-ups — handled automatically around the clock from day one.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="consulting-section" id="consulting">
+    <div class="pain-header fade-up">
+      <div class="section-label">AI Consulting</div>
+      <h2 class="section-title">Packages That Actually Move the Needle</h2>
+      <p class="section-sub">Three tiers of full-stack AI execution for revenue leaders who need results, not promises.</p>
+    </div>
+    <div class="pricing-grid">
+      <div class="pricing-card fade-up">
+        <div class="pricing-label">AI Foundation</div>
+        <div class="pricing-price">$12,500<span>/mo</span></div>
+        <ul class="pricing-features">
+          <li>2 Managed Agents</li>
+          <li>Ongoing Reporting</li>
+          <li>Slack/Teams Channel Support</li>
+          <li>Initial evaluation to establish AI GTM journey</li>
+          <li>Build and deliver up to two Agents for GTM execution</li>
+          <li>Weekly reporting and results</li>
+          <li>Look for additional opportunities to scale AI operations</li>
+        </ul>
+        <a href="https://t.me/OpenClawSalesBot?text=Hi%20-%20I%27m%20interested%20in%20AI%20Foundation%20consulting" class="pricing-btn">Get Started</a>
+      </div>
+      <div class="pricing-card featured fade-up">
+        <div class="pricing-label">AI Scale</div>
+        <div class="pricing-price">$35,000<span>/mo</span></div>
+        <ul class="pricing-features">
+          <li>5 Managed Agents</li>
+          <li>Ongoing Reporting</li>
+          <li>Embedded AIOps for one full day a week</li>
+          <li>Slack Channel Support</li>
+          <li>Leverage A-Gent platform to understand GTM workflow friction</li>
+          <li>Revised headcount plan, processes, and AI systems recommendations</li>
+          <li>Full AIOps Fractional Services: Weekly Exec Meetings, Optional Board Support</li>
+        </ul>
+        <a href="https://t.me/OpenClawSalesBot?text=Hi%20-%20I%27m%20interested%20in%20AI%20Scale%20consulting" class="pricing-btn featured-btn">Get Started</a>
+      </div>
+      <div class="pricing-card fade-up">
+        <div class="pricing-label">AI Accelerate</div>
+        <div class="pricing-price">$18,000<span>/mo</span></div>
+        <ul class="pricing-features">
+          <li>3 Managed Agents</li>
+          <li>Ongoing Reporting</li>
+          <li>Slack Channel Support</li>
+          <li>AI readiness and GTM opportunity report</li>
+          <li>Deliver and execute plan to implement AI Accelerate plan</li>
+          <li>Revised headcount, processes, new AI systems recommendation</li>
+          <li>Revised metrics in light of AI efficiencies</li>
+        </ul>
+        <a href="https://t.me/OpenClawSalesBot?text=Hi%20-%20I%27m%20interested%20in%20AI%20Accelerate%20consulting" class="pricing-btn">Get Started</a>
       </div>
     </div>
   </section>
