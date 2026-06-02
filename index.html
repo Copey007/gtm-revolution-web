@@ -32,7 +32,7 @@
     nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); background: rgba(5,5,8,0.85); border-bottom: 1px solid var(--border); }
     .nav-inner { max-width: 1200px; margin: 0 auto; padding: 0 2rem; height: 64px; display: flex; align-items: center; justify-content: space-between; }
     .nav-brand { display: flex; align-items: center; gap: 0.6rem; font-weight: 700; font-size: 1.1rem; letter-spacing: 0.5px; }
-    .nav-brand img { width: 80px; height: 80px; border-radius: 10px; }
+    .nav-brand img { width: 120px; height: 120px; border-radius: 12px; }
     .nav-links { display: flex; align-items: center; gap: 2rem; }
     .nav-links a { font-size: 0.875rem; color: var(--text-dim); font-weight: 500; transition: color 0.2s; }
     .nav-links a:hover { color: var(--text); }
@@ -176,10 +176,10 @@
         <img src="icons/logo.png" alt="A-Gent">
       </a>
       <div class="nav-links">
-        <a href="#agents">Prebuilt Agents</a>
+        <a href="#prebuilt-agents">Prebuilt Agents</a>
         <a href="#consulting">AI Consulting</a>
-        <a href="assessment.html">AI Assessment</a>
-        <a href="assessment.html" class="nav-cta">Talk to Agent</a>
+        <a href="#assessment">AI Assessment</a>
+        <a href="#assessment" class="nav-cta">Talk to Agent</a>
       </div>
       <div class="nav-mobile">
         <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
@@ -354,27 +354,39 @@
     </div>
   </section>
 
-  <section class="how-section" id="how-it-works">
-    <div class="pain-header fade-up">
-      <div class="section-label">How It Works</div>
-      <h2 class="section-title">Up and Running in Minutes</h2>
-      <p class="section-sub">No complex setup. No training docs. Just install and go.</p>
-    </div>
-    <div class="how-grid">
-      <div class="how-card fade-up">
-        <div class="how-num">1</div>
-        <h4>Install the Extension</h4>
-        <p>One-click Chrome install. A-Gent starts learning your workflow the moment you connect.</p>
+  <!-- PREBUILT AGENTS -->
+  <section id="prebuilt-agents" style="background:var(--surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:6rem 2rem;">
+    <div style="max-width:1200px;margin:0 auto;">
+      <div style="text-align:center;margin-bottom:3.5rem;">
+        <div style="font-size:0.65rem;font-weight:700;color:var(--gold);letter-spacing:2.5px;text-transform:uppercase;margin-bottom:0.75rem;">Prebuilt Agents</div>
+        <h2 style="font-size:clamp(1.8rem,3.5vw,2.5rem);font-weight:800;letter-spacing:-0.5px;margin-bottom:0.75rem;">AI Agents, Ready to Run</h2>
+        <p style="color:var(--text-dim);font-size:1rem;max-width:550px;margin:0 auto;">Hosted and managed by A-agent. Each agent runs in its own isolated instance — built for your ICP, wired to your stack.</p>
       </div>
-      <div class="how-card fade-up" style="transition-delay:0.1s">
-        <div class="how-num">2</div>
-        <h4>Connect Your Stack</h4>
-        <p>Link email, calendar, and CRM in minutes. AI maps your existing sales process automatically.</p>
-      </div>
-      <div class="how-card fade-up" style="transition-delay:0.2s">
-        <div class="how-num">3</div>
-        <h4>AI Takes Over</h4>
-        <p>Research, outreach, follow-ups — handled automatically around the clock from day one.</p>
+      <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:2rem;max-width:900px;margin:0 auto;">
+        <div style="background:rgba(255,255,255,0.02);border:1px solid var(--border);border-radius:18px;padding:2.5rem;">
+          <div style="font-size:0.65rem;font-weight:700;color:var(--gold);letter-spacing:2px;text-transform:uppercase;margin-bottom:0.75rem;">Outbound Agent</div>
+          <h3 style="font-size:1.4rem;font-weight:700;margin-bottom:0.5rem;">Outbound A-Gent</h3>
+          <p style="font-size:0.9rem;color:var(--text-dim);margin-bottom:1.5rem;line-height:1.6;">Plugs into your CRM and runs your entire outbound BDR motion — research, sequencing, personalization, and follow-up. Trained on your ICP, product, and differentiators.</p>
+          <ul style="list-style:none;padding:0;margin-bottom:2rem;">
+            <li style="font-size:0.82rem;color:var(--text-dim);padding:0.4rem 0;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:0.6rem;"><span style="color:var(--green);">✓</span> Accounts researched automatically</li>
+            <li style="font-size:0.82rem;color:var(--text-dim);padding:0.4rem 0;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:0.6rem;"><span style="color:var(--green);">✓</span> Human-like emails from your domain</li>
+            <li style="font-size:0.82rem;color:var(--text-dim);padding:0.4rem 0;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:0.6rem;"><span style="color:var(--green);">✓</span> Full follow-up sequences handled</li>
+            <li style="font-size:0.82rem;color:var(--text-dim);padding:0.4rem 0;display:flex;align-items:center;gap:0.6rem;"><span style="color:var(--green);">✓</span> CRM contacts + activities updated</li>
+          </ul>
+          <a href="https://t.me/OpenClawSalesBot?text=Hi%20-%20I%27m%20interested%20in%20Outbound%20A-Gent" style="display:inline-block;width:100%;background:linear-gradient(135deg,var(--gold),#8b6914);color:#050508;padding:0.9rem;border-radius:10px;font-weight:700;font-size:0.875rem;text-align:center;">Get Started</a>
+        </div>
+        <div style="background:rgba(255,255,255,0.02);border:1px solid var(--border);border-radius:18px;padding:2.5rem;">
+          <div style="font-size:0.65rem;font-weight:700;color:var(--gold);letter-spacing:2px;text-transform:uppercase;margin-bottom:0.75rem;">Signal Agent</div>
+          <h3 style="font-size:1.4rem;font-weight:700;margin-bottom:0.5rem;">Signal A-Gent</h3>
+          <p style="font-size:0.9rem;color:var(--text-dim);margin-bottom:1.5rem;line-height:1.6;">Aggregates every signal in your market — hiring, funding, events, reviews — and surfaces the right accounts to your BDR team in your CRM.</p>
+          <ul style="list-style:none;padding:0;margin-bottom:2rem;">
+            <li style="font-size:0.82rem;color:var(--text-dim);padding:0.4rem 0;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:0.6rem;"><span style="color:var(--green);">✓</span> Job changes & hiring spikes detected</li>
+            <li style="font-size:0.82rem;color:var(--text-dim);padding:0.4rem 0;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:0.6rem;"><span style="color:var(--green);">✓</span> Funding & M&A events tracked</li>
+            <li style="font-size:0.82rem;color:var(--text-dim);padding:0.4rem 0;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:0.6rem;"><span style="color:var(--green);">✓</span> Event attendance & speaking alerts</li>
+            <li style="font-size:0.82rem;color:var(--text-dim);padding:0.4rem 0;display:flex;align-items:center;gap:0.6rem;"><span style="color:var(--green);">✓</span> Signals surfaced in HubSpot/Salesforce</li>
+          </ul>
+          <a href="https://t.me/OpenClawSalesBot?text=Hi%20-%20I%27m%20interested%20in%20Signal%20A-Gent" style="display:inline-block;width:100%;background:var(--surface-2);color:var(--text);padding:0.9rem;border-radius:10px;font-weight:600;font-size:0.875rem;text-align:center;border:1px solid var(--border);">Get Started</a>
+        </div>
       </div>
     </div>
   </section>
