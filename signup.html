@@ -29,7 +29,7 @@
       width: 64px;
       height: 64px;
       margin: 0 auto 1.5rem;
-      background: linear-gradient(135deg, #c9a227, #8b6914);
+      background: linear-gradient(135deg, #3b82f6, #1d4ed8);
       border-radius: 50%;
       display: flex;
       align-items: center;
@@ -47,7 +47,7 @@
     
     .tagline {
       text-align: center;
-      color: #c9a227;
+      color: #3b82f6;
       font-size: 0.875rem;
       margin-bottom: 2rem;
       letter-spacing: 1px;
@@ -88,7 +88,7 @@
     }
     
     input:focus {
-      border-color: #c9a227;
+      border-color: #3b82f6;
     }
     
     input::placeholder {
@@ -98,10 +98,10 @@
     .submit-btn {
       width: 100%;
       padding: 1rem;
-      background: linear-gradient(135deg, #c9a227 0%, #8b6914 100%);
+      background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
       border: none;
       border-radius: 8px;
-      color: #0a0a0f;
+      color: #fff;
       font-size: 0.9rem;
       font-weight: 700;
       cursor: pointer;
@@ -113,7 +113,7 @@
     
     .submit-btn:hover {
       transform: scale(1.02);
-      box-shadow: 0 4px 20px rgba(201,162,39,0.4);
+      box-shadow: 0 4px 20px rgba(59,130,246,0.4);
     }
     
     .submit-btn:disabled {
@@ -168,9 +168,9 @@
     .dashboard-btn {
       display: inline-block;
       padding: 0.875rem 2rem;
-      background: linear-gradient(135deg, #c9a227 0%, #8b6914 100%);
+      background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
       border-radius: 8px;
-      color: #0a0a0f;
+      color: #fff;
       font-size: 0.875rem;
       font-weight: 700;
       text-decoration: none;
@@ -181,7 +181,7 @@
     
     .dashboard-btn:hover {
       transform: scale(1.05);
-      box-shadow: 0 4px 20px rgba(201,162,39,0.4);
+      box-shadow: 0 4px 20px rgba(59,130,246,0.4);
     }
     
     .form-card.hidden {
@@ -227,7 +227,7 @@
     }
     
     .login-link a {
-      color: #c9a227;
+      color: #3b82f6;
       text-decoration: none;
     }
     
@@ -240,7 +240,7 @@
   <div class="container">
     <div class="emblem">🤖</div>
     <h1>Get A-Gent Free</h1>
-    <p class="tagline">Your AI Sales Agent — Always Working</p>
+    <p class="tagline" id="tagline">Your AI Sales Agent — Always Working</p>
     
     <div class="form-card" id="formCard">
       <div class="error-msg" id="errorMsg"></div>
@@ -296,6 +296,14 @@
   </div>
   
   <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const agentType = urlParams.get('agent');
+    if (agentType === 'signal') {
+      document.getElementById('tagline').textContent = 'Signal A-Gent — Real-time account intelligence';
+    } else if (agentType === 'outbound') {
+      document.getElementById('tagline').textContent = 'Outbound A-Gent — Automated BDR at scale';
+    }
+
     const API_BASE = window.location.hostname === 'localhost' 
       ? 'http://localhost:3000' 
       : 'https://a-gent-provisioner.onrender.com';
@@ -312,10 +320,12 @@
       btn.textContent = 'Creating account...';
       errorEl.classList.remove('show');
       
+      const urlParams = new URLSearchParams(window.location.search);
       const data = {
         name: document.getElementById('name').value.trim(),
         email: document.getElementById('email').value.trim(),
         company: document.getElementById('company').value.trim(),
+        agent: urlParams.get('agent') || '',
       };
       
       try {
