@@ -1,0 +1,288 @@
+/* A-Gent shared brand system: logo sizing, dark/gold tokens, buttons, and cards. */
+:root {
+  --bg: #0a0e1a;
+  --surface: #101624;
+  --surface-2: #151d30;
+  --surface-elevated: rgba(16, 22, 36, 0.92);
+  --border: rgba(255, 255, 255, 0.08);
+  --gold: #c9a227;
+  --gold-light: #d4af37;
+  --gold-dark: #8b6914;
+  --gold-dim: rgba(201, 162, 39, 0.14);
+  --text: #e8ecf2;
+  --text-muted: #9aa3b8;
+  --text-dim: #9aa3b8;
+  --success: #22c55e;
+  --warning: #f59e0b;
+  --danger: #ef4444;
+  --green: #22c55e;
+  --red: #ef4444;
+
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4rem;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 20px;
+  --shadow-card: 0 24px 70px rgba(0, 0, 0, 0.35);
+
+  --brand-logo-height-desktop: 56px;
+  --brand-logo-height-mobile: 44px;
+  --brand-app-icon-size: 48px;
+  --brand-login-icon-size: 64px;
+
+  /* Compatibility aliases for legacy assessment/results CSS. */
+  --brand-primary: var(--text);
+  --brand-accent: var(--gold);
+  --brand-accent-light: var(--gold-dim);
+  --bg-light: var(--surface-2);
+  --text-dark: var(--text);
+  --text-gray: var(--text-muted);
+  --white: var(--bg);
+}
+
+body {
+  font-family: var(--font-sans);
+  background: radial-gradient(circle at 50% -20%, rgba(201, 162, 39, 0.08), transparent 42%), var(--bg);
+  color: var(--text);
+}
+
+.brand-lockup,
+.site-brand,
+.nav-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-3);
+  text-decoration: none;
+  color: var(--text);
+}
+
+.brand-logo {
+  height: var(--brand-logo-height-desktop);
+  width: auto;
+  max-width: 240px;
+  object-fit: contain;
+  display: block;
+  border-radius: var(--radius-sm);
+}
+
+.app-brand-icon-frame,
+.brand-icon {
+  width: var(--brand-app-icon-size);
+  height: var(--brand-app-icon-size);
+  border-radius: 14px;
+  background: linear-gradient(135deg, rgba(201, 162, 39, 0.20), rgba(139, 105, 20, 0.10));
+  border: 1px solid rgba(201, 162, 39, 0.26);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  flex: 0 0 auto;
+}
+
+.app-brand-icon,
+.brand-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: inherit;
+  display: block;
+}
+
+.login-brand-icon,
+.emblem img {
+  width: var(--brand-login-icon-size);
+  height: var(--brand-login-icon-size);
+  object-fit: cover;
+  border-radius: 18px;
+  display: block;
+}
+
+.site-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--space-3) var(--space-6);
+  min-height: 76px;
+}
+
+.site-nav ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: var(--space-6);
+}
+
+.site-nav a:not(.site-brand) {
+  color: var(--text-muted);
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.site-nav a:hover {
+  color: var(--gold);
+}
+
+.btn,
+.btn-primary,
+.btn-outline,
+.login-btn,
+.submit-btn,
+.pricing-btn,
+.cta-btn,
+.nav-cta {
+  border-radius: var(--radius-md);
+  font-family: var(--font-sans);
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+}
+
+.btn-primary,
+.login-btn,
+.submit-btn,
+.pricing-btn.featured-btn,
+.cta-btn,
+.nav-cta {
+  background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+  color: #070b13;
+  border: 1px solid rgba(201, 162, 39, 0.55);
+}
+
+.btn-primary:hover,
+.login-btn:hover,
+.submit-btn:hover,
+.pricing-btn.featured-btn:hover,
+.cta-btn:hover,
+.nav-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 36px rgba(201, 162, 39, 0.28);
+}
+
+.btn-outline {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(201, 162, 39, 0.55);
+  color: var(--gold);
+}
+
+.btn-outline:hover {
+  background: var(--gold-dim);
+  border-color: var(--gold-light);
+  color: var(--gold-light);
+}
+
+.card,
+.hero-card,
+.score-card,
+.rec-card,
+.share-section,
+.form-card,
+.option,
+.stat-card,
+.how-card,
+.result-card,
+.pricing-card,
+.upsell-section {
+  background: var(--surface-elevated);
+  border-color: var(--border);
+  box-shadow: var(--shadow-card);
+}
+
+/* Assessment and results consolidation: override legacy light/magenta page rules. */
+.quiz-wrapper,
+.results-wrapper {
+  color: var(--text);
+}
+
+.quiz-header h1,
+.email-capture h2,
+.chart-section h2,
+.recs-section h2,
+.share-section h2,
+.section-title,
+.rec-title {
+  color: var(--text);
+}
+
+.option:hover,
+.option.selected {
+  background: var(--gold-dim);
+  border-color: var(--gold);
+}
+
+.option-letter,
+.option.selected .option-letter {
+  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(201, 162, 39, 0.45);
+  color: var(--gold-light);
+}
+
+.option.selected .option-letter {
+  background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+  color: #070b13;
+}
+
+.progress-bar,
+.bar-track {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.progress-fill,
+.bar-you {
+  background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+}
+
+.bar-top {
+  background: rgba(34, 197, 94, 0.55);
+}
+
+.bar-score-dark {
+  color: var(--text);
+}
+
+.email-input,
+.login-input {
+  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(255, 255, 255, 0.10);
+  color: var(--text);
+}
+
+.email-input::placeholder,
+.login-input::placeholder {
+  color: var(--text-muted);
+}
+
+.email-input:focus,
+.login-input:focus {
+  border-color: var(--gold);
+  box-shadow: 0 0 0 4px var(--gold-dim);
+}
+
+footer {
+  color: var(--text-muted);
+}
+
+@media (max-width: 768px) {
+  .brand-logo {
+    height: var(--brand-logo-height-mobile);
+    max-width: 190px;
+  }
+
+  .site-nav {
+    padding: var(--space-3) var(--space-4);
+    min-height: 68px;
+  }
+
+  .site-nav ul {
+    gap: var(--space-4);
+  }
+}

@@ -235,10 +235,11 @@
       text-decoration: underline;
     }
   </style>
+  <link rel="stylesheet" href="assets/css/brand-system.css">
 </head>
 <body>
   <div class="container">
-    <div class="emblem">🤖</div>
+    <div class="emblem"><img class="login-brand-icon" src="assets/brand/a-gent-icon.png" alt="A-Gent"></div>
     <h1>Get A-Gent Free</h1>
     <p class="tagline" id="tagline">Your AI Sales Agent — Always Working</p>
     
@@ -261,7 +262,7 @@
           <input type="text" id="company" name="company" placeholder="Acme Corp" required>
         </div>
         
-        <button type="submit" class="submit-btn" id="submitBtn">Get Free Access</button>
+        <button type="submit" class="submit-btn" id="submitBtn">Install Extension</button>
       </form>
       
       <p class="privacy-note">Free Chrome Extension · No credit card required<br>Install and start tracking in 60 seconds.</p>
@@ -349,7 +350,7 @@
         errorEl.textContent = err.message;
         errorEl.classList.add('show');
         btn.disabled = false;
-        btn.textContent = 'Get Free Access';
+        btn.textContent = 'Install Extension';
       }
     });
   </script>

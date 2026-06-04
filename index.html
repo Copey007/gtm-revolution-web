@@ -169,16 +169,17 @@
       .hero-stats { gap: 1.5rem; }
     }
   </style>
+  <link rel="stylesheet" href="assets/css/brand-system.css">
 </head>
 <body>
 
   <nav>
     <div class="nav-inner">
       <a href="/" class="nav-brand">
-        <img src="icons/logo_new.png" alt="A-Gent" style="height:44px;width:auto;border-radius:8px;object-fit:contain;">
+        <img class="brand-logo" src="assets/brand/a-gent-wordmark.png" alt="A-Gent AI Agents">
       </a>
       <div class="nav-links">
-        <a href="/signup.html">Get Started</a>
+        <a href="/signup.html?intent=install-extension">Install Extension</a>
       </div>
       <div class="nav-mobile">
         <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
@@ -366,13 +367,13 @@
           <div style="font-size:2.5rem;margin-bottom:1rem;">📡</div>
           <h3 style="font-size:1.2rem;font-weight:700;margin-bottom:0.5rem;">Signal A-Gent Demo</h3>
           <p style="font-size:0.85rem;color:var(--text-dim);margin-bottom:1.5rem;line-height:1.6;">See how signals are detected, scored, and surfaced in your CRM.</p>
-          <a href="/signup.html?agent=signal" style="display:inline-block;background:linear-gradient(135deg,var(--gold),#8B6914);color:#050508;padding:0.75rem 1.5rem;border-radius:10px;font-weight:700;font-size:0.875rem;">Get Started</a>
+          <a href="/signup.html?agent=signal&intent=install-extension" style="display:inline-block;background:linear-gradient(135deg,var(--gold),#8B6914);color:#050508;padding:0.75rem 1.5rem;border-radius:10px;font-weight:700;font-size:0.875rem;">Install Extension</a>
         </div>
         <div style="background:rgba(255,255,255,0.02);border:1px solid var(--border);border-radius:18px;padding:2rem;text-align:center;">
           <div style="font-size:2.5rem;margin-bottom:1rem;">📧</div>
           <h3 style="font-size:1.2rem;font-weight:700;margin-bottom:0.5rem;">Outbound A-Gent Demo</h3>
           <p style="font-size:0.85rem;color:var(--text-dim);margin-bottom:1.5rem;line-height:1.6;">Watch a full outbound sequence — from signal trigger to personalized email.</p>
-          <a href="/signup.html?agent=outbound" style="display:inline-block;background:var(--surface-2);color:var(--text);padding:0.75rem 1.5rem;border-radius:10px;font-weight:600;font-size:0.875rem;border:1px solid var(--border);">Get Started</a>
+          <a href="/signup.html?agent=outbound&intent=dashboard" style="display:inline-block;background:var(--surface-2);color:var(--text);padding:0.75rem 1.5rem;border-radius:10px;font-weight:600;font-size:0.875rem;border:1px solid var(--border);">View Dashboard</a>
         </div>
       </div>
     </div>
@@ -397,7 +398,7 @@
           <li>Weekly reporting and results</li>
           <li>Look for additional opportunities to scale AI operations</li>
         </ul>
-        <a href="/signup.html" class="pricing-btn">Get Started</a>
+        <a href="/signup.html?intent=strategy-call" class="pricing-btn">Book Strategy Call</a>
       </div>
       <div class="pricing-card featured fade-up">
         <div class="pricing-label">AI Scale</div>
@@ -411,7 +412,7 @@
           <li>Revised headcount plan, processes, and AI systems recommendations</li>
           <li>Full AIOps Fractional Services: Weekly Exec Meetings, Optional Board Support</li>
         </ul>
-        <a href="/signup.html" class="pricing-btn featured-btn">Get Started</a>
+        <a href="/signup.html?intent=strategy-call" class="pricing-btn featured-btn">Book Strategy Call</a>
       </div>
       <div class="pricing-card fade-up">
         <div class="pricing-label">AI Accelerate</div>
@@ -425,7 +426,7 @@
           <li>Revised headcount, processes, new AI systems recommendation</li>
           <li>Revised metrics in light of AI efficiencies</li>
         </ul>
-        <a href="/signup.html" class="pricing-btn">Get Started</a>
+        <a href="/signup.html?intent=strategy-call" class="pricing-btn">Book Strategy Call</a>
       </div>
     </div>
   </section>
@@ -447,7 +448,7 @@
     <div class="links">
       <a href="/dashboard">Dashboard</a>
       <a href="assessment.html">AI Assessment</a>
-      <a href="/signup.html">Talk to Agent</a>
+      <a href="/signup.html?intent=strategy-call">Book Strategy Call</a>
       <a href="/privacy.html">Privacy</a>
     </div>
     <p>© 2026 A-Gent — Your AI Sales Agent, Always Working</p>

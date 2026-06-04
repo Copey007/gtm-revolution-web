@@ -9,14 +9,14 @@
   <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --brand-primary: #111;
-      --brand-accent: #d44a9a;
-      --brand-accent-light: #f5d0e8;
-      --bg-light: #f7f7f7;
-      --text-dark: #1a1a1a;
-      --text-gray: #6b6b6b;
-      --white: #ffffff;
-      --border: #e5e5e5;
+      --brand-primary: #e8ecf2;
+      --brand-accent: #c9a227;
+      --brand-accent-light: rgba(201, 162, 39, 0.14);
+      --bg-light: #151d30;
+      --text-dark: #e8ecf2;
+      --text-gray: #9aa3b8;
+      --white: #0a0e1a;
+      --border: rgba(255, 255, 255, 0.08);
       --success: #22c55e;
       --warning: #f59e0b;
     }
@@ -66,7 +66,7 @@
     }
 
     .score-card {
-      background: linear-gradient(135deg, var(--brand-primary) 0%, #2a2a2a 100%);
+      background: linear-gradient(135deg, #101624 0%, #151d30 100%);
       border-radius: 20px;
       padding: 2.5rem;
       color: white;
@@ -99,7 +99,7 @@
       text-align: center;
     }
     .btn-primary { background: var(--brand-accent); color: white; }
-    .btn-primary:hover { background: #c03d87; transform: translateY(-1px); }
+    .btn-primary:hover { background: #8b6914; transform: translateY(-1px); }
     .btn-outline { background: transparent; border: 2px solid white; color: white; }
     .btn-outline:hover { background: rgba(255,255,255,0.1); }
     .btn-large { padding: 1rem 2rem; font-size: 1.05rem; }
@@ -120,7 +120,7 @@
     .bar-fill { height: 100%; border-radius: 8px; transition: width 1s ease; }
     .bar-you { background: var(--brand-accent); }
     .bar-avg { background: var(--border); margin-bottom: 0; }
-    .bar-top { background: #e8f5e9; }
+    .bar-top { background: rgba(34, 197, 94, 0.55); }
 
     .bar-labels { display: flex; justify-content: space-between; font-size: 0.75rem; color: var(--text-gray); }
     .bar-score { font-weight: 600; font-size: 0.8rem; color: white; position: absolute; right: 8px; top: 50%; transform: translateY(-50%); }
@@ -144,6 +144,7 @@
     }
     .rec-card:hover { border-color: var(--brand-accent); transform: translateY(-2px); }
     .rec-icon { font-size: 1.8rem; flex-shrink: 0; }
+    .rec-brand-icon { width: 36px; height: 36px; object-fit: cover; border-radius: 10px; display: block; }
     .rec-title { font-weight: 600; font-size: 1.05rem; margin-bottom: 0.25rem; }
     .rec-desc { font-size: 0.9rem; color: var(--text-gray); }
 
@@ -174,18 +175,19 @@
       font-family: 'Inter', sans-serif;
       transition: all 0.2s;
     }
-    .login-btn:hover { background: #333; }
+    .login-btn:hover { background: #8b6914; }
     .login-error { color: #ef4444; font-size: 0.85rem; margin-top: 0.75rem; display: none; }
     .login-success { color: var(--success); font-size: 0.9rem; margin-top: 0.75rem; display: none; }
 
     footer { text-align: center; padding: 2rem 5%; color: var(--text-gray); font-size: 0.85rem; margin-top: 4rem; }
   </style>
+  <link rel="stylesheet" href="assets/css/brand-system.css">
 </head>
 <body>
 
-<nav>
-  <a href="https://a-gent.co/" style="display:flex;align-items:center;text-decoration:none;gap:0.6rem;">
-    <img src="icons/logo_new.png" alt="A-Gent" style="height:2.8rem;width:auto;">
+<nav class="site-nav">
+  <a href="https://a-gent.co/" class="site-brand">
+    <img class="brand-logo" src="assets/brand/a-gent-wordmark.png" alt="A-Gent AI Agents">
   </a>
   <ul>
     <li><a href="https://a-gent.co/">Home</a></li>
@@ -208,8 +210,9 @@
     <div>
       <p class="your-email" id="userEmail">Results for: —</p>
       <div class="cta-stack">
-        <a href="https://a-gent.co/?ref=assessment" class="btn btn-primary btn-large">Install A-Gent Free →</a>
-        <a href="https://a-gent.co/?ref=assessment#features" class="btn btn-outline btn-large">See How It Works</a>
+        <a href="https://a-gent.co/signup.html?intent=install-extension&ref=assessment" class="btn btn-primary btn-large">Install Extension</a>
+        <a href="https://dashboard.a-gent.co/login.html?ref=assessment" class="btn btn-outline btn-large">View Dashboard</a>
+        <a href="https://a-gent.co/signup.html?intent=strategy-call&ref=assessment" class="btn btn-outline btn-large">Book Strategy Call</a>
       </div>
       <div class="share-section" style="margin-top: 2.5rem; background: transparent; padding: 0;">
         <p style="color: var(--text-gray); font-size: 0.9rem; margin-bottom: 0.5rem;">Access your detailed results + daily tracking:</p>
@@ -338,7 +341,7 @@
     recs.push({ icon: '📈', title: 'Get Daily AI Insights', desc: 'Add A-Gent to see how you compare vs top performers every single day.' });
   } else if (score < 26) {
     recs.push({ icon: '🚀', title: 'Scale Without Adding Headcount', desc: 'You\'re AI-accelerated. A-Gent keeps you there and helps you handle more deals with the same calendar.' });
-    recs.push({ icon: '🤖', title: 'Try Managed AI Agents', desc: 'You\'ve reached the point where managed agents pay for themselves. Book a demo to see how.' });
+    recs.push({ icon: '<img src="assets/brand/a-gent-icon.png" alt="A-Gent" class="rec-brand-icon">', title: 'Try Managed AI Agents', desc: 'You\'ve reached the point where managed agents pay for themselves. Book a strategy call to see how.' });
   } else {
     recs.push({ icon: '🏆', title: 'You\'re a Top Performer', desc: 'A-Gent helps you stay ahead of the curve and brings the rest of your team up to your level.' });
     recs.push({ icon: '📈', title: 'Share Your Results', desc: 'Help your team level up by sharing your secret: AI-first workflows + A-Gent agents.' });
@@ -370,7 +373,7 @@
       const data = JSON.parse(saved);
       if (data.email === emailInput) {
         loginSuccess.style.display = 'block';
-        setTimeout(() => { window.location.href = `https://a-gent.co/?ref=assessment&email=${encodeURIComponent(emailInput)}`; }, 800);
+        setTimeout(() => { window.location.href = `https://dashboard.a-gent.co/login.html?ref=assessment&email=${encodeURIComponent(emailInput)}`; }, 800);
         return;
       }
     }
