@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A-Gent — Your AI Sales Agent, Always Working</title>
+  <meta name="description" content="A-Gent is an autonomous AI sales agent that handles account research, prospecting, and personalized outreach — 24/7.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --bg: #0a0e1a;
+      --surface: #0f1525;
+      --surface-2: #151d30;
+      --border: rgba(255,255,255,0.06);
+      --gold: #c9a227;
+      --gold-light: #d4af37;
+      --gold-dim: rgba(201,162,39,0.12);
+      --silver: #c0c8d4;
+      --silver-dim: rgba(192,200,212,0.1);
+      --text: #e8ecf2;
+      --text-dim: #7a8299;
+      --green: #22c55e;
+      --red: #ef4444;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', -apple-system, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; overflow-x: hidden; }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+
+    /* NAV */
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); background: rgba(5,5,8,0.85); border-bottom: 1px solid var(--border); }
+    .nav-inner { max-width: 1200px; margin: 0 auto; padding: 0 2rem; height: 64px; display: flex; align-items: center; justify-content: space-between; }
+    .nav-brand { display: flex; align-items: center; gap: 0.6rem; font-weight: 700; font-size: 1.1rem; letter-spacing: 0.5px; }
+    .nav-brand img { height: 44px; width: auto; border-radius: 6px; }
+    .nav-links { display: flex; align-items: center; gap: 2rem; }
+    .nav-links a { font-size: 0.875rem; color: var(--text-dim); font-weight: 500; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--text); }
+    .nav-cta { background: var(--gold); color: #050508 !important; padding: 0.5rem 1.25rem; border-radius: 8px; font-weight: 600; transition: all 0.2s; }
+    .nav-cta:hover { background: var(--gold-light) !important; transform: translateY(-1px); }
+    .nav-mobile { display: none; cursor: pointer; }
+    @media (max-width: 768px) { .nav-links { display: none; } .nav-mobile { display: block; } }
+
+    /* HERO */
+    .hero { min-height: 100vh; display: flex; align-items: center; position: relative; padding: 8rem 2rem 4rem; overflow: hidden; }
+    .hero-bg { position: absolute; inset: 0; z-index: 0; }
+    .hero-bg img { width: 100%; height: 100%; object-fit: cover; opacity: 0.4; }
+    .hero-gradient { position: absolute; inset: 0; background: linear-gradient(135deg, rgba(5,5,8,0.97) 0%, rgba(5,5,8,0.7) 50%, rgba(5,5,8,0.85) 100%); }
+    .hero-glow { position: absolute; top: 20%; right: 15%; width: 600px; height: 600px; background: radial-gradient(circle, rgba(201,162,39,0.08) 0%, transparent 70%); pointer-events: none; }
+    .hero-inner { max-width: 1200px; margin: 0 auto; width: 100%; display: grid; grid-template-columns: 1fr 480px; gap: 5rem; align-items: center; position: relative; z-index: 1; }
+    .hero-badge { display: inline-flex; align-items: center; gap: 0.5rem; background: var(--gold-dim); border: 1px solid rgba(201,162,39,0.25); color: var(--gold); padding: 0.35rem 1rem; border-radius: 99px; font-size: 0.7rem; font-weight: 600; letter-spacing: 0.5px; text-transform: uppercase; margin-bottom: 1.75rem; }
+    .hero-badge .dot { width: 6px; height: 6px; background: var(--gold); border-radius: 50%; animation: pulse 2.5s infinite; }
+    @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.25} }
+    .hero h1 { font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 800; line-height: 1.08; letter-spacing: -1px; margin-bottom: 1.5rem; }
+    .hero h1 .gold { color: var(--gold); }
+    .hero-sub { font-size: 1.1rem; color: var(--text-dim); max-width: 520px; line-height: 1.75; margin-bottom: 2.5rem; }
+    .hero-stats { display: flex; gap: 2.5rem; padding-top: 2rem; border-top: 1px solid var(--border); }
+    .hero-stat .num { font-size: 2rem; font-weight: 800; color: var(--gold); line-height: 1; }
+    .hero-stat .label { font-size: 0.75rem; color: var(--text-dim); margin-top: 0.3rem; line-height: 1.3; }
+
+    /* HERO FORM CARD */
+    .hero-card { background: rgba(13,13,20,0.85); backdrop-filter: blur(30px); -webkit-backdrop-filter: blur(30px); border: 1px solid rgba(255,255,255,0.1); border-radius: 20px; padding: 2.5rem; box-shadow: 0 40px 80px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.05); }
+    .card-label { font-size: 0.65rem; font-weight: 700; color: var(--gold); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 0.75rem; }
+    .hero-card h2 { font-size: 1.6rem; font-weight: 700; line-height: 1.2; margin-bottom: 0.4rem; }
+    .hero-card .card-sub { font-size: 0.9rem; color: var(--text-dim); margin-bottom: 2rem; }
+    .form-group { margin-bottom: 1rem; }
+    .form-group label { display: block; font-size: 0.78rem; color: var(--text-dim); margin-bottom: 0.4rem; font-weight: 500; }
+    .form-input { width: 100%; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 10px; padding: 0.8rem 1rem; color: var(--text); font-size: 0.9rem; font-family: 'Inter', sans-serif; outline: none; transition: border-color 0.2s, background 0.2s; }
+    .form-input:focus { border-color: rgba(201,162,39,0.5); background: rgba(255,255,255,0.06); }
+    .form-input::placeholder { color: #444; }
+    .form-select { width: 100%; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 10px; padding: 0.8rem 1rem; color: var(--text); font-size: 0.9rem; font-family: 'Inter', sans-serif; outline: none; appearance: none; cursor: pointer; transition: border-color 0.2s; }
+    .form-select:focus { border-color: rgba(201,162,39,0.5); }
+    .form-select option { background: #13131c; }
+    .btn-primary { width: 100%; background: linear-gradient(135deg, var(--gold), #8B6914); color: #050508; padding: 0.9rem; border-radius: 10px; font-weight: 700; font-size: 0.95rem; border: none; cursor: pointer; transition: all 0.2s; display: flex; align-items: center; justify-content: center; gap: 0.5rem; }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 12px 40px rgba(201,162,39,0.35); }
+    .btn-primary:active { transform: translateY(0); }
+    .card-foot { font-size: 0.73rem; color: var(--text-dim); text-align: center; margin-top: 1rem; }
+    .card-foot span { color: var(--gold); }
+
+    /* SOCIAL PROOF BAR */
+    .proof-bar { background: var(--surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 1.5rem 2rem; }
+    .proof-inner { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; gap: 2.5rem; flex-wrap: wrap; }
+    .proof-label { font-size: 0.7rem; color: var(--text-dim); text-transform: uppercase; letter-spacing: 1.5px; white-space: nowrap; font-weight: 600; }
+    .proof-logos { display: flex; gap: 2.5rem; align-items: center; flex-wrap: wrap; opacity: 0.4; }
+    .proof-logos span { font-size: 0.95rem; font-weight: 700; letter-spacing: 0.5px; }
+
+    /* PAIN / FIX SECTION */
+    .pain-section { max-width: 1200px; margin: 0 auto; padding: 6rem 2rem; }
+    .pain-header { text-align: center; margin-bottom: 4rem; }
+    .section-label { font-size: 0.65rem; font-weight: 700; color: var(--gold); letter-spacing: 2.5px; text-transform: uppercase; margin-bottom: 0.75rem; }
+    .section-title { font-size: clamp(1.8rem, 3.5vw, 2.5rem); font-weight: 800; letter-spacing: -0.5px; margin-bottom: 0.75rem; }
+    .section-sub { color: var(--text-dim); font-size: 1rem; max-width: 550px; margin: 0 auto; }
+    .pain-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--border); border-radius: 16px; overflow: hidden; border: 1px solid var(--border); }
+    .pain-col { background: var(--surface); padding: 2.5rem; }
+    .pain-col h3 { font-size: 0.7rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 1.75rem; }
+    .pain-col.hurts h3 { color: var(--red); }
+    .pain-col.fixes h3 { color: var(--green); }
+    .pain-item { display: flex; gap: 1rem; align-items: flex-start; margin-bottom: 1.5rem; }
+    .pain-item:last-child { margin-bottom: 0; }
+    .pain-icon { width: 26px; height: 26px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 0.75rem; font-weight: 700; margin-top: 0.1rem; }
+    .pain-col.hurts .pain-icon { background: rgba(239,68,68,0.15); color: var(--red); }
+    .pain-col.fixes .pain-icon { background: rgba(34,197,94,0.12); color: var(--green); }
+    .pain-item p { font-size: 0.9rem; color: var(--text-dim); line-height: 1.55; }
+
+    /* RESULTS SECTION */
+    .results-section { background: var(--surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 6rem 2rem; }
+    .results-inner { max-width: 1200px; margin: 0 auto; }
+    .results-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 3.5rem; }
+    .result-card { background: rgba(255,255,255,0.02); border: 1px solid var(--border); border-radius: 14px; padding: 2rem; transition: all 0.3s; }
+    .result-card:hover { border-color: rgba(201,162,39,0.3); transform: translateY(-4px); box-shadow: 0 20px 50px rgba(0,0,0,0.3); }
+    .result-metric { font-size: 2.75rem; font-weight: 800; color: var(--gold); line-height: 1; margin-bottom: 0.4rem; }
+    .result-label { font-size: 0.85rem; font-weight: 600; color: var(--text); margin-bottom: 0.75rem; }
+    .result-card p { font-size: 0.82rem; color: var(--text-dim); line-height: 1.55; }
+
+    /* HOW IT WORKS */
+    .how-section { max-width: 1200px; margin: 0 auto; padding: 6rem 2rem; }
+    .how-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 3rem; }
+    .how-card { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 2.25rem; text-align: center; transition: all 0.3s; }
+    .how-card:hover { border-color: rgba(201,162,39,0.2); }
+    .how-num { width: 48px; height: 48px; background: var(--gold-dim); border: 1px solid rgba(201,162,39,0.25); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; font-weight: 800; color: var(--gold); margin: 0 auto 1.25rem; }
+    .how-card h4 { font-size: 1.05rem; font-weight: 700; margin-bottom: 0.5rem; }
+    .how-card p { font-size: 0.82rem; color: var(--text-dim); line-height: 1.55; }
+
+    /* FINAL CTA */
+    /* CONSULTING / PRICING SECTION */
+    .consulting-section { max-width: 1200px; margin: 0 auto; padding: 6rem 2rem; }
+    .pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-top: 3rem; }
+    .pricing-card { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 2.5rem; text-align: center; transition: all 0.2s; }
+    .pricing-card:hover { border-color: rgba(201,162,39,0.3); transform: translateY(-4px); }
+    .pricing-card.featured { border-color: var(--gold); background: linear-gradient(135deg, rgba(201,162,39,0.08), var(--surface)); }
+    .pricing-label { font-size: 0.65rem; font-weight: 700; color: var(--gold); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 0.75rem; }
+    .pricing-price { font-size: 2.5rem; font-weight: 800; color: var(--text); margin-bottom: 1.5rem; }
+    .pricing-price span { font-size: 1rem; font-weight: 400; color: var(--text-dim); }
+    .pricing-features { list-style: none; padding: 0; margin-bottom: 2rem; text-align: left; }
+    .pricing-features li { font-size: 0.875rem; color: var(--text-dim); padding: 0.5rem 0; border-bottom: 1px solid var(--border); }
+    .pricing-features li:last-child { border-bottom: none; }
+    .pricing-btn { display: inline-block; width: 100%; background: var(--surface-2); color: var(--text); padding: 0.9rem; border-radius: 10px; font-weight: 600; font-size: 0.875rem; border: 1px solid var(--border); transition: all 0.2s; }
+    .pricing-btn:hover { border-color: var(--gold); color: var(--gold); }
+    .pricing-btn.featured-btn { background: var(--gold); color: #050508; border-color: var(--gold); }
+    .pricing-btn.featured-btn:hover { background: var(--gold-light); }
+    @media (max-width: 900px) { .pricing-grid { grid-template-columns: 1fr; } }
+    .cta-inner { max-width: 760px; margin: 0 auto; text-align: center; }
+    .cta-card { background: linear-gradient(135deg, rgba(201,162,39,0.06), rgba(139,92,246,0.03)); border: 1px solid rgba(201,162,39,0.2); border-radius: 20px; padding: 4.5rem 3rem; position: relative; overflow: hidden; }
+    .cta-card::before { content:''; position:absolute; top:-100px;left:50%;transform:translateX(-50%);width:400px;height:400px;background:radial-gradient(circle,rgba(201,162,39,0.08),transparent 70%);pointer-events:none;}
+    .cta-card h2 { font-size: clamp(1.8rem, 3.5vw, 2.5rem); font-weight: 800; letter-spacing: -0.5px; margin-bottom: 1rem; position: relative; }
+    .cta-card p { color: var(--text-dim); font-size: 1.05rem; margin-bottom: 2.5rem; line-height: 1.7; position: relative; }
+    .cta-btn { display: inline-flex; align-items: center; gap: 0.5rem; background: linear-gradient(135deg, var(--gold), #8B6914); color: #050508; padding: 1rem 2.5rem; border-radius: 10px; font-weight: 700; font-size: 1rem; transition: all 0.2s; }
+    .cta-btn:hover { transform: translateY(-2px); box-shadow: 0 12px 40px rgba(201,162,39,0.4); }
+
+    /* FOOTER */
+    footer { border-top: 1px solid var(--border); padding: 2rem; text-align: center; }
+    footer .links { display: flex; justify-content: center; gap: 2rem; margin-bottom: 1rem; }
+    footer .links a { font-size: 0.82rem; color: var(--text-dim); transition: color 0.2s; }
+    footer .links a:hover { color: var(--gold); }
+    footer p { font-size: 0.78rem; color: var(--text-dim); }
+
+    /* ANIMATIONS */
+    .fade-up { opacity: 0; transform: translateY(30px); transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1); }
+    .fade-up.visible { opacity: 1; transform: translateY(0); }
+
+    @media (max-width: 960px) {
+      .hero-inner { grid-template-columns: 1fr; gap: 3rem; }
+      .hero { padding: 7rem 2rem 3rem; }
+      .pain-grid { grid-template-columns: 1fr; }
+      .results-grid { grid-template-columns: 1fr; }
+      .how-grid { grid-template-columns: 1fr; }
+      .hero-stats { gap: 1.5rem; }
+    }
+  </style>
+  <link rel="stylesheet" href="assets/css/brand-system.css">
+</head>
+<body>
+
+  <nav>
+    <div class="nav-inner">
+      <a href="/" class="nav-brand">
+        <img class="brand-logo" src="assets/brand/a-gent-wordmark.png" alt="A-Gent AI Agents">
+      </a>
+      <div class="nav-links">
+        <a href="/signup.html?intent=install-extension">Install Extension</a>
+      </div>
+      <div class="nav-mobile">
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-glow"></div>
+    <div class="hero-inner">
+      <div class="hero-left fade-up">
+        <div class="hero-badge"><span class="dot"></span>AI Sales Automation</div>
+        <h1>Your AI Sales Agent<br><span class="gold">Works While You Sleep</span></h1>
+        <p class="hero-sub">Stop chasing. Start closing. A-Gent handles account research, prospect identification, and personalized outreach — 24/7, without another body on payroll.</p>
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <div class="num">40+</div>
+            <div class="label">Hours saved<br>per rep/month</div>
+          </div>
+          <div class="hero-stat">
+            <div class="num">3x</div>
+            <div class="label">More accounts<br>prospected</div>
+          </div>
+          <div class="hero-stat">
+            <div class="num">24/7</div>
+            <div class="label">Always active,<br>never sick</div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-right fade-up" style="transition-delay:0.15s">
+        <div class="hero-card">
+          <div class="card-label">Free Assessment</div>
+          <h2>See Your AI Sales Potential</h2>
+          <p class="card-sub">Get a personalized breakdown of where A-Gent can reclaim time in your workflow.</p>
+          <form id="leadForm" onsubmit="handleLeadSubmit(event)">
+            <div class="form-group">
+              <label>Work Email</label>
+              <input type="email" class="form-input" placeholder="you@company.com" required>
+            </div>
+            <div class="form-group">
+              <label>Your Role</label>
+              <select class="form-select" required>
+                <option value="" disabled selected>Select a role...</option>
+                <option>VP of Sales</option>
+                <option>Sales Director</option>
+                <option>Sales Manager</option>
+                <option>Account Executive</option>
+                <option>SDR / BDR</option>
+                <option>Founder / CEO</option>
+                <option>RevOps</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Team Size</label>
+              <select class="form-select" required>
+                <option value="" disabled selected>Select size...</option>
+                <option>Just me</option>
+                <option>2–5</option>
+                <option>5–10</option>
+                <option>10–25</option>
+                <option>25–50</option>
+                <option>50+</option>
+              </select>
+            </div>
+            <button type="submit" class="btn-primary" id="submitBtn">
+              <span>Get My Free Assessment</span>
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+          </form>
+          <p class="card-foot">No spam. Just results. <span>Free forever.</span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="pain-section">
+    <div class="pain-header fade-up">
+      <div class="section-label">The Problem</div>
+      <h2 class="section-title">Sound Familiar?</h2>
+      <p class="section-sub">Most sales teams are losing hours every day to work that doesn't require a human.</p>
+    </div>
+    <div class="pain-grid fade-up">
+      <div class="pain-col hurts">
+        <h3>The Old Way</h3>
+        <div class="pain-item">
+          <div class="pain-icon">✗</div>
+          <p>Hours researching one account — still missing key intel</p>
+        </div>
+        <div class="pain-item">
+          <div class="pain-icon">✗</div>
+          <p>"Hi [First Name]" emails that never get opens or replies</p>
+        </div>
+        <div class="pain-item">
+          <div class="pain-icon">✗</div>
+          <p>Prospect list goes stale the same day you build it</p>
+        </div>
+        <div class="pain-item">
+          <div class="pain-icon">✗</div>
+          <p>Follow-ups slip through the cracks constantly</p>
+        </div>
+        <div class="pain-item">
+          <div class="pain-icon">✗</div>
+          <p>Admin work eats 40% of every rep's selling time</p>
+        </div>
+      </div>
+      <div class="pain-col fixes">
+        <h3>The A-Gent Way</h3>
+        <div class="pain-item">
+          <div class="pain-icon">✓</div>
+          <p>Full account intelligence in minutes — funding, news, tech stack, hiring signals</p>
+        </div>
+        <div class="pain-item">
+          <div class="pain-icon">✓</div>
+          <p>Personalized outbound based on real triggers — not templates</p>
+        </div>
+        <div class="pain-item">
+          <div class="pain-icon">✓</div>
+          <p>Prospect list refreshes automatically as signals change</p>
+        </div>
+        <div class="pain-item">
+          <div class="pain-icon">✓</div>
+          <p>Persistent follow-up sequences — never drop the ball</p>
+        </div>
+        <div class="pain-item">
+          <div class="pain-icon">✓</div>
+          <p>CRM updates, email drafting, meeting prep — handled automatically</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="results-section" id="agents">
+    <div class="results-inner">
+      <div class="pain-header fade-up">
+        <div class="section-label">What You Get</div>
+        <h2 class="section-title">AI That Actually Sells</h2>
+        <p class="section-sub">A-Gent works 24/7 across your entire sales stack — research, outreach, follow-up, and insights.</p>
+      </div>
+      <div class="results-grid">
+        <div class="result-card fade-up">
+          <div class="result-metric">40+</div>
+          <div class="result-label">Hours saved per rep/month</div>
+          <p>Recover time spent on research, data entry, and follow-up sequences that don't need you.</p>
+        </div>
+        <div class="result-card fade-up" style="transition-delay:0.1s">
+          <div class="result-metric">3x</div>
+          <div class="result-label">More accounts prospected</div>
+          <p>AI touches more accounts in a day than a human can in a week — without cutting corners.</p>
+        </div>
+        <div class="result-card fade-up" style="transition-delay:0.2s">
+          <div class="result-metric">24/7</div>
+          <div class="result-label">Always active, never sick</div>
+          <p>Your pipeline keeps moving regardless of team capacity, time zones, or bandwidth.</p>
+        </div>
+        <div class="result-card fade-up" style="transition-delay:0.05s">
+          <div class="result-metric">100%</div>
+          <div class="result-label">Signal-based targeting</div>
+          <p>Accounts selected by funding events, hiring spikes, tech moves, and real buying intent.</p>
+        </div>
+        <div class="result-card fade-up" style="transition-delay:0.15s">
+          <div class="result-metric">5 min</div>
+          <div class="result-label">Setup time to start</div>
+          <p>Install the Chrome extension, connect your stack, and the AI starts immediately.</p>
+        </div>
+        <div class="result-card fade-up" style="transition-delay:0.25s">
+          <div class="result-metric">Zero</div>
+          <div class="result-label">Training required</div>
+          <p>A-Gent learns from your best customers and mirrors your sales style — not a generic bot.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PREBUILT AGENTS -->
+  <section id="prebuilt-agents" style="background:var(--surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:6rem 2rem;">
+    <div style="max-width:1200px;margin:0 auto;">
+      <div style="text-align:center;margin-bottom:3.5rem;">
+        <div style="font-size:0.65rem;font-weight:700;color:var(--gold);letter-spacing:2.5px;text-transform:uppercase;margin-bottom:0.75rem;">Prebuilt Agents</div>
+        <h2 style="font-size:clamp(1.8rem,3.5vw,2.5rem);font-weight:800;letter-spacing:-0.5px;margin-bottom:0.75rem;">AI Agents, Ready to Run</h2>
+        <p style="color:var(--text-dim);font-size:1rem;max-width:550px;margin:0 auto;">Hosted and managed by A-agent. Each agent runs in its own isolated instance — built for your ICP, wired to your stack.</p>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem;max-width:1000px;margin:0 auto;">
+        <div style="background:rgba(255,255,255,0.02);border:1px solid var(--border);border-radius:18px;padding:2rem;text-align:center;">
+          <div style="font-size:2.5rem;margin-bottom:1rem;">📡</div>
+          <h3 style="font-size:1.2rem;font-weight:700;margin-bottom:0.5rem;">Signal A-Gent Demo</h3>
+          <p style="font-size:0.85rem;color:var(--text-dim);margin-bottom:1.5rem;line-height:1.6;">See how signals are detected, scored, and surfaced in your CRM.</p>
+          <a href="/signup.html?agent=signal&intent=install-extension" style="display:inline-block;background:linear-gradient(135deg,var(--gold),#8B6914);color:#050508;padding:0.75rem 1.5rem;border-radius:10px;font-weight:700;font-size:0.875rem;">Install Extension</a>
+        </div>
+        <div style="background:rgba(255,255,255,0.02);border:1px solid var(--border);border-radius:18px;padding:2rem;text-align:center;">
+          <div style="font-size:2.5rem;margin-bottom:1rem;">📧</div>
+          <h3 style="font-size:1.2rem;font-weight:700;margin-bottom:0.5rem;">Outbound A-Gent Demo</h3>
+          <p style="font-size:0.85rem;color:var(--text-dim);margin-bottom:1.5rem;line-height:1.6;">Watch a full outbound sequence — from signal trigger to personalized email.</p>
+          <a href="/signup.html?agent=outbound&intent=dashboard" style="display:inline-block;background:var(--surface-2);color:var(--text);padding:0.75rem 1.5rem;border-radius:10px;font-weight:600;font-size:0.875rem;border:1px solid var(--border);">View Dashboard</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="consulting-section" id="consulting">
+    <div class="pain-header fade-up">
+      <div class="section-label">AI Consulting</div>
+      <h2 class="section-title">Packages That Actually Move the Needle</h2>
+      <p class="section-sub">Three tiers of full-stack AI execution for revenue leaders who need results, not promises.</p>
+    </div>
+    <div class="pricing-grid">
+      <div class="pricing-card fade-up">
+        <div class="pricing-label">AI Foundation</div>
+        <div class="pricing-price">$12,500<span>/mo</span></div>
+        <ul class="pricing-features">
+          <li>2 Managed Agents</li>
+          <li>Ongoing Reporting</li>
+          <li>Slack/Teams Channel Support</li>
+          <li>Initial evaluation to establish AI GTM journey</li>
+          <li>Build and deliver up to two Agents for GTM execution</li>
+          <li>Weekly reporting and results</li>
+          <li>Look for additional opportunities to scale AI operations</li>
+        </ul>
+        <a href="/signup.html?intent=strategy-call" class="pricing-btn">Book Strategy Call</a>
+      </div>
+      <div class="pricing-card featured fade-up">
+        <div class="pricing-label">AI Scale</div>
+        <div class="pricing-price">$35,000<span>/mo</span></div>
+        <ul class="pricing-features">
+          <li>5 Managed Agents</li>
+          <li>Ongoing Reporting</li>
+          <li>Embedded AIOps for one full day a week</li>
+          <li>Slack Channel Support</li>
+          <li>Leverage A-Gent platform to understand GTM workflow friction</li>
+          <li>Revised headcount plan, processes, and AI systems recommendations</li>
+          <li>Full AIOps Fractional Services: Weekly Exec Meetings, Optional Board Support</li>
+        </ul>
+        <a href="/signup.html?intent=strategy-call" class="pricing-btn featured-btn">Book Strategy Call</a>
+      </div>
+      <div class="pricing-card fade-up">
+        <div class="pricing-label">AI Accelerate</div>
+        <div class="pricing-price">$18,000<span>/mo</span></div>
+        <ul class="pricing-features">
+          <li>3 Managed Agents</li>
+          <li>Ongoing Reporting</li>
+          <li>Slack Channel Support</li>
+          <li>AI readiness and GTM opportunity report</li>
+          <li>Deliver and execute plan to implement AI Accelerate plan</li>
+          <li>Revised headcount, processes, new AI systems recommendation</li>
+          <li>Revised metrics in light of AI efficiencies</li>
+        </ul>
+        <a href="/signup.html?intent=strategy-call" class="pricing-btn">Book Strategy Call</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <div class="cta-inner fade-up">
+      <div class="cta-card">
+        <h2>Stop Trading Time for Money</h2>
+        <p>Your best hours should go to closing — not researching accounts or drafting templated emails.<br>A-Gent handles the work that doesn't require you.</p>
+        <a href="/signup.html" class="cta-btn">
+          Get Your Free Assessment
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="links">
+      <a href="/dashboard">Dashboard</a>
+      <a href="assessment.html">AI Assessment</a>
+      <a href="/signup.html?intent=strategy-call">Book Strategy Call</a>
+      <a href="/privacy.html">Privacy</a>
+    </div>
+    <p>© 2026 A-Gent — Your AI Sales Agent, Always Working</p>
+  </footer>
+
+  <script>
+    const API_BASE = window.location.hostname === 'localhost' 
+      ? 'http://localhost:3000' 
+      : 'https://a-gent-provisioner.onrender.com';
+
+    async function handleLeadSubmit(e) {
+      e.preventDefault();
+      const btn = document.getElementById('submitBtn');
+      const email = e.target.querySelector('input[type="email"]').value;
+      const role = e.target.querySelectorAll('.form-select')[0].value;
+      const company = e.target.querySelectorAll('.form-select')[1].value;
+      btn.innerHTML = '<span>Sending...</span>';
+      try {
+        const resp = await fetch(API_BASE + '/api/signup', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ name: email.split('@')[0], email, company, utm: 'direct' }),
+        });
+        const result = await resp.json();
+        if (!resp.ok) throw new Error(result.error || 'Failed');
+        setTimeout(() => {
+          btn.innerHTML = '<span>✓ Sent! Check your email.</span>';
+          btn.style.background = 'linear-gradient(135deg, #22c55e, #16a34a)';
+        }, 800);
+      } catch (err) {
+        btn.innerHTML = '<span>Error — try again</span>';
+        btn.style.background = 'linear-gradient(135deg, #ef4444, #dc2626)';
+        setTimeout(() => {
+          btn.innerHTML = '<span>Send</span>';
+          btn.style.background = '';
+        }, 2000);
+      }
+    }
+
+    // Scroll animations
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>

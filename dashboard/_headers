@@ -1,0 +1,7 @@
+/*
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+/*.html
+  Cache-Control: no-cache, no-store, must-revalidate
+/marketing/*
+  Cache-Control: no-cache, no-store, must-revalidate

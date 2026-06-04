@@ -1,6 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- A-Gent main-domain marketing fallback -->
+  <script>
+    (function() {
+      var host = window.location.hostname;
+      if (host === 'a-gent.co' || host === 'www.a-gent.co') {
+        var path = window.location.pathname.replace(/^\//, '');
+        var pageMap = {
+          '': 'index.html',
+          'assessment.html': 'assessment.html',
+          'assessment-results.html': 'assessment-results.html',
+          'signup.html': 'signup.html',
+          'privacy.html': 'privacy.html',
+          'dashboard-demo.html': 'dashboard-demo.html'
+        };
+        var target = pageMap[path] || 'index.html';
+        fetch('/marketing/' + target, { cache: 'no-store' })
+          .then(function(response) { return response.text(); })
+          .then(function(html) {
+            document.open();
+            document.write(html);
+            document.close();
+            if (path === '' && window.location.pathname !== '/') {
+              window.history.replaceState(null, '', '/');
+            }
+          })
+          .catch(function() { window.location.replace('/marketing/' + target); });
+      }
+    })();
+  </script>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>A-Gent Dashboard</title>

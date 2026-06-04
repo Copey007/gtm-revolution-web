@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Get A-Gent Free — AI Sales Agent</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #0a0a0f;
+      color: #f0f0f5;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+    }
+    
+    .container {
+      width: 100%;
+      max-width: 480px;
+    }
+    
+    .emblem {
+      width: 64px;
+      height: 64px;
+      margin: 0 auto 1.5rem;
+      background: linear-gradient(135deg, #c9a227, #8B6914);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.75rem;
+    }
+    
+    h1 {
+      text-align: center;
+      font-size: 1.75rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      letter-spacing: 1px;
+    }
+    
+    .tagline {
+      text-align: center;
+      color: #c9a227;
+      font-size: 0.875rem;
+      margin-bottom: 2rem;
+      letter-spacing: 1px;
+    }
+    
+    .form-card {
+      background: #16161f;
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 12px;
+      padding: 2rem;
+    }
+    
+    .form-group {
+      margin-bottom: 1.25rem;
+    }
+    
+    label {
+      display: block;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: #888;
+      margin-bottom: 0.5rem;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+    
+    input {
+      width: 100%;
+      padding: 0.875rem 1rem;
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 8px;
+      background: #0a0a0f;
+      color: #f0f0f5;
+      font-size: 0.9rem;
+      font-family: inherit;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    
+    input:focus {
+      border-color: #c9a227;
+    }
+    
+    input::placeholder {
+      color: #555;
+    }
+    
+    .submit-btn {
+      width: 100%;
+      padding: 1rem;
+      background: linear-gradient(135deg, #c9a227 0%, #8B6914 100%);
+      border: none;
+      border-radius: 8px;
+      color: #fff;
+      font-size: 0.9rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.2s;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-top: 0.5rem;
+    }
+    
+    .submit-btn:hover {
+      transform: scale(1.02);
+      box-shadow: 0 4px 20px rgba(59,130,246,0.4);
+    }
+    
+    .submit-btn:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+      transform: none;
+    }
+    
+    .error-msg {
+      background: rgba(239,68,68,0.1);
+      border: 1px solid rgba(239,68,68,0.3);
+      border-radius: 8px;
+      padding: 0.875rem;
+      color: #ef4444;
+      font-size: 0.8rem;
+      margin-bottom: 1rem;
+      display: none;
+    }
+    
+    .error-msg.show {
+      display: block;
+    }
+    
+    .success-card {
+      display: none;
+      text-align: center;
+      padding: 2.5rem 2rem;
+    }
+    
+    .success-card.show {
+      display: block;
+    }
+    
+    .success-icon {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+    
+    .success-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+    }
+    
+    .success-text {
+      color: #888;
+      font-size: 0.875rem;
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+    }
+    
+    .dashboard-btn {
+      display: inline-block;
+      padding: 0.875rem 2rem;
+      background: linear-gradient(135deg, #c9a227 0%, #8B6914 100%);
+      border-radius: 8px;
+      color: #fff;
+      font-size: 0.875rem;
+      font-weight: 700;
+      text-decoration: none;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      transition: all 0.2s;
+    }
+    
+    .dashboard-btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 20px rgba(59,130,246,0.4);
+    }
+    
+    .form-card.hidden {
+      display: none;
+    }
+    
+    .privacy-note {
+      text-align: center;
+      font-size: 0.7rem;
+      color: #555;
+      margin-top: 1.5rem;
+      line-height: 1.5;
+    }
+    
+    .social-proof {
+      text-align: center;
+      margin-top: 2rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid rgba(255,255,255,0.06);
+    }
+    
+    .social-proof-text {
+      font-size: 0.75rem;
+      color: #666;
+      margin-bottom: 0.75rem;
+    }
+    
+    .logos {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      opacity: 0.4;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+    }
+    
+    .login-link {
+      text-align: center;
+      font-size: 0.8rem;
+      color: #888;
+      margin-top: 1rem;
+    }
+    
+    .login-link a {
+      color: #c9a227;
+      text-decoration: none;
+    }
+    
+    .login-link a:hover {
+      text-decoration: underline;
+    }
+  </style>
+  <link rel="stylesheet" href="assets/css/brand-system.css">
+</head>
+<body>
+  <div class="container">
+    <div class="emblem"><img class="login-brand-icon" src="assets/brand/a-gent-icon.png" alt="A-Gent"></div>
+    <h1>Get A-Gent Free</h1>
+    <p class="tagline" id="tagline">Your AI Sales Agent — Always Working</p>
+    
+    <div class="form-card" id="formCard">
+      <div class="error-msg" id="errorMsg"></div>
+      
+      <form id="signupForm">
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" name="name" placeholder="Sarah Chen" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="email">Work Email</label>
+          <input type="email" id="email" name="email" placeholder="sarah@acmecorp.com" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="company">Company</label>
+          <input type="text" id="company" name="company" placeholder="Acme Corp" required>
+        </div>
+        
+        <button type="submit" class="submit-btn" id="submitBtn">Install Extension</button>
+      </form>
+      
+      <p class="privacy-note">Free Chrome Extension · No credit card required<br>Install and start tracking in 60 seconds.</p>
+      
+      <p class="login-link">Already have an account? <a href="login.html">Sign in</a></p>
+      
+
+    </div>
+    
+    <div class="form-card success-card" id="successCard">
+      <div class="success-icon">✅</div>
+      <div class="success-title">You're in!</div>
+      <div class="success-text">
+        Account created for <strong id="confirmEmail"></strong><br>
+        Check your email for next steps.
+      </div>
+      <a href="dashboard/login.html" class="dashboard-btn">
+        Go to Dashboard →
+      </a>
+      <p style="font-size: 0.7rem; color: #555; margin-top: 1rem;">
+        Free forever · No credit card required
+      </p>
+    </div>
+  </div>
+  
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const agentType = urlParams.get('agent');
+    if (agentType === 'signal') {
+      document.getElementById('tagline').textContent = 'Signal A-Gent — Real-time account intelligence';
+    } else if (agentType === 'outbound') {
+      document.getElementById('tagline').textContent = 'Outbound A-Gent — Automated BDR at scale';
+    }
+
+    const API_BASE = window.location.hostname === 'localhost' 
+      ? 'http://localhost:3000' 
+      : 'https://a-gent-provisioner.onrender.com';
+    
+    document.getElementById('signupForm').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      
+      const btn = document.getElementById('submitBtn');
+      const errorEl = document.getElementById('errorMsg');
+      const form = document.getElementById('formCard');
+      const success = document.getElementById('successCard');
+      
+      btn.disabled = true;
+      btn.textContent = 'Creating account...';
+      errorEl.classList.remove('show');
+      
+      const urlParams = new URLSearchParams(window.location.search);
+      const data = {
+        name: document.getElementById('name').value.trim(),
+        email: document.getElementById('email').value.trim(),
+        company: document.getElementById('company').value.trim(),
+        agent: urlParams.get('agent') || '',
+      };
+      
+      try {
+        const resp = await fetch(API_BASE + '/api/signup', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data),
+        });
+        
+        const result = await resp.json();
+        
+        if (!resp.ok) {
+          throw new Error(result.error || 'Something went wrong');
+        }
+        
+        // Auto-sign in by storing session
+        const session = {
+          token: result.token,
+          user: result.user,
+          expiry: Date.now() + (7 * 24 * 60 * 60 * 1000),
+        };
+        localStorage.setItem('agent_session', JSON.stringify(session));
+        
+        document.getElementById('confirmEmail').textContent = data.email;
+        form.classList.add('hidden');
+        success.classList.add('show');
+        
+      } catch (err) {
+        errorEl.textContent = err.message;
+        errorEl.classList.add('show');
+        btn.disabled = false;
+        btn.textContent = 'Install Extension';
+      }
+    });
+  </script>
+</body>
+</html>

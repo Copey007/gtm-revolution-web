@@ -1,0 +1,17 @@
+# Host-specific marketing rewrites for the main A-Gent domain when this directory is used as Netlify publish root.
+https://a-gent.co/ /marketing/index.html 200!
+https://www.a-gent.co/ /marketing/index.html 200!
+https://a-gent.co/assessment.html /marketing/assessment.html 200!
+https://www.a-gent.co/assessment.html /marketing/assessment.html 200!
+https://a-gent.co/assessment-results.html /marketing/assessment-results.html 200!
+https://www.a-gent.co/assessment-results.html /marketing/assessment-results.html 200!
+https://a-gent.co/signup.html /marketing/signup.html 200!
+https://www.a-gent.co/signup.html /marketing/signup.html 200!
+https://a-gent.co/privacy.html /marketing/privacy.html 200!
+https://www.a-gent.co/privacy.html /marketing/privacy.html 200!
+https://a-gent.co/dashboard-demo.html /marketing/dashboard-demo.html 200!
+https://www.a-gent.co/dashboard-demo.html /marketing/dashboard-demo.html 200!
+https://a-gent.co/assets/* /marketing/assets/:splat 200!
+https://www.a-gent.co/assets/* /marketing/assets/:splat 200!
+https://a-gent.co/icons/* /marketing/icons/:splat 200!
+https://www.a-gent.co/icons/* /marketing/icons/:splat 200!

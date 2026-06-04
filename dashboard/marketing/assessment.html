@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Maturity Assessment — A-Gent</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --brand-primary: #e8ecf2;
+      --brand-accent: #c9a227;
+      --brand-accent-light: rgba(201, 162, 39, 0.14);
+      --bg-light: #151d30;
+      --text-dark: #e8ecf2;
+      --text-gray: #9aa3b8;
+      --white: #0a0e1a;
+      --border: rgba(255, 255, 255, 0.08);
+      --success: #22c55e;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--text-dark);
+      background: var(--white);
+      line-height: 1.6;
+    }
+
+    .logo-text {
+      font-family: 'Caveat', cursive;
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--brand-primary);
+    }
+    .logo-text span { color: var(--brand-accent); }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.5rem 5%;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+    nav ul { display: flex; list-style: none; gap: 2rem; }
+    nav a { text-decoration: none; color: var(--text-dark); font-weight: 500; font-size: 0.95rem; }
+    nav a:hover { color: var(--brand-accent); }
+
+    .btn {
+      padding: 0.75rem 1.5rem;
+      border-radius: 8px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+      border: none;
+      font-size: 0.95rem;
+    }
+    .btn-primary { background: var(--brand-accent); color: white; }
+    .btn-primary:hover { background: #8b6914; transform: translateY(-1px); }
+    .btn-outline { background: transparent; border: 2px solid var(--brand-primary); color: var(--brand-primary); }
+    .btn-outline:hover { background: var(--brand-primary); color: white; }
+    .btn:disabled { opacity: 0.5; cursor: not-allowed; transform: none; }
+
+    /* Quiz container */
+    .quiz-wrapper {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 2rem 5%;
+    }
+
+    .quiz-header { text-align: center; margin-bottom: 3rem; }
+    .quiz-header h1 { font-size: 2.2rem; font-weight: 700; margin-bottom: 0.75rem; }
+    .quiz-header p { color: var(--text-gray); font-size: 1.05rem; }
+
+    /* Progress */
+    .progress-wrap { margin-bottom: 2.5rem; }
+    .progress-label { display: flex; justify-content: space-between; font-size: 0.85rem; color: var(--text-gray); margin-bottom: 0.5rem; }
+    .progress-bar { height: 6px; background: var(--bg-light); border-radius: 99px; overflow: hidden; }
+    .progress-fill { height: 100%; background: var(--brand-accent); transition: width 0.4s ease; width: 0%; }
+
+    /* Section */
+    .section { display: none; }
+    .section.active { display: block; }
+
+    .section-title {
+      font-size: 1.15rem;
+      font-weight: 600;
+      margin-bottom: 0.35rem;
+      color: var(--brand-primary);
+    }
+    .section-sub {
+      font-size: 0.9rem;
+      color: var(--text-gray);
+      margin-bottom: 1.5rem;
+    }
+
+    /* Options */
+    .option {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      padding: 1rem 1.25rem;
+      border: 2px solid var(--border);
+      border-radius: 12px;
+      margin-bottom: 0.75rem;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .option:hover { border-color: var(--brand-accent); background: rgba(201, 162, 39, 0.14); }
+    .option.selected { border-color: var(--brand-accent); background: var(--brand-accent-light); }
+
+    .option input[type="radio"] { display: none; }
+    .option-letter {
+      flex-shrink: 0;
+      width: 2rem;
+      height: 2rem;
+      border-radius: 50%;
+      border: 2px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 0.85rem;
+      color: var(--text-gray);
+      transition: all 0.2s;
+    }
+    .option.selected .option-letter { background: var(--brand-accent); border-color: var(--brand-accent); color: white; }
+    .option-text { font-size: 0.95rem; line-height: 1.5; padding-top: 0.15rem; }
+
+    /* Nav buttons */
+    .quiz-nav { display: flex; justify-content: space-between; margin-top: 2rem; }
+    .btn-back { background: transparent; color: var(--text-gray); border: none; font-size: 0.9rem; padding: 0.75rem 0; cursor: pointer; }
+    .btn-back:hover { color: var(--text-dark); }
+
+    /* Email capture */
+    .email-capture { display: none; text-align: center; }
+    .email-capture.active { display: block; }
+    .email-capture h2 { font-size: 1.8rem; font-weight: 700; margin-bottom: 0.75rem; }
+    .email-capture p { color: var(--text-gray); margin-bottom: 2rem; }
+    .email-input {
+      width: 100%;
+      max-width: 420px;
+      padding: 1rem 1.25rem;
+      border: 2px solid var(--border);
+      border-radius: 12px;
+      font-size: 1rem;
+      font-family: 'Inter', sans-serif;
+      outline: none;
+      transition: border-color 0.2s;
+      margin-bottom: 1rem;
+    }
+    .email-input:focus { border-color: var(--brand-accent); }
+    .email-error { color: #ef4444; font-size: 0.85rem; margin-bottom: 1rem; display: none; }
+    .email-success { color: var(--success); font-size: 0.9rem; margin-top: 1rem; display: none; }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 2rem 5%;
+      color: var(--text-gray);
+      font-size: 0.85rem;
+      margin-top: 4rem;
+    }
+  </style>
+  <link rel="stylesheet" href="assets/css/brand-system.css">
+</head>
+<body>
+
+<nav class="site-nav">
+  <a href="https://a-gent.co/" class="site-brand">
+    <img class="brand-logo" src="assets/brand/a-gent-wordmark.png" alt="A-Gent AI Agents">
+  </a>
+  <ul>
+    <li><a href="https://a-gent.co/">Home</a></li>
+    <li><a href="https://a-gent.co/#features">Features</a></li>
+    <li><a href="#">Assessment</a></li>
+  </ul>
+</nav>
+
+<!-- Quiz -->
+<div class="quiz-wrapper" id="quizView">
+  <div class="quiz-header">
+    <h1>AI Maturity Assessment</h1>
+    <p>6 questions · 2 minutes · Get your personalized score</p>
+  </div>
+
+  <div class="progress-wrap">
+    <div class="progress-label">
+      <span id="progressText">Question 1 of 6</span>
+      <span id="progressPercent">0%</span>
+    </div>
+    <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+  </div>
+
+  <!-- Section 1: Prospect Research -->
+  <div class="section active" id="section-0">
+    <div class="section-title">1. Prospect Research</div>
+    <div class="section-sub">How do you research a new prospect before first contact?</div>
+    <div class="option" onclick="selectOption(0, 'A')" id="opt-0-A">
+      <input type="radio" name="q0" value="A">
+      <div class="option-letter">A</div>
+      <div class="option-text">Google manually, open LinkedIn, read news articles — takes 30+ minutes per prospect</div>
+    </div>
+    <div class="option" onclick="selectOption(0, 'B')" id="opt-0-B">
+      <input type="radio" name="q0" value="B">
+      <div class="option-letter">B</div>
+      <div class="option-text">Use a combination of tools (LinkedIn, company website, news) but still mostly manual</div>
+    </div>
+    <div class="option" onclick="selectOption(0, 'C')" id="opt-0-C">
+      <input type="radio" name="q0" value="C">
+      <div class="option-letter">C</div>
+      <div class="option-text">Have a research template I follow, filling in each field manually</div>
+    </div>
+    <div class="option" onclick="selectOption(0, 'D')" id="opt-0-D">
+      <input type="radio" name="q0" value="D">
+      <div class="option-letter">D</div>
+      <div class="option-text">Some automation involved but I still review and synthesize the findings</div>
+    </div>
+    <div class="option" onclick="selectOption(0, 'E')" id="opt-0-E">
+      <input type="radio" name="q0" value="E">
+      <div class="option-letter">E</div>
+      <div class="option-text">AI research agent handles it — I get a brief summary before every call</div>
+    </div>
+    <div class="quiz-nav">
+      <div></div>
+      <button class="btn btn-primary" id="next0" onclick="nextSection(0)" disabled>Next →</button>
+    </div>
+  </div>
+
+  <!-- Section 2: CRM Updates -->
+  <div class="section" id="section-1">
+    <div class="section-title">2. CRM Management</div>
+    <div class="section-sub">How do you log activity and update deal stages in your CRM?</div>
+    <div class="option" onclick="selectOption(1, 'A')" id="opt-1-A">
+      <input type="radio" name="q1" value="A">
+      <div class="option-letter">A</div>
+      <div class="option-text">Pen and paper / memory — I add to CRM at the end of the day or end of week</div>
+    </div>
+    <div class="option" onclick="selectOption(1, 'B')" id="opt-1-B">
+      <input type="radio" name="q1" value="B">
+      <div class="option-letter">B</div>
+      <div class="option-text">Update CRM weekly in batch after the week is over</div>
+    </div>
+    <div class="option" onclick="selectOption(1, 'C')" id="opt-1-C">
+      <input type="radio" name="q1" value="C">
+      <div class="option-letter">C</div>
+      <div class="option-text">Update after each call but manually — takes 5–10 min per call</div>
+    </div>
+    <div class="option" onclick="selectOption(1, 'D')" id="opt-1-D">
+      <input type="radio" name="q1" value="D">
+      <div class="option-letter">D</div>
+      <div class="option-text">Some auto-logging from email/call tools but still manual review</div>
+    </div>
+    <div class="option" onclick="selectOption(1, 'E')" id="opt-1-E">
+      <input type="radio" name="q1" value="E">
+      <div class="option-letter">E</div>
+      <div class="option-text">AI agent auto-updates my CRM in real-time — I never touch it manually</div>
+    </div>
+    <div class="quiz-nav">
+      <button class="btn-back" onclick="prevSection(1)">← Back</button>
+      <button class="btn btn-primary" id="next1" onclick="nextSection(1)" disabled>Next →</button>
+    </div>
+  </div>
+
+  <!-- Section 3: Meeting Prep -->
+  <div class="section" id="section-2">
+    <div class="section-title">3. Meeting Prep</div>
+    <div class="section-sub">How do you prepare for a sales call or meeting?</div>
+    <div class="option" onclick="selectOption(2, 'A')" id="opt-2-A">
+      <input type="radio" name="q2" value="A">
+      <div class="option-letter">A</div>
+      <div class="option-text">Wing it or do minimal prep — I know the basics at least</div>
+    </div>
+    <div class="option" onclick="selectOption(2, 'B')" id="opt-2-B">
+      <input type="radio" name="q2" value="B">
+      <div class="option-letter">B</div>
+      <div class="option-text">Manually review past emails, notes, and Dealroom before each meeting</div>
+    </div>
+    <div class="option" onclick="selectOption(2, 'C')" id="opt-2-C">
+      <input type="radio" name="q2" value="C">
+      <div class="option-letter">C</div>
+      <div class="option-text">Template-based prep checklist — still takes 30+ minutes per meeting</div>
+    </div>
+    <div class="option" onclick="selectOption(2, 'D')" id="opt-2-D">
+      <input type="radio" name="q2" value="D">
+      <div class="option-letter">D</div>
+      <div class="option-text">Some AI assistance (transcription, summary tools) but I assemble manually</div>
+    </div>
+    <div class="option" onclick="selectOption(2, 'E')" id="opt-2-E">
+      <input type="radio" name="q2" value="E">
+      <div class="option-letter">E</div>
+      <div class="option-text">AI agent delivers a full brief 5 minutes before every call automatically</div>
+    </div>
+    <div class="quiz-nav">
+      <button class="btn-back" onclick="prevSection(2)">← Back</button>
+      <button class="btn btn-primary" id="next2" onclick="nextSection(2)" disabled>Next →</button>
+    </div>
+  </div>
+
+  <!-- Section 4: Email Management -->
+  <div class="section" id="section-3">
+    <div class="section-title">4. Email & Follow-ups</div>
+    <div class="section-sub">How do you handle outreach, follow-up sequences, and inbox?</div>
+    <div class="option" onclick="selectOption(3, 'A')" id="opt-3-A">
+      <input type="radio" name="q3" value="A">
+      <div class="option-letter">A</div>
+      <div class="option-text">Write every email manually, one at a time, personal and unique</div>
+    </div>
+    <div class="option" onclick="selectOption(3, 'B')" id="opt-3-B">
+      <input type="radio" name="q3" value="B">
+      <div class="option-letter">B</div>
+      <div class="option-text">Use email templates I copy-paste and manually personalize</div>
+    </div>
+    <div class="option" onclick="selectOption(3, 'C')" id="opt-3-C">
+      <input type="radio" name="q3" value="C">
+      <div class="option-letter">C</div>
+      <div class="option-text">Batched sending with some sequencing tools, still manual review</div>
+    </div>
+    <div class="option" onclick="selectOption(3, 'D')" id="opt-3-D">
+      <input type="radio" name="q3" value="D">
+      <div class="option-letter">D</div>
+      <div class="option-text">AI helps draft personalized emails — I review and approve before sending</div>
+    </div>
+    <div class="option" onclick="selectOption(3, 'E')" id="opt-3-E">
+      <input type="radio" name="q3" value="E">
+      <div class="option-letter">E</div>
+      <div class="option-text">AI agent manages the full sequence — I track results, not write emails</div>
+    </div>
+    <div class="quiz-nav">
+      <button class="btn-back" onclick="prevSection(3)">← Back</button>
+      <button class="btn btn-primary" id="next3" onclick="nextSection(3)" disabled>Next →</button>
+    </div>
+  </div>
+
+  <!-- Section 5: Documents & Reporting -->
+  <div class="section" id="section-4">
+    <div class="section-title">5. Documents & Reporting</div>
+    <div class="section-sub">How do you create proposals, reports, or meeting summaries?</div>
+    <div class="option" onclick="selectOption(4, 'A')" id="opt-4-A">
+      <input type="radio" name="q4" value="A">
+      <div class="option-letter">A</div>
+      <div class="option-text">Start from scratch every time — no templates or prior docs</div>
+    </div>
+    <div class="option" onclick="selectOption(4, 'B')" id="opt-4-B">
+      <input type="radio" name="q4" value="B">
+      <div class="option-letter">B</div>
+      <div class="option-text">Copy and paste from old documents and manually update</div>
+    </div>
+    <div class="option" onclick="selectOption(4, 'C')" id="opt-4-C">
+      <input type="radio" name="q4" value="C">
+      <div class="option-letter">C</div>
+      <div class="option-text">Use templates with some structure — manually customize each section</div>
+    </div>
+    <div class="option" onclick="selectOption(4, 'D')" id="opt-4-D">
+      <input type="radio" name="q4" value="D">
+      <div class="option-letter">D</div>
+      <div class="option-text">AI assists with first draft — I review, edit, and finalize</div>
+    </div>
+    <div class="option" onclick="selectOption(4, 'E')" id="opt-4-E">
+      <input type="radio" name="q4" value="E">
+      <div class="option-letter">E</div>
+      <div class="option-text">AI auto-generates from CRM data and context — I approve final output</div>
+    </div>
+    <div class="quiz-nav">
+      <button class="btn-back" onclick="prevSection(4)">← Back</button>
+      <button class="btn btn-primary" id="next4" onclick="nextSection(4)" disabled>Next →</button>
+    </div>
+  </div>
+
+  <!-- Section 6: Time on Admin -->
+  <div class="section" id="section-5">
+    <div class="section-title">6. Time on Admin</div>
+    <div class="section-sub">How many hours per day do you spend on manual, repetitive admin tasks?</div>
+    <div class="option" onclick="selectOption(5, 'A')" id="opt-5-A">
+      <input type="radio" name="q5" value="A">
+      <div class="option-letter">A</div>
+      <div class="option-text">3+ hours — most of my day is administrative work</div>
+    </div>
+    <div class="option" onclick="selectOption(5, 'B')" id="opt-5-B">
+      <input type="radio" name="q5" value="B">
+      <div class="option-letter">B</div>
+      <div class="option-text">2–3 hours — significant chunk of my day</div>
+    </div>
+    <div class="option" onclick="selectOption(5, 'C')" id="opt-5-C">
+      <input type="radio" name="q5" value="C">
+      <div class="option-letter">C</div>
+      <div class="option-text">1–2 hours — noticeable but manageable</div>
+    </div>
+    <div class="option" onclick="selectOption(5, 'D')" id="opt-5-D">
+      <input type="radio" name="q5" value="D">
+      <div class="option-letter">D</div>
+      <div class="option-text">30 minutes–1 hour — I'm fairly efficient</div>
+    </div>
+    <div class="option" onclick="selectOption(5, 'E')" id="opt-5-E">
+      <input type="radio" name="q5" value="E">
+      <div class="option-letter">E</div>
+      <div class="option-text">Less than 30 minutes — admin barely registers in my day</div>
+    </div>
+    <div class="quiz-nav">
+      <button class="btn-back" onclick="prevSection(5)">← Back</button>
+      <button class="btn btn-primary" id="next5" onclick="showEmailCapture()" disabled>See My Results →</button>
+    </div>
+  </div>
+</div>
+
+<!-- Email Capture -->
+<div class="quiz-wrapper email-capture" id="emailCapture">
+  <div class="quiz-header">
+    <h1>Almost there!</h1>
+    <p>Enter your email to get your full AI Maturity Report with detailed breakdown and personalized recommendations.</p>
+  </div>
+  <form onsubmit="submitQuiz(event)" style="text-align: center;">
+    <input type="email" class="email-input" id="emailInput" placeholder="your@email.com" required>
+    <div class="email-error" id="emailError">Please enter a valid email address.</div>
+    <button type="submit" class="btn btn-primary" id="submitBtn" style="width: 100%; max-width: 420px;">Get My AI Maturity Report →</button>
+    <div class="email-success" id="emailSuccess">✓ Submitting your results...</div>
+  </form>
+  <p style="color: var(--text-gray); font-size: 0.8rem; margin-top: 1.5rem;">No spam. Unsubscribe anytime. We handle your data like top performers handle their CRM.</p>
+</div>
+
+<footer>
+  <p>© 2026 A-Gent — Built for sales teams ready to stop wasting time.</p>
+</footer>
+
+<script>
+  const TOTAL_SECTIONS = 6;
+  const SCORES = { A: 1, B: 2, C: 3, D: 4, E: 5 };
+  const answers = {};
+
+  function selectOption(sectionIndex, letter) {
+    answers[sectionIndex] = letter;
+
+    // Remove selected from all options in this section
+    document.querySelectorAll(`#section-${sectionIndex} .option`).forEach(el => el.classList.remove('selected'));
+    // Add selected to chosen
+    document.getElementById(`opt-${sectionIndex}-${letter}`).classList.add('selected');
+
+    // Enable next button
+    document.getElementById(`next${sectionIndex}`).disabled = false;
+  }
+
+  function nextSection(currentIdx) {
+    if (currentIdx < TOTAL_SECTIONS - 1) {
+      document.getElementById(`section-${currentIdx}`).classList.remove('active');
+      document.getElementById(`section-${currentIdx + 1}`).classList.add('active');
+      updateProgress(currentIdx + 1);
+    }
+  }
+
+  function prevSection(currentIdx) {
+    if (currentIdx > 0) {
+      document.getElementById(`section-${currentIdx}`).classList.remove('active');
+      document.getElementById(`section-${currentIdx - 1}`).classList.add('active');
+      updateProgress(currentIdx - 1);
+    }
+  }
+
+  function updateProgress(idx) {
+    const pct = Math.round((idx / TOTAL_SECTIONS) * 100);
+    document.getElementById('progressFill').style.width = pct + '%';
+    document.getElementById('progressPercent').textContent = pct + '%';
+    document.getElementById('progressText').textContent = `Question ${idx + 1} of ${TOTAL_SECTIONS}`;
+  }
+
+  function showEmailCapture() {
+    document.getElementById('quizView').style.display = 'none';
+    document.getElementById('emailCapture').classList.add('active');
+    updateProgress(TOTAL_SECTIONS);
+  }
+
+  async function submitQuiz(e) {
+    e.preventDefault();
+    const email = document.getElementById('emailInput').value.trim();
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      document.getElementById('emailError').style.display = 'block';
+      return;
+    }
+    document.getElementById('emailError').style.display = 'none';
+
+    // Calculate score
+    const scoreValues = Object.values(answers).map(l => SCORES[l]);
+    const totalScore = scoreValues.reduce((a, b) => a + b, 0);
+
+    // Determine maturity level
+    let level, description;
+    if (totalScore <= 12) { level = 'Manual Novice'; description = 'You are doing most things manually — there is significant room for AI to reclaim your time.'; }
+    else if (totalScore <= 18) { level = 'Partial Automation'; description = 'You have started automating some tasks — with the right AI agents you can go much further.'; }
+    else if (totalScore <= 24) { level = 'Hybrid Approach'; description = 'You mix manual and automated work well — the gap to top-performer efficiency is smaller than you think.'; }
+    else if (totalScore <= 30) { level = 'AI-Accelerated'; description = 'You are ahead of most reps. A-Gent can sharpen your edge and reclaim the remaining manual drag.'; }
+    else { level = 'AI-First'; description = 'You are in the top tier. A-Gent keeps you there and helps you scale without adding headcount.'; }
+
+    // Calculate benchmark
+    const avgScores = {
+      research: { avg: 2.1, top: 4.5 },
+      crm: { avg: 1.8, top: 4.7 },
+      meeting: { avg: 2.3, top: 4.6 },
+      email: { avg: 2.5, top: 4.4 },
+      docs: { avg: 2.0, top: 4.3 },
+      admin: { avg: 2.2, top: 4.5 }
+    };
+
+    const sectionScores = Object.values(answers).map(l => SCORES[l]);
+    const benchmark = {
+      yourScores: sectionScores,
+      categories: ['Research', 'CRM', 'Meeting Prep', 'Email', 'Documents', 'Admin'],
+      benchmarks: [avgScores.research, avgScores.crm, avgScores.meeting, avgScores.email, avgScores.docs, avgScores.admin]
+    };
+
+    const payload = {
+      email,
+      answers,
+      totalScore,
+      level,
+      description,
+      benchmark: JSON.stringify(benchmark),
+      created_at: new Date().toISOString()
+    };
+
+    try {
+      const { createClient } = window.supabase;
+      const supabase = createClient('https://byospmliiokgrdjjxsde.supabase.co', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJ5b3NwbWxpaW9rZ3Jkamp4c2RlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzk4MjQ0NzUsImV4cCI6MjA5NTQwMDQ3NX0.KvzaEuEH9nRlBBSUOyg7kTKHvLFfR6CvmZbjVHZQ83I');
+      const { error } = await supabase.from('assessment_responses').insert(payload);
+      if (error) console.warn('Supabase insert failed:', error);
+    } catch (err) {
+      console.warn('Could not connect to Supabase:', err);
+    }
+
+    // Store in localStorage as fallback
+    localStorage.setItem('aGentAssessment', JSON.stringify(payload));
+
+    document.getElementById('submitBtn').disabled = true;
+    document.getElementById('emailSuccess').style.display = 'block';
+    document.getElementById('submitBtn').textContent = 'Loading your results...';
+
+    // Redirect to results page
+    const resultsParams = new URLSearchParams({
+      score: totalScore,
+      level: encodeURIComponent(level),
+      desc: encodeURIComponent(description),
+      email: encodeURIComponent(email)
+    });
+    setTimeout(() => {
+      window.location.href = `assessment-results.html?${resultsParams.toString()}`;
+    }, 1200);
+  }
+</script>
+
+<!-- Supabase client (must load before submitQuiz runs) -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+</body>
+</html>
