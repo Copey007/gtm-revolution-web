@@ -1,986 +1,166 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <!-- A-Gent main-domain marketing fallback -->
-  <script>
-    (function() {
-      var host = window.location.hostname;
-      if (host === 'a-gent.co' || host === 'www.a-gent.co') {
-        var path = window.location.pathname.replace(/^\//, '');
-        var pageMap = {
-          '': 'index.html',
-          'assessment.html': 'assessment.html',
-          'assessment-results.html': 'assessment-results.html',
-          'signup.html': 'signup.html',
-          'privacy.html': 'privacy.html',
-          'dashboard-demo.html': 'dashboard-demo.html'
-        };
-        var target = pageMap[path] || 'index.html';
-        fetch('/marketing/' + target, { cache: 'no-store' })
-          .then(function(response) { return response.text(); })
-          .then(function(html) {
-            document.open();
-            document.write(html);
-            document.close();
-            if (path === '' && window.location.pathname !== '/') {
-              window.history.replaceState(null, '', '/');
-            }
-          })
-          .catch(function() { window.location.replace('/marketing/' + target); });
-      }
-    })();
-  </script>
-
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>A-Gent Dashboard</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>A-Gent | AI SDR Platform and AI Consulting for B2B SaaS</title>
+  <meta name="description" content="A-Gent offers A-Gent Fleet, a packaged AI SDR platform, and AI Consulting for bespoke revenue automation systems for B2B SaaS teams.">
+  <link rel="canonical" href="https://a-gent.co">
+  <meta property="og:title" content="A-Gent | AI SDR Platform and AI Consulting for B2B SaaS">
+  <meta property="og:description" content="A-Gent offers A-Gent Fleet, a packaged AI SDR platform, and AI Consulting for bespoke revenue automation systems for B2B SaaS teams.">
+  <meta property="og:url" content="https://a-gent.co">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    
-    :root {
-      --bg: #0a0a0f;
-      --surface: #16161f;
-      --border: rgba(255,255,255,0.06);
-      --gold: #c9a227;
-      --gold-dim: rgba(201,162,39,0.15);
-      --text: #f0f0f5;
-      --text-dim: #888;
-      --green: #22c55e;
-      --blue: #c9a227;
-      --red: #ef4444;
-    }
-    
-    body {
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.5;
-      min-height: 100vh;
-    }
-    
-    .container {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 2rem 1.5rem;
-    }
-    
-    /* Header */
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1.5rem 0 2rem;
-      border-bottom: 1px solid var(--border);
-      margin-bottom: 2rem;
-    }
-    
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-    }
-    
-    .brand-icon {
-      width: 40px;
-      height: 40px;
-      background: linear-gradient(135deg, var(--gold), #8b6914);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.25rem;
-    }
-    
-    .brand-name {
-      font-size: 1.25rem;
-      font-weight: 700;
-      letter-spacing: 1px;
-    }
-    
-    .brand-tagline {
-      font-size: 0.7rem;
-      color: var(--gold);
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-    
-    .header-actions {
-      display: flex;
-      gap: 0.75rem;
-      align-items: center;
-    }
-    
-    .email-badge {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 20px;
-      padding: 0.4rem 0.875rem;
-      font-size: 0.75rem;
-      color: var(--text-dim);
-    }
-    
-    .btn {
-      padding: 0.625rem 1.25rem;
-      border-radius: 6px;
-      font-size: 0.8rem;
-      font-weight: 600;
-      cursor: pointer;
-      transition: all 0.2s;
-      text-decoration: none;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.4rem;
-      border: none;
-      font-family: inherit;
-    }
-    
-    .btn-primary {
-      background: var(--gold);
-      color: var(--bg);
-    }
-    
-    .btn-primary:hover {
-      transform: scale(1.02);
-      box-shadow: 0 4px 20px rgba(201,162,39,0.3);
-    }
-    
-    .btn-outline {
-      background: transparent;
-      border: 1px solid var(--gold);
-      color: var(--gold);
-    }
-    
-    .btn-danger {
-      background: var(--red);
-      color: white;
-    }
-    
-    /* Hero Stats */
-    .hero-stats {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 1rem;
-      margin-bottom: 2rem;
-    }
-    
-    .stat-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 1.25rem;
-      text-align: center;
-    }
-    
-    .stat-label {
-      font-size: 0.65rem;
-      color: var(--gold);
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      margin-bottom: 0.5rem;
-    }
-    
-    .stat-value {
-      font-size: 2rem;
-      font-weight: 700;
-      color: var(--text);
-    }
-    
-    .stat-sub {
-      font-size: 0.7rem;
-      color: var(--text-dim);
-      margin-top: 0.25rem;
-    }
-    
-    /* Tabs */
-    .tabs {
-      display: flex;
-      gap: 0.5rem;
-      margin-bottom: 1.5rem;
-    }
-    
-    .tab {
-      padding: 0.625rem 1.25rem;
-      background: transparent;
-      border: 1px solid var(--border);
-      border-radius: 6px;
-      color: var(--text-dim);
-      font-size: 0.8rem;
-      font-weight: 600;
-      cursor: pointer;
-      transition: all 0.2s;
-      font-family: inherit;
-    }
-    
-    .tab.active {
-      background: var(--gold-dim);
-      border-color: var(--gold);
-      color: var(--gold);
-    }
-    
-    .tab:hover:not(.active) {
-      border-color: rgba(255,255,255,0.2);
-      color: var(--text);
-    }
-    
-    /* Tab Panels */
-    .tab-panel {
-      display: none;
-    }
-    
-    .tab-panel.active {
-      display: block;
-    }
-    
-    /* Cards */
-    .card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 1.5rem;
-      margin-bottom: 1.5rem;
-    }
-    
-    .card-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 1rem;
-    }
-    
-    .card-title {
-      font-size: 0.7rem;
-      font-weight: 600;
-      color: var(--text-dim);
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-    
-    .card-action {
-      font-size: 0.75rem;
-      color: var(--gold);
-      cursor: pointer;
-      background: none;
-      border: none;
-      font-family: inherit;
-      font-weight: 600;
-    }
-    
-    .card-action:hover {
-      text-decoration: underline;
-    }
-    
-    /* Table */
-    .table-wrapper {
-      overflow-x: auto;
-    }
-    
-    table {
-      width: 100%;
-      border-collapse: collapse;
-    }
-    
-    th, td {
-      text-align: left;
-      padding: 0.75rem 1rem;
-      border-bottom: 1px solid var(--border);
-      font-size: 0.8rem;
-    }
-    
-    th {
-      color: var(--text-dim);
-      font-weight: 600;
-      text-transform: uppercase;
-      font-size: 0.65rem;
-      letter-spacing: 0.5px;
-    }
-    
-    tr:last-child td {
-      border-bottom: none;
-    }
-    
-    tr:hover td {
-      background: rgba(255,255,255,0.02);
-    }
-    
-    .status-badge {
-      display: inline-block;
-      padding: 0.2rem 0.5rem;
-      border-radius: 4px;
-      font-size: 0.65rem;
-      font-weight: 600;
-      text-transform: uppercase;
-    }
-    
-    .status-new { background: rgba(59,130,246,0.2); color: var(--gold); }
-    .status-contacted { background: rgba(245,158,11,0.2); color: #f59e0b; }
-    .status-qualified { background: rgba(34,197,94,0.2); color: var(--green); }
-    .status-proposal { background: rgba(139,92,246,0.2); color: #8b5cf6; }
-    .status-won { background: rgba(34,197,94,0.3); color: var(--green); }
-    .status-lost { background: rgba(239,68,68,0.2); color: var(--red); }
-    
-    .deal-value {
-      font-weight: 700;
-      color: var(--gold);
-    }
-    
-    .action-cell {
-      display: flex;
-      gap: 0.5rem;
-    }
-    
-    .btn-small {
-      padding: 0.3rem 0.6rem;
-      font-size: 0.7rem;
-      border-radius: 4px;
-      border: none;
-      cursor: pointer;
-      font-family: inherit;
-      font-weight: 600;
-    }
-    
-    .btn-edit {
-      background: rgba(255,255,255,0.1);
-      color: var(--text-dim);
-    }
-    
-    .btn-delete {
-      background: rgba(239,68,68,0.15);
-      color: var(--red);
-    }
-    
-    /* Modal */
-    .modal-overlay {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: rgba(0,0,0,0.7);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      z-index: 1000;
-      display: none;
-    }
-    
-    .modal-overlay.show {
-      display: flex;
-    }
-    
-    .modal {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 2rem;
-      width: 100%;
-      max-width: 500px;
-    }
-    
-    .modal-title {
-      font-size: 1.1rem;
-      font-weight: 700;
-      margin-bottom: 1.5rem;
-    }
-    
-    .form-group {
-      margin-bottom: 1rem;
-    }
-    
-    .form-group label {
-      display: block;
-      font-size: 0.7rem;
-      font-weight: 600;
-      color: var(--text-dim);
-      margin-bottom: 0.4rem;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-    }
-    
-    .form-group input,
-    .form-group select,
-    .form-group textarea {
-      width: 100%;
-      padding: 0.7rem 0.875rem;
-      border: 1px solid rgba(255,255,255,0.1);
-      border-radius: 6px;
-      background: var(--bg);
-      color: var(--text);
-      font-size: 0.85rem;
-      font-family: inherit;
-      outline: none;
-    }
-    
-    .form-group input:focus,
-    .form-group select:focus,
-    .form-group textarea:focus {
-      border-color: var(--gold);
-    }
-    
-    .form-group textarea {
-      resize: vertical;
-      min-height: 80px;
-    }
-    
-    .form-row {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1rem;
-    }
-    
-    .modal-actions {
-      display: flex;
-      gap: 0.75rem;
-      justify-content: flex-end;
-      margin-top: 1.5rem;
-    }
-    
-    .btn-cancel {
-      padding: 0.6rem 1.25rem;
-      background: transparent;
-      border: 1px solid var(--border);
-      color: var(--text-dim);
-      border-radius: 6px;
-      font-size: 0.8rem;
-      font-weight: 600;
-      cursor: pointer;
-      font-family: inherit;
-    }
-    
-    .btn-save {
-      padding: 0.6rem 1.25rem;
-      background: var(--gold);
-      border: none;
-      color: var(--bg);
-      border-radius: 6px;
-      font-size: 0.8rem;
-      font-weight: 700;
-      cursor: pointer;
-      font-family: inherit;
-    }
-    
-    /* Empty State */
-    .empty-state {
-      text-align: center;
-      padding: 2.5rem;
-      color: var(--text-dim);
-    }
-    
-    .empty-icon {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-      opacity: 0.4;
-    }
-    
-    .empty-title {
-      font-size: 1rem;
-      font-weight: 600;
-      margin-bottom: 0.5rem;
-      color: var(--text);
-    }
-    
-    .empty-text {
-      font-size: 0.8rem;
-      margin-bottom: 1.25rem;
-    }
-    
-    /* Loading */
-    .loading {
-      text-align: center;
-      padding: 2rem;
-      color: var(--text-dim);
-    }
-    
-    @media (max-width: 768px) {
-      .hero-stats { grid-template-columns: 1fr 1fr; }
-      .form-row { grid-template-columns: 1fr; }
-    }
-  </style>
-  <link rel="stylesheet" href="assets/css/brand-system.css">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Orbitron:wght@500;600;700;800;900&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/fleet-master.css">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"A-Gent","url":"https://a-gent.co","description":"A-Gent builds A-Gent Fleet, an AI SDR platform for B2B SaaS teams, and provides AI consulting for bespoke revenue automation systems.","email":"mark.cope.roarr@gmail.com","sameAs":["https://fleet.a-gent.co/"]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Service","name":"A-Gent Fleet and AI Consulting","url":"https://a-gent.co","provider":{"@type":"Organization","name":"A-Gent","url":"https://a-gent.co"},"areaServed":"B2B SaaS companies","serviceType":"AI SDR platform and AI consulting","description":"A-Gent offers A-Gent Fleet, a packaged AI SDR platform, and AI Consulting for bespoke revenue automation systems for B2B SaaS teams."}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is A-Gent Fleet?","acceptedAnswer":{"@type":"Answer","text":"A-Gent Fleet is the packaged AI SDR platform for researching accounts, generating relevant outreach, reviewing messages, and operating outbound workflows."}},{"@type":"Question","name":"How is AI Consulting different?","acceptedAnswer":{"@type":"Answer","text":"AI Consulting is the bespoke service offer for teams that need custom AI revenue systems, integrations, workflow design, or strategic implementation support."}},{"@type":"Question","name":"Where do users launch the product?","acceptedAnswer":{"@type":"Answer","text":"The Launch Console opens the A-Gent Fleet login and signup route at the Fleet app."}}]}</script>
 </head>
 <body>
-  <div class="container">
-    <header>
-      <div class="brand">
-        <div class="brand-icon"><img class="app-brand-icon" src="assets/brand/a-gent-icon.png" alt="A-Gent"></div>
-        <div>
-          <div class="brand-name">A-Gent</div>
-          <div class="brand-tagline">AI Workstamp</div>
+<div class="site-shell">
+<header class="nav">
+  <div class="container nav-inner">
+    <a class="wordmark" href="/" aria-label="A-Gent home"><img src="/assets/brand/agent-logo-master.svg" alt="A-Gent"></a>
+    <nav class="nav-links" aria-label="Primary navigation">
+      <a class="nav-link" href="/consulting">AI Consulting</a>
+      <a class="nav-link" href="/platform">Platform</a>
+      <a class="nav-link" href="/about">About</a>
+      <a class="nav-link" href="/blog/">Blog</a>
+      <a class="nav-link demo-link" data-demo-open href="/#book-demo">Book a Demo</a>
+      <a class="launch-link" href="https://fleet.a-gent.co/login">Launch Console</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <div class="status-pill">Systems Online</div>
+        <h1>A-Gent, <span class="gold">always-on SDR.</span></h1>
+        <p class="lede">Pipeline built in the background while your team focuses on revenue execution. Or engage AI Consulting to design a bespoke revenue automation system around your stack.</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" data-demo-open href="/#book-demo">Book Demo</a>
+          <a class="btn btn-secondary" href="/consulting">Explore Consulting</a>
         </div>
       </div>
-      <div class="header-actions">
-        <span class="email-badge" id="userEmail">Loading...</span>
-        <button class="btn btn-outline" id="logoutBtn">Sign Out</button>
-      </div>
-    </header>
-    
-    <!-- Hero Stats -->
-    <div class="hero-stats">
-      <div class="stat-card">
-        <div class="stat-label">Total Contacts</div>
-        <div class="stat-value" id="statContacts">—</div>
-        <div class="stat-sub">in your CRM</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-label">New Leads</div>
-        <div class="stat-value" id="statNew">—</div>
-        <div class="stat-sub">awaiting follow-up</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-label">Active Deals</div>
-        <div class="stat-value" id="statDeals">—</div>
-        <div class="stat-sub">in pipeline</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-label">Pipeline Value</div>
-        <div class="stat-value" id="statValue">—</div>
-        <div class="stat-sub">total deal value</div>
+      <aside class="console-card hero-motion-card" aria-label="A-Gent AI SDR product motion loop">
+        <div class="sdr-motion" role="img" aria-label="Looping product motion showing an AI SDR prospecting, researching, drafting outreach, and updating pipeline.">
+          <div class="sdr-topbar"><div class="sdr-title">AI SDR Running</div><div class="sdr-live">Live Loop</div></div>
+          <div class="sdr-stage"><div class="sdr-icon">01</div><div class="sdr-copy"><strong>Prospects matched</strong><span>ICP fit, buying signals, and target account data enrich automatically.</span></div></div>
+          <div class="sdr-stage"><div class="sdr-icon">02</div><div class="sdr-copy"><strong>Accounts researched</strong><span>Company context and signal evidence are compressed into a sales brief.</span></div></div>
+          <div class="sdr-stage"><div class="sdr-icon">03</div><div class="sdr-copy"><strong>Emails drafted</strong><span>Personalized GAP-style outreach is generated with the current-state signal.</span></div></div>
+          <div class="sdr-stage"><div class="sdr-icon">04</div><div class="sdr-copy"><strong>Pipeline updated</strong><span>CRM status, next steps, and review queue stay current in the background.</span></div></div>
+          <div class="sdr-pipeline"><div class="sdr-bar"></div></div>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-header"><div class="eyebrow">Choose the right path</div><h2>Productized AI SDR platform or bespoke AI revenue build.</h2><p>A-Gent Fleet is for teams ready to operate outbound inside a packaged console. AI Consulting is for companies that need custom architecture, integrations, and operating design.</p></div>
+      <div class="grid-2">
+        <article class="card featured"><div class="offer-label">Packaged product</div><h3>A-Gent Fleet</h3><p>Autonomous AI SDR agents research prospects, generate relevant outreach, route replies, and keep humans in control through a review queue.</p><ul><li>Best for lean B2B SaaS teams that want a deployable outbound engine.</li><li>Launch Console opens the Fleet app login and signup experience.</li><li>Platform pages below explain the Fleet capability layer.</li></ul><div class="cta-row"><a class="btn btn-primary" href="https://fleet.a-gent.co/login">Launch Console</a><a class="btn btn-secondary" href="/fleet">View Fleet</a></div></article>
+        <article class="card"><div class="offer-label">Service offer</div><h3>AI Consulting</h3><p>Strategic AI implementation for teams that need custom workflows, data architecture, GTM systems, automation, and internal enablement.</p><ul><li>Best for teams with complex stacks or bespoke operating requirements.</li><li>Includes advisory, design, build, and implementation support.</li><li>Starts with a focused assessment of the revenue workflow.</li></ul><div class="cta-row"><a class="btn btn-primary" href="/assessment">Start Assessment</a><a class="btn btn-secondary" href="/consulting">View Consulting</a></div></article>
       </div>
     </div>
-    
-    <!-- Tabs -->
-    <div class="tabs">
-      <button class="tab active" data-tab="contacts">Contacts</button>
-      <button class="tab" data-tab="deals">Deals</button>
-    </div>
-    
-    <!-- Contacts Panel -->
-    <div class="tab-panel active" id="contacts-panel">
-      <div class="card">
-        <div class="card-header">
-          <div class="card-title">All Contacts</div>
-          <button class="card-action" id="addContactBtn">+ Add Contact</button>
-        </div>
-        <div class="table-wrapper">
-          <table>
-            <thead>
-              <tr>
-                <th>Name</th>
-                <th>Company</th>
-                <th>Email</th>
-                <th>Status</th>
-                <th>Source</th>
-                <th>Actions</th>
-              </tr>
-            </thead>
-            <tbody id="contactsTable">
-              <tr><td colspan="6" class="loading">Loading contacts...</td></tr>
-            </tbody>
-          </table>
-        </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-header"><div class="eyebrow">Fleet capabilities</div><h2>The public Platform is now the Fleet operating layer.</h2><p>The platform story has been reframed around Fleet capabilities instead of advertising internal A-Gent tools as standalone public products.</p></div>
+      <div class="grid-4">
+        <article class="card"><div class="icon-box">⌁</div><h3>Research prospects</h3><p>Find accounts, enrich contacts, and capture the evidence needed for credible outreach.</p><div class="cta-row" style="margin-top:1.15rem"><a class="btn btn-secondary" href="/platform/find-and-research">Explore</a></div></article>
+        <article class="card"><div class="icon-box">✦</div><h3>Personalize outreach</h3><p>Generate messages from ICP rules, pain points, signals, and proof instead of generic templates.</p><div class="cta-row" style="margin-top:1.15rem"><a class="btn btn-secondary" href="/platform/ai-personalization">Explore</a></div></article>
+        <article class="card"><div class="icon-box">✓</div><h3>Review before send</h3><p>Use a human review queue to keep message quality and brand control intact.</p><div class="cta-row" style="margin-top:1.15rem"><a class="btn btn-secondary" href="/platform/review-queue">Explore</a></div></article>
+        <article class="card"><div class="icon-box">▣</div><h3>Measure and scale</h3><p>Track campaign performance, reply quality, workflow throughput, and pipeline movement.</p><div class="cta-row" style="margin-top:1.15rem"><a class="btn btn-secondary" href="/platform/measure-and-scale">Explore</a></div></article>
       </div>
     </div>
-    
-    <!-- Deals Panel -->
-    <div class="tab-panel" id="deals-panel">
-      <div class="card">
-        <div class="card-header">
-          <div class="card-title">All Deals</div>
-          <button class="card-action" id="addDealBtn">+ Add Deal</button>
-        </div>
-        <div class="table-wrapper">
-          <table>
-            <thead>
-              <tr>
-                <th>Title</th>
-                <th>Contact</th>
-                <th>Value</th>
-                <th>Stage</th>
-                <th>Created</th>
-                <th>Actions</th>
-              </tr>
-            </thead>
-            <tbody id="dealsTable">
-              <tr><td colspan="6" class="loading">Loading deals...</td></tr>
-            </tbody>
-          </table>
-        </div>
+  </section>
+
+  <section class="section">
+    <div class="container section-header"><div class="eyebrow">Ready to deploy?</div><h2>Open the Launch Console or start with a strategy assessment.</h2><p>Use Fleet when you want the product. Use Consulting when you want A-Gent to help design and build the operating system around your team.</p><div class="cta-row" style="justify-content:center"><a class="btn btn-primary" href="https://fleet.a-gent.co/login">Launch Console</a><a class="btn btn-secondary" href="/assessment">Start Assessment</a></div></div>
+  </section>
+</main>
+
+<div class="demo-modal" id="book-demo" aria-hidden="true">
+  <div class="demo-dialog" role="dialog" aria-modal="true" aria-labelledby="demoTitle">
+    <div class="demo-head">
+      <div>
+        <div class="eyebrow">Book a Demo</div>
+        <h2 id="demoTitle">Start the A-Gent demo flow.</h2>
+        <p>Share a few details and A-Gent will create a new CRM lead for follow-up.</p>
       </div>
+      <button class="demo-close" type="button" data-demo-close aria-label="Close demo form">×</button>
+    </div>
+    <form id="demoLeadForm" class="form-grid" data-supabase-url="https://byospmliiokgrdjjxsde.supabase.co" data-supabase-key="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJ5b3NwbWxpaW9rZ3Jkamp4c2RlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzk4MjQ0NzUsImV4cCI6MjA5NTQwMDQ3NX0.KvzaEuEH9nRlBBSUOyg7kTKHvLFfR6CvmZbjVHZQ83I">
+      <div class="field"><label for="demoName">Name</label><input id="demoName" name="name" autocomplete="name" required></div>
+      <div class="field"><label for="demoEmail">Work email</label><input id="demoEmail" name="email" type="email" autocomplete="email" required></div>
+      <div class="field wide"><label for="demoCompany">Company</label><input id="demoCompany" name="company" autocomplete="organization" required></div>
+      <div class="field wide"><label for="demoMessage">Optional message</label><textarea id="demoMessage" name="message" placeholder="Tell us about your revenue motion, SDR workflow, or current stack."></textarea></div>
+      <div class="field wide"><button class="btn btn-primary" type="submit">Submit Demo Request</button><div id="demoFormMessage" class="form-message" role="status" aria-live="polite"></div></div>
+    </form>
+  </div>
+</div>
+<script>
+(function() {
+  var modal = document.getElementById('book-demo');
+  var form = document.getElementById('demoLeadForm');
+  var msg = document.getElementById('demoFormMessage');
+  function openDemo(evt) { if (evt) evt.preventDefault(); if (modal) { modal.setAttribute('aria-hidden','false'); setTimeout(function(){ var first = document.getElementById('demoName'); if (first) first.focus(); }, 30); } }
+  function closeDemo(evt) { if (evt) evt.preventDefault(); if (modal) modal.setAttribute('aria-hidden','true'); }
+  Array.prototype.slice.call(document.querySelectorAll('[data-demo-open]')).forEach(function(el) { el.addEventListener('click', openDemo); });
+  Array.prototype.slice.call(document.querySelectorAll('[data-demo-close]')).forEach(function(el) { el.addEventListener('click', closeDemo); });
+  if (modal) modal.addEventListener('click', function(evt) { if (evt.target === modal) closeDemo(evt); });
+  document.addEventListener('keydown', function(evt) { if (evt.key === 'Escape') closeDemo(evt); });
+  if (!form) return;
+  form.addEventListener('submit', async function(evt) {
+    evt.preventDefault();
+    var fd = new FormData(form);
+    var name = String(fd.get('name') || '').trim();
+    var email = String(fd.get('email') || '').trim();
+    var company = String(fd.get('company') || '').trim();
+    var message = String(fd.get('message') || '').trim();
+    var payload = { name: name, email: email, company_name: company, type: 'Lead', source: 'a-gent.co Book Demo form' + (message ? ' — ' + message : ''), created_at: new Date().toISOString() };
+    msg.className = 'form-message'; msg.textContent = 'Submitting demo request...';
+    try {
+      var res = await fetch(form.dataset.supabaseUrl + '/rest/v1/contacts', {
+        method: 'POST',
+        headers: { apikey: form.dataset.supabaseKey, Authorization: 'Bearer ' + form.dataset.supabaseKey, 'Content-Type': 'application/json', Accept: 'application/json', Prefer: 'return=representation' },
+        body: JSON.stringify(payload)
+      });
+      if (!res.ok) throw new Error(await res.text());
+      msg.className = 'form-message success'; msg.textContent = 'Demo request received. We created your CRM lead.';
+      form.reset();
+    } catch (err) {
+      msg.className = 'form-message error'; msg.textContent = 'Submission failed. Please email mark.cope.roarr@gmail.com and mention Book Demo.';
+      console.warn('Demo lead submission failed', err);
+    }
+  });
+})();
+</script>
+<footer class="footer">
+  <div class="container footer-grid">
+    <div>
+      <a class="wordmark" href="/" aria-label="A-Gent home"><img src="/assets/brand/agent-logo-master.svg" alt="A-Gent"></a>
+      <p style="margin-top:.7rem;max-width:520px">A-Gent Fleet is the packaged AI SDR platform. A-Gent Consulting designs bespoke AI revenue systems for teams that need deeper implementation support.</p>
+      <p>© 2026 A-Gent. All rights reserved.</p>
+    </div>
+    <div class="footer-links">
+      <a href="/consulting">AI Consulting</a>
+      <a href="/platform">Platform</a>
+      <a href="/fleet">Fleet</a>
+      <a href="/assessment">Assessment</a>
+      <a href="/signup">Signup</a>
+      <a href="/privacy">Privacy</a>
+      <a href="https://fleet.a-gent.co/login">Launch Console</a>
     </div>
   </div>
-  
-  <!-- Contact Modal -->
-  <div class="modal-overlay" id="contactModal">
-    <div class="modal">
-      <div class="modal-title" id="contactModalTitle">Add Contact</div>
-      <form id="contactForm">
-        <input type="hidden" id="contactId">
-        <div class="form-group">
-          <label for="contactName">Name *</label>
-          <input type="text" id="contactName" required>
-        </div>
-        <div class="form-row">
-          <div class="form-group">
-            <label for="contactEmail">Email</label>
-            <input type="email" id="contactEmail">
-          </div>
-          <div class="form-group">
-            <label for="contactPhone">Phone</label>
-            <input type="text" id="contactPhone">
-          </div>
-        </div>
-        <div class="form-row">
-          <div class="form-group">
-            <label for="contactCompany">Company</label>
-            <input type="text" id="contactCompany">
-          </div>
-          <div class="form-group">
-            <label for="contactStatus">Status</label>
-            <select id="contactStatus">
-              <option value="new">New</option>
-              <option value="contacted">Contacted</option>
-              <option value="qualified">Qualified</option>
-              <option value="proposal">Proposal</option>
-              <option value="won">Won</option>
-              <option value="lost">Lost</option>
-            </select>
-          </div>
-        </div>
-        <div class="form-group">
-          <label for="contactSource">Source</label>
-          <input type="text" id="contactSource" placeholder="e.g. extension_signup, referral">
-        </div>
-        <div class="form-group">
-          <label for="contactNotes">Notes</label>
-          <textarea id="contactNotes"></textarea>
-        </div>
-        <div class="modal-actions">
-          <button type="button" class="btn-cancel" id="contactCancelBtn">Cancel</button>
-          <button type="submit" class="btn-save">Save Contact</button>
-        </div>
-      </form>
-    </div>
-  </div>
-  
-  <!-- Deal Modal -->
-  <div class="modal-overlay" id="dealModal">
-    <div class="modal">
-      <div class="modal-title" id="dealModalTitle">Add Deal</div>
-      <form id="dealForm">
-        <input type="hidden" id="dealId">
-        <div class="form-group">
-          <label for="dealTitle">Title *</label>
-          <input type="text" id="dealTitle" required>
-        </div>
-        <div class="form-group">
-          <label for="dealContact">Contact</label>
-          <select id="dealContact">
-            <option value="">— None —</option>
-          </select>
-        </div>
-        <div class="form-row">
-          <div class="form-group">
-            <label for="dealValue">Value ($)</label>
-            <input type="number" id="dealValue" min="0" step="100">
-          </div>
-          <div class="form-group">
-            <label for="dealStage">Stage</label>
-            <select id="dealStage">
-              <option value="lead">Lead</option>
-              <option value="contacted">Contacted</option>
-              <option value="qualified">Qualified</option>
-              <option value="proposal">Proposal</option>
-              <option value="won">Won</option>
-              <option value="lost">Lost</option>
-            </select>
-          </div>
-        </div>
-        <div class="form-group">
-          <label for="dealNotes">Notes</label>
-          <textarea id="dealNotes"></textarea>
-        </div>
-        <div class="modal-actions">
-          <button type="button" class="btn-cancel" id="dealCancelBtn">Cancel</button>
-          <button type="submit" class="btn-save">Save Deal</button>
-        </div>
-      </form>
-    </div>
-  </div>
-  
-  <script>
-    const API_BASE = window.location.hostname === 'localhost' 
-      ? 'http://localhost:3000' 
-      : 'https://a-gent-provisioner.onrender.com';
-    
-    const SESSION_KEY = 'agent_session';
-    
-    // ─── Auth Check ─────────────────────────────────────────────────────────────
-    function getSession() {
-      try {
-        const session = localStorage.getItem(SESSION_KEY);
-        if (!session) throw new Error('No session');
-        const { token, expiry } = JSON.parse(session);
-        if (Date.now() > expiry) throw new Error('Session expired');
-        return JSON.parse(session);
-      } catch {
-        window.location.href = 'login.html';
-        return null;
-      }
-    }
-    
-    function getToken() {
-      return getSession()?.token;
-    }
-    
-    function getUser() {
-      return getSession()?.user;
-    }
-    
-    // ─── API Helper ─────────────────────────────────────────────────────────────
-    async function api(method, endpoint, body) {
-      const res = await fetch(API_BASE + endpoint, {
-        method,
-        headers: {
-          'Content-Type': 'application/json',
-          'Authorization': 'Bearer ' + getToken()
-        },
-        body: body ? JSON.stringify(body) : undefined
-      });
-      if (res.status === 401) {
-        localStorage.removeItem(SESSION_KEY);
-        window.location.href = 'login.html';
-        return null;
-      }
-      return res.json();
-    }
-    
-    // ─── Render Helpers ─────────────────────────────────────────────────────────
-    function statusBadge(status) {
-      return `<span class="status-badge status-${status}">${status}</span>`;
-    }
-    
-    function formatDate(dateStr) {
-      return new Date(dateStr).toLocaleDateString('en-US', { 
-        month: 'short', day: 'numeric', year: 'numeric' 
-      });
-    }
-    
-    function formatCurrency(val) {
-      return '$' + (Number(val) || 0).toLocaleString();
-    }
-    
-    // ─── Tab Switching ──────────────────────────────────────────────────────────
-    document.querySelectorAll('.tab').forEach(tab => {
-      tab.addEventListener('click', () => {
-        document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
-        document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
-        tab.classList.add('active');
-        document.getElementById(tab.dataset.tab + '-panel').classList.add('active');
-      });
-    });
-    
-    // ─── Logout ─────────────────────────────────────────────────────────────────
-    document.getElementById('logoutBtn').addEventListener('click', () => {
-      localStorage.removeItem(SESSION_KEY);
-      window.location.href = 'login.html';
-    });
-    
-    // ─── Load Stats ─────────────────────────────────────────────────────────────
-    async function loadStats() {
-      const data = await api('GET', '/api/crm/stats');
-      if (!data) return;
-      document.getElementById('statContacts').textContent = data.stats.totalContacts;
-      document.getElementById('statNew').textContent = data.stats.newContacts;
-      document.getElementById('statDeals').textContent = data.stats.activeDeals;
-      document.getElementById('statValue').textContent = formatCurrency(data.stats.totalDealValue);
-    }
-    
-    // ─── Load Contacts ───────────────────────────────────────────────────────────
-    async function loadContacts() {
-      const data = await api('GET', '/api/crm/contacts');
-      const tbody = document.getElementById('contactsTable');
-      if (!data || !data.contacts.length) {
-        tbody.innerHTML = `<tr><td colspan="6">
-          <div class="empty-state">
-            <div class="empty-icon">👤</div>
-            <div class="empty-title">No contacts yet</div>
-            <div class="empty-text">Add your first contact to get started</div>
-          </div>
-        </td></tr>`;
-        return;
-      }
-      tbody.innerHTML = data.contacts.map(c => `
-        <tr>
-          <td><strong>${c.name}</strong></td>
-          <td>${c.company || '—'}</td>
-          <td>${c.email || '—'}</td>
-          <td>${statusBadge(c.status)}</td>
-          <td>${c.source || '—'}</td>
-          <td class="action-cell">
-            <button class="btn-small btn-edit" onclick="editContact(${c.id})">Edit</button>
-            <button class="btn-small btn-delete" onclick="deleteContact(${c.id})">Delete</button>
-          </td>
-        </tr>
-      `).join('');
-    }
-    
-    // ─── Load Deals ──────────────────────────────────────────────────────────────
-    async function loadDeals() {
-      const data = await api('GET', '/api/crm/deals');
-      const tbody = document.getElementById('dealsTable');
-      if (!data || !data.deals.length) {
-        tbody.innerHTML = `<tr><td colspan="6">
-          <div class="empty-state">
-            <div class="empty-icon">💰</div>
-            <div class="empty-title">No deals yet</div>
-            <div class="empty-text">Add your first deal to start tracking revenue</div>
-          </div>
-        </td></tr>`;
-        return;
-      }
-      tbody.innerHTML = data.deals.map(d => `
-        <tr>
-          <td><strong>${d.title}</strong></td>
-          <td>${d.contact_name || '—'}</td>
-          <td class="deal-value">${formatCurrency(d.value)}</td>
-          <td>${statusBadge(d.stage)}</td>
-          <td>${formatDate(d.created_at)}</td>
-          <td class="action-cell">
-            <button class="btn-small btn-edit" onclick="editDeal(${d.id})">Edit</button>
-            <button class="btn-small btn-delete" onclick="deleteDeal(${d.id})">Delete</button>
-          </td>
-        </tr>
-      `).join('');
-    }
-    
-    // ─── Contact Form Modal ──────────────────────────────────────────────────────
-    let editingContactId = null;
-    
-    function openContactModal(existing = null) {
-      editingContactId = existing?.id || null;
-      document.getElementById('contactModalTitle').textContent = editingContactId ? 'Edit Contact' : 'Add Contact';
-      document.getElementById('contactId').value = '';
-      document.getElementById('contactName').value = existing?.name || '';
-      document.getElementById('contactEmail').value = existing?.email || '';
-      document.getElementById('contactPhone').value = existing?.phone || '';
-      document.getElementById('contactCompany').value = existing?.company || '';
-      document.getElementById('contactStatus').value = existing?.status || 'new';
-      document.getElementById('contactSource').value = existing?.source || '';
-      document.getElementById('contactNotes').value = existing?.notes || '';
-      document.getElementById('contactModal').classList.add('show');
-    }
-    
-    function closeContactModal() {
-      document.getElementById('contactModal').classList.remove('show');
-      editingContactId = null;
-    }
-    
-    async function editContact(id) {
-      const data = await api('GET', '/api/crm/contacts');
-      const contact = data?.contacts.find(c => c.id === id);
-      if (contact) openContactModal(contact);
-    }
-    
-    async function deleteContact(id) {
-      if (!confirm('Delete this contact?')) return;
-      await api('DELETE', '/api/crm/contacts/' + id);
-      loadContacts();
-      loadStats();
-    }
-    
-    document.getElementById('contactForm').addEventListener('submit', async (e) => {
-      e.preventDefault();
-      const payload = {
-        name: document.getElementById('contactName').value.trim(),
-        email: document.getElementById('contactEmail').value.trim(),
-        phone: document.getElementById('contactPhone').value.trim(),
-        company: document.getElementById('contactCompany').value.trim(),
-        status: document.getElementById('contactStatus').value,
-        source: document.getElementById('contactSource').value.trim(),
-        notes: document.getElementById('contactNotes').value.trim(),
-      };
-      
-      if (editingContactId) {
-        await api('PUT', '/api/crm/contacts/' + editingContactId, payload);
-      } else {
-        await api('POST', '/api/crm/contacts', payload);
-      }
-      
-      closeContactModal();
-      loadContacts();
-      loadStats();
-    });
-    
-    document.getElementById('addContactBtn').addEventListener('click', () => openContactModal());
-    document.getElementById('contactCancelBtn').addEventListener('click', closeContactModal);
-    
-    // ─── Deal Form Modal ─────────────────────────────────────────────────────────
-    let editingDealId = null;
-    
-    async function openDealModal(existing = null) {
-      editingDealId = existing?.id || null;
-      document.getElementById('dealModalTitle').textContent = editingDealId ? 'Edit Deal' : 'Add Deal';
-      document.getElementById('dealId').value = '';
-      document.getElementById('dealTitle').value = existing?.title || '';
-      document.getElementById('dealValue').value = existing?.value || '';
-      document.getElementById('dealStage').value = existing?.stage || 'lead';
-      document.getElementById('dealNotes').value = existing?.notes || '';
-      
-      // Populate contacts dropdown
-      const contactsData = await api('GET', '/api/crm/contacts');
-      const select = document.getElementById('dealContact');
-      select.innerHTML = '<option value="">— None —</option>';
-      if (contactsData?.contacts) {
-        contactsData.contacts.forEach(c => {
-          select.innerHTML += `<option value="${c.id}" ${existing?.contact_id == c.id ? 'selected' : ''}>${c.name}${c.company ? ' — ' + c.company : ''}</option>`;
-        });
-      }
-      
-      document.getElementById('dealModal').classList.add('show');
-    }
-    
-    function closeDealModal() {
-      document.getElementById('dealModal').classList.remove('show');
-      editingDealId = null;
-    }
-    
-    async function editDeal(id) {
-      const data = await api('GET', '/api/crm/deals');
-      const deal = data?.deals.find(d => d.id === id);
-      if (deal) openDealModal(deal);
-    }
-    
-    async function deleteDeal(id) {
-      if (!confirm('Delete this deal?')) return;
-      await api('DELETE', '/api/crm/deals/' + id);
-      loadDeals();
-      loadStats();
-    }
-    
-    document.getElementById('dealForm').addEventListener('submit', async (e) => {
-      e.preventDefault();
-      const payload = {
-        title: document.getElementById('dealTitle').value.trim(),
-        contact_id: document.getElementById('dealContact').value || null,
-        value: parseFloat(document.getElementById('dealValue').value) || 0,
-        stage: document.getElementById('dealStage').value,
-        notes: document.getElementById('dealNotes').value.trim(),
-      };
-      
-      if (editingDealId) {
-        await api('PUT', '/api/crm/deals/' + editingDealId, payload);
-      } else {
-        await api('POST', '/api/crm/deals', payload);
-      }
-      
-      closeDealModal();
-      loadDeals();
-      loadStats();
-    });
-    
-    document.getElementById('addDealBtn').addEventListener('click', () => openDealModal());
-    document.getElementById('dealCancelBtn').addEventListener('click', closeDealModal);
-    
-    // ─── Init ───────────────────────────────────────────────────────────────────
-    const user = getUser();
-    if (user) {
-      document.getElementById('userEmail').textContent = user.email;
-      loadStats();
-      loadContacts();
-      loadDeals();
-    }
-  </script>
+</footer>
+</div>
 </body>
 </html>
