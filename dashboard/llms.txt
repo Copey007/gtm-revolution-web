@@ -1,0 +1,14 @@
+# A-Gent
+
+A-Gent offers A-Gent Fleet, a packaged AI SDR platform for B2B SaaS outbound teams, and AI Consulting for bespoke AI revenue automation systems.
+
+## Public navigation
+
+- AI Consulting: https://a-gent.co/consulting
+- Platform: https://a-gent.co/platform
+- Fleet: https://a-gent.co/fleet
+- Launch Console: https://fleet.a-gent.co/login
+
+## Positioning
+
+A-Gent Fleet is the product. AI Consulting is the service. The public Platform pages describe Fleet capabilities and consulting extension points; internal operating tools are not advertised as public products.

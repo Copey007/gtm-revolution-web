@@ -4,10 +4,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>AI Revenue Assessment | A-Gent</title>
-  <meta name="description" content="Start an A-Gent assessment to evaluate your outbound workflow, AI readiness, data quality, and automation opportunities.">
+  <meta name="description" content="Start the A-Gent AI Assessment questionnaire to evaluate outbound workflow, AI readiness, data quality, automation risk, and the best next revenue automation path.">
   <link rel="canonical" href="https://a-gent.co/assessment">
   <meta property="og:title" content="AI Revenue Assessment | A-Gent">
-  <meta property="og:description" content="Start an A-Gent assessment to evaluate your outbound workflow, AI readiness, data quality, and automation opportunities.">
+  <meta property="og:description" content="Start the A-Gent AI Assessment questionnaire to evaluate outbound workflow, AI readiness, data quality, automation risk, and the best next revenue automation path.">
   <meta property="og:url" content="https://a-gent.co/assessment">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
@@ -34,9 +34,61 @@
 </header>
 
 <main>
-  <section class="hero"><div class="container hero-grid"><div><div class="status-pill">Assessment</div><h1>Map the gap before you <span class="gold">automate revenue</span>.</h1><p class="lede">Use the assessment to decide whether Fleet is the right packaged path or whether your team needs a custom consulting build.</p></div><aside class="console-card"><div class="console-top"><div><div class="console-kicker">Assessment Inputs</div><div class="console-title">ICP • Data • Workflow • Risk</div></div></div><p style="margin-top:1rem">The best AI systems start with a clear current state, desired future state, and a sober view of the gap.</p></aside></div></section>
-  <section class="section"><div class="container"><div class="form-panel card"><div class="offer-label">Assessment request</div><h2 style="font-size:2rem;margin-bottom:1rem">Tell us what you want to improve.</h2><p class="notice">This static request panel preserves the assessment page and directs serious buyers to the next best action. Use the Launch Console for Fleet access or email mark.cope.roarr@gmail.com for consulting intake.</p><div class="cta-row"><a class="btn btn-primary" href="/assessment">Start Free AI Assessment</a><a class="btn btn-secondary" href="https://fleet.a-gent.co/login">Launch Console</a></div></div></div></section>
+  <section class="hero"><div class="container hero-grid"><div><div class="status-pill">AI Assessment</div><h1>Map the gap before you <span class="gold">automate revenue</span>.</h1><p class="lede">Answer five practical questions about your current outbound workflow, data quality, buying-signal visibility, AI readiness, and implementation risk. The result recommends whether A-Gent Fleet or A-Gent Consulting is the better next step.</p><div class="cta-row"><a class="btn btn-primary" href="#assessment-flow">Start Free AI Assessment</a><a class="btn btn-secondary" href="/consulting">Explore Consulting</a></div></div><aside class="console-card"><div class="console-top"><div><div class="console-kicker">Assessment Flow</div><div class="console-title">Current - Future - Gap</div></div></div><div class="metric-grid"><div class="metric"><strong>5</strong><span>Questions</span></div><div class="metric"><strong>2</strong><span>Pathways</span></div><div class="metric"><strong>0</strong><span>Cost</span></div><div class="metric"><strong>Live</strong><span>Results</span></div></div></aside></div></section>
+  <section class="section" id="assessment-flow"><div class="container"><div class="assessment-shell card" data-assessment-flow><div class="offer-label">Free AI Assessment</div><h2 style="font-size:2rem;margin-bottom:.7rem">Find the best AI revenue automation path.</h2><p class="notice">This questionnaire gives an immediate recommendation and next step. No browser login is required.</p><div class="assessment-progress" aria-label="Assessment progress"><span data-assessment-progress></span></div><form id="aiAssessmentForm">
+    <fieldset class="assessment-step is-active" data-step="1"><legend><h3>1. How repeatable is your outbound motion today?</h3></legend><div class="assessment-options"><label class="assessment-option"><input type="radio" name="workflow" value="1" required><span><strong>Mostly manual</strong><span>Lists, research, writing, and follow-up are still handled ad hoc.</span></span></label><label class="assessment-option"><input type="radio" name="workflow" value="2"><span><strong>Partly documented</strong><span>The team has a process, but execution depends heavily on rep discipline.</span></span></label><label class="assessment-option"><input type="radio" name="workflow" value="3"><span><strong>Operationally repeatable</strong><span>ICP, messaging, review, and CRM workflows are already structured.</span></span></label></div></fieldset>
+    <fieldset class="assessment-step" data-step="2"><legend><h3>2. How strong is your account and contact data?</h3></legend><div class="assessment-options"><label class="assessment-option"><input type="radio" name="data" value="1" required><span><strong>Fragmented</strong><span>Data quality, ownership, and enrichment are inconsistent.</span></span></label><label class="assessment-option"><input type="radio" name="data" value="2"><span><strong>Usable but incomplete</strong><span>Core CRM data exists, but enrichment and fit scoring need work.</span></span></label><label class="assessment-option"><input type="radio" name="data" value="3"><span><strong>Ready for automation</strong><span>Segments, contacts, CRM fields, and ownership are mostly reliable.</span></span></label></div></fieldset>
+    <fieldset class="assessment-step" data-step="3"><legend><h3>3. How visible are buying signals?</h3></legend><div class="assessment-options"><label class="assessment-option"><input type="radio" name="signals" value="1" required><span><strong>Low visibility</strong><span>Personalization is mostly generic or based on manual research.</span></span></label><label class="assessment-option"><input type="radio" name="signals" value="2"><span><strong>Some signal tracking</strong><span>The team uses a few triggers, but they are not operationalized.</span></span></label><label class="assessment-option"><input type="radio" name="signals" value="3"><span><strong>Strong signal strategy</strong><span>Signals can be connected to ICP fit, messaging, and prioritization.</span></span></label></div></fieldset>
+    <fieldset class="assessment-step" data-step="4"><legend><h3>4. What level of AI implementation support do you need?</h3></legend><div class="assessment-options"><label class="assessment-option"><input type="radio" name="support" value="1" required><span><strong>Need architecture first</strong><span>We need help designing the system, rules, data flow, and governance.</span></span></label><label class="assessment-option"><input type="radio" name="support" value="2"><span><strong>Need guided deployment</strong><span>We can adopt a product, but want implementation support.</span></span></label><label class="assessment-option"><input type="radio" name="support" value="3"><span><strong>Ready for product access</strong><span>We can use a focused AI SDR platform with minimal custom work.</span></span></label></div></fieldset>
+    <fieldset class="assessment-step" data-step="5"><legend><h3>5. What is the cost of staying manual?</h3></legend><div class="assessment-options"><label class="assessment-option"><input type="radio" name="gap" value="1" required><span><strong>Not yet clear</strong><span>We are still defining the business case and measurement model.</span></span></label><label class="assessment-option"><input type="radio" name="gap" value="2"><span><strong>Moderately painful</strong><span>Manual execution slows pipeline creation, but the team can still manage.</span></span></label><label class="assessment-option"><input type="radio" name="gap" value="3"><span><strong>Material revenue drag</strong><span>Slow research, weak personalization, or messy CRM follow-through is costing pipeline.</span></span></label></div></fieldset>
+    <div class="assessment-actions"><button class="btn btn-secondary" type="button" data-assessment-prev disabled>Back</button><button class="btn btn-primary" type="button" data-assessment-next>Next</button></div>
+  </form><div class="assessment-result" data-assessment-result><div class="offer-label">Assessment result</div><h2 data-result-title>Recommended next step</h2><div class="assessment-score" data-result-score></div><p class="notice" data-result-copy></p><div class="assessment-pill-row"><span>ICP fit</span><span>Data readiness</span><span>Signal strategy</span><span>Execution gap</span></div><div class="cta-row"><a class="btn btn-primary" data-result-primary href="/consulting">Talk Through the Assessment</a><a class="btn btn-secondary" href="https://fleet.a-gent.co/login">Launch Console</a></div></div></div></div></section>
 </main>
+<script>
+(function(){
+  var form = document.getElementById('aiAssessmentForm');
+  if (!form) return;
+  var steps = Array.prototype.slice.call(form.querySelectorAll('.assessment-step'));
+  var progress = document.querySelector('[data-assessment-progress]');
+  var prev = document.querySelector('[data-assessment-prev]');
+  var next = document.querySelector('[data-assessment-next]');
+  var result = document.querySelector('[data-assessment-result]');
+  var current = 0;
+  function showStep(i){
+    current = Math.max(0, Math.min(i, steps.length - 1));
+    steps.forEach(function(step, idx){ step.classList.toggle('is-active', idx === current); });
+    if (progress) progress.style.width = ((current + 1) / steps.length * 100) + '%';
+    if (prev) prev.disabled = current === 0;
+    if (next) next.textContent = current === steps.length - 1 ? 'Show Results' : 'Next';
+  }
+  function answered(){ return !!steps[current].querySelector('input[type="radio"]:checked'); }
+  function score(){ return Array.prototype.slice.call(form.querySelectorAll('input[type="radio"]:checked')).reduce(function(sum, input){ return sum + Number(input.value || 0); }, 0); }
+  function showResult(){
+    if (!form.reportValidity()) return;
+    var total = score();
+    var pct = Math.round(total / 15 * 100);
+    var workflow = Number((form.querySelector('input[name="workflow"]:checked') || {}).value || 0);
+    var support = Number((form.querySelector('input[name="support"]:checked') || {}).value || 0);
+    var customBias = support <= 2 || workflow <= 2;
+    var title = customBias ? 'AI Consulting is likely your best first move.' : 'A-Gent Fleet is likely ready to deploy.';
+    var copy = customBias ? 'Your answers suggest the gap is not just tooling. Start with Consulting to design the workflow, data model, review gates, and operating rules before scaling automation.' : 'Your answers suggest your GTM motion is structured enough for the packaged AI SDR platform. Use Fleet to operationalize research, personalization, review, and pipeline updates.';
+    form.style.display = 'none';
+    if (progress) progress.style.width = '100%';
+    if (result) result.classList.add('is-active');
+    document.querySelector('[data-result-title]').textContent = title;
+    document.querySelector('[data-result-score]').textContent = pct + '% readiness';
+    document.querySelector('[data-result-copy]').textContent = copy;
+    document.querySelector('[data-result-primary]').href = customBias ? '/consulting' : 'https://fleet.a-gent.co/login';
+  }
+  next.addEventListener('click', function(){
+    if (!answered()) { steps[current].querySelector('input[type="radio"]').reportValidity(); return; }
+    if (current === steps.length - 1) showResult(); else showStep(current + 1);
+  });
+  prev.addEventListener('click', function(){ showStep(current - 1); });
+  form.addEventListener('change', function(evt){ if (evt.target.matches('input[type="radio"]') && current < steps.length - 1) setTimeout(function(){ showStep(current + 1); }, 180); });
+  showStep(0);
+})();
+</script>
 <footer class="footer">
   <div class="container footer-grid">
     <div>

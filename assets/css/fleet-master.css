@@ -250,6 +250,23 @@ input, textarea, select { width: 100%; min-height: 44px; border: 1px solid rgba(
 textarea { min-height: 120px; resize: vertical; }
 input:focus, textarea:focus, select:focus { outline: none; border-color: rgba(212,175,55,.6); box-shadow: 0 0 0 3px rgba(212,175,55,.09); }
 .notice { border: 1px solid rgba(0,255,136,.18); color: #c8d4c2; background: rgba(0,255,136,.045); padding: 1rem; border-radius: 12px; }
+.assessment-shell { max-width: 920px; margin: 0 auto; display:grid; gap:1rem; }
+.assessment-progress { height: 10px; border-radius: 999px; background: rgba(255,255,255,.07); overflow:hidden; border:1px solid rgba(255,255,255,.09); }
+.assessment-progress span { display:block; height:100%; width:20%; border-radius:999px; background:linear-gradient(90deg,var(--gold),var(--green)); box-shadow:0 0 18px rgba(212,175,55,.28); transition:width .28s ease; }
+.assessment-step { display:none; }
+.assessment-step.is-active { display:block; }
+.assessment-options { display:grid; gap:.72rem; margin:1.2rem 0; }
+.assessment-option { display:flex; align-items:flex-start; gap:.72rem; padding:.92rem 1rem; border:1px solid rgba(255,255,255,.11); border-radius:12px; background:rgba(255,255,255,.035); cursor:pointer; transition:border-color .18s ease, background .18s ease, transform .18s ease; }
+.assessment-option:hover { border-color:rgba(212,175,55,.5); background:rgba(212,175,55,.07); transform:translateY(-1px); }
+.assessment-option input { width:auto; min-height:auto; margin-top:.2rem; accent-color:#d4af37; }
+.assessment-option strong { display:block; color:var(--text); font-size:.96rem; }
+.assessment-option span { display:block; color:var(--muted); font-size:.86rem; margin-top:.16rem; }
+.assessment-actions { display:flex; justify-content:space-between; gap:.75rem; flex-wrap:wrap; margin-top:1.15rem; }
+.assessment-result { display:none; }
+.assessment-result.is-active { display:block; }
+.assessment-score { font-family:'Orbitron',sans-serif; color:var(--gold); font-size:clamp(2rem,5vw,3.4rem); margin:.6rem 0; }
+.assessment-pill-row { display:flex; flex-wrap:wrap; gap:.55rem; margin-top:1rem; }
+.assessment-pill-row span { border:1px solid rgba(212,175,55,.22); background:rgba(212,175,55,.08); color:#e9ddb4; border-radius:999px; padding:.45rem .7rem; font-size:.78rem; letter-spacing:.05em; text-transform:uppercase; }
 .faq { display: grid; gap: .75rem; max-width: 900px; margin: 0 auto; }
 details { border: 1px solid var(--line); border-radius: 12px; padding: 1rem; background: rgba(255,255,255,.025); }
 summary { cursor: pointer; color: var(--text); font-family: 'Rajdhani', monospace; font-weight: 700; font-size: 1.05rem; }
