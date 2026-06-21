@@ -37,7 +37,7 @@ platform_pages = [
     ('multi-tenant-scaling', 'Multi-Tenant Scaling', 'Each organization gets isolated workflows, role-aware access, and scalable outbound operations.', 'Fleet is designed to grow from focused teams to more complex revenue organizations.'),
 ]
 
-core_routes = ['/', '/platform', '/consulting', '/fleet', '/signup', '/assessment', '/privacy', '/blog']
+core_routes = ['/', '/platform', '/platform/loop-engine', '/consulting', '/fleet', '/signup', '/assessment', '/privacy', '/blog']
 all_routes = core_routes + [f'/platform/{slug}' for slug, *_ in platform_pages]
 
 CSS = r'''
@@ -361,6 +361,17 @@ def faq_schema(items):
     return {'@context':'https://schema.org','@type':'FAQPage','mainEntity':[{'@type':'Question','name':q,'acceptedAnswer':{'@type':'Answer','text':a}} for q,a in items]}
 
 
+def breadcrumb_schema(items):
+    return {
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        'itemListElement': [
+            {'@type': 'ListItem', 'position': idx + 1, 'name': name, 'item': url}
+            for idx, (name, url) in enumerate(items)
+        ]
+    }
+
+
 def head(title, description, path, extra_schema=None):
     canonical = SITE + ('' if path == '/' else path)
     schemas = [org_schema()]
@@ -578,15 +589,32 @@ def home_page():
 def platform_index():
     desc = 'Explore A-Gent Fleet platform capabilities for AI SDR research, personalization, review, reply handling, routing, and revenue workflow measurement.'
     cards = '\n'.join(card(title, short, '◆', f'/platform/{slug}') for slug, title, short, _ in platform_pages)
+    flagship_cards = f'''
+        <article class="card featured" style="border-color:rgba(212,175,55,.46);background:radial-gradient(circle at 18% 8%,rgba(212,175,55,.18),transparent 34%),linear-gradient(180deg,rgba(22,22,22,.98),rgba(7,7,7,.98));">
+          <div class="eyebrow">Flagship Differentiator</div>
+          <h3 style="margin-top:1rem">Signal Engine</h3>
+          <p>Source-linked buying signals give every AI SDR message a timely, verifiable reason for reaching out instead of generic personalization.</p>
+          <div class="cta-row" style="margin-top:1.15rem"><a class="btn btn-secondary" href="/platform/signal-engine">Explore</a></div>
+        </article>
+        <article class="card featured" style="border-color:rgba(212,175,55,.46);background:radial-gradient(circle at 18% 8%,rgba(212,175,55,.20),transparent 34%),linear-gradient(180deg,rgba(22,22,22,.98),rgba(7,7,7,.98));">
+          <div class="eyebrow">Flagship Differentiator</div>
+          <h3 style="margin-top:1rem">Loop Engine</h3>
+          <p>Self-optimizing outbound uses an LLM-judge keep-or-revert loop to improve email strategy under hard sales-quality guardrails.</p>
+          <div class="cta-row" style="margin-top:1.15rem"><a class="btn btn-secondary" href="/platform/loop-engine">Explore</a></div>
+        </article>
+    '''
     return head('A-Gent Platform | Fleet AI SDR Capabilities', desc, '/platform', [service_schema('A-Gent Fleet Platform', SITE + '/platform', desc), faq_schema([
         ('Is the Platform a separate product from Fleet?', 'The public Platform pages describe the capability layer inside A-Gent Fleet and the implementation patterns A-Gent Consulting can extend.'),
+        ('What are the flagship differentiators?', 'Signal Engine adds source-linked buying signals. Loop Engine adds a self-optimizing outbound quality loop that keeps winning strategy changes and reverts weaker ones.'),
         ('Does A-Gent publish its internal operating tools here?', 'No. Internal A-Gent tools remain separate and are not promoted as public products on the marketing site.')
     ])]) + nav() + f'''
 <main>
-  <section class="hero"><div class="container hero-grid"><div><div class="status-pill">Platform Online</div><h1>The <span class="gold">Fleet platform</span> capability layer.</h1><p class="lede">A clear map of the workflows behind A-Gent Fleet: prospect discovery, account research, personalized outreach, human review, reply handling, routing, and measurement.</p><div class="cta-row"><a class="btn btn-primary" href="{FLEET_LOGIN}">Launch Console</a><a class="btn btn-secondary" href="/fleet">View Fleet</a></div></div><aside class="console-card"><div class="console-top"><div><div class="console-kicker">Capability Map</div><div class="console-title">Research → Review → Revenue</div></div></div><div class="metric-grid"><div class="metric"><strong>21</strong><span>Preserved pages</span></div><div class="metric"><strong>0</strong><span>Internal app links</span></div><div class="metric"><strong>1</strong><span>Public platform</span></div><div class="metric"><strong>AA</strong><span>Contrast target</span></div></div></aside></div></section>
+  <section class="hero"><div class="container hero-grid"><div><div class="status-pill">Platform Online</div><h1>The <span class="gold">Fleet platform</span> capability layer.</h1><p class="lede">A clear map of the workflows behind A-Gent Fleet: prospect discovery, account research, personalized outreach, human review, reply handling, routing, optimization, and measurement.</p><div class="cta-row"><a class="btn btn-primary" href="{FLEET_LOGIN}">Launch Console</a><a class="btn btn-secondary" href="/fleet">View Fleet</a></div></div><aside class="console-card"><div class="console-top"><div><div class="console-kicker">Capability Map</div><div class="console-title">Research → Review → Optimize → Revenue</div></div></div><div class="metric-grid"><div class="metric"><strong>23</strong><span>Public routes</span></div><div class="metric"><strong>2</strong><span>Differentiators</span></div><div class="metric"><strong>1</strong><span>Public platform</span></div><div class="metric"><strong>AA</strong><span>Contrast target</span></div></div></aside></div></section>
+  <section class="section"><div class="container"><div class="section-header"><div class="eyebrow">Flagship Differentiators</div><h2>Signals create relevance. Loops compound quality.</h2><p>Signal Engine and Loop Engine are the proprietary layers that make Fleet more than another outbound sequencer: one finds verifiable reasons to reach out, and the other improves what the system does next.</p></div><div class="grid-2">{flagship_cards}</div></div></section>
   <section class="section"><div class="container"><div class="section-header"><div class="eyebrow">Capabilities</div><h2>Every platform page now points back to Fleet outcomes.</h2><p>Existing SEO/AEO routes remain intact, but the positioning has been cleaned up so prospects understand A-Gent Fleet and AI Consulting without seeing internal tools advertised.</p></div><div class="grid-3">{cards}</div></div></section>
 </main>
 ''' + footer()
+
 
 
 def consulting_page():
@@ -693,6 +721,73 @@ def compatibility_page(name, route, target=FLEET_LOGIN):
 ''' + footer()
 
 
+def loop_engine_page():
+    route = '/platform/loop-engine'
+    desc = 'Loop Engine is A-Gent Fleet\'s self-optimizing outbound layer: an LLM-judge keep-or-revert loop that improves email strategy under hard sales-quality guardrails.'
+    faq_items = [
+        ('What is the A-Gent Loop Engine?', 'Loop Engine is A-Gent Fleet\'s proprietary optimization layer for outbound email. It proposes strategy variations, scores them with an LLM judge, keeps improvements, and reverts weaker changes so outbound quality can compound safely.'),
+        ('What does keep-or-revert mean?', 'Keep-or-revert means the system tests a candidate strategy change against a current baseline, accepts the change only when the judge score improves, and rolls back when the change weakens the message quality.'),
+        ('What guardrails does Loop Engine enforce?', 'Loop Engine keeps outbound aligned to GAP methodology, never fabricates signals, favors brevity and a single CTA, and preserves the A-Gent Fleet signature and brand constraints.'),
+        ('Is Loop Engine optimizing real reply rates yet?', 'Phase 1 quality-score optimization is live and has demonstrated a 78 to 82 baseline lift. Phase 2 reply-rate optimization is scoped and activates when statistically useful reply data is available.')
+    ]
+    schemas = [
+        service_schema('Loop Engine', SITE + route, desc),
+        faq_schema(faq_items),
+        breadcrumb_schema([('Home', SITE + '/'), ('Platform', SITE + '/platform'), ('Loop Engine', SITE + route)])
+    ]
+    return head('Loop Engine | Self-Optimizing Outbound for AI SDR Teams', desc, route, schemas) + nav() + f'''
+<main>
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <div class="eyebrow">Flagship Differentiator</div>
+        <h1>Loop Engine — <span class="gold">self-optimizing outbound.</span></h1>
+        <p class="lede">A-Gent Fleet does not stop at generating emails. Loop Engine creates a governed optimization loop that tests outbound strategy changes, scores them with an LLM judge, keeps stronger variants, and reverts weaker ones before quality drifts.</p>
+        <div class="cta-row"><a class="btn btn-primary" href="{FLEET_LOGIN}">Launch Console</a><a class="btn btn-secondary" href="/platform">View Platform</a></div>
+      </div>
+      <aside class="console-card" style="border-color:rgba(212,175,55,.42);background:radial-gradient(circle at 20% 10%,rgba(212,175,55,.20),transparent 36%),linear-gradient(180deg,rgba(17,17,17,.98),rgba(5,6,6,.99));">
+        <div class="console-top"><div><div class="console-kicker">Optimization Loop</div><div class="console-title">Propose → Judge → Keep or Revert</div></div></div>
+        <div class="metric-grid" style="margin-top:1rem"><div class="metric"><strong>78→82</strong><span>Phase 1 quality lift</span></div><div class="metric"><strong>Live</strong><span>aisdr.a-gent.co</span></div><div class="metric"><strong>LLM</strong><span>Judge scoring</span></div><div class="metric"><strong>Safe</strong><span>Hard guardrails</span></div></div>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-header"><div class="eyebrow">How it works</div><h2>A closed quality loop for outbound strategy.</h2><p>Loop Engine is designed around measured iteration, not uncontrolled automation. It improves email strategy only when the candidate version beats the current baseline against the rules A-Gent wants every message to follow.</p></div>
+      <div class="grid-4">
+        {card('Generate candidate','The system proposes a revised outbound strategy or email pattern based on the current baseline and campaign context.','01')}
+        {card('Score with judge','An LLM judge evaluates the candidate against relevance, problem clarity, evidence use, brevity, and CTA discipline.','02', featured=True)}
+        {card('Keep improvements','If the candidate improves the quality score, Loop Engine records the gain and promotes the stronger strategy.','03')}
+        {card('Revert drift','If the candidate weakens quality or violates guardrails, the system rejects it and preserves the safer baseline.','04')}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-header"><div class="eyebrow">Hard guardrails</div><h2>Optimization stays inside A-Gent sales-quality rules.</h2><p>The loop is intentionally constrained. It is not allowed to chase superficial novelty, fabricate context, or turn outbound into long-form copy.</p></div>
+      <div class="grid-2">
+        <article class="card featured"><h3>Message strategy rules</h3><ul><li><strong>GAP methodology:</strong> connect current state, desired future state, and the cost of the gap.</li><li><strong>Never fabricate signals:</strong> use only available, source-linked evidence from the workflow.</li><li><strong>Brevity and one CTA:</strong> keep the email easy to read and easy to answer.</li><li><strong>A-Gent Fleet signature:</strong> preserve the product voice and sender standard.</li></ul></article>
+        <article class="card"><h3>Operating state</h3><p><strong>Phase 1 is live:</strong> Loop Engine is already optimizing quality scores, including a demonstrated lift from a 78 baseline to 82.</p><p><strong>Phase 2 is scoped:</strong> real reply-rate optimization will activate when enough reply data exists to judge business outcomes rather than only message quality.</p><p><strong>Source:</strong> live on aisdr.a-gent.co as part of A-Gent's AI SDR operating layer.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container faq">
+      <details open><summary>What makes Loop Engine different from ordinary A/B testing?</summary><p>Loop Engine is a strategy-quality loop rather than a subject-line testing widget. It evaluates whether the outbound logic is more credible, problem-centric, concise, and evidence-based before keeping a change.</p></details>
+      <details><summary>Does Loop Engine replace human review?</summary><p>No. It improves the strategy baseline that feeds Fleet workflows, while review queues and approval gates still give operators control over what reaches prospects.</p></details>
+      <details><summary>How does it work with Signal Engine?</summary><p>Signal Engine supplies verifiable current-state evidence. Loop Engine evaluates how that evidence is turned into messaging and keeps changes that improve the sales-quality score.</p></details>
+      <details><summary>Where should buyers go next?</summary><p>Teams ready to use the product should open the Launch Console. Teams that need a bespoke build should start with A-Gent Consulting or review the broader Platform capability map.</p></details>
+    </div>
+  </section>
+
+  <section class="section"><div class="container section-header"><div class="eyebrow">Ready to compound outbound quality?</div><h2>Launch Fleet or explore the platform layer.</h2><p>Loop Engine is one of the flagship differentiators inside the A-Gent AI SDR system.</p><div class="cta-row" style="justify-content:center"><a class="btn btn-primary" href="{FLEET_LOGIN}">Launch Console</a><a class="btn btn-secondary" href="/platform">View Platform</a></div></div></section>
+</main>
+''' + footer()
+
+
 def platform_subpage(slug, title, short, detail):
     route = f'/platform/{slug}'
     desc = f'{title} is an A-Gent Fleet capability for B2B SaaS teams: {short}'
@@ -712,7 +807,7 @@ def platform_subpage(slug, title, short, detail):
 
 def preserve_existing_routes():
     preserve_names = ['blog', 'about']
-    preserve_nested = [Path('platform/signal-engine')]
+    preserve_nested = [Path('platform/signal-engine'), Path('platform/loop-engine')]
     temp = BASE / '.preserve-public-routes'
     if temp.exists():
         shutil.rmtree(temp)
@@ -768,6 +863,7 @@ def build():
         shutil.copytree(src_brand, OUT / 'assets/brand', dirs_exist_ok=True)
     write_route('/', home_page())
     write_route('/platform', platform_index())
+    write_route('/platform/loop-engine', loop_engine_page())
     write_route('/consulting', consulting_page())
     write_route('/fleet', fleet_page())
     write_route('/signup', signup_page())
@@ -789,7 +885,7 @@ def build():
     restore_preserved_routes(preserved)
     (OUT / 'sitemap.xml').write_text('\n'.join(sitemap) + '\n', encoding='utf-8')
     (OUT / 'robots.txt').write_text('User-agent: *\nAllow: /\nSitemap: https://a-gent.co/sitemap.xml\n', encoding='utf-8')
-    (OUT / 'llms.txt').write_text('''# A-Gent\n\nA-Gent offers A-Gent Fleet, a packaged AI SDR platform for B2B SaaS outbound teams, and AI Consulting for bespoke AI revenue automation systems.\n\n## Public navigation\n\n- AI Consulting: https://a-gent.co/consulting\n- Platform: https://a-gent.co/platform\n- Fleet: https://a-gent.co/fleet\n- Launch Console: https://fleet.a-gent.co/login\n\n## Positioning\n\nA-Gent Fleet is the product. AI Consulting is the service. The public Platform pages describe Fleet capabilities and consulting extension points; internal operating tools are not advertised as public products.\n''', encoding='utf-8')
+    (OUT / 'llms.txt').write_text('''# A-Gent\n\nA-Gent offers A-Gent Fleet, a packaged AI SDR platform for B2B SaaS outbound teams, and AI Consulting for bespoke AI revenue automation systems.\n\n## Public navigation\n\n- AI Consulting: https://a-gent.co/consulting\n- Platform: https://a-gent.co/platform\n- Loop Engine: https://a-gent.co/platform/loop-engine\n- Fleet: https://a-gent.co/fleet\n- Launch Console: https://fleet.a-gent.co/login\n\n## Positioning\n\nA-Gent Fleet is the product. AI Consulting is the service. The public Platform pages describe Fleet capabilities and consulting extension points; internal operating tools are not advertised as public products. Flagship differentiators include Signal Engine for source-linked buying signals and Loop Engine for self-optimizing outbound quality under hard guardrails.\n''', encoding='utf-8')
     (OUT / 'netlify.toml').write_text('''[build]\n  publish = "."\n\n[[headers]]\n  for = "/*"\n  [headers.values]\n    X-Frame-Options = "DENY"\n    X-Content-Type-Options = "nosniff"\n    Referrer-Policy = "strict-origin-when-cross-origin"\n''', encoding='utf-8')
 
 

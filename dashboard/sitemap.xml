@@ -2,6 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://a-gent.co</loc><lastmod>2026-06-13</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
   <url><loc>https://a-gent.co/platform</loc><lastmod>2026-06-13</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://a-gent.co/platform/loop-engine</loc><lastmod>2026-06-13</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://a-gent.co/consulting</loc><lastmod>2026-06-13</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://a-gent.co/fleet</loc><lastmod>2026-06-13</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://a-gent.co/signup</loc><lastmod>2026-06-13</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>

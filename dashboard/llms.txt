@@ -6,9 +6,10 @@ A-Gent offers A-Gent Fleet, a packaged AI SDR platform for B2B SaaS outbound tea
 
 - AI Consulting: https://a-gent.co/consulting
 - Platform: https://a-gent.co/platform
+- Loop Engine: https://a-gent.co/platform/loop-engine
 - Fleet: https://a-gent.co/fleet
 - Launch Console: https://fleet.a-gent.co/login
 
 ## Positioning
 
-A-Gent Fleet is the product. AI Consulting is the service. The public Platform pages describe Fleet capabilities and consulting extension points; internal operating tools are not advertised as public products.
+A-Gent Fleet is the product. AI Consulting is the service. The public Platform pages describe Fleet capabilities and consulting extension points; internal operating tools are not advertised as public products. Flagship differentiators include Signal Engine for source-linked buying signals and Loop Engine for self-optimizing outbound quality under hard guardrails.
