@@ -1,0 +1,139 @@
+1
+00:00:00,000 --> 00:00:01,300
+AI sales adoption will
+
+2
+00:00:01,370 --> 00:00:02,360
+fail if managers are
+
+3
+00:00:02,390 --> 00:00:02,870
+left out.
+
+4
+00:00:03,680 --> 00:00:05,110
+Most teams focus on rep
+
+5
+00:00:05,200 --> 00:00:06,950
+productivity: emails,
+
+6
+00:00:07,120 --> 00:00:08,430
+summaries, research,
+
+7
+00:00:08,670 --> 00:00:09,160
+follow-up.
+
+8
+00:00:10,010 --> 00:00:11,630
+Useful, but incomplete.
+
+9
+00:00:12,400 --> 00:00:13,420
+The manager layer is
+
+10
+00:00:13,480 --> 00:00:14,480
+where adoption turns
+
+11
+00:00:14,520 --> 00:00:15,710
+into revenue impact.
+
+12
+00:00:16,520 --> 00:00:17,670
+Managers need AI to
+
+13
+00:00:17,740 --> 00:00:18,720
+surface deal risk,
+
+14
+00:00:19,040 --> 00:00:19,950
+compare opportunities
+
+15
+00:00:19,980 --> 00:00:21,180
+against buyer evidence,
+
+16
+00:00:21,440 --> 00:00:22,290
+identify coaching
+
+17
+00:00:22,340 --> 00:00:23,710
+moments, and show where
+
+18
+00:00:23,770 --> 00:00:24,620
+reps are skipping
+
+19
+00:00:24,710 --> 00:00:25,610
+critical discovery.
+
+20
+00:00:26,170 --> 00:00:27,060
+That does not replace
+
+21
+00:00:27,100 --> 00:00:27,890
+management judgment.
+
+22
+00:00:28,390 --> 00:00:29,050
+It improves the
+
+23
+00:00:29,110 --> 00:00:30,260
+information managers use
+
+24
+00:00:30,290 --> 00:00:30,730
+to coach.
+
+25
+00:00:31,420 --> 00:00:32,430
+The question is not just
+
+26
+00:00:32,470 --> 00:00:33,700
+how AI helps reps move
+
+27
+00:00:33,740 --> 00:00:34,170
+faster.
+
+28
+00:00:34,340 --> 00:00:35,420
+It is how AI helps
+
+29
+00:00:35,480 --> 00:00:36,560
+managers see reality
+
+30
+00:00:36,630 --> 00:00:36,970
+sooner.
+
+31
+00:00:37,500 --> 00:00:38,590
+That is a much bigger
+
+32
+00:00:38,680 --> 00:00:39,360
+revenue lever.
+
+33
+00:00:40,300 --> 00:00:41,700
+Follow A-Gent for more
+
+34
+00:00:41,760 --> 00:00:42,690
+agent-first sales
+
+35
+00:00:42,730 --> 00:00:43,240
+workflows.
