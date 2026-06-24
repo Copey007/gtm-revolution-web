@@ -1,0 +1,123 @@
+1
+00:00:00,000 --> 00:00:01,730
+AI does not fix weak
+
+2
+00:00:01,810 --> 00:00:02,300
+messaging.
+
+3
+00:00:02,530 --> 00:00:03,620
+It amplifies it.
+
+4
+00:00:04,040 --> 00:00:04,870
+If your positioning is
+
+5
+00:00:04,910 --> 00:00:06,200
+generic, AI can help you
+
+6
+00:00:06,250 --> 00:00:07,260
+produce more generic
+
+7
+00:00:07,310 --> 00:00:07,750
+copy.
+
+8
+00:00:08,210 --> 00:00:10,660
+If your ICP is vague, AI
+
+9
+00:00:10,720 --> 00:00:11,760
+can help you reach more
+
+10
+00:00:11,800 --> 00:00:12,780
+of the wrong people.
+
+11
+00:00:13,130 --> 00:00:13,820
+If your value
+
+12
+00:00:13,840 --> 00:00:14,950
+proposition is unclear,
+
+13
+00:00:15,350 --> 00:00:16,500
+AI can scale the
+
+14
+00:00:16,530 --> 00:00:17,110
+confusion.
+
+15
+00:00:17,520 --> 00:00:18,640
+The best teams will use
+
+16
+00:00:18,700 --> 00:00:19,430
+AI differently.
+
+17
+00:00:19,480 --> 00:00:20,420
+They will use it to test
+
+18
+00:00:20,490 --> 00:00:21,800
+sharper hypotheses about
+
+19
+00:00:21,840 --> 00:00:23,150
+the buyer, the problem,
+
+20
+00:00:23,280 --> 00:00:24,520
+the trigger, and the
+
+21
+00:00:24,590 --> 00:00:25,660
+cost of inaction.
+
+22
+00:00:25,900 --> 00:00:26,780
+That is the difference
+
+23
+00:00:26,830 --> 00:00:28,700
+between automation and
+
+24
+00:00:28,760 --> 00:00:29,440
+intelligence.
+
+25
+00:00:29,670 --> 00:00:30,890
+Before you ask AI to
+
+26
+00:00:30,930 --> 00:00:31,950
+write more, ask whether
+
+27
+00:00:32,000 --> 00:00:32,790
+the message is worth
+
+28
+00:00:32,820 --> 00:00:33,230
+scaling.
+
+29
+00:00:33,850 --> 00:00:34,930
+Follow A-Gent for
+
+30
+00:00:35,000 --> 00:00:36,180
+practical AI sales
+
+31
+00:00:36,200 --> 00:00:36,730
+strategy.
