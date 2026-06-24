@@ -1,3 +1,14 @@
+# Blog media assets are tracked in GitHub; redirect them so the public blog can serve video/media
+# without requiring large binary uploads in Netlify deploy bundles.
+/assets/blog/ava-009/the-ai-ready-sales-process.mp4    https://raw.githubusercontent.com/Copey007/gtm-revolution-web/main/assets/blog/ava-009/the-ai-ready-sales-process.mp4    302
+/assets/blog/ava-009/the-ai-ready-sales-process.jpg    https://raw.githubusercontent.com/Copey007/gtm-revolution-web/main/assets/blog/ava-009/the-ai-ready-sales-process.jpg    302
+/assets/blog/ava-012/why-ai-makes-bad-messaging-more-obvious.mp4    https://raw.githubusercontent.com/Copey007/gtm-revolution-web/main/assets/blog/ava-012/why-ai-makes-bad-messaging-more-obvious.mp4    302
+/assets/blog/ava-012/why-ai-makes-bad-messaging-more-obvious.jpg    https://raw.githubusercontent.com/Copey007/gtm-revolution-web/main/assets/blog/ava-012/why-ai-makes-bad-messaging-more-obvious.jpg    302
+/assets/blog/ava-012/why-ai-makes-bad-messaging-more-obvious.srt    https://raw.githubusercontent.com/Copey007/gtm-revolution-web/main/assets/blog/ava-012/why-ai-makes-bad-messaging-more-obvious.srt    302
+
+# Dashboard blog compatibility mirror routes resolve to the canonical public blog pages.
+/dashboard/blog/*    /blog/:splat    301
+
 # Redirect /dashboard to the dashboard subdomain
 /dashboard    https://dashboard.a-gent.co/    301
 
