@@ -1,6 +1,41 @@
 [build]
   publish = "."
 
+[[redirects]]
+  from = "/assets/blog/ava-009/the-ai-ready-sales-process.mp4"
+  to = "https://raw.githubusercontent.com/Copey007/gtm-revolution-web/main/assets/blog/ava-009/the-ai-ready-sales-process.mp4"
+  status = 302
+  force = true
+
+[[redirects]]
+  from = "/assets/blog/ava-009/the-ai-ready-sales-process.jpg"
+  to = "https://raw.githubusercontent.com/Copey007/gtm-revolution-web/main/assets/blog/ava-009/the-ai-ready-sales-process.jpg"
+  status = 302
+  force = true
+
+[[redirects]]
+  from = "/assets/blog/ava-012/why-ai-makes-bad-messaging-more-obvious.mp4"
+  to = "https://raw.githubusercontent.com/Copey007/gtm-revolution-web/main/assets/blog/ava-012/why-ai-makes-bad-messaging-more-obvious.mp4"
+  status = 302
+  force = true
+
+[[redirects]]
+  from = "/assets/blog/ava-012/why-ai-makes-bad-messaging-more-obvious.jpg"
+  to = "https://raw.githubusercontent.com/Copey007/gtm-revolution-web/main/assets/blog/ava-012/why-ai-makes-bad-messaging-more-obvious.jpg"
+  status = 302
+  force = true
+
+[[redirects]]
+  from = "/assets/blog/ava-012/why-ai-makes-bad-messaging-more-obvious.srt"
+  to = "https://raw.githubusercontent.com/Copey007/gtm-revolution-web/main/assets/blog/ava-012/why-ai-makes-bad-messaging-more-obvious.srt"
+  status = 302
+  force = true
+
+[[redirects]]
+  from = "/dashboard/blog/*"
+  to = "/blog/:splat"
+  status = 301
+
 [[headers]]
   for = "/*"
   [headers.values]
