@@ -1,0 +1,127 @@
+1
+00:00:00,000 --> 00:00:01,200
+Forecast confidence is
+
+2
+00:00:01,310 --> 00:00:03,250
+not the same as buyer
+
+3
+00:00:03,460 --> 00:00:04,120
+evidence.
+
+4
+00:00:04,540 --> 00:00:05,910
+A rep can feel confident
+
+5
+00:00:05,960 --> 00:00:06,930
+because the prospect was
+
+6
+00:00:06,990 --> 00:00:08,200
+friendly, the meeting
+
+7
+00:00:08,240 --> 00:00:09,470
+went well, or the next
+
+8
+00:00:09,510 --> 00:00:10,790
+step is on the calendar.
+
+9
+00:00:11,230 --> 00:00:12,320
+But buyer evidence is
+
+10
+00:00:12,370 --> 00:00:12,740
+different.
+
+11
+00:00:13,190 --> 00:00:14,230
+It shows that the buyer
+
+12
+00:00:14,280 --> 00:00:15,660
+has a real problem, a
+
+13
+00:00:15,780 --> 00:00:16,740
+reason to change,
+
+14
+00:00:16,850 --> 00:00:18,240
+internal ownership, a
+
+15
+00:00:18,310 --> 00:00:19,750
+decision path, and
+
+16
+00:00:19,830 --> 00:00:20,980
+consequences for doing
+
+17
+00:00:21,040 --> 00:00:21,390
+nothing.
+
+18
+00:00:22,200 --> 00:00:23,160
+AI can help sales
+
+19
+00:00:23,210 --> 00:00:23,850
+leaders make this
+
+20
+00:00:23,930 --> 00:00:24,800
+visible earlier.
+
+21
+00:00:24,800 --> 00:00:26,030
+It can inspect notes,
+
+22
+00:00:26,380 --> 00:00:28,760
+calls, emails, CRM
+
+23
+00:00:28,840 --> 00:00:30,050
+fields, and meeting
+
+24
+00:00:30,110 --> 00:00:31,140
+history to ask one
+
+25
+00:00:31,180 --> 00:00:32,910
+question: what evidence
+
+26
+00:00:32,960 --> 00:00:34,280
+supports this forecast?
+
+27
+00:00:34,780 --> 00:00:35,920
+That is a better use of
+
+28
+00:00:36,040 --> 00:00:37,330
+AI than another activity
+
+29
+00:00:37,380 --> 00:00:37,770
+summary.
+
+30
+00:00:38,240 --> 00:00:39,450
+Follow A-Gent for
+
+31
+00:00:39,570 --> 00:00:40,860
+practical AI sales
+
+32
+00:00:40,880 --> 00:00:41,410
+strategy.
