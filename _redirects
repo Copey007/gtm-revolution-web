@@ -14,3 +14,6 @@
 
 # Signup page
 /signup    /signup.html    200
+
+# Modules page (pretty URL -> file)
+/modules    /modules.html    200
