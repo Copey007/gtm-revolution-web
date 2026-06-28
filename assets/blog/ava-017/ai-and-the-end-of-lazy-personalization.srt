@@ -1,0 +1,135 @@
+1
+00:00:00,000 --> 00:00:01,450
+Lazy personalization is
+
+2
+00:00:01,500 --> 00:00:02,610
+about to become obvious.
+
+3
+00:00:03,180 --> 00:00:04,230
+For years, teams could
+
+4
+00:00:04,260 --> 00:00:05,390
+pretend a first-name
+
+5
+00:00:05,420 --> 00:00:06,800
+token, a LinkedIn
+
+6
+00:00:06,870 --> 00:00:08,720
+mention, or a generic
+
+7
+00:00:08,790 --> 00:00:09,830
+company line was
+
+8
+00:00:09,980 --> 00:00:10,890
+personalization.
+
+9
+00:00:11,700 --> 00:00:12,900
+AI will make that easier
+
+10
+00:00:12,950 --> 00:00:13,910
+to produce, which means
+
+11
+00:00:14,230 --> 00:00:15,210
+buyers will learn to
+
+12
+00:00:15,280 --> 00:00:16,170
+ignore it faster.
+
+13
+00:00:16,990 --> 00:00:17,880
+Real relevance is
+
+14
+00:00:17,930 --> 00:00:18,290
+different.
+
+15
+00:00:18,760 --> 00:00:19,850
+It connects a meaningful
+
+16
+00:00:19,900 --> 00:00:20,850
+account signal to a
+
+17
+00:00:20,920 --> 00:00:21,780
+business problem the
+
+18
+00:00:21,850 --> 00:00:23,020
+buyer may actually care
+
+19
+00:00:23,060 --> 00:00:23,330
+about.
+
+20
+00:00:23,330 --> 00:00:24,250
+That is where AI can
+
+21
+00:00:24,310 --> 00:00:25,320
+help, but only if the
+
+22
+00:00:25,370 --> 00:00:26,090
+team has the right
+
+23
+00:00:26,140 --> 00:00:26,560
+inputs.
+
+24
+00:00:26,940 --> 00:00:27,680
+Better signals.
+
+25
+00:00:28,070 --> 00:00:29,080
+Better hypotheses.
+
+26
+00:00:29,410 --> 00:00:30,120
+Better timing.
+
+27
+00:00:30,650 --> 00:00:32,250
+Do not use AI to create
+
+28
+00:00:32,350 --> 00:00:33,730
+fake relevance at scale.
+
+29
+00:00:34,200 --> 00:00:35,270
+Use it to earn attention
+
+30
+00:00:35,330 --> 00:00:36,360
+with a real reason to
+
+31
+00:00:36,400 --> 00:00:36,690
+speak.
+
+32
+00:00:37,090 --> 00:00:38,130
+Follow A-Gent for the
+
+33
+00:00:38,220 --> 00:00:39,080
+agent-first sales
+
+34
+00:00:39,110 --> 00:00:39,520
+playbook.
