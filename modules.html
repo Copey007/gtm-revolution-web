@@ -4,31 +4,31 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>A-Gent Modules — See the Workforce in Action</title>
-  <meta name="description" content="Watch how each A-Gent module works — interactive demos of the AI workforce, concierge, co-pilot, and more.">
+  <meta name="description" content="Watch how each A-Gent module works — interactive demos of the AI workforce, mission control, and more.">
   <link rel="canonical" href="https://a-gent.co/modules">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Orbitron:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&" rel="stylesheet">
   <link rel="stylesheet" href="/assets/css/fleet-master.css">
   <style>
     .module-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(380px,1fr));gap:28px;margin-top:32px}
-    .module-card{background:linear-gradient(180deg,rgba(22,22,22,.98),rgba(7,7,7,.98));border:1px solid rgba(212,175,55,.18);border-radius:20px;overflow:hidden;transition:transform .2s,border-color .2s,box-shadow .2s}
-    .module-card:hover{transform:translateY(-3px);border-color:rgba(212,175,55,.4);box-shadow:0 8px 32px rgba(212,175,55,.08)}
-    .module-video{width:100%;aspect-ratio:16/9;background:#050508;overflow:hidden;position:relative}
+    .module-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;transition:transform .2s,border-color .2s,box-shadow .2s}
+    .module-card:hover{transform:translateY(-2px);border-color:var(--line-strong);box-shadow:var(--shadow-lift)}
+    .module-video{width:100%;aspect-ratio:16/9;background:#0a0a0c;overflow:hidden;position:relative}
     .module-video video{width:100%;height:100%;object-fit:cover}
     .module-video .play-overlay{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(5,5,8,.4);cursor:pointer;transition:opacity .3s}
     .module-video .play-overlay:hover{opacity:.7}
-    .module-video .play-btn{width:64px;height:64px;border-radius:50%;background:rgba(212,175,55,.9);display:grid;place-items:center;font-size:1.5rem;color:#050508;pointer-events:none}
+    .module-video .play-btn{width:56px;height:56px;border-radius:50%;background:rgba(255,255,255,.9);display:grid;place-items:center;font-size:1.3rem;color:#0a0a0c;pointer-events:none}
     .module-body{padding:22px}
-    .module-tag{font-size:.68rem;color:#d4af37;text-transform:uppercase;letter-spacing:.1em;font-weight:600;margin-bottom:6px}
-    .module-title{font-size:1.15rem;font-weight:700;color:#f4f1df;margin-bottom:8px}
-    .module-desc{font-size:.85rem;color:#c8d1c5;line-height:1.6;margin-bottom:14px}
+    .module-tag{font-size:.68rem;color:var(--gold);font-weight:500;margin-bottom:6px}
+    .module-title{font-size:1.1rem;font-weight:600;color:var(--text);margin-bottom:8px;letter-spacing:-0.015em}
+    .module-desc{font-size:.85rem;color:var(--muted);line-height:1.6;margin-bottom:14px}
     .module-links{display:flex;gap:8px;flex-wrap:wrap}
-    .module-links a{padding:7px 14px;border-radius:10px;font-size:.78rem;font-weight:600;text-decoration:none;transition:transform .15s}
+    .module-links a{padding:6px 12px;border-radius:8px;font-size:.78rem;font-weight:500;text-decoration:none;transition:transform .15s,background .15s}
     .module-links a:hover{transform:scale(1.02)}
-    .module-links .primary{background:linear-gradient(135deg,#41ff9f,#1b9d62);color:#021006}
-    .module-links .secondary{background:rgba(255,255,255,.06);color:#c8d1c5;border:1px solid rgba(212,175,55,.15)}
-    .module-links .gold{background:linear-gradient(135deg,#d4af37,#a08020);color:#050508}
+    .module-links .primary{background:#f5f5f7;color:#0a0a0c}
+    .module-links .secondary{background:rgba(255,255,255,.05);color:var(--text);border:1px solid var(--line-strong)}
+    .module-links .gold{background:var(--gold-soft);color:var(--gold-bright);border:1px solid var(--line-accent)}
     @media(max-width:600px){.module-grid{grid-template-columns:1fr}}
   </style>
 </head>
@@ -62,7 +62,7 @@
     <div class="container">
       <div class="section-header">
         <div class="eyebrow">Product Modules</div>
-        <h2>Five modules. One autonomous GTM workforce.</h2>
+        <h2>Four modules. One autonomous GTM workforce.</h2>
         <p>From the worker marketplace to the interactive demo, every module is live and connected to the same agent infrastructure.</p>
       </div>
 
@@ -71,12 +71,11 @@
         <!-- Worker Marketplace -->
         <article class="module-card">
           <div class="module-video">
-            <video controls poster="https://aisdr.a-gent.co/assets/demo-agent.png" preload="none">
-              <source src="https://aisdr.a-gent.co/assets/demo-workers.mp4" type="video/mp4">
+            <video controls preload="metadata" playsinline>
+              <source src="/assets/video/meet-the-ai-team.mp4" type="video/mp4">
             </video>
           </div>
           <div class="module-body">
-            <div class="module-tag">Phase 3 — Delos Competitor</div>
             <div class="module-title">Worker Marketplace</div>
             <div class="module-desc">Browse 7 AI workers with real identities — Sarah the Researcher, James the SDR, Priya in RevOps, and more. Hire them with a 3-step onboarding flow.</div>
             <div class="module-links">
@@ -94,11 +93,10 @@
             </video>
           </div>
           <div class="module-body">
-            <div class="module-tag">Phase 4 — 1Mind Competitor</div>
             <div class="module-title">Interactive AI Demo</div>
             <div class="module-desc">A photorealistic AI agent walks you through the platform. She speaks, shows product mockups, and answers your questions via chat or voice.</div>
             <div class="module-links">
-              <a class="primary" href="https://aisdr.a-gent.co/demo.html" target="_blank">Start Demo</a>
+              <a class="primary" href="https://aisdr.a-gent.co/a/demo" target="_blank">Start Demo</a>
               <a class="gold" href="https://aisdr.a-gent.co/offers-demo.html" target="_blank">Offers Page</a>
             </div>
           </div>
@@ -112,66 +110,28 @@
             </video>
           </div>
           <div class="module-body">
-            <div class="module-tag">Phase 1 — Foundation</div>
             <div class="module-title">Mission Control</div>
-            <div class="module-desc">Your command center. Live campaign metrics, agent status, heartbeat summaries, concierge activity, and co-pilot meetings — all in one dashboard.</div>
+            <div class="module-desc">Your command center. Live campaign metrics, agent status, heartbeat summaries, and workforce activity — all in one dashboard.</div>
             <div class="module-links">
               <a class="primary" href="https://missioncontrol.a-gent.co" target="_blank">Open Dashboard</a>
-              <a class="secondary" href="https://aisdr.a-gent.co/api/workforce" target="_blank">Workforce API</a>
+              <a class="secondary" href="/platform/mission-control-dashboard" target="_blank">Learn More</a>
             </div>
           </div>
         </article>
 
-        <!-- Concierge -->
+        <!-- AI SDR -->
         <article class="module-card">
           <div class="module-video">
-            <video controls poster="https://aisdr.a-gent.co/assets/demo-agent.png" preload="none">
-              <source src="https://aisdr.a-gent.co/assets/demo-more_info.mp4" type="video/mp4">
+            <video controls preload="metadata" playsinline>
+              <source src="/assets/video/aisdr-overview.mp4" type="video/mp4">
             </video>
           </div>
           <div class="module-body">
-            <div class="module-tag">Phase 3 — Inbound</div>
-            <div class="module-title">Concierge Widget</div>
-            <div class="module-desc">An autonomous inbound concierge that greets visitors, qualifies leads, and captures emails for your CRM. Voice-enabled with natural TTS.</div>
+            <div class="module-title">AI SDR</div>
+            <div class="module-desc">Your always-on AI sales rep. Researches accounts, detects buying signals, writes personalized outreach, and routes replies — all through a human-in-the-loop review queue.</div>
             <div class="module-links">
-              <a class="primary" href="https://aisdr.a-gent.co/concierge.html" target="_blank">Open Widget</a>
-              <a class="secondary" href="https://aisdr.a-gent.co/api/concierge" target="_blank">API</a>
-            </div>
-          </div>
-        </article>
-
-        <!-- Meeting Co-Pilot -->
-        <article class="module-card">
-          <div class="module-video">
-            <video controls poster="https://aisdr.a-gent.co/assets/demo-agent.png" preload="none">
-              <source src="https://aisdr.a-gent.co/assets/demo-signals.mp4" type="video/mp4">
-            </video>
-          </div>
-          <div class="module-body">
-            <div class="module-tag">Phase 4 — Meeting Intelligence</div>
-            <div class="module-title">Meeting Co-Pilot</div>
-            <div class="module-desc">Real-time speech transcription with live GAP-methodology coaching. Tracks talk ratio, buying signals, and gap score. Generates structured meeting notes.</div>
-            <div class="module-links">
-              <a class="primary" href="https://aisdr.a-gent.co/copilot.html" target="_blank">Launch Co-Pilot</a>
-              <a class="secondary" href="https://aisdr.a-gent.co/api/copilot" target="_blank">API</a>
-            </div>
-          </div>
-        </article>
-
-        <!-- Workforce Autopilot -->
-        <article class="module-card">
-          <div class="module-video">
-            <video controls poster="https://aisdr.a-gent.co/assets/demo-agent.png" preload="none">
-              <source src="https://aisdr.a-gent.co/assets/demo-step2.mp4" type="video/mp4">
-            </video>
-          </div>
-          <div class="module-body">
-            <div class="module-tag">Phase 2 — Autopilot</div>
-            <div class="module-title">Workforce Autopilot</div>
-            <div class="module-desc">The Manager agent wakes up every 30 minutes, delegates to Ops (health check), Support (reply classification), and Success (customer health). Fully autonomous.</div>
-            <div class="module-links">
-              <a class="primary" href="https://missioncontrol.a-gent.co" target="_blank">View Heartbeat</a>
-              <a class="secondary" href="https://aisdr.a-gent.co/api/workforce" target="_blank">Agent Status</a>
+              <a class="primary" href="https://fleet.a-gent.co/login" target="_blank">Launch Console</a>
+              <a class="secondary" href="/platform/signal-engine" target="_blank">Signal Engine</a>
             </div>
           </div>
         </article>
@@ -189,7 +149,7 @@
       </div>
       <div class="cta-row" style="justify-content:center">
         <a class="btn btn-primary" href="https://aisdr.a-gent.co/workers.html" target="_blank">Browse Workers</a>
-        <a class="btn btn-secondary" href="https://aisdr.a-gent.co/demo.html" target="_blank">Watch Demo</a>
+        <a class="btn btn-secondary" href="https://aisdr.a-gent.co/a/demo" target="_blank">Watch Demo</a>
         <a class="btn btn-secondary" href="https://missioncontrol.a-gent.co" target="_blank">Mission Control</a>
       </div>
     </div>
@@ -200,7 +160,7 @@
   <div class="container footer-grid">
     <div>
       <a class="wordmark" href="/" aria-label="A-Gent home"><img src="/assets/brand/agent-logo-master.svg" alt="A-Gent"></a>
-      <p style="margin-top:.7rem;max-width:520px">A-Gent Fleet is the packaged AI SDR platform. A-Gent Consulting designs bespoke AI revenue systems for teams that need deeper implementation support.</p>
+      <p style="margin-top:.7rem;max-width:520px">A-Gent Fleet is the packaged AI GTM Execution tools that are always on, working around the clock to help you sell more</p>
     </div>
   </div>
 </footer>
