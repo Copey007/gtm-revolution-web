@@ -1,0 +1,139 @@
+1
+00:00:00,000 --> 00:00:01,660
+Do not start AI sales
+
+2
+00:00:01,700 --> 00:00:02,930
+adoption with every
+
+3
+00:00:03,000 --> 00:00:04,170
+workflow at once.
+
+4
+00:00:04,480 --> 00:00:05,310
+Start with the first
+
+5
+00:00:05,420 --> 00:00:06,190
+thirty days.
+
+6
+00:00:06,580 --> 00:00:07,430
+Pick one revenue
+
+7
+00:00:07,450 --> 00:00:08,800
+problem, one team, and
+
+8
+00:00:08,920 --> 00:00:09,590
+one workflow.
+
+9
+00:00:09,720 --> 00:00:11,290
+For example: pre-call
+
+10
+00:00:11,380 --> 00:00:12,430
+intelligence for account
+
+11
+00:00:12,480 --> 00:00:13,070
+executives.
+
+12
+00:00:13,570 --> 00:00:14,560
+Define the signal
+
+13
+00:00:14,620 --> 00:00:15,070
+inputs.
+
+14
+00:00:15,430 --> 00:00:16,280
+Define the buyer
+
+15
+00:00:16,350 --> 00:00:17,300
+evidence you expect.
+
+16
+00:00:17,930 --> 00:00:18,840
+Define the manager
+
+17
+00:00:18,910 --> 00:00:19,710
+review process.
+
+18
+00:00:19,710 --> 00:00:20,570
+Then measure whether
+
+19
+00:00:20,630 --> 00:00:22,050
+calls improve, whether
+
+20
+00:00:22,110 --> 00:00:23,230
+discovery gets sharper,
+
+21
+00:00:23,680 --> 00:00:24,910
+and whether deal risk
+
+22
+00:00:24,960 --> 00:00:25,740
+appears earlier.
+
+23
+00:00:26,460 --> 00:00:27,810
+That is how AI adoption
+
+24
+00:00:27,850 --> 00:00:28,890
+becomes operational
+
+25
+00:00:28,940 --> 00:00:29,980
+instead of performative.
+
+26
+00:00:30,740 --> 00:00:31,450
+The goal is not to
+
+27
+00:00:31,520 --> 00:00:31,940
+announce a
+
+28
+00:00:31,990 --> 00:00:32,680
+transformation.
+
+29
+00:00:33,030 --> 00:00:34,010
+The goal is to prove one
+
+30
+00:00:34,040 --> 00:00:34,950
+workflow creates better
+
+31
+00:00:34,990 --> 00:00:35,740
+revenue decisions.
+
+32
+00:00:36,130 --> 00:00:36,780
+Then scale.
+
+33
+00:00:37,260 --> 00:00:38,210
+Follow A-Gent for
+
+34
+00:00:38,280 --> 00:00:39,620
+practical AI GTM
+
+35
+00:00:39,680 --> 00:00:40,240
+execution.
