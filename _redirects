@@ -5,6 +5,27 @@
 /assets/blog/ava-012/why-ai-makes-bad-messaging-more-obvious.mp4    https://raw.githubusercontent.com/Copey007/gtm-revolution-web/main/assets/blog/ava-012/why-ai-makes-bad-messaging-more-obvious.mp4    302
 /assets/blog/ava-012/why-ai-makes-bad-messaging-more-obvious.jpg    https://raw.githubusercontent.com/Copey007/gtm-revolution-web/main/assets/blog/ava-012/why-ai-makes-bad-messaging-more-obvious.jpg    302
 /assets/blog/ava-012/why-ai-makes-bad-messaging-more-obvious.srt    https://raw.githubusercontent.com/Copey007/gtm-revolution-web/main/assets/blog/ava-012/why-ai-makes-bad-messaging-more-obvious.srt    302
+/assets/blog/ava-013/the-manager-layer-of-ai-sales.mp4    https://raw.githubusercontent.com/Copey007/gtm-revolution-web/main/assets/blog/ava-013/the-manager-layer-of-ai-sales.mp4    302
+/assets/blog/ava-013/the-manager-layer-of-ai-sales.jpg    https://raw.githubusercontent.com/Copey007/gtm-revolution-web/main/assets/blog/ava-013/the-manager-layer-of-ai-sales.jpg    302
+/assets/blog/ava-013/the-manager-layer-of-ai-sales.srt    https://raw.githubusercontent.com/Copey007/gtm-revolution-web/main/assets/blog/ava-013/the-manager-layer-of-ai-sales.srt    302
+/assets/blog/ava-014/from-revops-dashboard-to-revenue-intelligence.mp4    https://raw.githubusercontent.com/Copey007/gtm-revolution-web/main/assets/blog/ava-014/from-revops-dashboard-to-revenue-intelligence.mp4    302
+/assets/blog/ava-014/from-revops-dashboard-to-revenue-intelligence.jpg    https://raw.githubusercontent.com/Copey007/gtm-revolution-web/main/assets/blog/ava-014/from-revops-dashboard-to-revenue-intelligence.jpg    302
+/assets/blog/ava-014/from-revops-dashboard-to-revenue-intelligence.srt    https://raw.githubusercontent.com/Copey007/gtm-revolution-web/main/assets/blog/ava-014/from-revops-dashboard-to-revenue-intelligence.srt    302
+/assets/blog/ava-015/the-human-decision-boundary.mp4    https://raw.githubusercontent.com/Copey007/gtm-revolution-web/main/assets/blog/ava-015/the-human-decision-boundary.mp4    302
+/assets/blog/ava-015/the-human-decision-boundary.jpg    https://raw.githubusercontent.com/Copey007/gtm-revolution-web/main/assets/blog/ava-015/the-human-decision-boundary.jpg    302
+/assets/blog/ava-015/the-human-decision-boundary.srt    https://raw.githubusercontent.com/Copey007/gtm-revolution-web/main/assets/blog/ava-015/the-human-decision-boundary.srt    302
+/assets/blog/ava-016/why-forecasting-needs-buyer-evidence.mp4    https://raw.githubusercontent.com/Copey007/gtm-revolution-web/main/assets/blog/ava-016/why-forecasting-needs-buyer-evidence.mp4    302
+/assets/blog/ava-016/why-forecasting-needs-buyer-evidence.jpg    https://raw.githubusercontent.com/Copey007/gtm-revolution-web/main/assets/blog/ava-016/why-forecasting-needs-buyer-evidence.jpg    302
+/assets/blog/ava-016/why-forecasting-needs-buyer-evidence.srt    https://raw.githubusercontent.com/Copey007/gtm-revolution-web/main/assets/blog/ava-016/why-forecasting-needs-buyer-evidence.srt    302
+/assets/blog/ava-017/ai-and-the-end-of-lazy-personalization.mp4    https://raw.githubusercontent.com/Copey007/gtm-revolution-web/main/assets/blog/ava-017/ai-and-the-end-of-lazy-personalization.mp4    302
+/assets/blog/ava-017/ai-and-the-end-of-lazy-personalization.jpg    https://raw.githubusercontent.com/Copey007/gtm-revolution-web/main/assets/blog/ava-017/ai-and-the-end-of-lazy-personalization.jpg    302
+/assets/blog/ava-017/ai-and-the-end-of-lazy-personalization.srt    https://raw.githubusercontent.com/Copey007/gtm-revolution-web/main/assets/blog/ava-017/ai-and-the-end-of-lazy-personalization.srt    302
+/assets/blog/ava-018/the-first-30-days-of-ai-sales-adoption.mp4    https://raw.githubusercontent.com/Copey007/gtm-revolution-web/main/assets/blog/ava-018/the-first-30-days-of-ai-sales-adoption.mp4    302
+/assets/blog/ava-018/the-first-30-days-of-ai-sales-adoption.jpg    https://raw.githubusercontent.com/Copey007/gtm-revolution-web/main/assets/blog/ava-018/the-first-30-days-of-ai-sales-adoption.jpg    302
+/assets/blog/ava-018/the-first-30-days-of-ai-sales-adoption.srt    https://raw.githubusercontent.com/Copey007/gtm-revolution-web/main/assets/blog/ava-018/the-first-30-days-of-ai-sales-adoption.srt    302
+/assets/blog/ava-019/your-team-does-not-need-ai-confidence-it-needs-ai-discipline.mp4    https://raw.githubusercontent.com/Copey007/gtm-revolution-web/main/assets/blog/ava-019/your-team-does-not-need-ai-confidence-it-needs-ai-discipline.mp4    302
+/assets/blog/ava-019/your-team-does-not-need-ai-confidence-it-needs-ai-discipline.jpg    https://raw.githubusercontent.com/Copey007/gtm-revolution-web/main/assets/blog/ava-019/your-team-does-not-need-ai-confidence-it-needs-ai-discipline.jpg    302
+/assets/blog/ava-019/your-team-does-not-need-ai-confidence-it-needs-ai-discipline.srt    https://raw.githubusercontent.com/Copey007/gtm-revolution-web/main/assets/blog/ava-019/your-team-does-not-need-ai-confidence-it-needs-ai-discipline.srt    302
 
 # Dashboard blog compatibility mirror routes resolve to the canonical public blog pages.
 /dashboard/blog/*    /blog/:splat    301
