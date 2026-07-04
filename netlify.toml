@@ -7,3 +7,180 @@
     X-Frame-Options = "DENY"
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
+
+# ava-009
+[[redirects]]
+  from = "/assets/blog/ava-009/the-ai-ready-sales-process.mp4"
+  to = "https://raw.githubusercontent.com/Copey007/gtm-revolution-web/main/assets/blog/ava-009/the-ai-ready-sales-process.mp4"
+  status = 302
+  force = true
+[[redirects]]
+  from = "/assets/blog/ava-009/the-ai-ready-sales-process.jpg"
+  to = "https://raw.githubusercontent.com/Copey007/gtm-revolution-web/main/assets/blog/ava-009/the-ai-ready-sales-process.jpg"
+  status = 302
+  force = true
+[[redirects]]
+  from = "/assets/blog/ava-009/the-ai-ready-sales-process.srt"
+  to = "https://raw.githubusercontent.com/Copey007/gtm-revolution-web/main/assets/blog/ava-009/the-ai-ready-sales-process.srt"
+  status = 302
+  force = true
+
+# ava-012
+[[redirects]]
+  from = "/assets/blog/ava-012/why-ai-makes-bad-messaging-more-obvious.mp4"
+  to = "https://raw.githubusercontent.com/Copey007/gtm-revolution-web/main/assets/blog/ava-012/why-ai-makes-bad-messaging-more-obvious.mp4"
+  status = 302
+  force = true
+[[redirects]]
+  from = "/assets/blog/ava-012/why-ai-makes-bad-messaging-more-obvious.jpg"
+  to = "https://raw.githubusercontent.com/Copey007/gtm-revolution-web/main/assets/blog/ava-012/why-ai-makes-bad-messaging-more-obvious.jpg"
+  status = 302
+  force = true
+[[redirects]]
+  from = "/assets/blog/ava-012/why-ai-makes-bad-messaging-more-obvious.srt"
+  to = "https://raw.githubusercontent.com/Copey007/gtm-revolution-web/main/assets/blog/ava-012/why-ai-makes-bad-messaging-more-obvious.srt"
+  status = 302
+  force = true
+
+# ava-013
+[[redirects]]
+  from = "/assets/blog/ava-013/the-manager-layer-of-ai-sales.mp4"
+  to = "https://raw.githubusercontent.com/Copey007/gtm-revolution-web/main/assets/blog/ava-013/the-manager-layer-of-ai-sales.mp4"
+  status = 302
+  force = true
+[[redirects]]
+  from = "/assets/blog/ava-013/the-manager-layer-of-ai-sales.jpg"
+  to = "https://raw.githubusercontent.com/Copey007/gtm-revolution-web/main/assets/blog/ava-013/the-manager-layer-of-ai-sales.jpg"
+  status = 302
+  force = true
+[[redirects]]
+  from = "/assets/blog/ava-013/the-manager-layer-of-ai-sales.srt"
+  to = "https://raw.githubusercontent.com/Copey007/gtm-revolution-web/main/assets/blog/ava-013/the-manager-layer-of-ai-sales.srt"
+  status = 302
+  force = true
+
+# ava-014
+[[redirects]]
+  from = "/assets/blog/ava-014/from-revops-dashboard-to-revenue-intelligence.mp4"
+  to = "https://raw.githubusercontent.com/Copey007/gtm-revolution-web/main/assets/blog/ava-014/from-revops-dashboard-to-revenue-intelligence.mp4"
+  status = 302
+  force = true
+[[redirects]]
+  from = "/assets/blog/ava-014/from-revops-dashboard-to-revenue-intelligence.jpg"
+  to = "https://raw.githubusercontent.com/Copey007/gtm-revolution-web/main/assets/blog/ava-014/from-revops-dashboard-to-revenue-intelligence.jpg"
+  status = 302
+  force = true
+[[redirects]]
+  from = "/assets/blog/ava-014/from-revops-dashboard-to-revenue-intelligence.srt"
+  to = "https://raw.githubusercontent.com/Copey007/gtm-revolution-web/main/assets/blog/ava-014/from-revops-dashboard-to-revenue-intelligence.srt"
+  status = 302
+  force = true
+
+# ava-015
+[[redirects]]
+  from = "/assets/blog/ava-015/the-human-decision-boundary.mp4"
+  to = "https://raw.githubusercontent.com/Copey007/gtm-revolution-web/main/assets/blog/ava-015/the-human-decision-boundary.mp4"
+  status = 302
+  force = true
+[[redirects]]
+  from = "/assets/blog/ava-015/the-human-decision-boundary.jpg"
+  to = "https://raw.githubusercontent.com/Copey007/gtm-revolution-web/main/assets/blog/ava-015/the-human-decision-boundary.jpg"
+  status = 302
+  force = true
+[[redirects]]
+  from = "/assets/blog/ava-015/the-human-decision-boundary.srt"
+  to = "https://raw.githubusercontent.com/Copey007/gtm-revolution-web/main/assets/blog/ava-015/the-human-decision-boundary.srt"
+  status = 302
+  force = true
+
+# ava-016
+[[redirects]]
+  from = "/assets/blog/ava-016/why-forecasting-needs-buyer-evidence.mp4"
+  to = "https://raw.githubusercontent.com/Copey007/gtm-revolution-web/main/assets/blog/ava-016/why-forecasting-needs-buyer-evidence.mp4"
+  status = 302
+  force = true
+[[redirects]]
+  from = "/assets/blog/ava-016/why-forecasting-needs-buyer-evidence.jpg"
+  to = "https://raw.githubusercontent.com/Copey007/gtm-revolution-web/main/assets/blog/ava-016/why-forecasting-needs-buyer-evidence.jpg"
+  status = 302
+  force = true
+[[redirects]]
+  from = "/assets/blog/ava-016/why-forecasting-needs-buyer-evidence.srt"
+  to = "https://raw.githubusercontent.com/Copey007/gtm-revolution-web/main/assets/blog/ava-016/why-forecasting-needs-buyer-evidence.srt"
+  status = 302
+  force = true
+
+# ava-017
+[[redirects]]
+  from = "/assets/blog/ava-017/ai-and-the-end-of-lazy-personalization.mp4"
+  to = "https://raw.githubusercontent.com/Copey007/gtm-revolution-web/main/assets/blog/ava-017/ai-and-the-end-of-lazy-personalization.mp4"
+  status = 302
+  force = true
+[[redirects]]
+  from = "/assets/blog/ava-017/ai-and-the-end-of-lazy-personalization.jpg"
+  to = "https://raw.githubusercontent.com/Copey007/gtm-revolution-web/main/assets/blog/ava-017/ai-and-the-end-of-lazy-personalization.jpg"
+  status = 302
+  force = true
+[[redirects]]
+  from = "/assets/blog/ava-017/ai-and-the-end-of-lazy-personalization.srt"
+  to = "https://raw.githubusercontent.com/Copey007/gtm-revolution-web/main/assets/blog/ava-017/ai-and-the-end-of-lazy-personalization.srt"
+  status = 302
+  force = true
+
+# ava-018
+[[redirects]]
+  from = "/assets/blog/ava-018/the-first-30-days-of-ai-sales-adoption.mp4"
+  to = "https://raw.githubusercontent.com/Copey007/gtm-revolution-web/main/assets/blog/ava-018/the-first-30-days-of-ai-sales-adoption.mp4"
+  status = 302
+  force = true
+[[redirects]]
+  from = "/assets/blog/ava-018/the-first-30-days-of-ai-sales-adoption.jpg"
+  to = "https://raw.githubusercontent.com/Copey007/gtm-revolution-web/main/assets/blog/ava-018/the-first-30-days-of-ai-sales-adoption.jpg"
+  status = 302
+  force = true
+[[redirects]]
+  from = "/assets/blog/ava-018/the-first-30-days-of-ai-sales-adoption.srt"
+  to = "https://raw.githubusercontent.com/Copey007/gtm-revolution-web/main/assets/blog/ava-018/the-first-30-days-of-ai-sales-adoption.srt"
+  status = 302
+  force = true
+
+# ava-019
+[[redirects]]
+  from = "/assets/blog/ava-019/your-team-does-not-need-ai-confidence-it-needs-ai-discipline.mp4"
+  to = "https://raw.githubusercontent.com/Copey007/gtm-revolution-web/main/assets/blog/ava-019/your-team-does-not-need-ai-confidence-it-needs-ai-discipline.mp4"
+  status = 302
+  force = true
+[[redirects]]
+  from = "/assets/blog/ava-019/your-team-does-not-need-ai-confidence-it-needs-ai-discipline.jpg"
+  to = "https://raw.githubusercontent.com/Copey007/gtm-revolution-web/main/assets/blog/ava-019/your-team-does-not-need-ai-confidence-it-needs-ai-discipline.jpg"
+  status = 302
+  force = true
+[[redirects]]
+  from = "/assets/blog/ava-019/your-team-does-not-need-ai-confidence-it-needs-ai-discipline.srt"
+  to = "https://raw.githubusercontent.com/Copey007/gtm-revolution-web/main/assets/blog/ava-019/your-team-does-not-need-ai-confidence-it-needs-ai-discipline.srt"
+  status = 302
+  force = true
+
+# Dashboard blog compatibility mirror routes
+[[redirects]]
+  from = "/dashboard/blog/*"
+  to = "/blog/:splat"
+  status = 301
+
+# Redirect /dashboard to the dashboard subdomain
+[[redirects]]
+  from = "/dashboard"
+  to = "https://dashboard.a-gent.co/"
+  status = 301
+
+# Signup page
+[[redirects]]
+  from = "/signup"
+  to = "/signup.html"
+  status = 200
+
+# Modules page (pretty URL -> file)
+[[redirects]]
+  from = "/modules"
+  to = "/modules.html"
+  status = 200
