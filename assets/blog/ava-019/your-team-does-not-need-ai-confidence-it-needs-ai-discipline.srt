@@ -1,0 +1,24 @@
+1
+00:00:00,200 --> 00:00:01,600
+AI confidence is not the goal.
+
+2
+00:00:01,600 --> 00:00:02,700
+AI discipline is.
+
+3
+00:00:02,700 --> 00:00:10,500
+A sales team can feel excited about AI and still use it inconsistently, casually, or in ways that create more noise.
+
+4
+00:00:10,500 --> 00:00:21,000
+Discipline means leaders define where AI belongs in the revenue process, what inputs it needs, what output quality looks like, and how managers inspect adoption.
+
+5
+00:00:21,000 --> 00:00:23,500
+It means AI is not a side experiment.
+
+6
+00:00:23,500 --> 00:00:27,200
+It becomes part of how the GTM system learns.
+
