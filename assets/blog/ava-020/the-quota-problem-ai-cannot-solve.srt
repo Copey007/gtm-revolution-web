@@ -1,0 +1,183 @@
+1
+00:00:00,000 --> 00:00:01,790
+AI will not fix a quota
+
+2
+00:00:01,850 --> 00:00:02,950
+problem that is actually
+
+3
+00:00:03,010 --> 00:00:04,160
+a pipeline problem.
+
+4
+00:00:04,880 --> 00:00:05,820
+Most revenue leaders
+
+5
+00:00:05,890 --> 00:00:06,920
+know this but still
+
+6
+00:00:07,000 --> 00:00:08,770
+reach for AI tools as if
+
+7
+00:00:08,880 --> 00:00:10,020
+better outreach volume
+
+8
+00:00:10,040 --> 00:00:11,030
+will close the gap.
+
+9
+00:00:11,480 --> 00:00:12,390
+It will not.
+
+10
+00:00:13,110 --> 00:00:14,340
+If the pipeline is thin,
+
+11
+00:00:14,500 --> 00:00:15,670
+it is because the team
+
+12
+00:00:15,730 --> 00:00:16,870
+is targeting the wrong
+
+13
+00:00:16,920 --> 00:00:17,940
+accounts, having the
+
+14
+00:00:18,000 --> 00:00:19,960
+wrong conversations, or
+
+15
+00:00:20,070 --> 00:00:21,290
+losing deals at a stage
+
+16
+00:00:21,320 --> 00:00:22,200
+that has nothing to do
+
+17
+00:00:22,310 --> 00:00:23,050
+with outreach.
+
+18
+00:00:23,710 --> 00:00:24,740
+AI can help you move
+
+19
+00:00:24,780 --> 00:00:25,880
+faster inside a broken
+
+20
+00:00:25,940 --> 00:00:27,700
+system, but it cannot
+
+21
+00:00:27,770 --> 00:00:29,020
+fix the system itself.
+
+22
+00:00:29,620 --> 00:00:30,360
+Before you scale
+
+23
+00:00:30,410 --> 00:00:31,520
+AI-assisted outreach,
+
+24
+00:00:31,850 --> 00:00:33,200
+ask three questions.
+
+25
+00:00:33,760 --> 00:00:34,450
+Are we targeting
+
+26
+00:00:34,490 --> 00:00:35,480
+accounts with a real
+
+27
+00:00:35,550 --> 00:00:36,320
+reason to buy now?
+
+28
+00:00:36,910 --> 00:00:37,860
+Are our reps having
+
+29
+00:00:37,930 --> 00:00:38,810
+conversations that
+
+30
+00:00:38,870 --> 00:00:40,020
+surface actual buyer
+
+31
+00:00:40,070 --> 00:00:40,520
+problems?
+
+32
+00:00:41,150 --> 00:00:42,190
+Are we losing deals
+
+33
+00:00:42,250 --> 00:00:43,130
+because of the same
+
+34
+00:00:43,180 --> 00:00:44,210
+avoidable reasons each
+
+35
+00:00:44,260 --> 00:00:44,610
+quarter?
+
+36
+00:00:45,570 --> 00:00:46,240
+If you cannot answer
+
+37
+00:00:46,280 --> 00:00:47,140
+those questions clearly,
+
+38
+00:00:47,210 --> 00:00:48,310
+more AI activity will
+
+39
+00:00:48,370 --> 00:00:49,140
+not save the number.
+
+40
+00:00:49,550 --> 00:00:50,690
+Fix the system first.
+
+41
+00:00:51,210 --> 00:00:52,220
+Then use AI to
+
+42
+00:00:52,290 --> 00:00:53,350
+accelerate what already
+
+43
+00:00:53,390 --> 00:00:53,720
+works.
+
+44
+00:00:54,570 --> 00:00:55,590
+Follow A-Gent for the
+
+45
+00:00:55,660 --> 00:00:57,120
+agent-first GTM
+
+46
+00:00:57,180 --> 00:00:57,620
+playbook.
