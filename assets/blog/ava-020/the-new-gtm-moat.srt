@@ -1,0 +1,143 @@
+1
+00:00:00,000 --> 00:00:01,430
+The new GTM moat is not
+
+2
+00:00:01,470 --> 00:00:02,100
+just data.
+
+3
+00:00:02,190 --> 00:00:03,670
+It is learning speed.
+
+4
+00:00:04,230 --> 00:00:05,500
+Every B2B company has
+
+5
+00:00:05,530 --> 00:00:07,340
+CRM data, marketing
+
+6
+00:00:07,380 --> 00:00:08,820
+data, conversation data,
+
+7
+00:00:09,200 --> 00:00:10,830
+product usage data, and
+
+8
+00:00:11,010 --> 00:00:12,020
+customer data.
+
+9
+00:00:12,610 --> 00:00:13,560
+The advantage is not
+
+10
+00:00:13,620 --> 00:00:14,590
+owning those fragments.
+
+11
+00:00:14,650 --> 00:00:15,650
+The advantage is turning
+
+12
+00:00:15,700 --> 00:00:16,440
+them into better
+
+13
+00:00:16,500 --> 00:00:17,430
+decisions faster.
+
+14
+00:00:18,390 --> 00:00:19,490
+Which accounts should we
+
+15
+00:00:19,550 --> 00:00:20,280
+prioritize?
+
+16
+00:00:21,190 --> 00:00:22,080
+Which message is
+
+17
+00:00:22,160 --> 00:00:22,710
+resonating?
+
+18
+00:00:23,580 --> 00:00:24,610
+Which deals are real?
+
+19
+00:00:25,230 --> 00:00:26,220
+Which customers are at
+
+20
+00:00:26,260 --> 00:00:26,610
+risk?
+
+21
+00:00:27,520 --> 00:00:28,600
+Which workflow should
+
+22
+00:00:28,640 --> 00:00:29,140
+change?
+
+23
+00:00:30,530 --> 00:00:31,500
+AI gives leaders a
+
+24
+00:00:31,540 --> 00:00:32,820
+chance to build a GTM
+
+25
+00:00:32,910 --> 00:00:34,020
+system that senses,
+
+26
+00:00:34,200 --> 00:00:35,550
+acts, and learns faster
+
+27
+00:00:35,600 --> 00:00:36,330
+than competitors.
+
+28
+00:00:36,880 --> 00:00:37,920
+That is the revolution.
+
+29
+00:00:38,850 --> 00:00:39,600
+Not artificial
+
+30
+00:00:39,650 --> 00:00:40,380
+intelligence as a
+
+31
+00:00:40,430 --> 00:00:40,920
+feature, but
+
+32
+00:00:40,970 --> 00:00:42,070
+intelligence as an
+
+33
+00:00:42,160 --> 00:00:43,040
+operating system.
+
+34
+00:00:43,850 --> 00:00:45,130
+Follow A-Gent for the
+
+35
+00:00:45,220 --> 00:00:46,590
+agent-first GTM
+
+36
+00:00:46,650 --> 00:00:47,070
+playbook.
