@@ -1,0 +1,151 @@
+1
+00:00:00,000 --> 00:00:01,230
+Most deal reviews are
+
+2
+00:00:01,290 --> 00:00:02,400
+opinion contests.
+
+3
+00:00:03,000 --> 00:00:04,080
+The rep says the deal is
+
+4
+00:00:04,130 --> 00:00:04,410
+good.
+
+5
+00:00:04,810 --> 00:00:06,030
+The manager pushes back.
+
+6
+00:00:06,800 --> 00:00:07,670
+Neither has clean
+
+7
+00:00:07,730 --> 00:00:08,200
+evidence.
+
+8
+00:00:08,820 --> 00:00:10,140
+AI changes the dynamic
+
+9
+00:00:10,180 --> 00:00:11,090
+when it surfaces what
+
+10
+00:00:11,130 --> 00:00:12,450
+the buyer actually said,
+
+11
+00:00:12,840 --> 00:00:13,790
+what next steps were
+
+12
+00:00:13,820 --> 00:00:14,910
+agreed to, what
+
+13
+00:00:14,950 --> 00:00:15,880
+stakeholders have gone
+
+14
+00:00:15,930 --> 00:00:17,150
+quiet, and what the deal
+
+15
+00:00:17,220 --> 00:00:18,010
+history shows about
+
+16
+00:00:18,040 --> 00:00:18,520
+momentum.
+
+17
+00:00:19,390 --> 00:00:21,120
+That is not a forecast
+
+18
+00:00:21,150 --> 00:00:21,360
+tool.
+
+19
+00:00:21,420 --> 00:00:22,590
+That is a coaching tool.
+
+20
+00:00:23,120 --> 00:00:24,480
+The manager stops asking
+
+21
+00:00:24,520 --> 00:00:25,400
+what the rep thinks and
+
+22
+00:00:25,460 --> 00:00:26,320
+starts asking what the
+
+23
+00:00:26,390 --> 00:00:27,730
+buyer evidence shows.
+
+24
+00:00:28,320 --> 00:00:29,320
+The conversation becomes
+
+25
+00:00:29,390 --> 00:00:31,140
+faster, more specific,
+
+26
+00:00:31,500 --> 00:00:32,360
+and more useful.
+
+27
+00:00:33,090 --> 00:00:34,390
+The rep learns what good
+
+28
+00:00:34,440 --> 00:00:35,010
+looks like.
+
+29
+00:00:35,490 --> 00:00:36,300
+The manager builds a
+
+30
+00:00:36,340 --> 00:00:37,280
+consistent inspection
+
+31
+00:00:37,340 --> 00:00:37,760
+standard.
+
+32
+00:00:38,310 --> 00:00:39,750
+That is what AI-assisted
+
+33
+00:00:39,810 --> 00:00:40,800
+deal review actually
+
+34
+00:00:40,850 --> 00:00:41,950
+delivers when it is set
+
+35
+00:00:41,980 --> 00:00:42,620
+up correctly.
+
+36
+00:00:43,490 --> 00:00:44,650
+Follow A-Gent for the
+
+37
+00:00:44,730 --> 00:00:46,110
+agent-first GTM
+
+38
+00:00:46,160 --> 00:00:46,610
+playbook.
