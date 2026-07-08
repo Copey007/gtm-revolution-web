@@ -1,0 +1,187 @@
+1
+00:00:00,000 --> 00:00:00,810
+The job of the sales
+
+2
+00:00:00,860 --> 00:00:01,660
+leader is changing.
+
+3
+00:00:02,190 --> 00:00:02,980
+For years, sales
+
+4
+00:00:03,020 --> 00:00:03,760
+leadership was built
+
+5
+00:00:03,800 --> 00:00:04,530
+around activity,
+
+6
+00:00:04,850 --> 00:00:06,150
+coaching, pipeline
+
+7
+00:00:06,180 --> 00:00:07,850
+inspection, and forecast
+
+8
+00:00:07,890 --> 00:00:08,290
+judgment.
+
+9
+00:00:09,010 --> 00:00:10,100
+Those still matter.
+
+10
+00:00:10,660 --> 00:00:11,690
+But in the agent-first
+
+11
+00:00:11,810 --> 00:00:13,920
+GTM era, the sales
+
+12
+00:00:13,970 --> 00:00:14,730
+leader has a new
+
+13
+00:00:14,790 --> 00:00:15,600
+responsibility:
+
+14
+00:00:16,200 --> 00:00:16,750
+designing the
+
+15
+00:00:16,800 --> 00:00:17,690
+intelligence system
+
+16
+00:00:17,750 --> 00:00:18,450
+around the team.
+
+17
+00:00:19,410 --> 00:00:20,320
+What signals should the
+
+18
+00:00:20,350 --> 00:00:20,960
+team see?
+
+19
+00:00:21,460 --> 00:00:22,480
+What buyer evidence
+
+20
+00:00:22,500 --> 00:00:23,590
+should every opportunity
+
+21
+00:00:23,640 --> 00:00:24,080
+contain?
+
+22
+00:00:24,930 --> 00:00:26,090
+Where should AI support
+
+23
+00:00:26,150 --> 00:00:27,240
+reps, managers, and
+
+24
+00:00:27,300 --> 00:00:27,950
+operations?
+
+25
+00:00:28,930 --> 00:00:30,020
+What decisions should be
+
+26
+00:00:30,080 --> 00:00:31,790
+automated, assisted, or
+
+27
+00:00:31,860 --> 00:00:32,440
+left human?
+
+28
+00:00:33,290 --> 00:00:34,320
+That is the leadership
+
+29
+00:00:34,380 --> 00:00:34,630
+work.
+
+30
+00:00:35,300 --> 00:00:36,510
+Not simply approving AI
+
+31
+00:00:36,580 --> 00:00:36,990
+tools.
+
+32
+00:00:37,490 --> 00:00:38,410
+Not just encouraging
+
+33
+00:00:38,490 --> 00:00:39,460
+reps to experiment.
+
+34
+00:00:40,090 --> 00:00:41,120
+But deciding how the
+
+35
+00:00:41,180 --> 00:00:42,020
+revenue system should
+
+36
+00:00:42,090 --> 00:00:44,440
+sense, prioritize, act,
+
+37
+00:00:44,650 --> 00:00:45,210
+and learn.
+
+38
+00:00:46,170 --> 00:00:47,390
+The best sales leaders
+
+39
+00:00:47,450 --> 00:00:48,460
+will not become less
+
+40
+00:00:48,500 --> 00:00:49,590
+human because of AI.
+
+41
+00:00:50,180 --> 00:00:51,050
+They will become more
+
+42
+00:00:51,100 --> 00:00:51,990
+focused on the human
+
+43
+00:00:52,040 --> 00:00:52,900
+decisions that matter
+
+44
+00:00:52,950 --> 00:00:53,290
+most.
+
+45
+00:00:54,160 --> 00:00:55,510
+Follow A-Gent for the
+
+46
+00:00:55,580 --> 00:00:57,190
+agent-first GTM
+
+47
+00:00:57,240 --> 00:00:57,670
+playbook.

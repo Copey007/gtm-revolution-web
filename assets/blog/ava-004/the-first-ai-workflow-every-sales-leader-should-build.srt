@@ -1,0 +1,187 @@
+1
+00:00:00,000 --> 00:00:00,880
+If you are wondering
+
+2
+00:00:00,950 --> 00:00:01,870
+where to start with AI
+
+3
+00:00:01,930 --> 00:00:03,730
+in sales, do not start
+
+4
+00:00:03,760 --> 00:00:04,340
+with a giant
+
+5
+00:00:04,380 --> 00:00:05,560
+transformation project.
+
+6
+00:00:06,370 --> 00:00:07,750
+Start with one workflow:
+
+7
+00:00:08,260 --> 00:00:09,760
+pre-call intelligence.
+
+8
+00:00:10,630 --> 00:00:11,640
+Before every meaningful
+
+9
+00:00:11,710 --> 00:00:13,210
+sales conversation, your
+
+10
+00:00:13,270 --> 00:00:14,220
+team should know three
+
+11
+00:00:14,270 --> 00:00:14,660
+things.
+
+12
+00:00:15,530 --> 00:00:16,900
+First, what has changed
+
+13
+00:00:16,940 --> 00:00:17,630
+in this account that
+
+14
+00:00:17,680 --> 00:00:18,740
+could create urgency?
+
+15
+00:00:19,520 --> 00:00:21,060
+Second, what business
+
+16
+00:00:21,090 --> 00:00:21,880
+problem is likely
+
+17
+00:00:21,940 --> 00:00:22,560
+connected to that
+
+18
+00:00:22,600 --> 00:00:23,020
+change?
+
+19
+00:00:23,810 --> 00:00:25,360
+Third, what question
+
+20
+00:00:25,400 --> 00:00:26,200
+should the rep ask to
+
+21
+00:00:26,290 --> 00:00:27,030
+uncover whether the
+
+22
+00:00:27,060 --> 00:00:27,820
+problem is real?
+
+23
+00:00:27,970 --> 00:00:28,730
+That sounds simple.
+
+24
+00:00:29,410 --> 00:00:30,630
+But in most sales teams,
+
+25
+00:00:30,790 --> 00:00:31,710
+every rep prepares
+
+26
+00:00:31,750 --> 00:00:32,230
+differently.
+
+27
+00:00:32,870 --> 00:00:33,990
+Some research deeply.
+
+28
+00:00:34,550 --> 00:00:35,910
+Some skim LinkedIn.
+
+29
+00:00:36,470 --> 00:00:37,420
+Some wing it.
+
+30
+00:00:38,210 --> 00:00:39,420
+And managers only see
+
+31
+00:00:39,450 --> 00:00:40,310
+the damage later in the
+
+32
+00:00:40,330 --> 00:00:40,830
+pipeline.
+
+33
+00:00:41,620 --> 00:00:43,100
+An AI-assisted workflow
+
+34
+00:00:43,140 --> 00:00:43,910
+can standardize the
+
+35
+00:00:43,960 --> 00:00:44,800
+preparation without
+
+36
+00:00:44,860 --> 00:00:45,850
+making the conversation
+
+37
+00:00:45,910 --> 00:00:46,430
+robotic.
+
+38
+00:00:47,110 --> 00:00:47,790
+The goal is not to
+
+39
+00:00:47,840 --> 00:00:48,660
+script the rep.
+
+40
+00:00:49,160 --> 00:00:50,140
+The goal is to make sure
+
+41
+00:00:50,200 --> 00:00:51,350
+every rep walks in with
+
+42
+00:00:51,410 --> 00:00:52,380
+relevant context.
+
+43
+00:00:52,890 --> 00:00:53,960
+That is where AI starts
+
+44
+00:00:54,010 --> 00:00:55,100
+creating sales leverage.
+
+45
+00:00:55,570 --> 00:00:56,810
+Follow A-Gent for more
+
+46
+00:00:56,840 --> 00:00:57,860
+practical AI sales
+
+47
+00:00:57,900 --> 00:00:58,410
+workflows.

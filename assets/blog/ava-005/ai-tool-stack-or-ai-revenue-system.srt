@@ -1,0 +1,179 @@
+1
+00:00:00,000 --> 00:00:00,920
+Here is the question
+
+2
+00:00:00,960 --> 00:00:02,770
+every B2B CEO should ask
+
+3
+00:00:02,890 --> 00:00:03,620
+this quarter.
+
+4
+00:00:04,380 --> 00:00:05,430
+Are we building an AI
+
+5
+00:00:05,490 --> 00:00:06,610
+tool stack, or are we
+
+6
+00:00:06,660 --> 00:00:07,840
+building an AI revenue
+
+7
+00:00:07,860 --> 00:00:08,210
+system?
+
+8
+00:00:08,820 --> 00:00:10,480
+A tool stack means every
+
+9
+00:00:10,540 --> 00:00:11,730
+team buys its own AI
+
+10
+00:00:11,820 --> 00:00:12,590
+point solution.
+
+11
+00:00:13,210 --> 00:00:14,300
+Marketing has one.
+
+12
+00:00:14,610 --> 00:00:15,560
+Sales has another.
+
+13
+00:00:16,070 --> 00:00:17,300
+RevOps has a dashboard.
+
+14
+00:00:17,520 --> 00:00:18,600
+Customer success has a
+
+15
+00:00:18,650 --> 00:00:19,140
+chatbot.
+
+16
+00:00:19,870 --> 00:00:20,320
+Everyone is
+
+17
+00:00:20,360 --> 00:00:21,360
+experimenting, but the
+
+18
+00:00:21,430 --> 00:00:22,460
+revenue motion does not
+
+19
+00:00:22,520 --> 00:00:23,550
+actually get smarter.
+
+20
+00:00:24,330 --> 00:00:25,650
+An AI revenue system is
+
+21
+00:00:25,690 --> 00:00:26,080
+different.
+
+22
+00:00:26,630 --> 00:00:27,590
+It connects signals,
+
+23
+00:00:27,680 --> 00:00:29,110
+priorities, workflows,
+
+24
+00:00:29,150 --> 00:00:29,800
+and decisions.
+
+25
+00:00:30,360 --> 00:00:31,300
+It helps the team know
+
+26
+00:00:31,350 --> 00:00:32,530
+who to target, what to
+
+27
+00:00:32,600 --> 00:00:34,270
+say, when to act, what
+
+28
+00:00:34,350 --> 00:00:35,570
+deal risk exists, and
+
+29
+00:00:35,630 --> 00:00:36,210
+where leadership
+
+30
+00:00:36,250 --> 00:00:36,950
+attention is needed.
+
+31
+00:00:37,190 --> 00:00:38,320
+That is the executive
+
+32
+00:00:38,360 --> 00:00:38,910
+opportunity.
+
+33
+00:00:39,380 --> 00:00:40,220
+Not more tools.
+
+34
+00:00:40,510 --> 00:00:41,240
+Better revenue
+
+35
+00:00:41,270 --> 00:00:41,760
+decisions.
+
+36
+00:00:42,170 --> 00:00:43,390
+If your AI strategy does
+
+37
+00:00:43,450 --> 00:00:44,180
+not improve how your
+
+38
+00:00:44,220 --> 00:00:44,930
+company creates,
+
+39
+00:00:45,000 --> 00:00:45,920
+converts, and retains
+
+40
+00:00:45,980 --> 00:00:48,020
+revenue, it is not a GTM
+
+41
+00:00:48,090 --> 00:00:48,800
+strategy yet.
+
+42
+00:00:49,260 --> 00:00:50,450
+Follow A-Gent if you
+
+43
+00:00:50,500 --> 00:00:51,250
+want to build for the
+
+44
+00:00:51,320 --> 00:00:52,350
+agent-first era of
+
+45
+00:00:52,420 --> 00:00:52,840
+sales.

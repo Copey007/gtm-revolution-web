@@ -1,0 +1,147 @@
+1
+00:00:00,000 --> 00:00:01,140
+Prompt libraries are
+
+2
+00:00:01,210 --> 00:00:01,670
+useful.
+
+3
+00:00:02,520 --> 00:00:03,700
+But they are not a sales
+
+4
+00:00:03,730 --> 00:00:04,250
+strategy.
+
+5
+00:00:04,660 --> 00:00:05,880
+If your team gives every
+
+6
+00:00:05,970 --> 00:00:07,040
+rep a folder of AI
+
+7
+00:00:07,110 --> 00:00:08,650
+prompts, you may get
+
+8
+00:00:08,710 --> 00:00:09,530
+faster writing.
+
+9
+00:00:10,010 --> 00:00:10,730
+You probably will not
+
+10
+00:00:10,760 --> 00:00:11,690
+get better targeting,
+
+11
+00:00:12,110 --> 00:00:13,200
+better qualification,
+
+12
+00:00:13,580 --> 00:00:14,960
+better coaching, or
+
+13
+00:00:15,020 --> 00:00:15,700
+better forecast
+
+14
+00:00:15,750 --> 00:00:16,230
+evidence.
+
+15
+00:00:16,680 --> 00:00:17,520
+That is the trap.
+
+16
+00:00:18,810 --> 00:00:20,270
+AI adoption often starts
+
+17
+00:00:20,320 --> 00:00:21,120
+at the individual
+
+18
+00:00:21,190 --> 00:00:22,330
+productivity layer, but
+
+19
+00:00:22,350 --> 00:00:23,710
+the revenue impact comes
+
+20
+00:00:23,740 --> 00:00:24,860
+from the workflow layer.
+
+21
+00:00:25,480 --> 00:00:26,450
+What account should we
+
+22
+00:00:26,510 --> 00:00:27,410
+prioritize?
+
+23
+00:00:27,950 --> 00:00:29,010
+What changed in the
+
+24
+00:00:29,070 --> 00:00:29,930
+buyer’s world?
+
+25
+00:00:30,460 --> 00:00:31,780
+What evidence is missing
+
+26
+00:00:31,820 --> 00:00:32,430
+from this deal?
+
+27
+00:00:33,040 --> 00:00:34,040
+What should the manager
+
+28
+00:00:34,120 --> 00:00:34,970
+coach next?
+
+29
+00:00:35,960 --> 00:00:36,810
+Those are system
+
+30
+00:00:36,870 --> 00:00:37,990
+questions, not prompt
+
+31
+00:00:38,050 --> 00:00:38,530
+questions.
+
+32
+00:00:39,310 --> 00:00:40,880
+Use prompts, but do not
+
+33
+00:00:40,920 --> 00:00:41,600
+confuse them with
+
+34
+00:00:41,630 --> 00:00:42,330
+transformation.
+
+35
+00:00:43,110 --> 00:00:44,120
+Follow A-Gent for
+
+36
+00:00:44,190 --> 00:00:45,320
+practical AI sales
+
+37
+00:00:45,350 --> 00:00:45,840
+strategy.

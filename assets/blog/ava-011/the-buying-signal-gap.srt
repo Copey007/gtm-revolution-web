@@ -1,0 +1,151 @@
+1
+00:00:00,000 --> 00:00:01,470
+Most B2B teams do not
+
+2
+00:00:01,520 --> 00:00:02,280
+have a lead problem.
+
+3
+00:00:02,370 --> 00:00:03,100
+They have a signal
+
+4
+00:00:03,150 --> 00:00:03,510
+problem.
+
+5
+00:00:03,980 --> 00:00:04,980
+They know which accounts
+
+6
+00:00:05,020 --> 00:00:06,730
+fit the ICP, but they do
+
+7
+00:00:06,860 --> 00:00:08,390
+not know which accounts
+
+8
+00:00:08,430 --> 00:00:09,590
+are showing meaningful
+
+9
+00:00:09,650 --> 00:00:10,320
+change right now.
+
+10
+00:00:11,150 --> 00:00:12,310
+That is where AI can
+
+11
+00:00:12,380 --> 00:00:13,210
+create leverage.
+
+12
+00:00:13,790 --> 00:00:15,090
+Not by blasting every
+
+13
+00:00:15,140 --> 00:00:16,070
+account with generic
+
+14
+00:00:16,130 --> 00:00:17,310
+messaging, but by
+
+15
+00:00:17,400 --> 00:00:18,790
+watching for shifts that
+
+16
+00:00:18,840 --> 00:00:20,710
+create urgency: hiring
+
+17
+00:00:20,770 --> 00:00:22,010
+patterns, funding
+
+18
+00:00:22,060 --> 00:00:23,230
+events, leadership
+
+19
+00:00:23,280 --> 00:00:24,510
+changes, product
+
+20
+00:00:24,550 --> 00:00:25,600
+launches, market
+
+21
+00:00:25,630 --> 00:00:27,180
+pressure, or operational
+
+22
+00:00:27,230 --> 00:00:27,500
+pain.
+
+23
+00:00:28,330 --> 00:00:29,200
+The question for sales
+
+24
+00:00:29,250 --> 00:00:30,060
+leaders is simple.
+
+25
+00:00:30,430 --> 00:00:31,410
+What signals tell us an
+
+26
+00:00:31,430 --> 00:00:32,390
+account may need to act
+
+27
+00:00:32,450 --> 00:00:32,660
+now?
+
+28
+00:00:33,310 --> 00:00:34,610
+If your GTM motion
+
+29
+00:00:34,670 --> 00:00:36,190
+cannot answer that, AI
+
+30
+00:00:36,250 --> 00:00:37,180
+will mostly make your
+
+31
+00:00:37,230 --> 00:00:38,350
+old targeting faster.
+
+32
+00:00:38,920 --> 00:00:39,750
+Build the signal layer
+
+33
+00:00:39,820 --> 00:00:40,190
+first.
+
+34
+00:00:40,590 --> 00:00:41,670
+Then automate the motion
+
+35
+00:00:41,700 --> 00:00:42,140
+around it.
+
+36
+00:00:42,640 --> 00:00:43,780
+Follow A-Gent for the
+
+37
+00:00:43,850 --> 00:00:45,270
+agent-first GTM
+
+38
+00:00:45,310 --> 00:00:45,760
+playbook.

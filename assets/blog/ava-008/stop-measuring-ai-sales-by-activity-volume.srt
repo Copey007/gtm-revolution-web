@@ -1,0 +1,139 @@
+1
+00:00:00,000 --> 00:00:00,960
+If your AI sales
+
+2
+00:00:00,990 --> 00:00:01,990
+strategy is measured by
+
+3
+00:00:02,060 --> 00:00:03,320
+activity volume, you may
+
+4
+00:00:03,380 --> 00:00:04,610
+be optimizing the wrong
+
+5
+00:00:04,680 --> 00:00:04,990
+thing.
+
+6
+00:00:05,350 --> 00:00:06,210
+More emails.
+
+7
+00:00:06,300 --> 00:00:07,170
+More sequences.
+
+8
+00:00:07,490 --> 00:00:08,650
+More call summaries.
+
+9
+00:00:08,950 --> 00:00:09,750
+More automated
+
+10
+00:00:09,820 --> 00:00:10,400
+follow-ups.
+
+11
+00:00:10,690 --> 00:00:11,690
+That can look productive
+
+12
+00:00:11,730 --> 00:00:12,680
+while making the buyer
+
+13
+00:00:12,790 --> 00:00:13,980
+experience worse.
+
+14
+00:00:14,350 --> 00:00:15,190
+The better question is
+
+15
+00:00:15,240 --> 00:00:16,830
+not: did AI help us do
+
+16
+00:00:16,900 --> 00:00:17,280
+more?
+
+17
+00:00:17,690 --> 00:00:18,710
+The better question is:
+
+18
+00:00:19,120 --> 00:00:20,550
+did AI help us act with
+
+19
+00:00:20,630 --> 00:00:22,070
+better timing, stronger
+
+20
+00:00:22,130 --> 00:00:23,600
+relevance, and clearer
+
+21
+00:00:23,700 --> 00:00:24,570
+buyer evidence?
+
+22
+00:00:25,150 --> 00:00:25,950
+Did it help us find
+
+23
+00:00:26,000 --> 00:00:26,650
+accounts that were
+
+24
+00:00:26,690 --> 00:00:27,740
+actually more likely to
+
+25
+00:00:27,790 --> 00:00:28,190
+move?
+
+26
+00:00:28,750 --> 00:00:29,990
+Did it help reps prepare
+
+27
+00:00:30,070 --> 00:00:30,930
+better questions?
+
+28
+00:00:31,610 --> 00:00:32,870
+Did it help managers see
+
+29
+00:00:32,960 --> 00:00:34,020
+deal risk sooner?
+
+30
+00:00:34,740 --> 00:00:36,090
+That is where AI creates
+
+31
+00:00:36,140 --> 00:00:36,950
+sales leverage.
+
+32
+00:00:37,450 --> 00:00:38,590
+Not by making every weak
+
+33
+00:00:38,660 --> 00:00:39,860
+motion faster, but by
+
+34
+00:00:39,970 --> 00:00:41,240
+making the right motion
+
+35
+00:00:41,520 --> 00:00:42,420
+easier to repeat.

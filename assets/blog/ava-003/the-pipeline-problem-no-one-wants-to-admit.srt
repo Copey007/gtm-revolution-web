@@ -1,0 +1,179 @@
+1
+00:00:00,000 --> 00:00:00,950
+Here is the pipeline
+
+2
+00:00:00,990 --> 00:00:01,830
+problem no one wants to
+
+3
+00:00:01,890 --> 00:00:02,190
+admit.
+
+4
+00:00:02,980 --> 00:00:04,380
+A lot of pipeline is not
+
+5
+00:00:04,470 --> 00:00:05,480
+really pipeline.
+
+6
+00:00:05,930 --> 00:00:06,930
+It is activity with a
+
+7
+00:00:06,980 --> 00:00:08,060
+probability attached to
+
+8
+00:00:08,130 --> 00:00:08,240
+it.
+
+9
+00:00:08,900 --> 00:00:09,670
+The account looked
+
+10
+00:00:09,720 --> 00:00:10,030
+right.
+
+11
+00:00:10,590 --> 00:00:11,520
+The rep had a
+
+12
+00:00:11,560 --> 00:00:12,280
+conversation.
+
+13
+00:00:12,780 --> 00:00:13,620
+The opportunity was
+
+14
+00:00:13,660 --> 00:00:14,140
+created.
+
+15
+00:00:14,650 --> 00:00:15,770
+But there is no strong
+
+16
+00:00:15,840 --> 00:00:17,530
+buyer evidence, no clear
+
+17
+00:00:17,600 --> 00:00:19,950
+pain, no urgency, and no
+
+18
+00:00:20,040 --> 00:00:20,820
+reason to believe the
+
+19
+00:00:20,850 --> 00:00:21,700
+customer will change
+
+20
+00:00:21,750 --> 00:00:21,930
+now.
+
+21
+00:00:22,620 --> 00:00:24,440
+AI can help, but not if
+
+22
+00:00:24,480 --> 00:00:25,340
+it is only used to
+
+23
+00:00:25,410 --> 00:00:26,690
+summarize calls or write
+
+24
+00:00:26,740 --> 00:00:27,610
+follow-up emails.
+
+25
+00:00:28,140 --> 00:00:29,230
+The real opportunity is
+
+26
+00:00:29,280 --> 00:00:30,550
+to use AI to identify
+
+27
+00:00:30,630 --> 00:00:31,610
+missing buyer evidence
+
+28
+00:00:31,650 --> 00:00:32,470
+before deals become
+
+29
+00:00:32,520 --> 00:00:33,360
+forecast problems.
+
+30
+00:00:34,070 --> 00:00:35,120
+What changed in the
+
+31
+00:00:35,160 --> 00:00:35,980
+buyer’s business?
+
+32
+00:00:36,450 --> 00:00:37,440
+Who owns the problem?
+
+33
+00:00:38,000 --> 00:00:39,010
+What happens if they do
+
+34
+00:00:39,090 --> 00:00:39,460
+nothing?
+
+35
+00:00:40,090 --> 00:00:41,240
+What decision process
+
+36
+00:00:41,280 --> 00:00:42,000
+are they actually
+
+37
+00:00:42,050 --> 00:00:42,470
+following?
+
+38
+00:00:43,100 --> 00:00:44,190
+If your system cannot
+
+39
+00:00:44,250 --> 00:00:45,150
+answer those questions,
+
+40
+00:00:45,200 --> 00:00:46,130
+your forecast is still
+
+41
+00:00:46,170 --> 00:00:46,560
+guessing.
+
+42
+00:00:47,180 --> 00:00:48,300
+A-Gent helps leaders
+
+43
+00:00:48,370 --> 00:00:49,980
+build GTM systems around
+
+44
+00:00:50,050 --> 00:00:51,030
+buyer evidence, not
+
+45
+00:00:51,090 --> 00:00:51,910
+sales activity.
