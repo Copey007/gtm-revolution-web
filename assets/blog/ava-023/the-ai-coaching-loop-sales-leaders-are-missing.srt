@@ -1,0 +1,107 @@
+1
+00:00:00,000 --> 00:00:01,780
+The best use of AI in sales management
+
+2
+00:00:01,830 --> 00:00:03,010
+is not automation.
+
+3
+00:00:03,560 --> 00:00:05,160
+It is the coaching loop.
+
+4
+00:00:06,000 --> 00:00:07,090
+Here is what that means.
+
+5
+00:00:07,750 --> 00:00:09,110
+AI surfaces a pattern.
+
+6
+00:00:09,670 --> 00:00:11,890
+A rep is consistently losing deals after
+
+7
+00:00:11,920 --> 00:00:12,600
+the second call.
+
+8
+00:00:13,190 --> 00:00:15,200
+Or discovery is shallow across the team.
+
+9
+00:00:15,710 --> 00:00:17,470
+Or a specific objection is not being
+
+10
+00:00:17,530 --> 00:00:18,080
+handled well.
+
+11
+00:00:18,550 --> 00:00:20,850
+The manager sees the pattern early, not
+
+12
+00:00:20,890 --> 00:00:21,680
+at the end of the quarter.
+
+13
+00:00:22,360 --> 00:00:23,910
+The coaching conversation becomes
+
+14
+00:00:23,930 --> 00:00:24,460
+specific.
+
+15
+00:00:25,100 --> 00:00:27,090
+The rep gets a clear behavior to change.
+
+16
+00:00:27,660 --> 00:00:29,460
+The manager tracks whether it changes.
+
+17
+00:00:30,330 --> 00:00:32,130
+That loop, signal to coaching to
+
+18
+00:00:32,200 --> 00:00:34,500
+behavior change to outcome, is where AI
+
+19
+00:00:34,570 --> 00:00:36,260
+creates real revenue leverage.
+
+20
+00:00:36,960 --> 00:00:38,590
+Most teams are using AI to do more
+
+21
+00:00:38,630 --> 00:00:39,080
+activity.
+
+22
+00:00:39,580 --> 00:00:41,080
+The teams that win will use it to build
+
+23
+00:00:41,150 --> 00:00:43,060
+faster feedback cycles between what the
+
+24
+00:00:43,110 --> 00:00:44,770
+team does and what the buyer responds
+
+25
+00:00:44,820 --> 00:00:45,000
+to.
+
+26
+00:00:45,870 --> 00:00:48,640
+Follow A-Gent for the agent-first GTM
+
+27
+00:00:48,700 --> 00:00:49,160
+playbook.
