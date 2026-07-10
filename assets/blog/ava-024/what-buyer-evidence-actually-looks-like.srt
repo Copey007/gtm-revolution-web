@@ -1,0 +1,103 @@
+1
+00:00:00,000 --> 00:00:01,730
+Buyer evidence is not what the rep
+
+2
+00:00:01,780 --> 00:00:02,160
+believes.
+
+3
+00:00:02,220 --> 00:00:04,300
+It is what the buyer said or did.
+
+4
+00:00:05,050 --> 00:00:06,590
+There is a difference between a rep
+
+5
+00:00:06,680 --> 00:00:08,730
+saying the champion is engaged and a
+
+6
+00:00:08,790 --> 00:00:10,680
+buyer saying in a recorded call that
+
+7
+00:00:10,730 --> 00:00:12,740
+this problem is costing us two million
+
+8
+00:00:12,780 --> 00:00:14,670
+dollars a year and we need to fix it
+
+9
+00:00:14,710 --> 00:00:15,360
+before Q3.
+
+10
+00:00:15,410 --> 00:00:16,090
+One is an opinion.
+
+11
+00:00:16,700 --> 00:00:17,880
+One is evidence.
+
+12
+00:00:18,340 --> 00:00:20,220
+AI can help teams build an evidence
+
+13
+00:00:20,240 --> 00:00:22,170
+standard by surfacing what was actually
+
+14
+00:00:22,220 --> 00:00:24,750
+said in calls, what actions the buyer
+
+15
+00:00:24,800 --> 00:00:27,140
+took, what stakeholders showed up, and
+
+16
+00:00:27,220 --> 00:00:28,460
+what questions were asked.
+
+17
+00:00:29,240 --> 00:00:30,850
+When managers inspect deals using
+
+18
+00:00:30,920 --> 00:00:32,840
+evidence instead of rep confidence, the
+
+19
+00:00:32,890 --> 00:00:34,810
+pipeline becomes more accurate.
+
+20
+00:00:35,500 --> 00:00:37,830
+The forecast becomes more reliable.
+
+21
+00:00:38,400 --> 00:00:40,030
+Coaching becomes more specific.
+
+22
+00:00:40,800 --> 00:00:42,170
+The shift is not complicated.
+
+23
+00:00:42,660 --> 00:00:44,670
+It requires deciding that buyer evidence
+
+24
+00:00:44,740 --> 00:00:46,290
+matters more than seller optimism.
+
+25
+00:00:47,420 --> 00:00:50,250
+Follow A-Gent for the agent-first GTM
+
+26
+00:00:50,310 --> 00:00:50,740
+playbook.
