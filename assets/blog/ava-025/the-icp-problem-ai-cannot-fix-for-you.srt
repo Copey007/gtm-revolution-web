@@ -1,0 +1,119 @@
+1
+00:00:00,000 --> 00:00:02,140
+AI will not fix a bad ICP.
+
+2
+00:00:02,500 --> 00:00:03,870
+It will just help you reach the wrong
+
+3
+00:00:03,900 --> 00:00:04,680
+accounts faster.
+
+4
+00:00:05,180 --> 00:00:07,150
+Ideal customer profile is a strategic
+
+5
+00:00:07,200 --> 00:00:08,700
+decision, not a data problem.
+
+6
+00:00:08,970 --> 00:00:11,050
+It requires the leadership team to
+
+7
+00:00:11,170 --> 00:00:12,240
+answer hard questions.
+
+8
+00:00:12,590 --> 00:00:15,050
+Which customers actually get value from
+
+9
+00:00:15,100 --> 00:00:15,730
+what we sell?
+
+10
+00:00:16,060 --> 00:00:17,880
+Which ones renew, expand, and refer?
+
+11
+00:00:17,960 --> 00:00:19,970
+Which ones churn, complain, and drain
+
+12
+00:00:20,030 --> 00:00:20,390
+the team?
+
+13
+00:00:20,980 --> 00:00:22,810
+AI can help you analyze patterns in your
+
+14
+00:00:22,860 --> 00:00:24,120
+customer base once you have enough
+
+15
+00:00:24,160 --> 00:00:24,500
+signal.
+
+16
+00:00:25,060 --> 00:00:27,080
+It can surface firmographic clusters,
+
+17
+00:00:27,480 --> 00:00:28,920
+usage patterns, and expansion
+
+18
+00:00:28,960 --> 00:00:29,500
+indicators.
+
+19
+00:00:30,220 --> 00:00:32,250
+But it cannot make the strategic call
+
+20
+00:00:32,300 --> 00:00:33,800
+about which market to focus on.
+
+21
+00:00:33,990 --> 00:00:35,220
+That is a human decision.
+
+22
+00:00:35,680 --> 00:00:38,040
+The teams that use AI most effectively
+
+23
+00:00:38,090 --> 00:00:39,800
+in their go-to-market motion have
+
+24
+00:00:39,860 --> 00:00:41,600
+already done the hard work of defining
+
+25
+00:00:41,720 --> 00:00:43,660
+who they are actually built to serve.
+
+26
+00:00:44,060 --> 00:00:45,940
+AI then helps them find more of those
+
+27
+00:00:45,980 --> 00:00:48,140
+buyers and reach them with a relevant
+
+28
+00:00:48,190 --> 00:00:48,910
+reason to talk.
+
+29
+00:00:49,460 --> 00:00:52,090
+Follow A-Gent for the agent-first GTM
+
+30
+00:00:52,140 --> 00:00:52,550
+playbook.
