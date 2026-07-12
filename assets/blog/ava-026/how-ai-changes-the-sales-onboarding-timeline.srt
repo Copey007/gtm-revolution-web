@@ -1,0 +1,111 @@
+1
+00:00:00,000 --> 00:00:02,530
+AI can cut new rep ramp time in half.
+
+2
+00:00:03,180 --> 00:00:04,830
+But only if the knowledge is structured
+
+3
+00:00:04,870 --> 00:00:05,210
+first.
+
+4
+00:00:06,150 --> 00:00:07,630
+Most onboarding programs are long
+
+5
+00:00:07,690 --> 00:00:08,960
+because the knowledge is scattered.
+
+6
+00:00:09,520 --> 00:00:11,420
+Product information lives in one place.
+
+7
+00:00:11,970 --> 00:00:13,540
+Competitive positioning lives somewhere
+
+8
+00:00:13,570 --> 00:00:13,930
+else.
+
+9
+00:00:14,430 --> 00:00:16,300
+Objection handling is in someone's head.
+
+10
+00:00:17,430 --> 00:00:19,850
+Call recordings are untagged.
+
+11
+00:00:20,480 --> 00:00:22,590
+AI can compress the learning curve when
+
+12
+00:00:22,620 --> 00:00:23,940
+the knowledge is organized and
+
+13
+00:00:23,970 --> 00:00:24,590
+accessible.
+
+14
+00:00:25,340 --> 00:00:27,000
+A new rep can ask what the most common
+
+15
+00:00:27,030 --> 00:00:28,740
+objection is in the mid-market segment
+
+16
+00:00:29,020 --> 00:00:31,220
+and get a specific answer with examples.
+
+17
+00:00:31,820 --> 00:00:33,630
+They can review the top ten discovery
+
+18
+00:00:33,690 --> 00:00:35,660
+calls from the last quarter before their
+
+19
+00:00:35,700 --> 00:00:36,950
+first customer conversation.
+
+20
+00:00:37,410 --> 00:00:39,140
+They can get real-time coaching on their
+
+21
+00:00:39,180 --> 00:00:40,770
+first calls instead of waiting for a
+
+22
+00:00:40,800 --> 00:00:41,450
+weekly review.
+
+23
+00:00:42,230 --> 00:00:43,930
+The investment is in structuring the
+
+24
+00:00:43,980 --> 00:00:45,270
+knowledge before the rep arrives.
+
+25
+00:00:46,080 --> 00:00:47,870
+The return is a faster, more consistent
+
+26
+00:00:47,910 --> 00:00:48,160
+ramp.
+
+27
+00:00:49,090 --> 00:00:51,430
+Follow A-Gent for the agent-first GTM
+
+28
+00:00:51,490 --> 00:00:51,940
+playbook.
