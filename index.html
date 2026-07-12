@@ -40,14 +40,28 @@
   <section class="hero">
     <div class="container hero-grid">
       <div>
-        <a href="/assessment#assessment-flow" style="display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin:0 0 1.4rem;padding:14px 18px;border:1px solid rgba(227,200,120,.45);border-radius:14px;background:linear-gradient(120deg,rgba(227,200,120,.12),rgba(227,200,120,.03));text-decoration:none;color:inherit">
-          <span style="font-size:1.35rem">&#129504;</span>
-          <span style="flex:1;min-width:230px">
-            <strong style="color:#e3c878;letter-spacing:.04em;font-size:.72rem;text-transform:uppercase">A-Gent GTM Brain</strong><br>
-            <span style="font-size:1.02rem;font-weight:600">CRO-grade advice against your data &mdash; upload your CRM data or connect it here.</span>
+        <a href="/assessment#assessment-flow" class="brain-banner">
+          <span class="bb-copy">
+            <span class="bb-label">A-Gent GTM Brain</span>
+            <span class="bb-head">CRO-grade advice against <span class="bb-gold">your data</span> &mdash; upload your CRM data or connect it here.</span>
           </span>
-          <span class="btn btn-primary" style="white-space:nowrap">Analyze my data &rarr;</span>
+          <span class="bb-btn">Analyze my data <span class="bb-arrow">&rarr;</span></span>
         </a>
+        <style>
+          .brain-banner{position:relative;display:flex;align-items:center;gap:18px;flex-wrap:wrap;margin:0 0 1.6rem;padding:18px 22px;border-radius:16px;text-decoration:none;color:inherit;background:linear-gradient(135deg,rgba(227,200,120,.10),rgba(227,200,120,.02) 45%,rgba(126,184,138,.05));border:1px solid rgba(227,200,120,.38);box-shadow:0 0 42px rgba(227,200,120,.10),inset 0 1px 0 rgba(255,255,255,.05);overflow:hidden;transition:border-color .25s ease,box-shadow .25s ease,transform .25s ease}
+          .brain-banner:before{content:"";position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(227,200,120,.85),transparent)}
+          .brain-banner:hover{border-color:rgba(227,200,120,.65);box-shadow:0 0 60px rgba(227,200,120,.18),inset 0 1px 0 rgba(255,255,255,.07);transform:translateY(-1px)}
+          .bb-copy{flex:1;min-width:250px;display:flex;flex-direction:column;gap:5px}
+          .bb-label{display:inline-flex;align-items:center;gap:8px;color:#e3c878;letter-spacing:.16em;font-size:.68rem;font-weight:700;text-transform:uppercase}
+          .bb-label:before{content:"";width:22px;height:1px;background:linear-gradient(90deg,#e3c878,transparent)}
+          .bb-head{font-size:1.08rem;font-weight:600;line-height:1.45;color:#f2efe6}
+          .bb-gold{color:#e3c878}
+          .bb-btn{display:inline-flex;align-items:center;gap:8px;white-space:nowrap;padding:12px 22px;border-radius:12px;font-weight:700;font-size:.92rem;color:#141208;background:linear-gradient(135deg,#ecd9a0,#d9b968);box-shadow:0 6px 22px rgba(227,200,120,.28);transition:box-shadow .25s ease,transform .25s ease}
+          .brain-banner:hover .bb-btn{box-shadow:0 8px 30px rgba(227,200,120,.4);transform:translateX(2px)}
+          .bb-arrow{transition:transform .25s ease}
+          .brain-banner:hover .bb-arrow{transform:translateX(3px)}
+          @media(max-width:640px){.brain-banner{padding:16px 18px}.bb-btn{width:100%;justify-content:center}}
+        </style>
         <h1>Always-on <span class="gold">AI agents</span> for GTM — plus the team to build them.</h1>
         <p class="lede">A-Gent is the one place to get both: a packaged AI SDR platform you can launch today, and hands-on AI consulting to design a bespoke revenue system around your stack.</p>
         <div class="cta-row">
