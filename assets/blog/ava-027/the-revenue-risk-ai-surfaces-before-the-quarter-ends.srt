@@ -1,0 +1,107 @@
+1
+00:00:00,000 --> 00:00:01,760
+The best time to surface revenue risk is
+
+2
+00:00:01,820 --> 00:00:03,540
+six weeks before the quarter ends, not
+
+3
+00:00:03,600 --> 00:00:04,200
+six days.
+
+4
+00:00:05,070 --> 00:00:06,730
+Most teams find out a deal is at risk
+
+5
+00:00:06,770 --> 00:00:07,350
+when it slips.
+
+6
+00:00:07,940 --> 00:00:09,520
+The rep updates the close date.
+
+7
+00:00:10,330 --> 00:00:11,740
+The manager asks what happened.
+
+8
+00:00:12,290 --> 00:00:13,870
+The answer is usually something that was
+
+9
+00:00:13,940 --> 00:00:15,040
+visible weeks earlier.
+
+10
+00:00:15,570 --> 00:00:17,020
+Stakeholder access dropped off.
+
+11
+00:00:17,580 --> 00:00:19,180
+Next steps went unconfirmed.
+
+12
+00:00:19,560 --> 00:00:21,470
+The economic buyer never engaged.
+
+13
+00:00:22,050 --> 00:00:24,350
+AI can surface those signals early when
+
+14
+00:00:24,370 --> 00:00:25,870
+it is connected to call recordings,
+
+15
+00:00:26,290 --> 00:00:28,410
+email activity, and CRM data.
+
+16
+00:00:29,230 --> 00:00:30,710
+The question is whether the team has
+
+17
+00:00:30,780 --> 00:00:32,340
+built the inspection habit to act on
+
+18
+00:00:32,430 --> 00:00:34,380
+early signals rather than wait for the
+
+19
+00:00:34,410 --> 00:00:34,680
+slip.
+
+20
+00:00:36,130 --> 00:00:37,810
+Revenue risk is not a forecasting
+
+21
+00:00:37,870 --> 00:00:38,270
+problem.
+
+22
+00:00:38,670 --> 00:00:40,250
+It is an operating rhythm problem.
+
+23
+00:00:41,090 --> 00:00:42,900
+Teams that use AI to inspect deals
+
+24
+00:00:42,960 --> 00:00:45,130
+weekly, not just at quarter end, build a
+
+25
+00:00:45,180 --> 00:00:46,910
+different kind of pipeline confidence.
+
+26
+00:00:47,790 --> 00:00:50,310
+Follow A-Gent for the agent-first GTM
+
+27
+00:00:50,370 --> 00:00:50,800
+playbook.
