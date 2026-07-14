@@ -1,0 +1,107 @@
+1
+00:00:00,000 --> 00:00:02,210
+Most AI sales tools fail not because the
+
+2
+00:00:02,240 --> 00:00:03,950
+technology is wrong but because the
+
+3
+00:00:04,020 --> 00:00:05,510
+workflow was never designed.
+
+4
+00:00:06,050 --> 00:00:07,410
+A tool gets purchased.
+
+5
+00:00:07,960 --> 00:00:09,580
+A demo impresses the team.
+
+6
+00:00:10,240 --> 00:00:11,410
+The rollout happens.
+
+7
+00:00:11,980 --> 00:00:14,350
+Three months later, adoption is low, the
+
+8
+00:00:14,420 --> 00:00:16,940
+data is inconsistent, and the team has
+
+9
+00:00:17,010 --> 00:00:18,440
+reverted to the old process.
+
+10
+00:00:18,940 --> 00:00:20,860
+The pattern repeats because the tool was
+
+11
+00:00:20,920 --> 00:00:22,830
+added to an existing workflow instead of
+
+12
+00:00:22,900 --> 00:00:24,540
+replacing a specific step in that
+
+13
+00:00:24,570 --> 00:00:24,990
+workflow.
+
+14
+00:00:25,920 --> 00:00:27,910
+Effective AI adoption requires defining
+
+15
+00:00:27,950 --> 00:00:30,070
+the job to be done before selecting the
+
+16
+00:00:30,110 --> 00:00:30,380
+tool.
+
+17
+00:00:31,060 --> 00:00:32,700
+What decision does this help the team
+
+18
+00:00:32,750 --> 00:00:33,250
+make better?
+
+19
+00:00:33,880 --> 00:00:35,120
+What input does it need?
+
+20
+00:00:35,560 --> 00:00:37,280
+What output does the team act on?
+
+21
+00:00:37,910 --> 00:00:39,720
+Who is responsible for reviewing it?
+
+22
+00:00:40,490 --> 00:00:42,200
+When that design work is done first, the
+
+23
+00:00:42,250 --> 00:00:43,510
+tool has a clear role.
+
+24
+00:00:44,410 --> 00:00:46,040
+Adoption follows because the team can
+
+25
+00:00:46,120 --> 00:00:47,570
+see what changes when they use it.
+
+26
+00:00:48,500 --> 00:00:51,090
+Follow A-Gent for the agent-first GTM
+
+27
+00:00:51,150 --> 00:00:51,570
+playbook.
