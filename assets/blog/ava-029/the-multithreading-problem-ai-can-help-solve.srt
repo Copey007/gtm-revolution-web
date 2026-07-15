@@ -1,0 +1,115 @@
+1
+00:00:00,000 --> 00:00:01,730
+Single-threaded deals are the most
+
+2
+00:00:01,780 --> 00:00:02,940
+predictable way to lose.
+
+3
+00:00:03,710 --> 00:00:04,520
+One contact.
+
+4
+00:00:05,030 --> 00:00:05,880
+One champion.
+
+5
+00:00:06,500 --> 00:00:07,750
+One point of failure.
+
+6
+00:00:08,660 --> 00:00:10,670
+When that person goes quiet, changes
+
+7
+00:00:10,740 --> 00:00:12,780
+roles, or loses internal support, the
+
+8
+00:00:12,860 --> 00:00:13,580
+deal stalls.
+
+9
+00:00:14,570 --> 00:00:16,770
+AI can help identify multithreading gaps
+
+10
+00:00:16,800 --> 00:00:17,150
+earlier.
+
+11
+00:00:17,870 --> 00:00:19,850
+It surfaces which stakeholders have been
+
+12
+00:00:19,890 --> 00:00:22,300
+engaged, which ones have not responded,
+
+13
+00:00:22,660 --> 00:00:24,540
+and which roles are typically involved
+
+14
+00:00:24,580 --> 00:00:26,350
+in decisions at similar companies.
+
+15
+00:00:27,340 --> 00:00:29,190
+That gives the rep a specific reason to
+
+16
+00:00:29,280 --> 00:00:31,220
+reach out to a new contact rather than a
+
+17
+00:00:31,300 --> 00:00:32,910
+generic request to expand the
+
+18
+00:00:32,950 --> 00:00:33,560
+relationship.
+
+19
+00:00:34,530 --> 00:00:36,330
+The message becomes more relevant
+
+20
+00:00:36,370 --> 00:00:38,220
+because it is tied to a real gap in the
+
+21
+00:00:38,270 --> 00:00:39,180
+buying process.
+
+22
+00:00:40,700 --> 00:00:42,650
+Multithreading is not a relationship
+
+23
+00:00:42,700 --> 00:00:43,090
+tactic.
+
+24
+00:00:43,590 --> 00:00:45,340
+It is a risk management discipline.
+
+25
+00:00:46,060 --> 00:00:48,060
+AI makes it easier to see where the risk
+
+26
+00:00:48,110 --> 00:00:50,500
+is concentrated and act on it before the
+
+27
+00:00:50,560 --> 00:00:51,910
+deal is already in trouble.
+
+28
+00:00:53,340 --> 00:00:55,920
+Follow A-Gent for the agent-first GTM
+
+29
+00:00:55,980 --> 00:00:56,420
+playbook.
