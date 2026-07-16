@@ -1,0 +1,135 @@
+1
+00:00:00,000 --> 00:00:02,930
+Agent-first GTM is not about replacing
+
+2
+00:00:02,980 --> 00:00:03,390
+people.
+
+3
+00:00:03,880 --> 00:00:05,550
+It is about building a revenue system
+
+4
+00:00:05,600 --> 00:00:06,150
+that learns.
+
+5
+00:00:06,780 --> 00:00:09,270
+In a traditional GTM motion, the system
+
+6
+00:00:09,320 --> 00:00:10,250
+improves slowly.
+
+7
+00:00:10,810 --> 00:00:12,630
+Reps develop intuition over years.
+
+8
+00:00:13,260 --> 00:00:14,930
+Managers build pattern recognition
+
+9
+00:00:14,980 --> 00:00:16,440
+through hundreds of deal reviews.
+
+10
+00:00:16,970 --> 00:00:18,530
+Knowledge lives in people and leaves
+
+11
+00:00:18,550 --> 00:00:19,060
+when they do.
+
+12
+00:00:19,680 --> 00:00:22,330
+An agent-first GTM motion is different.
+
+13
+00:00:22,830 --> 00:00:24,510
+It captures what works in the system
+
+14
+00:00:24,550 --> 00:00:24,980
+itself.
+
+15
+00:00:25,630 --> 00:00:27,160
+Which messages get responses.
+
+16
+00:00:27,690 --> 00:00:29,400
+Which discovery questions surface real
+
+17
+00:00:29,450 --> 00:00:29,930
+problems.
+
+18
+00:00:30,470 --> 00:00:32,080
+Which signals predict deal risk.
+
+19
+00:00:32,640 --> 00:00:34,080
+Which coaching interventions change
+
+20
+00:00:34,110 --> 00:00:34,570
+behavior.
+
+21
+00:00:35,290 --> 00:00:37,240
+Over time, the system gets smarter.
+
+22
+00:00:37,950 --> 00:00:39,480
+New reps ramp faster because the
+
+23
+00:00:39,530 --> 00:00:40,430
+knowledge is structured.
+
+24
+00:00:41,050 --> 00:00:42,770
+Managers inspect deals with evidence
+
+25
+00:00:42,810 --> 00:00:43,670
+instead of opinions.
+
+26
+00:00:44,450 --> 00:00:45,930
+Leaders make resource decisions with
+
+27
+00:00:46,020 --> 00:00:46,720
+better signal.
+
+28
+00:00:47,620 --> 00:00:49,460
+The goal is not artificial intelligence
+
+29
+00:00:49,490 --> 00:00:51,230
+as a feature added to an existing
+
+30
+00:00:51,290 --> 00:00:51,670
+motion.
+
+31
+00:00:52,090 --> 00:00:53,590
+The goal is intelligence as the
+
+32
+00:00:53,700 --> 00:00:55,460
+operating system of the revenue team.
+
+33
+00:00:55,910 --> 00:00:57,400
+That is the revolution.
+
+34
+00:00:57,930 --> 00:00:59,630
+Follow A-Gent to build it.
