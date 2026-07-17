@@ -1,0 +1,111 @@
+1
+00:00:00,000 --> 00:00:01,660
+Most pipeline problems start before the
+
+2
+00:00:01,720 --> 00:00:02,880
+first sales conversation.
+
+3
+00:00:03,450 --> 00:00:05,330
+The handoff between marketing and sales
+
+4
+00:00:05,380 --> 00:00:06,500
+is where revenue leaks.
+
+5
+00:00:07,160 --> 00:00:08,390
+Marketing generates a lead.
+
+6
+00:00:08,950 --> 00:00:10,590
+Sales receives a name and a company.
+
+7
+00:00:11,120 --> 00:00:12,010
+No context.
+
+8
+00:00:12,400 --> 00:00:13,280
+No buying signal.
+
+9
+00:00:13,720 --> 00:00:14,770
+No problem statement.
+
+10
+00:00:15,390 --> 00:00:16,680
+The rep starts from scratch.
+
+11
+00:00:17,220 --> 00:00:19,020
+Cold outreach to a warm contact.
+
+12
+00:00:19,770 --> 00:00:20,970
+AI can fix this.
+
+13
+00:00:21,650 --> 00:00:22,990
+Not by generating more leads.
+
+14
+00:00:23,600 --> 00:00:25,070
+By capturing what marketing already
+
+15
+00:00:25,110 --> 00:00:25,500
+knows.
+
+16
+00:00:26,040 --> 00:00:27,750
+Which content did this buyer engage
+
+17
+00:00:27,790 --> 00:00:27,970
+with.
+
+18
+00:00:28,530 --> 00:00:30,120
+Which pain points surfaced in their
+
+19
+00:00:30,150 --> 00:00:30,590
+behavior.
+
+20
+00:00:31,150 --> 00:00:32,940
+Which questions they asked before ever
+
+21
+00:00:33,000 --> 00:00:33,800
+talking to a rep.
+
+22
+00:00:34,460 --> 00:00:36,370
+When that context transfers to sales,
+
+23
+00:00:36,700 --> 00:00:38,250
+the first conversation is different.
+
+24
+00:00:38,580 --> 00:00:40,260
+The rep walks in knowing the problem.
+
+25
+00:00:40,700 --> 00:00:41,670
+Not guessing at it.
+
+26
+00:00:42,150 --> 00:00:43,580
+That is not a technology upgrade.
+
+27
+00:00:43,620 --> 00:00:45,280
+That is a revenue system upgrade.
+
+28
+00:00:45,650 --> 00:00:47,170
+Follow A-Gent to build it.
