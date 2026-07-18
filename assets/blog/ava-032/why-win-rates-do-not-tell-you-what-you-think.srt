@@ -1,0 +1,111 @@
+1
+00:00:00,000 --> 00:00:02,110
+Win rate is a lagging indicator.
+
+2
+00:00:02,510 --> 00:00:03,520
+It tells you what happened.
+
+3
+00:00:03,730 --> 00:00:04,370
+Not why.
+
+4
+00:00:04,900 --> 00:00:07,220
+Most GTM teams track win rate as a
+
+5
+00:00:07,270 --> 00:00:08,120
+performance metric.
+
+6
+00:00:08,750 --> 00:00:11,110
+But win rate without context is noise.
+
+7
+00:00:11,810 --> 00:00:13,150
+Did you win because your product was
+
+8
+00:00:13,210 --> 00:00:13,500
+better?
+
+9
+00:00:14,010 --> 00:00:15,530
+Because your champion had authority?
+
+10
+00:00:16,310 --> 00:00:17,900
+Because the competitor made a mistake?
+
+11
+00:00:18,710 --> 00:00:20,350
+Because your rep happened to ask the
+
+12
+00:00:20,410 --> 00:00:21,120
+right question?
+
+13
+00:00:21,850 --> 00:00:22,730
+You do not know.
+
+14
+00:00:23,010 --> 00:00:25,210
+And if you do not know why you win, you
+
+15
+00:00:25,280 --> 00:00:26,320
+cannot replicate it.
+
+16
+00:00:26,950 --> 00:00:29,640
+AI changes this by analyzing what
+
+17
+00:00:29,700 --> 00:00:31,780
+actually happened in the deals you won.
+
+18
+00:00:32,470 --> 00:00:34,280
+Which discovery questions were asked.
+
+19
+00:00:34,810 --> 00:00:36,450
+Which objections came up and how they
+
+20
+00:00:36,480 --> 00:00:37,020
+were handled.
+
+21
+00:00:37,430 --> 00:00:39,020
+Which stakeholders were engaged and
+
+22
+00:00:39,110 --> 00:00:39,380
+when.
+
+23
+00:00:40,050 --> 00:00:42,080
+Win rate becomes a starting point.
+
+24
+00:00:42,650 --> 00:00:44,690
+The pattern behind the win rate becomes
+
+25
+00:00:44,740 --> 00:00:45,430
+the strategy.
+
+26
+00:00:46,240 --> 00:00:47,660
+That is how you build a repeatable
+
+27
+00:00:47,710 --> 00:00:48,400
+revenue motion.
+
+28
+00:00:48,840 --> 00:00:50,100
+Follow A-Gent to build it.
