@@ -1,0 +1,115 @@
+1
+00:00:00,000 --> 00:00:01,520
+Efficiency saves time.
+
+2
+00:00:01,970 --> 00:00:03,390
+Leverage changes outcomes.
+
+3
+00:00:04,140 --> 00:00:05,880
+Most AI deployments in sales are
+
+4
+00:00:05,930 --> 00:00:07,060
+efficiency plays.
+
+5
+00:00:07,510 --> 00:00:08,470
+Summarize the call.
+
+6
+00:00:09,030 --> 00:00:10,070
+Draft the follow-up.
+
+7
+00:00:10,600 --> 00:00:11,840
+Update the CRM.
+
+8
+00:00:12,620 --> 00:00:14,030
+These are real gains.
+
+9
+00:00:14,560 --> 00:00:15,650
+But they are not the goal.
+
+10
+00:00:16,340 --> 00:00:17,300
+Leverage is different.
+
+11
+00:00:17,860 --> 00:00:19,910
+Leverage means AI is changing what is
+
+12
+00:00:19,970 --> 00:00:21,510
+possible, not just what is faster.
+
+13
+00:00:22,180 --> 00:00:24,640
+A rep who uses AI to identify the three
+
+14
+00:00:24,670 --> 00:00:26,110
+accounts most likely to close this
+
+15
+00:00:26,160 --> 00:00:28,010
+quarter is not more efficient.
+
+16
+00:00:28,730 --> 00:00:30,410
+They are operating with better judgment.
+
+17
+00:00:31,130 --> 00:00:33,440
+A manager who uses AI to see which rep
+
+18
+00:00:33,490 --> 00:00:35,370
+behaviors predict deal risk is not
+
+19
+00:00:35,420 --> 00:00:36,130
+saving time.
+
+20
+00:00:36,460 --> 00:00:38,110
+They are coaching with evidence instead
+
+21
+00:00:38,130 --> 00:00:38,640
+of instinct.
+
+22
+00:00:39,490 --> 00:00:41,750
+The question for every GTM leader is not
+
+23
+00:00:41,800 --> 00:00:43,370
+how much time did AI save this week.
+
+24
+00:00:43,490 --> 00:00:45,170
+The question is what decisions are we
+
+25
+00:00:45,220 --> 00:00:47,290
+making now that we could not make
+
+26
+00:00:47,330 --> 00:00:47,620
+before.
+
+27
+00:00:47,660 --> 00:00:48,370
+That is leverage.
+
+28
+00:00:48,420 --> 00:00:49,000
+That is the goal.
+
+29
+00:00:49,080 --> 00:00:50,260
+Follow A-Gent to build it.
