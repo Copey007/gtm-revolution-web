@@ -1,0 +1,111 @@
+1
+00:00:00,000 --> 00:00:01,610
+The quality of your AI output is
+
+2
+00:00:01,650 --> 00:00:03,350
+determined by the quality of your input.
+
+3
+00:00:04,200 --> 00:00:06,580
+Most sales teams give AI generic prompts
+
+4
+00:00:06,620 --> 00:00:07,690
+and get generic output.
+
+5
+00:00:08,420 --> 00:00:09,580
+Write a follow-up email.
+
+6
+00:00:10,240 --> 00:00:11,230
+Summarize this call.
+
+7
+00:00:11,780 --> 00:00:12,890
+Draft a proposal.
+
+8
+00:00:13,850 --> 00:00:15,590
+The output is technically correct and
+
+9
+00:00:15,650 --> 00:00:16,850
+completely forgettable.
+
+10
+00:00:17,660 --> 00:00:19,340
+Good prompting in a sales context is
+
+11
+00:00:19,400 --> 00:00:19,800
+different.
+
+12
+00:00:20,270 --> 00:00:21,780
+It includes the buyer's specific
+
+13
+00:00:21,830 --> 00:00:22,250
+problem.
+
+14
+00:00:22,870 --> 00:00:24,510
+The language they used to describe it.
+
+15
+00:00:25,020 --> 00:00:26,380
+The objection they raised and the
+
+16
+00:00:26,420 --> 00:00:27,380
+context behind it.
+
+17
+00:00:28,200 --> 00:00:29,810
+The outcome they said they needed and
+
+18
+00:00:29,870 --> 00:00:31,130
+the timeline they gave.
+
+19
+00:00:31,500 --> 00:00:33,590
+When you give AI that context, the
+
+20
+00:00:33,650 --> 00:00:35,720
+output sounds like it was written by
+
+21
+00:00:35,790 --> 00:00:36,830
+someone who was in the room.
+
+22
+00:00:37,800 --> 00:00:39,070
+Because in a sense, it was.
+
+23
+00:00:39,760 --> 00:00:41,710
+Prompt engineering is not a technical
+
+24
+00:00:41,750 --> 00:00:42,070
+skill.
+
+25
+00:00:42,520 --> 00:00:43,880
+It is a sales skill.
+
+26
+00:00:44,700 --> 00:00:46,840
+The reps who learn it will outperform
+
+27
+00:00:46,900 --> 00:00:47,840
+the ones who do not.
+
+28
+00:00:48,400 --> 00:00:49,820
+Follow A-Gent to build it.
