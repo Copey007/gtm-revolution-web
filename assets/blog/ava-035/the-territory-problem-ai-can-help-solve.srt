@@ -1,0 +1,127 @@
+1
+00:00:00,000 --> 00:00:01,200
+Territory design is one of the
+
+2
+00:00:01,260 --> 00:00:03,260
+highest-leverage decisions in GTM.
+
+3
+00:00:03,980 --> 00:00:05,080
+Most teams get it wrong.
+
+4
+00:00:05,410 --> 00:00:06,610
+Not because they lack data.
+
+5
+00:00:07,010 --> 00:00:08,630
+Because they use the wrong data.
+
+6
+00:00:09,310 --> 00:00:10,820
+Territories are usually built on
+
+7
+00:00:10,940 --> 00:00:11,800
+firmographics.
+
+8
+00:00:12,210 --> 00:00:13,110
+Company size.
+
+9
+00:00:13,400 --> 00:00:13,990
+Industry.
+
+10
+00:00:14,310 --> 00:00:15,020
+Geography.
+
+11
+00:00:15,710 --> 00:00:17,400
+These are proxies for potential.
+
+12
+00:00:17,480 --> 00:00:18,660
+They are not measures of it.
+
+13
+00:00:19,170 --> 00:00:21,640
+AI can analyze your actual win patterns.
+
+14
+00:00:22,200 --> 00:00:23,850
+Which account characteristics predict a
+
+15
+00:00:23,910 --> 00:00:24,610
+closed deal.
+
+16
+00:00:25,440 --> 00:00:27,300
+Which industries have the shortest sales
+
+17
+00:00:27,340 --> 00:00:27,820
+cycles.
+
+18
+00:00:28,600 --> 00:00:30,100
+Which segments have the highest
+
+19
+00:00:30,150 --> 00:00:31,620
+expansion revenue after the initial
+
+20
+00:00:31,690 --> 00:00:32,270
+close.
+
+21
+00:00:33,470 --> 00:00:34,780
+When you build territories on those
+
+22
+00:00:34,810 --> 00:00:36,550
+signals, you stop distributing accounts
+
+23
+00:00:36,640 --> 00:00:38,460
+evenly and start distributing
+
+24
+00:00:38,530 --> 00:00:39,770
+opportunity strategically.
+
+25
+00:00:40,640 --> 00:00:42,660
+Some reps get fewer accounts with higher
+
+26
+00:00:42,710 --> 00:00:43,460
+win probability.
+
+27
+00:00:44,180 --> 00:00:46,110
+Some get more accounts in emerging
+
+28
+00:00:46,200 --> 00:00:47,430
+segments worth developing.
+
+29
+00:00:48,380 --> 00:00:49,840
+Territory becomes a competitive
+
+30
+00:00:49,870 --> 00:00:51,400
+advantage, not an administrative
+
+31
+00:00:51,430 --> 00:00:52,060
+exercise.
+
+32
+00:00:52,590 --> 00:00:54,300
+Follow A-Gent to build it.
