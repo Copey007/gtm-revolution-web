@@ -509,7 +509,7 @@ def home_page():
       </div>
       <button class="demo-close" type="button" data-demo-close aria-label="Close demo form">×</button>
     </div>
-    <form id="demoLeadForm" class="form-grid" data-supabase-url="https://byospmliiokgrdjjxsde.supabase.co" data-supabase-key="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJ5b3NwbWxpaW9rZ3Jkamp4c2RlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzk4MjQ0NzUsImV4cCI6MjA5NTQwMDQ3NX0.KvzaEuEH9nRlBBSUOyg7kTKHvLFfR6CvmZbjVHZQ83I">
+    <form id="demoLeadForm" class="form-grid" data-supabase-url="https://byospmliiokgrdjjxsde.supabase.co" data-supabase-key="sb_publishable_sQAEX9fp8QuAOwIjPLG1cQ_Um-j1Yi2">
       <div class="field"><label for="demoName">Name</label><input id="demoName" name="name" autocomplete="name" required></div>
       <div class="field"><label for="demoEmail">Work email</label><input id="demoEmail" name="email" type="email" autocomplete="email" required></div>
       <div class="field wide"><label for="demoCompany">Company</label><input id="demoCompany" name="company" autocomplete="organization" required></div>
