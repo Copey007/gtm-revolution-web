@@ -1,0 +1,119 @@
+1
+00:00:00,000 --> 00:00:01,970
+Most sales teams are sitting on the most
+
+2
+00:00:02,060 --> 00:00:04,570
+valuable data they have and not using
+
+3
+00:00:04,630 --> 00:00:04,780
+it.
+
+4
+00:00:05,890 --> 00:00:07,780
+Every recorded call contains buyer
+
+5
+00:00:07,850 --> 00:00:09,590
+language, objection patterns,
+
+6
+00:00:10,020 --> 00:00:12,210
+competitive mentions, and signals about
+
+7
+00:00:12,250 --> 00:00:13,680
+what matters to the person on the other
+
+8
+00:00:13,720 --> 00:00:14,160
+side.
+
+9
+00:00:14,940 --> 00:00:16,890
+Conversation intelligence tools surface
+
+10
+00:00:16,930 --> 00:00:17,450
+that data.
+
+11
+00:00:18,110 --> 00:00:20,200
+But most teams use them for compliance
+
+12
+00:00:20,240 --> 00:00:22,620
+and call scoring, not for building a
+
+13
+00:00:22,730 --> 00:00:23,980
+smarter revenue motion.
+
+14
+00:00:24,790 --> 00:00:26,180
+The teams that win are using
+
+15
+00:00:26,240 --> 00:00:28,030
+conversation data to identify which
+
+16
+00:00:28,080 --> 00:00:30,440
+discovery questions actually lead to
+
+17
+00:00:30,500 --> 00:00:31,630
+qualified opportunities.
+
+18
+00:00:32,360 --> 00:00:34,090
+Which messages resonate with specific
+
+19
+00:00:34,170 --> 00:00:35,100
+buyer personas.
+
+20
+00:00:35,860 --> 00:00:37,600
+Which objections predict deal risk.
+
+21
+00:00:38,260 --> 00:00:39,990
+Which competitor mentions require a
+
+22
+00:00:40,060 --> 00:00:40,990
+different response.
+
+23
+00:00:41,310 --> 00:00:42,800
+That is not a technology problem.
+
+24
+00:00:43,220 --> 00:00:45,040
+It is a decision about whether the team
+
+25
+00:00:45,110 --> 00:00:47,330
+treats conversation data as a strategic
+
+26
+00:00:47,390 --> 00:00:47,800
+asset.
+
+27
+00:00:48,560 --> 00:00:50,090
+The gap is not in the tool.
+
+28
+00:00:50,240 --> 00:00:52,170
+It is in how the output is used.
+
+29
+00:00:52,380 --> 00:00:55,040
+Follow A-Gent for the agent-first GTM
+
+30
+00:00:55,100 --> 00:00:55,550
+playbook.
