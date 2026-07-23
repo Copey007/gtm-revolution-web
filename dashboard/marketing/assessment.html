@@ -165,13 +165,13 @@
       margin-top: 4rem;
     }
   </style>
-  <link rel="stylesheet" href="/assets/css/brand-system.css">
+  <link rel="stylesheet" href="assets/css/brand-system.css">
 </head>
 <body>
 
 <nav class="site-nav">
   <a href="https://a-gent.co/" class="site-brand">
-    <img class="brand-logo" src="/assets/brand/a-gent-wordmark.png" alt="A-Gent AI Agents">
+    <img class="brand-logo" src="assets/brand/a-gent-wordmark.png" alt="A-Gent AI Agents">
   </a>
   <ul>
     <li><a href="https://a-gent.co/">Home</a></li>
@@ -522,7 +522,7 @@
 
     try {
       const { createClient } = window.supabase;
-      const supabase = createClient('https://byospmliiokgrdjjxsde.supabase.co', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJ5b3NwbWxpaW9rZ3Jkamp4c2RlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzk4MjQ0NzUsImV4cCI6MjA5NTQwMDQ3NX0.KvzaEuEH9nRlBBSUOyg7kTKHvLFfR6CvmZbjVHZQ83I');
+      const supabase = createClient('https://byospmliiokgrdjjxsde.supabase.co', 'sb_publishable_sQAEX9fp8QuAOwIjPLG1cQ_Um-j1Yi2');
       const { error } = await supabase.from('assessment_responses').insert(payload);
       if (error) console.warn('Supabase insert failed:', error);
     } catch (err) {
