@@ -1,0 +1,131 @@
+1
+00:00:00,000 --> 00:00:01,950
+AI can help you run discovery faster.
+
+2
+00:00:02,450 --> 00:00:04,240
+It cannot make bad discovery good.
+
+3
+00:00:05,140 --> 00:00:06,870
+Discovery is broken when reps are
+
+4
+00:00:06,910 --> 00:00:08,230
+pitching before they understand the
+
+5
+00:00:08,260 --> 00:00:08,630
+problem.
+
+6
+00:00:09,180 --> 00:00:10,940
+When they are asking surface questions
+
+7
+00:00:10,990 --> 00:00:12,720
+instead of getting to economic impact.
+
+8
+00:00:13,540 --> 00:00:15,460
+When they are qualifying based on budget
+
+9
+00:00:15,500 --> 00:00:16,830
+and timeline instead of whether the
+
+10
+00:00:16,880 --> 00:00:18,600
+buyer has a real problem worth solving.
+
+11
+00:00:19,160 --> 00:00:21,250
+Adding AI to that process does not fix
+
+12
+00:00:21,340 --> 00:00:21,490
+it.
+
+13
+00:00:22,180 --> 00:00:23,300
+It accelerates it.
+
+14
+00:00:23,860 --> 00:00:25,700
+You get to the wrong conclusion faster.
+
+15
+00:00:26,250 --> 00:00:27,820
+The fix is a discovery standard.
+
+16
+00:00:28,290 --> 00:00:30,080
+What questions must be answered before a
+
+17
+00:00:30,130 --> 00:00:30,870
+deal advances?
+
+18
+00:00:31,440 --> 00:00:32,870
+What evidence must exist?
+
+19
+00:00:33,460 --> 00:00:35,030
+What does a qualified opportunity
+
+20
+00:00:35,110 --> 00:00:36,220
+actually look like?
+
+21
+00:00:36,970 --> 00:00:39,190
+Once that standard is defined, AI can
+
+22
+00:00:39,220 --> 00:00:40,000
+help enforce it.
+
+23
+00:00:40,460 --> 00:00:42,120
+It can flag calls where key questions
+
+24
+00:00:42,160 --> 00:00:42,820
+were not asked.
+
+25
+00:00:43,320 --> 00:00:44,960
+It can surface gaps in the opportunity
+
+26
+00:00:45,020 --> 00:00:45,340
+record.
+
+27
+00:00:45,950 --> 00:00:47,450
+It can prompt the rep before the next
+
+28
+00:00:47,480 --> 00:00:47,730
+call.
+
+29
+00:00:48,350 --> 00:00:49,500
+AI is a multiplier.
+
+30
+00:00:49,970 --> 00:00:51,930
+The quality of what it multiplies is
+
+31
+00:00:51,990 --> 00:00:53,580
+still a human decision.
+
+32
+00:00:54,240 --> 00:00:57,090
+Follow A-Gent for the agent-first GTM
+
+33
+00:00:57,150 --> 00:00:57,580
+playbook.
