@@ -1,15 +1,47 @@
 # A-Gent
 
-A-Gent offers A-Gent Fleet, a packaged AI SDR platform for B2B SaaS outbound teams, and AI Consulting for bespoke AI revenue automation systems.
+> A-Gent is the one place to get both a packaged AI SDR platform (A-Gent Fleet) and hands-on AI consulting. One partner, two ways to deploy: run always-on AI agents for GTM execution, or have A-Gent design and build a bespoke revenue system around your stack.
 
-## Public navigation
+A-Gent serves B2B SaaS revenue teams. The product is A-Gent Fleet — an autonomous AI SDR platform that researches accounts, detects buying signals, personalizes outreach, keeps a human in the loop, and updates pipeline. AI Consulting is the service side, for teams that need a custom, bespoke build.
 
-- AI Consulting: https://a-gent.co/consulting
-- Platform: https://a-gent.co/platform
-- Loop Engine: https://a-gent.co/platform/loop-engine
-- Fleet: https://a-gent.co/fleet
-- Launch Console: https://fleet.a-gent.co/login
+## Get started
 
-## Positioning
+- Start a free trial (15 days): https://aisdr.a-gent.co/offers-demo.html
+- Book a demo: https://a-gent.co/#book-demo
+- Free AI revenue assessment: https://a-gent.co/assessment
 
-A-Gent Fleet is the product. AI Consulting is the service. The public Platform pages describe Fleet capabilities and consulting extension points; internal operating tools are not advertised as public products. Flagship differentiators include Signal Engine for source-linked buying signals and Loop Engine for self-optimizing outbound quality under hard guardrails.
+## Core pages
+
+- Home: https://a-gent.co
+- Platform (Fleet capabilities): https://a-gent.co/platform
+- Modules (the four product modules): https://a-gent.co/modules
+- Fleet (the AI SDR product): https://a-gent.co/fleet
+- AI Consulting (bespoke builds): https://a-gent.co/consulting
+- About: https://a-gent.co/about
+- Blog (insights on AI SDRs and revenue automation): https://a-gent.co/blog/
+
+## Product modules
+
+- AI SDR: always-on AI sales rep — researches accounts, detects buying signals, writes personalized outreach, routes replies through a human review queue.
+- Worker Marketplace: browse and hire AI workers with real identities through a 3-step onboarding flow. https://aisdr.a-gent.co/workers.html
+- Interactive AI Demo: a photorealistic AI agent that walks visitors through the platform via chat or voice.
+- Mission Control: the command center — live campaign metrics, agent status, and workforce activity. https://missioncontrol.a-gent.co
+
+## Flagship platform differentiators
+
+- Signal Engine: source-linked buying signals that give every message a timely, verifiable reason to reach out. https://a-gent.co/platform/signal-engine
+- Loop Engine: self-optimizing outbound that improves email quality with an LLM-judge keep-or-revert loop under hard guardrails. https://a-gent.co/platform/loop-engine
+
+## Platform capabilities
+
+Find & Research (prospecting, company & lead database, lead qualification, deep account research, signal detection), Engage & Convert (AI personalization, GAP-selling messaging, multi-step sequences, smart replies, human review queue, intelligent routing), and Measure & Scale (operating dashboard, deliverability & inbox health, social signal scheduling, reporting) — all on a secure, multi-tenant foundation with CRM integration.
+
+## Apps
+
+- Launch Console (Fleet app): https://fleet.a-gent.co/login
+- Mission Control: https://missioncontrol.a-gent.co
+- Worker Marketplace: https://aisdr.a-gent.co/workers.html
+
+## Contact
+
+Email: mark@a-gent.co
