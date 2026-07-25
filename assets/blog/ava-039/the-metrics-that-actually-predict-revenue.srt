@@ -1,0 +1,139 @@
+1
+00:00:00,000 --> 00:00:01,800
+Most revenue teams are measuring the
+
+2
+00:00:01,870 --> 00:00:03,500
+wrong things and wondering why the
+
+3
+00:00:03,530 --> 00:00:04,660
+forecast is always wrong.
+
+4
+00:00:05,170 --> 00:00:06,970
+Activity metrics tell you what happened.
+
+5
+00:00:07,380 --> 00:00:08,840
+They do not tell you what will happen.
+
+6
+00:00:09,330 --> 00:00:12,060
+Calls made, emails sent, meetings
+
+7
+00:00:12,120 --> 00:00:12,480
+booked.
+
+8
+00:00:13,040 --> 00:00:14,070
+These are inputs.
+
+9
+00:00:14,500 --> 00:00:15,820
+They do not predict revenue.
+
+10
+00:00:16,240 --> 00:00:17,740
+The metrics that actually predict
+
+11
+00:00:17,790 --> 00:00:18,700
+revenue are different.
+
+12
+00:00:19,230 --> 00:00:21,300
+Stage conversion rates by rep, by
+
+13
+00:00:21,380 --> 00:00:22,820
+segment, by source.
+
+14
+00:00:23,250 --> 00:00:25,280
+Time in stage relative to historical
+
+15
+00:00:25,340 --> 00:00:25,780
+averages.
+
+16
+00:00:26,540 --> 00:00:28,250
+Buyer engagement signals like
+
+17
+00:00:28,370 --> 00:00:30,080
+stakeholder involvement and response
+
+18
+00:00:30,110 --> 00:00:30,390
+rates.
+
+19
+00:00:31,170 --> 00:00:33,160
+Deal velocity compared to won deals at
+
+20
+00:00:33,190 --> 00:00:33,980
+the same stage.
+
+21
+00:00:34,880 --> 00:00:36,110
+These are leading indicators.
+
+22
+00:00:36,840 --> 00:00:38,440
+They tell you where the pipeline is
+
+23
+00:00:38,480 --> 00:00:40,320
+healthy and where it is at risk before
+
+24
+00:00:40,340 --> 00:00:41,250
+the quarter closes.
+
+25
+00:00:42,000 --> 00:00:43,620
+AI makes it possible to track these
+
+26
+00:00:43,670 --> 00:00:45,100
+metrics at scale without manual
+
+27
+00:00:45,120 --> 00:00:45,640
+analysis.
+
+28
+00:00:46,260 --> 00:00:48,640
+But the first step is deciding which
+
+29
+00:00:48,710 --> 00:00:50,080
+metrics actually matter.
+
+30
+00:00:50,620 --> 00:00:52,720
+Most teams have not made that decision.
+
+31
+00:00:53,140 --> 00:00:55,090
+They are measuring what is easy to count
+
+32
+00:00:55,140 --> 00:00:56,890
+instead of what actually predicts
+
+33
+00:00:56,940 --> 00:00:57,450
+outcomes.
+
+34
+00:00:58,930 --> 00:01:01,750
+Follow A-Gent for the agent-first GTM
+
+35
+00:01:01,810 --> 00:01:02,260
+playbook.
