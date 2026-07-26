@@ -1,0 +1,139 @@
+1
+00:00:00,000 --> 00:00:02,100
+An account plan without AI is a
+
+2
+00:00:02,160 --> 00:00:02,670
+document.
+
+3
+00:00:03,260 --> 00:00:05,170
+An account plan with AI is a living
+
+4
+00:00:05,240 --> 00:00:05,620
+system.
+
+5
+00:00:06,250 --> 00:00:07,770
+The traditional account plan is built
+
+6
+00:00:07,860 --> 00:00:10,580
+once, reviewed quarterly, and ignored in
+
+7
+00:00:10,620 --> 00:00:11,050
+between.
+
+8
+00:00:11,770 --> 00:00:13,190
+It captures what the rep knows at a
+
+9
+00:00:13,250 --> 00:00:14,040
+point in time.
+
+10
+00:00:14,410 --> 00:00:15,860
+It does not update when the buyer's
+
+11
+00:00:15,890 --> 00:00:16,880
+situation changes.
+
+12
+00:00:17,440 --> 00:00:18,390
+AI changes that.
+
+13
+00:00:18,440 --> 00:00:20,120
+It can monitor news and signals about
+
+14
+00:00:20,140 --> 00:00:20,570
+the account.
+
+15
+00:00:21,160 --> 00:00:23,180
+Leadership changes, funding events,
+
+16
+00:00:23,330 --> 00:00:25,230
+product launches, hiring patterns.
+
+17
+00:00:25,900 --> 00:00:27,650
+It can surface which stakeholders have
+
+18
+00:00:27,680 --> 00:00:29,450
+been engaged and which have gone quiet.
+
+19
+00:00:30,010 --> 00:00:32,210
+It can flag when a deal is drifting from
+
+20
+00:00:32,250 --> 00:00:33,130
+the expected pattern.
+
+21
+00:00:33,940 --> 00:00:35,950
+The rep stops managing a static document
+
+22
+00:00:36,010 --> 00:00:37,890
+and starts working with a system that
+
+23
+00:00:37,960 --> 00:00:39,090
+surfaces what matters.
+
+24
+00:00:39,900 --> 00:00:41,730
+The account plan becomes a decision
+
+25
+00:00:41,810 --> 00:00:43,540
+support tool instead of a reporting
+
+26
+00:00:43,600 --> 00:00:44,150
+artifact.
+
+27
+00:00:44,980 --> 00:00:46,900
+The shift requires connecting the right
+
+28
+00:00:46,950 --> 00:00:49,240
+data sources and defining what signals
+
+29
+00:00:49,310 --> 00:00:50,870
+matter for your specific accounts.
+
+30
+00:00:51,400 --> 00:00:52,770
+That is the design work.
+
+31
+00:00:53,490 --> 00:00:55,370
+Once it is done, the account plan starts
+
+32
+00:00:55,420 --> 00:00:57,230
+working for the rep instead of the other
+
+33
+00:00:57,280 --> 00:00:57,740
+way around.
+
+34
+00:00:57,860 --> 00:01:00,130
+Follow A-Gent for the agent-first GTM
+
+35
+00:01:00,190 --> 00:01:00,600
+playbook.
