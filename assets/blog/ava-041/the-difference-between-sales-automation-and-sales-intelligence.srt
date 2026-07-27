@@ -1,0 +1,139 @@
+1
+00:00:00,000 --> 00:00:02,030
+Sales automation and sales intelligence
+
+2
+00:00:02,070 --> 00:00:03,310
+are not the same thing.
+
+3
+00:00:03,700 --> 00:00:05,600
+Confusing them is costing you deals.
+
+4
+00:00:05,940 --> 00:00:07,790
+Sales automation handles repetitive
+
+5
+00:00:07,830 --> 00:00:08,350
+tasks.
+
+6
+00:00:08,790 --> 00:00:09,900
+Sequencing emails.
+
+7
+00:00:10,210 --> 00:00:11,080
+Logging calls.
+
+8
+00:00:11,360 --> 00:00:12,160
+Routing leads.
+
+9
+00:00:12,490 --> 00:00:14,070
+It removes friction from work that
+
+10
+00:00:14,110 --> 00:00:15,700
+should not require human judgment.
+
+11
+00:00:16,230 --> 00:00:17,760
+Sales intelligence tells you something
+
+12
+00:00:17,810 --> 00:00:18,600
+you did not know.
+
+13
+00:00:18,900 --> 00:00:20,180
+Which accounts are showing buying
+
+14
+00:00:20,220 --> 00:00:20,940
+signals right now.
+
+15
+00:00:21,320 --> 00:00:23,710
+Which contacts have changed roles.
+
+16
+00:00:24,300 --> 00:00:27,240
+Which deals are at risk based on
+
+17
+00:00:27,350 --> 00:00:28,480
+engagement patterns.
+
+18
+00:00:28,950 --> 00:00:30,240
+Automation makes you faster.
+
+19
+00:00:30,640 --> 00:00:32,110
+Intelligence makes you smarter.
+
+20
+00:00:32,670 --> 00:00:35,830
+The mistake most teams make is investing
+
+21
+00:00:35,900 --> 00:00:38,290
+heavily in automation and calling it an
+
+22
+00:00:38,360 --> 00:00:39,170
+AI strategy.
+
+23
+00:00:40,020 --> 00:00:42,160
+They have faster sequences and cleaner
+
+24
+00:00:42,240 --> 00:00:43,190
+CRM data.
+
+25
+00:00:43,870 --> 00:00:45,650
+But they still do not know which
+
+26
+00:00:45,690 --> 00:00:48,330
+accounts to prioritize or why a deal is
+
+27
+00:00:48,370 --> 00:00:48,780
+stalling.
+
+28
+00:00:49,630 --> 00:00:51,480
+The teams winning with AI are using
+
+29
+00:00:51,550 --> 00:00:53,380
+automation to handle the routine and
+
+30
+00:00:53,440 --> 00:00:55,260
+intelligence to drive the decisions.
+
+31
+00:00:55,800 --> 00:00:57,830
+That distinction determines whether AI
+
+32
+00:00:57,910 --> 00:00:59,950
+makes your team more efficient or
+
+33
+00:01:00,020 --> 00:01:01,170
+actually more effective.
+
+34
+00:01:01,670 --> 00:01:04,540
+Follow A-Gent for the agent-first GTM
+
+35
+00:01:04,600 --> 00:01:05,030
+playbook.
