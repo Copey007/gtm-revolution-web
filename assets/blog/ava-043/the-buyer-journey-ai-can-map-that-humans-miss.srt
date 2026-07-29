@@ -1,0 +1,131 @@
+1
+00:00:00,000 --> 00:00:01,460
+The buyer journey your team thinks is
+
+2
+00:00:01,510 --> 00:00:03,060
+happening and the one that is actually
+
+3
+00:00:03,110 --> 00:00:04,590
+happening are not the same.
+
+4
+00:00:05,650 --> 00:00:07,510
+Most teams map the buyer journey based
+
+5
+00:00:07,550 --> 00:00:08,490
+on what they can see.
+
+6
+00:00:09,330 --> 00:00:11,530
+Form fills, meeting requests, demo
+
+7
+00:00:11,590 --> 00:00:12,130
+attendance.
+
+8
+00:00:13,090 --> 00:00:14,570
+But buyers are doing most of their
+
+9
+00:00:14,620 --> 00:00:16,260
+research before they ever talk to a rep.
+
+10
+00:00:16,870 --> 00:00:19,000
+They are reading your content, comparing
+
+11
+00:00:19,040 --> 00:00:20,880
+you to competitors, and building an
+
+12
+00:00:20,920 --> 00:00:22,900
+internal business case without you in
+
+13
+00:00:22,930 --> 00:00:23,270
+the room.
+
+14
+00:00:23,860 --> 00:00:25,570
+AI can map what humans miss.
+
+15
+00:00:25,860 --> 00:00:27,920
+It can track engagement signals across
+
+16
+00:00:27,970 --> 00:00:30,500
+content, identify which stakeholders are
+
+17
+00:00:30,530 --> 00:00:33,040
+involved and at what stage, and surface
+
+18
+00:00:33,070 --> 00:00:34,700
+patterns in how buyers move from
+
+19
+00:00:34,750 --> 00:00:35,800
+awareness to decision.
+
+20
+00:00:36,550 --> 00:00:38,100
+It can tell you which accounts are
+
+21
+00:00:38,160 --> 00:00:40,430
+actively evaluating right now based on
+
+22
+00:00:40,490 --> 00:00:42,820
+behavioral signals, not just declared
+
+23
+00:00:42,860 --> 00:00:43,250
+intent.
+
+24
+00:00:43,890 --> 00:00:46,560
+The teams that use this data do not wait
+
+25
+00:00:46,610 --> 00:00:48,020
+for buyers to raise their hand.
+
+26
+00:00:48,330 --> 00:00:49,850
+They show up at the right moment with
+
+27
+00:00:49,880 --> 00:00:51,160
+the right message because they
+
+28
+00:00:51,200 --> 00:00:53,410
+understand where the buyer actually is
+
+29
+00:00:53,620 --> 00:00:54,660
+in their process.
+
+30
+00:00:55,300 --> 00:00:56,740
+That is not a sales advantage.
+
+31
+00:00:56,790 --> 00:00:58,980
+That is a buyer experience advantage.
+
+32
+00:00:59,270 --> 00:01:02,230
+Follow A-Gent for the agent-first GTM
+
+33
+00:01:02,280 --> 00:01:02,720
+playbook.
