@@ -8,7 +8,7 @@
   <url><loc>https://a-gent.co/signup</loc><lastmod>2026-06-13</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://a-gent.co/assessment</loc><lastmod>2026-06-13</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://a-gent.co/privacy</loc><lastmod>2026-06-13</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://a-gent.co/blog</loc><lastmod>2026-06-13</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://a-gent.co/blog/</loc><lastmod>2026-06-13</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://a-gent.co/platform/find-and-research</loc><lastmod>2026-06-13</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://a-gent.co/platform/real-time-company-lead-database</loc><lastmod>2026-06-13</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://a-gent.co/platform/ai-prospecting</loc><lastmod>2026-06-13</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
@@ -31,8 +31,8 @@
   <url><loc>https://a-gent.co/platform/supabase-backend</loc><lastmod>2026-06-13</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://a-gent.co/platform/multi-tenant-scaling</loc><lastmod>2026-06-13</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://a-gent.co/modules</loc><lastmod>2026-06-27</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://a-gent.co/about</loc><lastmod>2026-07-08</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://a-gent.co/platform/signal-engine</loc><lastmod>2026-07-08</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://a-gent.co/about/</loc><lastmod>2026-07-08</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://a-gent.co/platform/signal-engine/</loc><lastmod>2026-07-08</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://a-gent.co/blog/a-gent-ava-quinn-daily-ava-002-ai-will-not-replace-your-sales-team-it-will-expose-it/</loc><lastmod>2026-07-24</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://a-gent.co/blog/a-gent-ava-quinn-daily-ava-003-the-pipeline-problem-no-one-wants-to-admit/</loc><lastmod>2026-07-24</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://a-gent.co/blog/a-gent-ava-quinn-daily-ava-004-the-first-ai-workflow-every-sales-leader-should-build/</loc><lastmod>2026-07-24</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
