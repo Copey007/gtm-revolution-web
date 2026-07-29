@@ -38,3 +38,7 @@
 
 # Modules page (pretty URL -> file)
 /modules    /modules.html    200
+
+# Retired blog slugs -> current posts (fix GSC 404s)
+/blog/ai-will-not-replace-your-sales-team    /blog/a-gent-ava-quinn-daily-ava-002-ai-will-not-replace-your-sales-team-it-will-expose-it/    301
+/blog/your-ai-sales-problem-is-not-a-tooling-problem    /blog/    301
