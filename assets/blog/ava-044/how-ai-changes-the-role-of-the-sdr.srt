@@ -1,0 +1,147 @@
+1
+00:00:00,000 --> 00:00:02,000
+The SDR role is not disappearing.
+
+2
+00:00:02,090 --> 00:00:04,370
+It is being redesigned around AI.
+
+3
+00:00:04,870 --> 00:00:06,910
+The version of the SDR role that AI
+
+4
+00:00:06,970 --> 00:00:09,900
+replaces is the one built around volume.
+
+5
+00:00:10,580 --> 00:00:11,780
+Sending hundreds of emails.
+
+6
+00:00:12,160 --> 00:00:13,480
+Making dozens of calls.
+
+7
+00:00:13,920 --> 00:00:15,660
+Hoping that enough activity produces
+
+8
+00:00:15,730 --> 00:00:16,670
+enough pipeline.
+
+9
+00:00:17,150 --> 00:00:19,390
+That model was already broken before AI.
+
+10
+00:00:19,870 --> 00:00:21,830
+AI accelerates its obsolescence.
+
+11
+00:00:22,330 --> 00:00:24,980
+The SDR role that survives and scales is
+
+12
+00:00:25,070 --> 00:00:26,120
+built around judgment.
+
+13
+00:00:26,780 --> 00:00:28,700
+Which accounts are worth pursuing right
+
+14
+00:00:28,740 --> 00:00:28,920
+now.
+
+15
+00:00:29,910 --> 00:00:31,560
+Which message will resonate with this
+
+16
+00:00:31,590 --> 00:00:32,370
+specific buyer.
+
+17
+00:00:33,300 --> 00:00:35,340
+Which signal indicates genuine intent
+
+18
+00:00:35,380 --> 00:00:36,160
+versus noise.
+
+19
+00:00:37,540 --> 00:00:39,710
+AI handles the research, the sequencing,
+
+20
+00:00:40,110 --> 00:00:41,810
+and the personalization at scale.
+
+21
+00:00:42,180 --> 00:00:43,990
+The SDR applies judgment to
+
+22
+00:00:44,080 --> 00:00:46,370
+prioritization, conversation, and
+
+23
+00:00:46,450 --> 00:00:47,230
+qualification.
+
+24
+00:00:47,640 --> 00:00:49,940
+The output is not fewer SDRs doing more
+
+25
+00:00:49,980 --> 00:00:50,430
+volume.
+
+26
+00:00:50,840 --> 00:00:52,820
+It is fewer SDRs generating better
+
+27
+00:00:52,880 --> 00:00:54,740
+pipeline because they are spending their
+
+28
+00:00:54,780 --> 00:00:57,000
+time on the work that actually requires
+
+29
+00:00:57,050 --> 00:00:57,480
+a human.
+
+30
+00:00:58,200 --> 00:00:59,670
+The teams that figure this out first
+
+31
+00:00:59,700 --> 00:01:01,080
+will have a structural advantage in
+
+32
+00:01:01,130 --> 00:01:02,030
+pipeline generation.
+
+33
+00:01:02,470 --> 00:01:04,270
+The ones that do not will keep hiring
+
+34
+00:01:04,310 --> 00:01:06,370
+for volume and wondering why conversion
+
+35
+00:01:06,420 --> 00:01:07,390
+rates are not improving.
+
+36
+00:01:08,350 --> 00:01:10,940
+Follow A-Gent for the agent-first GTM
+
+37
+00:01:10,990 --> 00:01:11,420
+playbook.
