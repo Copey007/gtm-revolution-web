@@ -1,0 +1,131 @@
+1
+00:00:00,000 --> 00:00:01,610
+Bad pipeline hygiene does not just
+
+2
+00:00:01,650 --> 00:00:02,520
+affect your forecast.
+
+3
+00:00:02,810 --> 00:00:05,020
+It corrupts every AI model built on top
+
+4
+00:00:05,060 --> 00:00:05,270
+of it.
+
+5
+00:00:05,990 --> 00:00:08,090
+Most CRMs contain deals that should have
+
+6
+00:00:08,120 --> 00:00:09,940
+been closed or disqualified months ago.
+
+7
+00:00:10,660 --> 00:00:12,830
+Opportunities with no activity in sixty
+
+8
+00:00:12,880 --> 00:00:14,500
+days still sitting in stage three.
+
+9
+00:00:15,430 --> 00:00:16,750
+Contacts with wrong titles.
+
+10
+00:00:17,410 --> 00:00:18,860
+Close dates that have been pushed five
+
+11
+00:00:18,880 --> 00:00:19,160
+times.
+
+12
+00:00:20,030 --> 00:00:21,540
+This is not just a reporting problem.
+
+13
+00:00:21,630 --> 00:00:23,310
+When AI is trained on this data to
+
+14
+00:00:23,380 --> 00:00:25,370
+predict outcomes, prioritize accounts,
+
+15
+00:00:25,430 --> 00:00:27,780
+or score leads, it learns from noise.
+
+16
+00:00:28,480 --> 00:00:30,170
+The output is unreliable because the
+
+17
+00:00:30,270 --> 00:00:31,640
+input is unreliable.
+
+18
+00:00:32,150 --> 00:00:34,570
+AI surfaces the pipeline hygiene problem
+
+19
+00:00:34,620 --> 00:00:35,980
+by making it visible in a way that
+
+20
+00:00:36,060 --> 00:00:37,470
+manual review never could.
+
+21
+00:00:38,240 --> 00:00:40,380
+It can flag every deal that has not had
+
+22
+00:00:40,410 --> 00:00:42,260
+a meaningful touchpoint in thirty days.
+
+23
+00:00:43,130 --> 00:00:45,110
+It can identify every opportunity where
+
+24
+00:00:45,140 --> 00:00:46,850
+the close date does not match the
+
+25
+00:00:46,910 --> 00:00:47,660
+activity pattern.
+
+26
+00:00:48,130 --> 00:00:50,240
+It can score deals against historical
+
+27
+00:00:50,290 --> 00:00:52,450
+patterns and show you which ones do not
+
+28
+00:00:52,520 --> 00:00:52,820
+fit.
+
+29
+00:00:53,670 --> 00:00:55,500
+The hygiene problem was always there.
+
+30
+00:00:55,990 --> 00:00:58,000
+AI just makes it impossible to ignore.
+
+31
+00:00:58,500 --> 00:01:00,030
+Clean the data before you build on it.
+
+32
+00:01:00,510 --> 00:01:03,200
+Follow A-Gent for the agent-first GTM
+
+33
+00:01:03,260 --> 00:01:03,690
+playbook.
