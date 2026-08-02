@@ -1,0 +1,135 @@
+1
+00:00:00,000 --> 00:00:02,930
+Before you invest in AI for your GTM
+
+2
+00:00:02,980 --> 00:00:05,160
+motion, you need to know if your team is
+
+3
+00:00:05,220 --> 00:00:06,330
+actually ready to use it.
+
+4
+00:00:07,120 --> 00:00:09,240
+AI readiness is not about technology.
+
+5
+00:00:09,740 --> 00:00:12,420
+It is about data, process, and adoption
+
+6
+00:00:12,470 --> 00:00:13,050
+capacity.
+
+7
+00:00:14,500 --> 00:00:17,740
+The data test: Is your CRM data clean
+
+8
+00:00:17,770 --> 00:00:18,970
+enough to train a model on?
+
+9
+00:00:19,650 --> 00:00:21,420
+If your pipeline hygiene is poor, your
+
+10
+00:00:21,480 --> 00:00:23,250
+AI outputs will be unreliable.
+
+11
+00:00:23,820 --> 00:00:26,880
+The process test: Are your core GTM
+
+12
+00:00:26,940 --> 00:00:29,120
+processes documented and consistently
+
+13
+00:00:29,190 --> 00:00:29,760
+executed?
+
+14
+00:00:30,860 --> 00:00:32,510
+AI optimizes a process.
+
+15
+00:00:33,040 --> 00:00:34,680
+It cannot define one that does not
+
+16
+00:00:34,730 --> 00:00:35,160
+exist.
+
+17
+00:00:36,260 --> 00:00:38,890
+The adoption test: Do your reps trust
+
+18
+00:00:38,940 --> 00:00:40,310
+the tools they already have?
+
+19
+00:00:41,240 --> 00:00:42,980
+If adoption of existing technology is
+
+20
+00:00:43,050 --> 00:00:45,290
+low, adding AI will not improve it.
+
+21
+00:00:46,020 --> 00:00:48,050
+And the leadership test: Is there an
+
+22
+00:00:48,100 --> 00:00:49,690
+executive sponsor who will drive
+
+23
+00:00:49,710 --> 00:00:51,280
+accountability for AI usage?
+
+24
+00:00:52,250 --> 00:00:54,160
+Without that, every AI initiative
+
+25
+00:00:54,200 --> 00:00:56,380
+becomes optional and eventually ignored.
+
+26
+00:00:57,320 --> 00:00:59,270
+Running this test before you buy is not
+
+27
+00:00:59,330 --> 00:00:59,930
+pessimism.
+
+28
+00:01:00,620 --> 00:01:02,600
+It is how you avoid spending six figures
+
+29
+00:01:02,640 --> 00:01:04,950
+on a tool that sits unused because the
+
+30
+00:01:04,990 --> 00:01:06,080
+foundation was not ready.
+
+31
+00:01:06,620 --> 00:01:07,740
+Build the foundation.
+
+32
+00:01:07,840 --> 00:01:08,630
+Then build on it.
+
+33
+00:01:09,300 --> 00:01:11,450
+Follow A-Gent for the agent-first GTM
+
+34
+00:01:11,490 --> 00:01:11,880
+playbook.
