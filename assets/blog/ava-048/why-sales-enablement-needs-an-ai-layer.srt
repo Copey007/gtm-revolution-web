@@ -1,0 +1,131 @@
+1
+00:00:00,000 --> 00:00:02,230
+Sales enablement without an AI layer is
+
+2
+00:00:02,280 --> 00:00:04,240
+becoming a content management problem
+
+3
+00:00:04,330 --> 00:00:05,900
+instead of a performance problem.
+
+4
+00:00:06,620 --> 00:00:08,660
+Most enablement teams spend the majority
+
+5
+00:00:08,710 --> 00:00:10,430
+of their time creating and organizing
+
+6
+00:00:10,480 --> 00:00:10,960
+content.
+
+7
+00:00:11,590 --> 00:00:14,060
+Playbooks, battle cards, objection
+
+8
+00:00:14,120 --> 00:00:15,920
+guides, onboarding materials.
+
+9
+00:00:16,540 --> 00:00:18,010
+The content exists.
+
+10
+00:00:18,370 --> 00:00:20,600
+The problem is that reps cannot find it
+
+11
+00:00:20,630 --> 00:00:22,640
+when they need it, and when they do find
+
+12
+00:00:22,700 --> 00:00:24,150
+it, it is often out of date.
+
+13
+00:00:24,690 --> 00:00:26,450
+AI changes the enablement model.
+
+14
+00:00:26,900 --> 00:00:28,670
+It can surface the right content at the
+
+15
+00:00:28,740 --> 00:00:30,480
+right moment based on the context of the
+
+16
+00:00:30,510 --> 00:00:30,780
+deal.
+
+17
+00:00:31,400 --> 00:00:32,740
+It can identify which reps are
+
+18
+00:00:32,770 --> 00:00:34,360
+struggling with specific objections
+
+19
+00:00:34,430 --> 00:00:36,340
+based on call data and serve them
+
+20
+00:00:36,400 --> 00:00:37,230
+targeted coaching.
+
+21
+00:00:37,640 --> 00:00:39,880
+It can analyze win and loss patterns and
+
+22
+00:00:40,000 --> 00:00:41,800
+update the playbook automatically when
+
+23
+00:00:41,830 --> 00:00:42,670
+the market shifts.
+
+24
+00:00:43,160 --> 00:00:45,000
+Enablement stops being a library and
+
+25
+00:00:45,050 --> 00:00:46,730
+starts being a real-time performance
+
+26
+00:00:46,750 --> 00:00:47,100
+system.
+
+27
+00:00:47,880 --> 00:00:49,820
+The teams that make this shift stop
+
+28
+00:00:49,940 --> 00:00:52,310
+measuring enablement by content volume
+
+29
+00:00:52,430 --> 00:00:54,140
+and start measuring it by rep
+
+30
+00:00:54,230 --> 00:00:55,180
+performance improvement.
+
+31
+00:00:55,900 --> 00:00:57,320
+That is the metric that matters.
+
+32
+00:00:57,460 --> 00:01:00,050
+Follow A-Gent for the agent-first GTM
+
+33
+00:01:00,090 --> 00:01:00,510
+playbook.
