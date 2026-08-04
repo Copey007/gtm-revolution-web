@@ -1,0 +1,139 @@
+1
+00:00:00,000 --> 00:00:01,660
+Most objection handling frameworks are
+
+2
+00:00:01,720 --> 00:00:02,550
+built on instinct.
+
+3
+00:00:03,400 --> 00:00:05,330
+AI can build them on evidence.
+
+4
+00:00:05,760 --> 00:00:07,190
+The traditional approach to objection
+
+5
+00:00:07,250 --> 00:00:09,040
+handling is to collect the most common
+
+6
+00:00:09,080 --> 00:00:11,770
+objections, write responses, and train
+
+7
+00:00:11,890 --> 00:00:12,830
+reps to deliver them.
+
+8
+00:00:13,580 --> 00:00:15,080
+The problem is that the responses are
+
+9
+00:00:15,120 --> 00:00:16,730
+based on what experienced reps think
+
+10
+00:00:16,790 --> 00:00:19,210
+works, not on what actually moves deals
+
+11
+00:00:19,260 --> 00:00:19,660
+forward.
+
+12
+00:00:20,410 --> 00:00:21,400
+AI changes that.
+
+13
+00:00:22,050 --> 00:00:24,070
+It can analyze thousands of recorded
+
+14
+00:00:24,110 --> 00:00:26,120
+calls and identify which responses to
+
+15
+00:00:26,190 --> 00:00:28,640
+specific objections correlate with deals
+
+16
+00:00:28,690 --> 00:00:29,930
+advancing versus stalling.
+
+17
+00:00:30,780 --> 00:00:32,290
+It can show you that the response your
+
+18
+00:00:32,340 --> 00:00:33,760
+team has been training for the price
+
+19
+00:00:33,800 --> 00:00:36,130
+objection actually increases churn risk.
+
+20
+00:00:36,780 --> 00:00:38,590
+It can identify which objections are
+
+21
+00:00:38,650 --> 00:00:40,820
+real blockers and which ones are just
+
+22
+00:00:40,990 --> 00:00:42,540
+friction that better discovery would
+
+23
+00:00:42,560 --> 00:00:43,110
+have prevented.
+
+24
+00:00:44,040 --> 00:00:46,310
+The framework stops being a best-guess
+
+25
+00:00:46,360 --> 00:00:48,660
+document and becomes a data-driven
+
+26
+00:00:48,710 --> 00:00:50,580
+playbook that updates as the market
+
+27
+00:00:50,610 --> 00:00:51,090
+changes.
+
+28
+00:00:52,050 --> 00:00:54,020
+Reps stop handling objections based on
+
+29
+00:00:54,070 --> 00:00:56,300
+what sounds right and start handling
+
+30
+00:00:56,350 --> 00:00:57,880
+them based on what actually works.
+
+31
+00:00:58,170 --> 00:01:00,330
+That is not a marginal improvement.
+
+32
+00:01:00,640 --> 00:01:03,200
+That is a structural advantage in every
+
+33
+00:01:03,260 --> 00:01:04,070
+competitive deal.
+
+34
+00:01:04,510 --> 00:01:07,880
+Follow A-Gent for the agent-first GTM
+
+35
+00:01:07,940 --> 00:01:08,370
+playbook.
