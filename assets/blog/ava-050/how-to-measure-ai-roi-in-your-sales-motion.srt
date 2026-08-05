@@ -1,0 +1,135 @@
+1
+00:00:00,000 --> 00:00:01,960
+Most teams cannot tell you what their AI
+
+2
+00:00:02,010 --> 00:00:03,450
+investment is actually returning.
+
+3
+00:00:04,000 --> 00:00:05,880
+That is a measurement problem, not an AI
+
+4
+00:00:05,940 --> 00:00:06,340
+problem.
+
+5
+00:00:07,150 --> 00:00:09,880
+Measuring AI ROI in a sales motion
+
+6
+00:00:09,940 --> 00:00:12,050
+requires defining the baseline before
+
+7
+00:00:12,110 --> 00:00:12,710
+you deploy.
+
+8
+00:00:13,530 --> 00:00:16,090
+What is the current win rate, average
+
+9
+00:00:16,140 --> 00:00:19,400
+deal size, ramp time for new reps, and
+
+10
+00:00:19,470 --> 00:00:21,060
+cost per qualified opportunity?
+
+11
+00:00:21,760 --> 00:00:23,700
+Without that baseline, you cannot
+
+12
+00:00:23,750 --> 00:00:25,910
+attribute improvement to AI versus other
+
+13
+00:00:25,950 --> 00:00:27,860
+changes happening simultaneously.
+
+14
+00:00:28,800 --> 00:00:30,660
+The right measurement framework connects
+
+15
+00:00:30,750 --> 00:00:33,870
+AI usage to business outcomes, not tool
+
+16
+00:00:33,920 --> 00:00:34,760
+adoption metrics.
+
+17
+00:00:35,630 --> 00:00:37,050
+Not how many reps logged into the
+
+18
+00:00:37,070 --> 00:00:37,560
+platform.
+
+19
+00:00:38,370 --> 00:00:39,910
+Not how many calls were analyzed.
+
+20
+00:00:40,640 --> 00:00:42,400
+Whether win rates improved for deals
+
+21
+00:00:42,450 --> 00:00:44,350
+where AI-recommended actions were taken.
+
+22
+00:00:45,300 --> 00:00:47,150
+Whether ramp time decreased for reps who
+
+23
+00:00:47,220 --> 00:00:48,160
+used AI coaching.
+
+24
+00:00:48,800 --> 00:00:51,060
+Whether pipeline accuracy improved in
+
+25
+00:00:51,150 --> 00:00:53,590
+segments where AI scoring was applied.
+
+26
+00:00:54,430 --> 00:00:55,900
+The teams that measure this correctly
+
+27
+00:00:55,950 --> 00:00:57,810
+can make confident investment decisions.
+
+28
+00:00:58,400 --> 00:00:59,940
+They know which AI applications are
+
+29
+00:00:59,970 --> 00:01:01,810
+generating return and which ones are
+
+30
+00:01:01,850 --> 00:01:02,180
+not.
+
+31
+00:01:02,730 --> 00:01:05,160
+That clarity is itself a competitive
+
+32
+00:01:05,200 --> 00:01:05,710
+advantage.
+
+33
+00:01:07,100 --> 00:01:10,010
+Follow A-Gent for the agent-first GTM
+
+34
+00:01:10,090 --> 00:01:10,550
+playbook.
