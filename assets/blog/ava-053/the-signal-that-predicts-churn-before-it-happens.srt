@@ -1,0 +1,151 @@
+1
+00:00:00,000 --> 00:00:01,600
+By the time a customer tells you they
+
+2
+00:00:01,620 --> 00:00:03,540
+are leaving, the decision was made weeks
+
+3
+00:00:03,580 --> 00:00:03,840
+ago.
+
+4
+00:00:04,340 --> 00:00:05,750
+Churn is not an event.
+
+5
+00:00:05,980 --> 00:00:07,040
+It is a process.
+
+6
+00:00:07,490 --> 00:00:09,640
+And that process leaves signals that
+
+7
+00:00:09,720 --> 00:00:11,130
+most teams are not watching.
+
+8
+00:00:11,630 --> 00:00:13,670
+Engagement drop-off is the most reliable
+
+9
+00:00:13,750 --> 00:00:14,610
+early indicator.
+
+10
+00:00:15,230 --> 00:00:17,340
+When a customer who used to attend every
+
+11
+00:00:17,430 --> 00:00:18,850
+QBR stops showing up.
+
+12
+00:00:19,410 --> 00:00:21,300
+When the champion who drove the original
+
+13
+00:00:21,360 --> 00:00:22,430
+purchase goes quiet.
+
+14
+00:00:23,120 --> 00:00:25,200
+When usage metrics decline for two
+
+15
+00:00:25,270 --> 00:00:26,150
+consecutive months.
+
+16
+00:00:26,740 --> 00:00:28,210
+These are not coincidences.
+
+17
+00:00:28,830 --> 00:00:30,700
+They are signals that the value case is
+
+18
+00:00:30,760 --> 00:00:31,230
+eroding.
+
+19
+00:00:32,220 --> 00:00:34,300
+AI makes it possible to monitor these
+
+20
+00:00:34,330 --> 00:00:37,170
+signals at scale across every account
+
+21
+00:00:37,220 --> 00:00:38,150
+simultaneously.
+
+22
+00:00:38,910 --> 00:00:40,380
+It can flag the accounts where
+
+23
+00:00:40,430 --> 00:00:42,110
+engagement is declining before the
+
+24
+00:00:42,180 --> 00:00:44,130
+renewal conversation becomes a retention
+
+25
+00:00:44,200 --> 00:00:44,900
+conversation.
+
+26
+00:00:45,710 --> 00:00:47,270
+The teams that act on these signals
+
+27
+00:00:47,350 --> 00:00:49,250
+early have a fundamentally different
+
+28
+00:00:49,300 --> 00:00:50,110
+retention motion.
+
+29
+00:00:50,850 --> 00:00:52,670
+They are not trying to save accounts.
+
+30
+00:00:53,280 --> 00:00:55,070
+They are reinforcing value before the
+
+31
+00:00:55,120 --> 00:00:56,270
+customer starts looking for
+
+32
+00:00:56,310 --> 00:00:56,880
+alternatives.
+
+33
+00:00:57,750 --> 00:00:59,400
+The difference between a renewal and a
+
+34
+00:00:59,460 --> 00:01:01,410
+churn is often a single proactive
+
+35
+00:01:01,450 --> 00:01:02,730
+conversation at the right moment.
+
+36
+00:01:03,550 --> 00:01:05,230
+AI tells you when that moment is.
+
+37
+00:01:06,220 --> 00:01:08,700
+Follow A-Gent for the agent-first GTM
+
+38
+00:01:08,760 --> 00:01:09,210
+playbook.
