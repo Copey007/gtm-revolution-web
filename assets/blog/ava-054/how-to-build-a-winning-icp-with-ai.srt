@@ -1,0 +1,143 @@
+1
+00:00:00,000 --> 00:00:02,280
+Most ICPs are built on assumptions.
+
+2
+00:00:02,600 --> 00:00:04,660
+The best ones are built on closed-won
+
+3
+00:00:04,740 --> 00:00:05,080
+data.
+
+4
+00:00:05,640 --> 00:00:08,580
+The traditional ICP exercise starts with
+
+5
+00:00:08,620 --> 00:00:09,160
+a whiteboard.
+
+6
+00:00:09,720 --> 00:00:11,160
+Who do we think we sell best to?
+
+7
+00:00:11,910 --> 00:00:13,920
+What industries, company sizes, and
+
+8
+00:00:13,970 --> 00:00:15,660
+personas fit our solution?
+
+9
+00:00:16,380 --> 00:00:18,000
+The output is a hypothesis.
+
+10
+00:00:18,260 --> 00:00:19,900
+It reflects what the team believes, not
+
+11
+00:00:19,940 --> 00:00:20,910
+what the data shows.
+
+12
+00:00:21,780 --> 00:00:24,560
+AI changes the ICP process by starting
+
+13
+00:00:24,580 --> 00:00:25,300
+with the evidence.
+
+14
+00:00:25,860 --> 00:00:27,710
+It analyzes your closed-won deals and
+
+15
+00:00:27,750 --> 00:00:29,590
+surfaces the patterns that humans miss.
+
+16
+00:00:30,160 --> 00:00:31,980
+Which firmographic combinations convert
+
+17
+00:00:32,000 --> 00:00:32,800
+at the highest rate.
+
+18
+00:00:33,400 --> 00:00:35,460
+Which personas are present in every deal
+
+19
+00:00:35,510 --> 00:00:37,080
+that closes in under sixty days.
+
+20
+00:00:37,830 --> 00:00:39,140
+Which industries have the highest
+
+21
+00:00:39,190 --> 00:00:40,850
+average contract value and the lowest
+
+22
+00:00:40,880 --> 00:00:41,410
+churn rate.
+
+23
+00:00:41,960 --> 00:00:44,440
+The ICP stops being a belief system and
+
+24
+00:00:44,480 --> 00:00:46,310
+becomes a data-driven targeting model.
+
+25
+00:00:47,070 --> 00:00:48,900
+It updates as new deals close and the
+
+26
+00:00:48,940 --> 00:00:49,680
+market shifts.
+
+27
+00:00:50,300 --> 00:00:52,770
+The teams that build their ICP this way
+
+28
+00:00:53,100 --> 00:00:54,840
+do not just know who to target.
+
+29
+00:00:55,400 --> 00:00:57,320
+They know why those accounts convert and
+
+30
+00:00:57,390 --> 00:00:58,440
+what it takes to win them.
+
+31
+00:00:59,000 --> 00:01:00,840
+That is not a marginal improvement in
+
+32
+00:01:00,890 --> 00:01:01,310
+targeting.
+
+33
+00:01:01,750 --> 00:01:03,260
+That is a structural advantage in
+
+34
+00:01:03,340 --> 00:01:04,380
+pipeline generation.
+
+35
+00:01:05,100 --> 00:01:07,610
+Follow A-Gent for the agent-first GTM
+
+36
+00:01:07,670 --> 00:01:08,100
+playbook.
