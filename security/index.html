@@ -108,7 +108,7 @@
     <div class="container copy-block">
       <div class="status-pill">Security</div>
       <h1>Security, as it stands <span class="gold">today</span>.</h1>
-      <p class="lede">This page covers access, email, and header controls we can point to in a public pull request or a live check run on 24 November 2026. It also says plainly what we have not finished, and what we do not claim.</p>
+      <p class="lede">This page covers access, header, and data-handling controls we can point to in a public pull request or a live check run on 24 November 2026. It also says plainly what we have not finished, and what we do not claim.</p>
     </div>
   </section>
 
@@ -117,13 +117,6 @@
       <h2>Access control</h2>
       <p>Mission Control at <a href="https://missioncontrol.a-gent.co/">missioncontrol.a-gent.co</a> is invite-only. A visitor who is not signed in receives an HTTP 401 sign-in page, not the application. That page does not offer a way to create an account.</p>
       <p class="sources">Sources: <a href="https://github.com/Copey007/mission-control/pull/3">mission-control#3</a>, <a href="https://github.com/Copey007/mission-control/pull/4">mission-control#4</a>, live check of <a href="https://missioncontrol.a-gent.co/">missioncontrol.a-gent.co</a> on 24 November 2026.</p>
-      <p>The Sales Agent dashboard at <a href="https://aisdr.a-gent.co/">aisdr.a-gent.co</a> is not yet behind a sign-in gate in production. A sign-in gate and related tenant checks are merged in the sales-agent repository. They have not been deployed to this host, and the dashboard still loads without signing in.</p>
-      <p class="sources">Sources: <a href="https://github.com/Copey007/sales-agent/pull/4">sales-agent#4</a> (merged, not deployed to this host), live check of <a href="https://aisdr.a-gent.co/">aisdr.a-gent.co</a> on 24 November 2026.</p>
-
-      <h2>Outbound email approval</h2>
-      <p>In the merged Sales Agent codebase, outbound email is not sent until a person approves it. Unapproved messages are stored as pending drafts. Approved messages go out with the stored text. That behavior is not yet running on the live Sales Agent dashboard.</p>
-      <p class="sources">Source: <a href="https://github.com/Copey007/sales-agent/pull/4">sales-agent#4</a> (merged, not deployed to aisdr.a-gent.co).</p>
-
       <h2>Browser and transport protections</h2>
       <p>a-gent.co, aisdr.a-gent.co, and missioncontrol.a-gent.co are served over HTTPS and send HTTP Strict Transport Security.</p>
       <p>The marketing site, <a href="https://a-gent.co/">a-gent.co</a>, also sends <code>X-Frame-Options: DENY</code>, <code>X-Content-Type-Options: nosniff</code>, and <code>Referrer-Policy: strict-origin-when-cross-origin</code>.</p>
@@ -162,11 +155,10 @@
           <li>We do not have a SOC 2, ISO 27001, HIPAA, or similar certification, and we do not claim a GDPR certification.</li>
           <li>We do not publish an uptime service level agreement, and we do not claim a completed third-party penetration test.</li>
           <li>Database row-level security hardening is in progress and is not finished.</li>
-          <li>The Sales Agent sign-in gate and approval-gated outbound email are merged in <a href="https://github.com/Copey007/sales-agent/pull/4">sales-agent#4</a> and are not yet deployed to <a href="https://aisdr.a-gent.co/">aisdr.a-gent.co</a>.</li>
           <li>We do not yet publish terms of service or a data processing agreement. <a href="https://a-gent.co/terms">/terms</a> and <a href="https://a-gent.co/dpa">/dpa</a> returned HTTP 404 on 24 November 2026.</li>
         </ul>
       </div>
-      <p class="sources">Sources for the in-progress database work and the pending Sales Agent deploy: <a href="https://github.com/Copey007/mission-control/pull/5">mission-control#5</a>, <a href="https://github.com/Copey007/sales-agent/pull/4">sales-agent#4</a>, live check of <a href="https://aisdr.a-gent.co/">aisdr.a-gent.co</a> on 24 November 2026. Sources for unpublished legal pages: live checks of <a href="https://a-gent.co/terms">a-gent.co/terms</a> and <a href="https://a-gent.co/dpa">a-gent.co/dpa</a> on 24 November 2026.</p>
+      <p class="sources">Sources for the in-progress database work: <a href="https://github.com/Copey007/mission-control/pull/5">mission-control#5</a>. Sources for unpublished legal pages: live checks of <a href="https://a-gent.co/terms">a-gent.co/terms</a> and <a href="https://a-gent.co/dpa">a-gent.co/dpa</a> on 24 November 2026.</p>
       <p class="updated">Last checked: 24 November 2026, America/New_York. This page is not listed in the site navigation while it is under review.</p>
     </div>
   </section>
