@@ -8,6 +8,20 @@
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
 
+# W2-AG-12: keep /security out of search indexes until the page is approved.
+[[headers]]
+  for = "/security"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"
+[[headers]]
+  for = "/security/"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"
+[[headers]]
+  for = "/security.html"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"
+
 # ava-009
 [[redirects]]
   from = "/assets/blog/ava-009/the-ai-ready-sales-process.mp4"
