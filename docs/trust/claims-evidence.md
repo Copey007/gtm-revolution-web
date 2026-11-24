@@ -123,7 +123,7 @@ content-type: text/html; charset=utf-8
 
 - `meta name="robots" content="noindex, nofollow"` is on the page.
 - `netlify.toml` adds `X-Robots-Tag: noindex, nofollow` for `/security`, `/security/`, and `/security.html`.
-- Canonical URL is `/security` (served from `security/index.html`). `/security/` and `/security.html` 301 to `/security`.
+- Canonical URL is `/security` (served from `security/index.html`). `/security.html` 301s to `/security`. `/security/` also returns 200 with the same page: Netlify Pretty URLs treats `/security` and `/security/` as the same path, and a 301 between them loops.
 - The page is not in the site nav, footer, `sitemap.xml`, or `robots.txt`.
 - New files contain no personal webmail addresses.
 - The only placeholder is `{{MARK: security contact email}}`.

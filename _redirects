@@ -39,9 +39,9 @@
 # Modules page (pretty URL -> file)
 /modules    /modules.html    200
 
-# W2-AG-12: canonical /security; keep the .html and trailing-slash aliases as 301s.
-# The /security/ 301 must come before the /security 200 rewrite.
-/security/    /security    301!
+# W2-AG-12: canonical /security is served from security/index.html.
+# /security.html 301s to /security. Do not 301 between /security and /security/:
+# Netlify Pretty URLs treats those two paths as the same, so a 301 loops.
 /security.html    /security    301!
 /security    /security/index.html    200!
 
