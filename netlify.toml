@@ -198,3 +198,19 @@
   from = "/modules"
   to = "/modules.html"
   status = 200
+
+# W2-AG-12: canonical /security; keep the .html and trailing-slash aliases as 301s.
+[[redirects]]
+  from = "/security"
+  to = "/security/index.html"
+  status = 200
+[[redirects]]
+  from = "/security/"
+  to = "/security"
+  status = 301
+  force = true
+[[redirects]]
+  from = "/security.html"
+  to = "/security"
+  status = 301
+  force = true

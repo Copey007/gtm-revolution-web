@@ -71,10 +71,10 @@
     .copy-block ul,.copy-block ol{margin:0 0 1rem;padding-left:1.2rem;color:var(--muted)}
     .copy-block li{margin:0 0 .45rem;line-height:1.55}
     .copy-block li strong{color:var(--text)}
-    .sources{margin:.35rem 0 0;font-size:.88rem;color:var(--muted)}
+    .copy-block .sources{margin:.35rem 0 1.1rem;font-size:.88rem;color:var(--muted)}
     .callout{margin:0 0 1.2rem;padding:1.1rem 1.2rem;border:1px solid var(--line-strong);border-radius:16px;background:var(--surface)}
     .callout p:last-child{margin-bottom:0}
-    .updated{margin-top:2.4rem;font-size:.88rem}
+    .copy-block .updated{margin-top:2.4rem;font-size:.88rem}
     .slot{color:var(--gold);font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.92em}
     code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.86em;color:var(--text);background:var(--surface-2);padding:.1em .35em;border-radius:4px;word-break:break-word}
   </style>
@@ -123,12 +123,12 @@
       <p class="sources">Source: live check of <a href="https://a-gent.co/">a-gent.co</a> on 24 November 2026.</p>
       <p>Mission Control also sends <code>Content-Security-Policy: frame-ancestors 'none'</code>, <code>X-Frame-Options: DENY</code>, <code>X-Content-Type-Options: nosniff</code>, <code>Referrer-Policy: strict-origin-when-cross-origin</code>, <code>Permissions-Policy</code>, and <code>X-Robots-Tag: noindex, nofollow</code>. The sign-in response is served with <code>Cache-Control: no-store, private</code>.</p>
       <p class="sources">Sources: <a href="https://github.com/Copey007/mission-control/pull/3">mission-control#3</a>, <a href="https://github.com/Copey007/mission-control/pull/4">mission-control#4</a>, live check of <a href="https://missioncontrol.a-gent.co/">missioncontrol.a-gent.co</a> on 24 November 2026.</p>
-      <p>On the Sales Agent host, <a href="https://aisdr.a-gent.co/">/</a> and <a href="https://aisdr.a-gent.co/signup">/signup</a> send <code>Content-Security-Policy: frame-ancestors 'none'</code>, <code>X-Frame-Options: DENY</code>, <code>X-Content-Type-Options: nosniff</code>, <code>Strict-Transport-Security</code> with <code>includeSubDomains</code>, <code>Referrer-Policy: strict-origin-when-cross-origin</code>, <code>Permissions-Policy</code>, and <code>X-Robots-Tag: noindex, nofollow</code>. Some other public pages on that host, including <a href="https://aisdr.a-gent.co/agent.html">/agent.html</a>, send the same noindex, nosniff, HSTS, Referrer-Policy, and Permissions-Policy headers, but not <code>X-Frame-Options</code> or <code>Content-Security-Policy</code>.</p>
+      <p>On the Sales Agent host, <a href="https://aisdr.a-gent.co/">aisdr.a-gent.co/</a> and <a href="https://aisdr.a-gent.co/signup">/signup</a> send <code>Content-Security-Policy: frame-ancestors 'none'</code>, <code>X-Frame-Options: DENY</code>, <code>X-Content-Type-Options: nosniff</code>, <code>Strict-Transport-Security</code> with <code>includeSubDomains</code>, <code>Referrer-Policy: strict-origin-when-cross-origin</code>, <code>Permissions-Policy</code>, and <code>X-Robots-Tag: noindex, nofollow</code>. Some other public pages on that host, including <a href="https://aisdr.a-gent.co/agent.html">/agent.html</a>, send the same noindex, nosniff, HSTS, Referrer-Policy, and Permissions-Policy headers, but not <code>X-Frame-Options</code> or <code>Content-Security-Policy</code>.</p>
       <p class="sources">Sources: <a href="https://github.com/Copey007/sales-agent/pull/5">sales-agent#5</a>, live checks of <a href="https://aisdr.a-gent.co/">aisdr.a-gent.co</a>, <a href="https://aisdr.a-gent.co/signup">/signup</a>, and <a href="https://aisdr.a-gent.co/agent.html">/agent.html</a> on 24 November 2026.</p>
 
       <h2>Closed file exposures</h2>
-      <p>On the live Sales Agent host, paths that previously exposed application files now return HTTP 404. That includes <a href="https://aisdr.a-gent.co/package.json">/package.json</a> and <a href="https://aisdr.a-gent.co/memory/sent_emails.json">/memory/sent_emails.json</a>.</p>
-      <p class="sources">Source: live checks of those paths on 24 November 2026.</p>
+      <p>On the live Sales Agent host, we blocked public access to internal configuration and data files. Those paths now return HTTP 404.</p>
+      <p class="sources">Source: live checks on 24 November 2026.</p>
 
       <h2>Public marketing site forms</h2>
       <p>The demo inquiry form on this marketing site sends a <code>Prefer: return=minimal</code> header so the browser does not read the inserted row back after a submit.</p>
