@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Security | A-Gent</title>
+  <meta name="description" content="How A-Gent protects Mission Control, the Sales Agent dashboard, and this marketing site — limited to controls we can show in a public pull request or a live check.">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="canonical" href="https://a-gent.co/security">
+  <meta property="og:title" content="Security | A-Gent">
+  <meta property="og:description" content="How A-Gent protects Mission Control, the Sales Agent dashboard, and this marketing site — limited to controls we can show in a public pull request or a live check.">
+  <meta property="og:url" content="https://a-gent.co/security">
+  <meta property="og:image" content="https://a-gent.co/assets/brand/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="A-Gent — Always-on AI agents for GTM execution, plus the team to build them.">
+  <meta name="twitter:image" content="https://a-gent.co/assets/brand/og-image.png">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/fleet-master.css">
+  <style>
+    :focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+    main:focus{outline:none}
+    html{scroll-padding-top:72px}
+    .skip-link{position:absolute;left:12px;top:-48px;z-index:100;padding:.6rem .9rem;border-radius:8px;background:var(--text);color:var(--bg);font:600 .85rem/1 Inter,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;text-decoration:none;transition:top .2s cubic-bezier(.4,0,.2,1)}
+    .skip-link:focus,.skip-link:focus-visible{top:12px;outline:2px solid var(--gold);outline-offset:2px}
+    .nav-cta,.nav-toggle{display:none}
+    .nav.is-open{z-index:70}
+    @media (max-width:880px){
+      .js-nav .nav{backdrop-filter:none;-webkit-backdrop-filter:none;background:rgba(10,10,12,.97)}
+      .nav-inner{height:56px;flex-wrap:nowrap;padding:0}
+      .wordmark img{height:28px;max-width:150px;width:auto}
+      .nav-cta{display:inline-flex;min-height:40px;padding:.5rem .8rem;margin-left:auto;font-size:.8rem}
+      .js-nav .nav-toggle{display:inline-flex;align-items:center;gap:.5rem;min-height:44px;min-width:44px;padding:0 .75rem;border:1px solid var(--line-strong);border-radius:8px;background:rgba(255,255,255,.03);color:var(--text);font:500 .82rem/1 Inter,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;cursor:pointer}
+      .nav-toggle-bars{position:relative;width:16px;height:1.5px;background:currentColor;border-radius:1px}
+      .nav-toggle-bars::before,.nav-toggle-bars::after{content:"";position:absolute;left:0;width:16px;height:1.5px;background:currentColor;border-radius:1px;transition:transform .2s cubic-bezier(.4,0,.2,1)}
+      .nav-toggle-bars::before{top:-5px}.nav-toggle-bars::after{top:5px}
+      .nav-toggle[aria-expanded="true"] .nav-toggle-bars{background:transparent}
+      .nav-toggle[aria-expanded="true"] .nav-toggle-bars::before{transform:translateY(5px) rotate(45deg)}
+      .nav-toggle[aria-expanded="true"] .nav-toggle-bars::after{transform:translateY(-5px) rotate(-45deg)}
+      .js-nav .nav-links{position:fixed;z-index:60;top:0;right:0;bottom:0;width:min(86vw,360px);display:flex;flex-direction:column;align-items:stretch;gap:.25rem;padding:72px 1rem calc(1.25rem + env(safe-area-inset-bottom));overflow-y:auto;overscroll-behavior:contain;background:var(--bg);border-left:1px solid var(--line-strong);box-shadow:0 1px 3px rgba(0,0,0,.2),0 12px 40px rgba(0,0,0,.35);transform:translateX(100%);visibility:hidden;transition:transform .28s cubic-bezier(.2,.7,.2,1),visibility 0s linear .28s}
+      .js-nav .nav-links.is-open{transform:none;visibility:visible;transition:transform .28s cubic-bezier(.2,.7,.2,1),visibility 0s}
+      .js-nav .nav-links .nav-link,.js-nav .nav-links .launch-link{justify-content:flex-start;min-height:48px;padding:.75rem .9rem;font-size:1rem;color:var(--text)}
+      .js-nav .nav-links .nav-link[aria-current="page"]{color:var(--gold);background:var(--gold-soft)}
+      .js-nav .nav-links .demo-link{order:-1;justify-content:center;margin-bottom:.5rem;background:#f5f5f7;color:#0a0a0c;font-weight:600}
+      .js-nav .nav-links .launch-link{margin-top:auto;justify-content:center}
+      .js-nav .nav-toggle{position:relative;z-index:61}
+      .nav-scrim{position:fixed;inset:0;z-index:55;background:rgba(0,0,0,.6);opacity:0;transition:opacity .2s linear}
+      .nav-scrim.is-open{opacity:1}
+      html.nav-locked{overflow:hidden}
+      html:not(.js-nav) .nav-inner{height:auto;flex-wrap:wrap;padding:.5rem 0}
+      html:not(.js-nav) .nav-links{width:100%;display:flex;flex-wrap:wrap;gap:.25rem}
+      html:not(.js-nav) .nav-cta{display:none}
+    }
+    @media (max-width:760px){ .hero{padding-top:3rem} }
+    @media (max-width:360px){ .nav-cta{display:none} }
+    @media (prefers-reduced-motion:reduce){
+      .js-nav .nav-links,.js-nav .nav-links.is-open,.nav-scrim,.nav-toggle-bars::before,.nav-toggle-bars::after,.skip-link{transition:none}
+    }
+    /* Page-local footer contrast: main's --dim token is below AA on --bg. */
+    .footer{color:var(--muted)}
+
+    .copy-block a{color:var(--gold);text-decoration:underline;text-underline-offset:2px}
+    .copy-block a:hover{color:var(--gold-bright)}
+    .copy-block a:focus-visible{outline:2px solid var(--gold);outline-offset:2px;border-radius:2px}
+    .copy-block h2{margin:2.4rem 0 .8rem;font-size:1.35rem}
+    .copy-block h2:first-child{margin-top:0}
+    .copy-block ul,.copy-block ol{margin:0 0 1rem;padding-left:1.2rem;color:var(--muted)}
+    .copy-block li{margin:0 0 .45rem;line-height:1.55}
+    .copy-block li strong{color:var(--text)}
+    .copy-block .sources{margin:.35rem 0 1.1rem;font-size:.88rem;color:var(--muted)}
+    .callout{margin:0 0 1.2rem;padding:1.1rem 1.2rem;border:1px solid var(--line-strong);border-radius:16px;background:var(--surface)}
+    .callout p:last-child{margin-bottom:0}
+    .copy-block .updated{margin-top:2.4rem;font-size:.88rem}
+    .slot{color:var(--gold);font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.92em}
+    code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.86em;color:var(--text);background:var(--surface-2);padding:.1em .35em;border-radius:4px;word-break:break-word}
+  </style>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="site-shell">
+<header class="nav">
+  <div class="container nav-inner">
+    <a class="wordmark" href="/" aria-label="A-Gent home"><img src="/assets/brand/agent-logo-master.svg" alt="A-Gent" width="1600" height="420"></a>
+    <a class="btn btn-primary nav-cta" data-demo-open href="/#book-demo">Book a Demo</a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" hidden>
+      <span class="nav-toggle-bars" aria-hidden="true"></span>
+      <span class="nav-toggle-label">Menu</span>
+    </button>
+    <nav class="nav-links" id="site-nav" aria-label="Primary navigation">
+      <a class="nav-link" href="/consulting">AI Consulting</a>
+      <a class="nav-link" href="/platform">Platform</a>
+      <a class="nav-link" href="/modules">Modules</a>
+      <a class="nav-link" href="/about">About</a>
+      <a class="nav-link" href="/blog/">Blog</a>
+      <a class="nav-link demo-link" data-demo-open href="/#book-demo">Book a Demo</a>
+      <a class="launch-link" href="https://fleet.a-gent.co/login">Launch Console</a>
+    </nav>
+  </div>
+</header>
+<div class="nav-scrim" hidden></div>
+
+<main id="main" tabindex="-1">
+  <section class="hero">
+    <div class="container copy-block">
+      <div class="status-pill">Security</div>
+      <h1>Security, as it stands <span class="gold">today</span>.</h1>
+      <p class="lede">This page covers access, header, and data-handling controls we can point to in a public pull request or a live check run on 24 November 2026. It also says plainly what we have not finished, and what we do not claim.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container copy-block">
+      <h2>Access control</h2>
+      <p>Mission Control at <a href="https://missioncontrol.a-gent.co/">missioncontrol.a-gent.co</a> is invite-only. A visitor who is not signed in receives an HTTP 401 sign-in page, not the application. That page does not offer a way to create an account.</p>
+      <p class="sources">Sources: <a href="https://github.com/Copey007/mission-control/pull/3">mission-control#3</a>, <a href="https://github.com/Copey007/mission-control/pull/4">mission-control#4</a>, live check of <a href="https://missioncontrol.a-gent.co/">missioncontrol.a-gent.co</a> on 24 November 2026.</p>
+      <h2>Browser and transport protections</h2>
+      <p>a-gent.co, aisdr.a-gent.co, and missioncontrol.a-gent.co are served over HTTPS and send HTTP Strict Transport Security.</p>
+      <p>The marketing site, <a href="https://a-gent.co/">a-gent.co</a>, also sends <code>X-Frame-Options: DENY</code>, <code>X-Content-Type-Options: nosniff</code>, and <code>Referrer-Policy: strict-origin-when-cross-origin</code>.</p>
+      <p class="sources">Source: live check of <a href="https://a-gent.co/">a-gent.co</a> on 24 November 2026.</p>
+      <p>Mission Control also sends <code>Content-Security-Policy: frame-ancestors 'none'</code>, <code>X-Frame-Options: DENY</code>, <code>X-Content-Type-Options: nosniff</code>, <code>Referrer-Policy: strict-origin-when-cross-origin</code>, <code>Permissions-Policy</code>, and <code>X-Robots-Tag: noindex, nofollow</code>. The sign-in response is served with <code>Cache-Control: no-store, private</code>.</p>
+      <p class="sources">Sources: <a href="https://github.com/Copey007/mission-control/pull/3">mission-control#3</a>, <a href="https://github.com/Copey007/mission-control/pull/4">mission-control#4</a>, live check of <a href="https://missioncontrol.a-gent.co/">missioncontrol.a-gent.co</a> on 24 November 2026.</p>
+      <p>On the Sales Agent host, <a href="https://aisdr.a-gent.co/">aisdr.a-gent.co/</a> and <a href="https://aisdr.a-gent.co/signup">/signup</a> send <code>Content-Security-Policy: frame-ancestors 'none'</code>, <code>X-Frame-Options: DENY</code>, <code>X-Content-Type-Options: nosniff</code>, <code>Strict-Transport-Security</code> with <code>includeSubDomains</code>, <code>Referrer-Policy: strict-origin-when-cross-origin</code>, <code>Permissions-Policy</code>, and <code>X-Robots-Tag: noindex, nofollow</code>. Some other public pages on that host, including <a href="https://aisdr.a-gent.co/agent.html">/agent.html</a>, send the same noindex, nosniff, HSTS, Referrer-Policy, and Permissions-Policy headers, but not <code>X-Frame-Options</code> or <code>Content-Security-Policy</code>.</p>
+      <p class="sources">Sources: <a href="https://github.com/Copey007/sales-agent/pull/5">sales-agent#5</a>, live checks of <a href="https://aisdr.a-gent.co/">aisdr.a-gent.co</a>, <a href="https://aisdr.a-gent.co/signup">/signup</a>, and <a href="https://aisdr.a-gent.co/agent.html">/agent.html</a> on 24 November 2026.</p>
+
+      <h2>Closed file exposures</h2>
+      <p>On the live Sales Agent host, we blocked public access to internal configuration and data files. Those paths now return HTTP 404.</p>
+      <p class="sources">Source: live checks on 24 November 2026.</p>
+
+      <h2>Public marketing site forms</h2>
+      <p>The demo inquiry form on this marketing site sends a <code>Prefer: return=minimal</code> header so the browser does not read the inserted row back after a submit.</p>
+      <p class="sources">Source: <a href="https://github.com/Copey007/gtm-revolution-web/pull/1">gtm-revolution-web#1</a>.</p>
+
+      <h2>Data and service providers</h2>
+      <p>We use the following providers to operate these sites and the product. This list is limited to providers we can show from a live hosting header or from environment variable names in the public repositories. It is not a claim that every integration is turned on in production, and it is not a complete inventory of every optional connector in the code.</p>
+      <ul>
+        <li><strong>Netlify</strong> hosts <a href="https://a-gent.co/">a-gent.co</a>, <a href="https://aisdr.a-gent.co/">aisdr.a-gent.co</a>, and <a href="https://missioncontrol.a-gent.co/">missioncontrol.a-gent.co</a>. Live responses include a <code>Server: Netlify</code> header.</li>
+        <li><strong>Supabase</strong> is used for authentication and database access. The Mission Control and Sales Agent repositories reference <code>SUPABASE_URL</code> and related variable names. This marketing site writes demo and assessment submissions there.</li>
+        <li><strong>Resend</strong> is referenced in the Sales Agent codebase for email delivery, including <code>RESEND_API_KEY</code> and <code>RESEND_WEBHOOK_SECRET</code>.</li>
+        <li>This marketing site loads fonts from <strong>Google Fonts</strong>.</li>
+      </ul>
+      <p>The Sales Agent repository also references environment variable names for optional product features and connectors, including OpenAI, Stripe, and HeyGen. Presence of a variable name is not a claim that the integration is enabled for every workspace.</p>
+      <p class="sources">Sources: live <code>Server</code> headers on 24 November 2026; environment variable names in the sales-agent, mission-control, and gtm-revolution-web repositories; <a href="https://github.com/Copey007/sales-agent/pull/4">sales-agent#4</a>; <a href="https://github.com/Copey007/gtm-revolution-web/pull/1">gtm-revolution-web#1</a>; <a href="https://github.com/Copey007/gtm-revolution-web/pull/3">gtm-revolution-web#3</a>.</p>
+
+      <h2>Data requests and security contact</h2>
+      <p>We do not publish a data-retention schedule on this page. To request deletion of personal data, or to report a security issue, contact <a href="mailto:Mark.cope.roarr@gmail.com">Mark.cope.roarr@gmail.com</a>.</p>
+
+      <h2>What we do not have yet</h2>
+      <div class="callout">
+        <p>We want this page to be useful, so the gaps are listed here as well.</p>
+        <ul>
+          <li>We do not have a SOC 2, ISO 27001, HIPAA, or similar certification, and we do not claim a GDPR certification.</li>
+          <li>We do not publish an uptime service level agreement, and we do not claim a completed third-party penetration test.</li>
+          <li>Database row-level security hardening is in progress and is not finished.</li>
+          <li>We do not yet publish terms of service or a data processing agreement. <a href="https://a-gent.co/terms">/terms</a> and <a href="https://a-gent.co/dpa">/dpa</a> returned HTTP 404 on 24 November 2026.</li>
+        </ul>
+      </div>
+      <p class="sources">Sources for the in-progress database work: <a href="https://github.com/Copey007/mission-control/pull/5">mission-control#5</a>. Sources for unpublished legal pages: live checks of <a href="https://a-gent.co/terms">a-gent.co/terms</a> and <a href="https://a-gent.co/dpa">a-gent.co/dpa</a> on 24 November 2026.</p>
+      <p class="updated">Last checked: 24 November 2026, America/New_York. This page is not listed in the site navigation while it is under review.</p>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container footer-grid">
+    <div>
+      <a class="wordmark" href="/" aria-label="A-Gent home"><img src="/assets/brand/agent-logo-master.svg" alt="A-Gent" width="1600" height="420"></a>
+      <p style="margin-top:.7rem;max-width:520px">One platform, two ways to deploy &mdash; and everything your GTM motion needs.</p>
+      <p>&copy; 2026 A-Gent. All rights reserved.</p>
+    </div>
+    <div class="footer-links">
+      <a href="/consulting">AI Consulting</a>
+      <a href="/platform">Platform</a>
+      <a href="/modules">Modules</a>
+      <a href="/fleet">Fleet</a>
+      <a href="/assessment">Assessment</a>
+      <a href="/blog/">Blog</a>
+      <a href="/privacy">Privacy</a>
+      <a href="https://fleet.a-gent.co/login">Launch Console</a>
+    </div>
+  </div>
+</footer>
+</div>
+
+<script>
+(function(){
+  var html=document.documentElement, btn=document.querySelector('.nav-toggle'), nav=document.getElementById('site-nav'),
+      scrim=document.querySelector('.nav-scrim'), header=document.querySelector('.nav'), label=btn&&btn.querySelector('.nav-toggle-label');
+  if(!btn||!nav) return;
+  var mq=window.matchMedia('(max-width: 880px)'); html.classList.add('js-nav'); btn.hidden=false;
+  var outside=[document.querySelector('main'),document.querySelector('footer'),document.querySelector('.skip-link'),document.querySelector('.wordmark'),document.querySelector('.nav-cta')];
+  function focusables(){return [btn].concat([].slice.call(nav.querySelectorAll('a[href],button:not([disabled])')));}
+  function setOpen(open){
+    btn.setAttribute('aria-expanded',String(open)); if(label) label.textContent=open?'Close':'Menu';
+    nav.classList.toggle('is-open',open); header.classList.toggle('is-open',open); html.classList.toggle('nav-locked',open);
+    scrim.hidden=!open; requestAnimationFrame(function(){scrim.classList.toggle('is-open',open);});
+    outside.forEach(function(el){ if(el){ if(open){el.setAttribute('inert','');} else {el.removeAttribute('inert');} } });
+    if(open){ var first=nav.querySelector('a[href]'); if(first) first.focus(); } else { btn.focus(); }
+  }
+  function isOpen(){return btn.getAttribute('aria-expanded')==='true';}
+  btn.addEventListener('click',function(){setOpen(!isOpen());});
+  scrim.addEventListener('click',function(){setOpen(false);});
+  nav.addEventListener('click',function(e){ if(e.target.closest('a')&&mq.matches&&isOpen()) setOpen(false); });
+  document.addEventListener('keydown',function(e){
+    if(!isOpen()) return;
+    if(e.key==='Escape'){ e.preventDefault(); setOpen(false); return; }
+    if(e.key==='Tab'){ var f=focusables(), i=f.indexOf(document.activeElement);
+      if(e.shiftKey&&(i<=0)){ e.preventDefault(); f[f.length-1].focus(); }
+      else if(!e.shiftKey&&i===f.length-1){ e.preventDefault(); f[0].focus(); } }
+  });
+  mq.addEventListener('change',function(e){ if(!e.matches&&isOpen()) setOpen(false); });
+})();
+</script>
+</body>
+</html>
