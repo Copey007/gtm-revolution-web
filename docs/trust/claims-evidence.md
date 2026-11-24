@@ -22,7 +22,7 @@ Probe request user-agent: `A-Gent-W2-AG12-probe`. Saved header files (not commit
 | 12 | Resend is referenced in the Sales Agent codebase for email delivery (`RESEND_API_KEY`, `RESEND_WEBHOOK_SECRET`). | Environment variable names in sales-agent; [sales-agent#4](https://github.com/Copey007/sales-agent/pull/4) (webhook verification, approval-gated send path) | The public page only says Resend is referenced in the Sales Agent codebase. It does not claim a production send path. |
 | 13 | The marketing site loads fonts from Google Fonts. | This page and the live a-gent.co HTML load `fonts.googleapis.com` / `fonts.gstatic.com` | Visible in page source. |
 | 14 | The Sales Agent repository also references optional connectors including OpenAI, Stripe, and HeyGen. Presence of a variable name is not a claim that the integration is enabled for every workspace. | Environment variable names in sales-agent: `OPENAI_API_KEY`, `OPENAI_API_BASE`, `STRIPE_WEBHOOK_SECRET`, `HEYGEN_API_KEY` | Other names exist in the same repo (for example Buffer, HubSpot, Hunter, Salesforce, Serper). They are omitted from the public page to keep the list to widely recognized infrastructure and features; this file records that they were found. |
-| 15 | No data-retention schedule is published on this page. The security / deletion contact is a `{{MARK: security contact email}}` placeholder. | No retention schedule was found on a-gent.co; contact is intentionally unfilled | Do not invent an address. |
+| 15 | No data-retention schedule is published on this page. The security / deletion contact is [Mark.cope.roarr@gmail.com](mailto:Mark.cope.roarr@gmail.com). | Address supplied by Mark in chat on 24 November 2026, 3:18 PM America/New_York, and relayed by Eng Lead. The public page uses a `mailto:` link with that address as the link text. | Slot filled. Do not invent additional addresses. |
 | 16 | We do not have SOC 2, ISO 27001, HIPAA, or similar certification, and we do not claim a GDPR certification. We do not publish an uptime SLA, and we do not claim a completed third-party penetration test. | Honest negative claims. No contrary public page was found (`/security` was 404 before this draft; `/trust` 404). | These are absences, not attestations. |
 | 17 | Database row-level security hardening is in progress and is not finished. | [mission-control#5](https://github.com/Copey007/mission-control/pull/5) (`12e1a9e`) added coverage tests and an anon INSERT-only `assessment_responses` policy. The full RLS lockdown migration is **not** applied in production. Eight tables still have RLS disabled. | The public page does not name tables or counts. Reviewers should not treat #5 as “RLS complete.” |
 | 18 | We do not yet publish terms of service or a data processing agreement. `/terms` and `/dpa` returned HTTP 404. | Live `GET https://a-gent.co/terms` and `https://a-gent.co/dpa` (also `/terms/` and `/legal`) | All 404 on 24 November 2026. |
@@ -50,7 +50,7 @@ They are kept here for reviewers only. They must not be copied back onto `/secur
 | Full RLS, “all tables protected,” or a completed database lockdown | Eight tables still have RLS disabled; the migration is pending. |
 | Live approval-gated outbound on aisdr, or a live sign-in wall on aisdr | Withheld from the public page. See “Withheld until deployed” below. |
 | Fleet headers or a Fleet sign-in gate | Headers were not shipped; a server-side Fleet gate is out of scope. |
-| People, postal addresses, or real email addresses | Not invented. The only contact is `{{MARK: security contact email}}`. |
+| People, postal addresses, or additional email addresses | Not invented. The only contact on the page is the address Mark supplied on 24 November 2026 (Mark.cope.roarr@gmail.com). |
 | Customer counts, pipeline outcomes, or availability SLAs | Not proven. |
 
 ## Live header excerpts (24 November 2026)
@@ -126,4 +126,4 @@ content-type: text/html; charset=utf-8
 - Canonical URL is `/security` (served from `security/index.html`). `/security.html` 301s to `/security`. `/security/` also returns 200 with the same page: Netlify Pretty URLs treats `/security` and `/security/` as the same path, and a 301 between them loops.
 - The page is not in the site nav, footer, `sitemap.xml`, or `robots.txt`.
 - New files contain no personal webmail addresses.
-- The only placeholder is `{{MARK: security contact email}}`.
+- The `{{MARK: security contact email}}` slot was filled on 24 November 2026 with the address Mark supplied (Mark.cope.roarr@gmail.com) as a `mailto:` link. No `{{MARK` slots remain on the security page.

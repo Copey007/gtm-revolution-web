@@ -21,6 +21,10 @@
   for = "/security.html"
   [headers.values]
     X-Robots-Tag = "noindex, nofollow"
+[[headers]]
+  for = "/security/*"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"
 
 # ava-009
 [[redirects]]
