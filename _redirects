@@ -40,9 +40,10 @@
 /modules    /modules.html    200
 
 # W2-AG-12: canonical /security; keep the .html and trailing-slash aliases as 301s.
-/security    /security/index.html    200!
+# The /security/ 301 must come before the /security 200 rewrite.
 /security/    /security    301!
 /security.html    /security    301!
+/security    /security/index.html    200!
 
 # Retired blog slugs -> current posts (fix GSC 404s)
 /blog/ai-will-not-replace-your-sales-team    /blog/a-gent-ava-quinn-daily-ava-002-ai-will-not-replace-your-sales-team-it-will-expose-it/    301

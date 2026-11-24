@@ -200,11 +200,8 @@
   status = 200
 
 # W2-AG-12: canonical /security; keep the .html and trailing-slash aliases as 301s.
-[[redirects]]
-  from = "/security"
-  to = "/security/index.html"
-  status = 200
-  force = true
+# The /security/ 301 must come before the /security 200 rewrite, or Netlify treats
+# the trailing-slash URL as the same path and serves 200 instead of redirecting.
 [[redirects]]
   from = "/security/"
   to = "/security"
@@ -214,4 +211,9 @@
   from = "/security.html"
   to = "/security"
   status = 301
+  force = true
+[[redirects]]
+  from = "/security"
+  to = "/security/index.html"
+  status = 200
   force = true
