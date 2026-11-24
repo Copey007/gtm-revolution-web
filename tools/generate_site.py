@@ -322,7 +322,7 @@ def org_schema():
         'name': 'A-Gent',
         'url': SITE,
         'description': 'A-Gent builds A-Gent Fleet, an AI SDR platform for B2B SaaS teams, and provides AI consulting for bespoke revenue automation systems.',
-        'email': 'mark.cope.roarr@gmail.com',
+        'email': '{{MARK: hello@a-gent.co}}',
         'sameAs': [FLEET]
     }
 
@@ -550,7 +550,7 @@ def home_page():
       msg.className = 'form-message success'; msg.textContent = 'Demo request received. We created your CRM lead.';
       form.reset();
     } catch (err) {
-      msg.className = 'form-message error'; msg.textContent = 'Submission failed. Please email mark.cope.roarr@gmail.com and mention Book Demo.';
+      msg.className = 'form-message error'; msg.textContent = 'Submission failed. Please email {{MARK: hello@a-gent.co}} and mention Book Demo.';
       console.warn('Demo lead submission failed', err);
     }
   });
@@ -605,7 +605,7 @@ def assessment_page():
     return head('AI Revenue Assessment | A-Gent', desc, '/assessment') + nav() + f'''
 <main>
   <section class="hero"><div class="container hero-grid"><div><div class="status-pill">Assessment</div><h1>Map the gap before you <span class="gold">automate revenue</span>.</h1><p class="lede">Use the assessment to decide whether Fleet is the right packaged path or whether your team needs a custom consulting build.</p></div><aside class="console-card"><div class="console-top"><div><div class="console-kicker">Assessment Inputs</div><div class="console-title">ICP • Data • Workflow • Risk</div></div></div><p style="margin-top:1rem">The best AI systems start with a clear current state, desired future state, and a sober view of the gap.</p></aside></div></section>
-  <section class="section"><div class="container"><div class="form-panel card"><div class="offer-label">Assessment request</div><h2 style="font-size:2rem;margin-bottom:1rem">Tell us what you want to improve.</h2><p class="notice">This static request panel preserves the assessment page and directs serious buyers to the next best action. Use the Launch Console for Fleet access or email mark.cope.roarr@gmail.com for consulting intake.</p><div class="cta-row"><a class="btn btn-primary" href="/assessment">Start Free AI Assessment</a><a class="btn btn-secondary" href="{FLEET_LOGIN}">Launch Console</a></div></div></div></section>
+  <section class="section"><div class="container"><div class="form-panel card"><div class="offer-label">Assessment request</div><h2 style="font-size:2rem;margin-bottom:1rem">Tell us what you want to improve.</h2><p class="notice">This static request panel preserves the assessment page and directs serious buyers to the next best action. Use the Launch Console for Fleet access or email {{MARK: hello@a-gent.co}} for consulting intake.</p><div class="cta-row"><a class="btn btn-primary" href="/assessment">Start Free AI Assessment</a><a class="btn btn-secondary" href="{FLEET_LOGIN}">Launch Console</a></div></div></div></section>
 </main>
 ''' + footer()
 
@@ -613,7 +613,7 @@ def assessment_page():
 def privacy_page():
     desc = 'A-Gent privacy information for the public marketing site, A-Gent Fleet, and AI Consulting inquiries.'
     return head('Privacy | A-Gent', desc, '/privacy') + nav() + '''
-<main><section class="hero"><div class="container copy-block"><div class="status-pill">Privacy</div><h1>Privacy and <span class="gold">data handling</span>.</h1><p class="lede">A-Gent’s public marketing site explains Fleet and Consulting. Customer data for product workflows is handled through the appropriate Fleet application environment and agreed implementation scope.</p></div></section><section class="section"><div class="container copy-block"><h2>Public site privacy</h2><p>This marketing site is designed to provide information about A-Gent Fleet and AI Consulting. If you contact A-Gent, the information you provide may be used to respond to your request, evaluate fit, and coordinate next steps.</p><h2 style="margin-top:2rem">Product and consulting data</h2><p>Fleet product workflows and consulting engagements may involve separate customer data, access controls, and implementation agreements. A-Gent aims to use only the information necessary to provide the requested service and operate the relevant workflow.</p><h2 style="margin-top:2rem">Contact</h2><p>For privacy questions, contact mark.cope.roarr@gmail.com.</p></div></section></main>
+<main><section class="hero"><div class="container copy-block"><div class="status-pill">Privacy</div><h1>Privacy and <span class="gold">data handling</span>.</h1><p class="lede">A-Gent’s public marketing site explains Fleet and Consulting. Customer data for product workflows is handled through the appropriate Fleet application environment and agreed implementation scope.</p></div></section><section class="section"><div class="container copy-block"><h2>Public site privacy</h2><p>This marketing site is designed to provide information about A-Gent Fleet and AI Consulting. If you contact A-Gent, the information you provide may be used to respond to your request, evaluate fit, and coordinate next steps.</p><h2 style="margin-top:2rem">Product and consulting data</h2><p>Fleet product workflows and consulting engagements may involve separate customer data, access controls, and implementation agreements. A-Gent aims to use only the information necessary to provide the requested service and operate the relevant workflow.</p><h2 style="margin-top:2rem">Contact</h2><p>For privacy questions, contact {{MARK: hello@a-gent.co}}.</p></div></section></main>
 ''' + footer()
 
 

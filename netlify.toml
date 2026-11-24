@@ -8,6 +8,21 @@
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
 
+[[headers]]
+  for = "/*.webmanifest"
+  [headers.values]
+    Content-Type = "application/manifest+json"
+
+[[headers]]
+  for = "/site.webmanifest"
+  [headers.values]
+    Content-Type = "application/manifest+json"
+
+[[headers]]
+  for = "/dashboard/site.webmanifest"
+  [headers.values]
+    Content-Type = "application/manifest+json"
+
 # ava-009
 [[redirects]]
   from = "/assets/blog/ava-009/the-ai-ready-sales-process.mp4"
