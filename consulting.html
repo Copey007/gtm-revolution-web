@@ -97,10 +97,11 @@
     try {
       var res = await fetch(form.dataset.supabaseUrl + '/rest/v1/contacts', {
         method: 'POST',
-        headers: { apikey: form.dataset.supabaseKey, Authorization: 'Bearer ' + form.dataset.supabaseKey, 'Content-Type': 'application/json', Accept: 'application/json', Prefer: 'return=representation' },
+        headers: { apikey: form.dataset.supabaseKey, Authorization: 'Bearer ' + form.dataset.supabaseKey, 'Content-Type': 'application/json', Accept: 'application/json', Prefer: 'return=minimal' },
         body: JSON.stringify(payload)
       });
-      if (!res.ok) throw new Error(await res.text());
+      // return=minimal: PostgREST replies 201 Created with an empty body (anon has INSERT only, no SELECT on contacts).
+      if (res.status !== 201 && !res.ok) { var detail = ''; try { detail = await res.text(); } catch (_) {} throw new Error('HTTP ' + res.status + ' ' + detail); }
       msg.className = 'form-message success'; msg.textContent = 'Demo request received. We created your CRM lead.';
       form.reset();
     } catch (err) {
