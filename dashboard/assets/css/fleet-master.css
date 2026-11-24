@@ -13,8 +13,8 @@
   --green: #7eb88a;
   --green-soft: rgba(126,184,138,.10);
   --text: #f4f4f2;
-  --muted: #a2a2a0;
-  --dim: #70706d;
+  --muted: #a1a1a6; /* was #a2a2a0 — AG-11 */
+  --dim: #8a8a90; /* was #70706d — AG-11 WCAG AA (spec: token-and-contrast-spec.md §4) */
   --danger: #ff5c7a;
   --max: 1180px;
   --radius: 14px;
@@ -286,4 +286,63 @@ details p { margin-top: .8rem; }
   .form-grid { grid-template-columns: 1fr; }
   .field.wide { grid-column: auto; }
   .footer-grid { flex-direction: column; }
+}
+
+/* ═══════════════════════════════════════════════════
+   AG-11 mobile nav + a11y (W1, 2026-11-23)
+   Source: /workspace/web1-handoff/a-gent/mobile-nav-spec.md §3 (verbatim) + §6
+   ═══════════════════════════════════════════════════ */
+/* skip link */
+.skip-link{position:absolute;left:12px;top:-48px;z-index:100;padding:.6rem .9rem;border-radius:8px;
+  background:var(--text);color:var(--bg);font:600 .85rem/1 'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;transition:top .2s cubic-bezier(.4,0,.2,1)}
+.skip-link:focus{top:12px}
+:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+main:focus{outline:none}
+html{scroll-padding-top:72px}
+
+.nav-cta,.nav-toggle{display:none}
+.nav.is-open{z-index:70}
+
+@media (max-width:880px){
+  /* backdrop-filter on .nav would make it the containing block for the fixed drawer — drop it on mobile (implementation note) */
+  .js-nav .nav{backdrop-filter:none;-webkit-backdrop-filter:none;background:rgba(10,10,12,.97)}
+  .nav-inner{height:56px;flex-wrap:nowrap;padding:0}
+  .wordmark img{height:28px;max-width:150px;width:auto}
+  .nav-cta{display:inline-flex;min-height:40px;padding:.5rem .8rem;margin-left:auto;font-size:.8rem}
+  .js-nav .nav-toggle{display:inline-flex;align-items:center;gap:.5rem;min-height:44px;min-width:44px;padding:0 .75rem;
+    border:1px solid var(--line-strong);border-radius:8px;background:rgba(255,255,255,.03);color:var(--text);
+    font:500 .82rem/1 'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;cursor:pointer}
+  .nav-toggle-bars{position:relative;width:16px;height:1.5px;background:currentColor;border-radius:1px}
+  .nav-toggle-bars::before,.nav-toggle-bars::after{content:"";position:absolute;left:0;width:16px;height:1.5px;background:currentColor;
+    border-radius:1px;transition:transform .2s cubic-bezier(.4,0,.2,1)}
+  .nav-toggle-bars::before{top:-5px}.nav-toggle-bars::after{top:5px}
+  .nav-toggle[aria-expanded="true"] .nav-toggle-bars{background:transparent}
+  .nav-toggle[aria-expanded="true"] .nav-toggle-bars::before{transform:translateY(5px) rotate(45deg)}
+  .nav-toggle[aria-expanded="true"] .nav-toggle-bars::after{transform:translateY(-5px) rotate(-45deg)}
+
+  /* drawer (JS-enhanced only) */
+  .js-nav .nav-links{position:fixed;z-index:60;top:0;right:0;bottom:0;width:min(86vw,360px);display:flex;flex-direction:column;
+    align-items:stretch;gap:.25rem;padding:72px 1rem calc(1.25rem + env(safe-area-inset-bottom));overflow-y:auto;overscroll-behavior:contain;
+    background:var(--bg);border-left:1px solid var(--line-strong);box-shadow:0 1px 3px rgba(0,0,0,.2),0 12px 40px rgba(0,0,0,.35);
+    transform:translateX(100%);visibility:hidden;transition:transform .28s cubic-bezier(.2,.7,.2,1),visibility 0s linear .28s}
+  .js-nav .nav-links.is-open{transform:none;visibility:visible;transition:transform .28s cubic-bezier(.2,.7,.2,1),visibility 0s}
+  .js-nav .nav-links .nav-link,.js-nav .nav-links .launch-link{justify-content:flex-start;min-height:48px;padding:.75rem .9rem;
+    font-size:1rem;color:var(--text)}
+  .js-nav .nav-links .nav-link[aria-current="page"]{color:var(--gold);background:var(--gold-soft)}
+  .js-nav .nav-links .demo-link{order:-1;justify-content:center;margin-bottom:.5rem;background:#f5f5f7;color:#0a0a0c;font-weight:600}
+  .js-nav .nav-links .launch-link{margin-top:auto;justify-content:center}
+  .js-nav .nav-toggle{position:relative;z-index:61}
+  .nav-scrim{position:fixed;inset:0;z-index:55;background:rgba(0,0,0,.6);opacity:0;transition:opacity .2s linear}
+  .nav-scrim.is-open{opacity:1}
+  html.nav-locked{overflow:hidden}
+  /* no-JS fallback keeps today's stacked list, but compact */
+  html:not(.js-nav) .nav-inner{height:auto;flex-wrap:wrap;padding:.5rem 0}
+  html:not(.js-nav) .nav-links{width:100%;display:flex;flex-wrap:wrap;gap:.25rem}
+  html:not(.js-nav) .nav-cta{display:none}
+}
+@media (max-width:760px){ .hero{padding-top:3rem} }
+@media (max-width:360px){ .nav-cta{display:none} }
+@media (prefers-reduced-motion:reduce){
+  .js-nav .nav-links,.js-nav .nav-links.is-open,.nav-scrim,.nav-toggle-bars::before,.nav-toggle-bars::after,.skip-link{transition:none}
+  .brain-banner{animation:none}
 }

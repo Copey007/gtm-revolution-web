@@ -3,6 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- favicon set (W1 / AG-11, @Web Designer head-snippets.md §2) -->
+  <link rel="icon" href="/favicon.ico" sizes="32x32">
+  <link rel="icon" href="/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#0a0a0c">
   <title>Privacy | A-Gent</title>
   <meta name="description" content="A-Gent privacy information for the public marketing site, A-Gent Fleet, and AI Consulting inquiries.">
   <link rel="canonical" href="https://a-gent.co/privacy">
@@ -13,31 +19,39 @@
   <meta name="twitter:card" content="summary_large_image">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/assets/css/fleet-master.css">
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"A-Gent","url":"https://a-gent.co","description":"A-Gent builds A-Gent Fleet, an AI SDR platform for B2B SaaS teams, and provides AI consulting for bespoke revenue automation systems.","email":"mark.cope.roarr@gmail.com","sameAs":["https://fleet.a-gent.co/"]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"A-Gent","url":"https://a-gent.co","description":"A-Gent builds A-Gent Fleet, an AI SDR platform for B2B SaaS teams, and provides AI consulting for bespoke revenue automation systems.","email":"{{MARK: hello@a-gent.co}}","sameAs":["https://fleet.a-gent.co/"]}</script>
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to content</a>
 <div class="site-shell">
 <header class="nav">
   <div class="container nav-inner">
-    <a class="wordmark" href="/" aria-label="A-Gent home"><img src="/assets/brand/agent-logo-master.svg" alt="A-Gent"></a>
-    <nav class="nav-links" aria-label="Primary navigation">
+    <a class="wordmark" href="/" aria-label="A-Gent home"><img src="/assets/brand/agent-logo-master.svg" alt="" width="1600" height="420"></a>
+    <a class="btn btn-primary nav-cta" data-demo-open href="/#book-demo">Book a Demo</a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" hidden>
+      <span class="nav-toggle-bars" aria-hidden="true"></span>
+      <span class="nav-toggle-label">Menu</span>
+    </button>
+    <nav class="nav-links" id="site-nav" aria-label="Primary navigation">
       <a class="nav-link" href="/consulting">AI Consulting</a>
-      <a class="nav-link" href="/platform">Platform</a><a class="nav-link" href="/modules">Modules</a>
-      <a class="nav-link" href="/about">About</a>
+      <a class="nav-link" href="/platform">Platform</a>
+      <a class="nav-link" href="/modules">Modules</a>
+      <a class="nav-link" href="/about/">About</a>
       <a class="nav-link" href="/blog/">Blog</a>
       <a class="nav-link demo-link" data-demo-open href="/#book-demo">Book a Demo</a>
       <a class="launch-link" href="https://fleet.a-gent.co/login">Launch Console</a>
     </nav>
   </div>
 </header>
+<div class="nav-scrim" hidden></div>
 
-<main><section class="hero"><div class="container copy-block"><div class="status-pill">Privacy</div><h1>Privacy and <span class="gold">data handling</span>.</h1><p class="lede">A-Gent’s public marketing site explains Fleet and Consulting. Customer data for product workflows is handled through the appropriate Fleet application environment and agreed implementation scope.</p></div></section><section class="section"><div class="container copy-block"><h2>Public site privacy</h2><p>This marketing site is designed to provide information about A-Gent Fleet and AI Consulting. If you contact A-Gent, the information you provide may be used to respond to your request, evaluate fit, and coordinate next steps.</p><h2 style="margin-top:2rem">Product and consulting data</h2><p>Fleet product workflows and consulting engagements may involve separate customer data, access controls, and implementation agreements. A-Gent aims to use only the information necessary to provide the requested service and operate the relevant workflow.</p><h2 style="margin-top:2rem">Contact</h2><p>For privacy questions, contact mark.cope.roarr@gmail.com.</p></div></section></main>
+<main id="main" tabindex="-1"><section class="hero"><div class="container copy-block"><div class="status-pill">Privacy</div><h1>Privacy and <span class="gold">data handling</span>.</h1><p class="lede">A-Gent’s public marketing site explains Fleet and Consulting. Customer data for product workflows is handled through the appropriate Fleet application environment and agreed implementation scope.</p></div></section><section class="section"><div class="container copy-block"><h2>Public site privacy</h2><p>This marketing site is designed to provide information about A-Gent Fleet and AI Consulting. If you contact A-Gent, the information you provide may be used to respond to your request, evaluate fit, and coordinate next steps.</p><h2 style="margin-top:2rem">Product and consulting data</h2><p>Fleet product workflows and consulting engagements may involve separate customer data, access controls, and implementation agreements. A-Gent aims to use only the information necessary to provide the requested service and operate the relevant workflow.</p><h2 style="margin-top:2rem">Contact</h2><p>For privacy questions, contact {{MARK: hello@a-gent.co}}.</p></div></section></main>
 <footer class="footer">
   <div class="container footer-grid">
     <div>
-      <a class="wordmark" href="/" aria-label="A-Gent home"><img src="/assets/brand/agent-logo-master.svg" alt="A-Gent"></a>
+      <a class="wordmark" href="/" aria-label="A-Gent home"><img src="/assets/brand/agent-logo-master.svg" alt="" width="1600" height="420"></a>
       <p style="margin-top:.7rem;max-width:520px">A-Gent pairs an always-on AI SDR platform with hands-on AI consulting — packaged products and bespoke builds from one partner.</p>
       <p>© 2026 A-Gent. All rights reserved.</p>
     </div>
@@ -45,6 +59,7 @@
       <a href="/consulting">AI Consulting</a>
       <a href="/platform">Platform</a><a href="/modules">Modules</a>
       <a href="/fleet">Fleet</a>
+      <a href="/pricing/">Pricing</a>
       <a href="/assessment">Assessment</a>
       <a href="/signup">Signup</a>
       <a href="/privacy">Privacy</a>
@@ -53,5 +68,34 @@
   </div>
 </footer>
 </div>
+<script>
+(function(){
+  var html=document.documentElement, btn=document.querySelector('.nav-toggle'), nav=document.getElementById('site-nav'),
+      scrim=document.querySelector('.nav-scrim'), header=document.querySelector('.nav'), label=btn&&btn.querySelector('.nav-toggle-label');
+  if(!btn||!nav) return;
+  var mq=window.matchMedia('(max-width: 880px)'); html.classList.add('js-nav'); btn.hidden=false;
+  var outside=[document.querySelector('main'),document.querySelector('footer'),document.querySelector('.skip-link'),document.querySelector('.wordmark'),document.querySelector('.nav-cta')];
+  function focusables(){return [btn].concat([].slice.call(nav.querySelectorAll('a[href],button:not([disabled])')));}
+  function setOpen(open){
+    btn.setAttribute('aria-expanded',String(open)); if(label) label.textContent=open?'Close':'Menu';
+    nav.classList.toggle('is-open',open); header.classList.toggle('is-open',open); html.classList.toggle('nav-locked',open);
+    scrim.hidden=!open; requestAnimationFrame(function(){scrim.classList.toggle('is-open',open);});
+    outside.forEach(function(el){ if(el){ if(open){el.setAttribute('inert','');} else {el.removeAttribute('inert');} } });
+    if(open){ var first=nav.querySelector('a[href]'); if(first) first.focus(); } else { btn.focus(); }
+  }
+  function isOpen(){return btn.getAttribute('aria-expanded')==='true';}
+  btn.addEventListener('click',function(){setOpen(!isOpen());});
+  scrim.addEventListener('click',function(){setOpen(false);});
+  nav.addEventListener('click',function(e){ if(e.target.closest('a')&&mq.matches&&isOpen()) setOpen(false); });
+  document.addEventListener('keydown',function(e){
+    if(!isOpen()) return;
+    if(e.key==='Escape'){ e.preventDefault(); setOpen(false); return; }
+    if(e.key==='Tab'){ var f=focusables(), i=f.indexOf(document.activeElement);
+      if(e.shiftKey&&(i<=0)){ e.preventDefault(); f[f.length-1].focus(); }
+      else if(!e.shiftKey&&i===f.length-1){ e.preventDefault(); f[0].focus(); } }
+  });
+  mq.addEventListener('change',function(e){ if(!e.matches&&isOpen()) setOpen(false); });
+})();
+</script>
 </body>
 </html>
