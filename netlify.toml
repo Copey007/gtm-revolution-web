@@ -204,6 +204,7 @@
   from = "/security"
   to = "/security/index.html"
   status = 200
+  force = true
 [[redirects]]
   from = "/security/"
   to = "/security"

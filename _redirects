@@ -40,7 +40,7 @@
 /modules    /modules.html    200
 
 # W2-AG-12: canonical /security; keep the .html and trailing-slash aliases as 301s.
-/security    /security/index.html    200
+/security    /security/index.html    200!
 /security/    /security    301!
 /security.html    /security    301!
 
