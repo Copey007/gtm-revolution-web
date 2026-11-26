@@ -10,7 +10,7 @@ OUT = BASE / 'deploy'
 SITE = 'https://a-gent.co'
 FLEET = 'https://fleet.a-gent.co/'
 FLEET_LOGIN = 'https://fleet.a-gent.co/login'
-FLEET_PRICING = 'https://fleet.a-gent.co/pricing'
+FLEET_PRICING = '/pricing/'
 LASTMOD = '2026-06-13'
 
 platform_pages = [
