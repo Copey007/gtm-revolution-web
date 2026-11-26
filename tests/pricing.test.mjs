@@ -97,7 +97,8 @@ for (const page of ['pricing/index.html', 'dashboard/pricing/index.html']) {
     assert.equal(/credit top-ups?/i.test(html), false);
     assert.equal(/buy more credits/i.test(html), false);
     assert.equal(/cancel[^.]{0,80}from Mission Control/i.test(html), false);
-    assert.match(html, /Stripe customer portal/);
+    assert.equal(/Stripe customer portal|billing portal/i.test(html), false);
+    assert.match(html, /cancel at the end of the current billing period by contacting us/);
     assert.equal(html.includes('Explore Consulting'), false);
     assert.match(html, /Book a Demo/);
   });
@@ -130,7 +131,9 @@ for (const page of ['pricing/index.html', 'dashboard/pricing/index.html']) {
     assert.match(html, /@media \(max-width:920px\) and \(min-width:640px\)[\s\S]*grid-template-columns:repeat\(2,minmax\(0,1fr\)\)/);
     assert.match(html, /@media \(max-width:639px\)[\s\S]*max-width:560px/);
     assert.match(html, /\.plan \.price\{[^}]*font-size:2\.6rem/);
-    assert.match(html, /\.plan li::before/);
+    assert.match(html, /\.plan ul\{[^}]*align-content:start/);
+    assert.match(html, /\.plan li\{display:block;position:relative;padding-left:26px\}/);
+    assert.match(html, /\.plan li::before\{[^}]*position:absolute;left:0/);
     assert.match(html, /border-radius:var\(--radius\)/);
     // Custom CTA is Book a Demo to the homepage modal, not a preselected plan.
     assert.match(html, /data-plan="enterprise"[\s\S]*href="\/#book-demo">Book a Demo</);

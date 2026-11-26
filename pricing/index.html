@@ -81,9 +81,9 @@
     .plan-for{margin:.35rem 0 0;color:var(--muted);font-size:.92rem}
     .plan .price{margin:0;font-size:2.6rem;font-weight:700;letter-spacing:-.03em;line-height:1;font-variant-numeric:tabular-nums}
     .plan .price small{font-size:.9rem;font-weight:500;color:var(--muted)}
-    .plan ul{list-style:none;margin:0;padding:0;color:var(--text);font-size:.92rem;line-height:1.55;display:grid;gap:.35rem}
-    .plan li{display:flex;align-items:flex-start;gap:10px;padding:0}
-    .plan li::before{content:'';width:16px;height:16px;margin-top:3px;flex-shrink:0;border-radius:50%;background:var(--green-soft);background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%237eb88a' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E");background-size:11px;background-repeat:no-repeat;background-position:center}
+    .plan ul{list-style:none;margin:0;padding:0;color:var(--text);font-size:.92rem;line-height:1.55;display:grid;gap:.35rem;align-content:start}
+    .plan li{display:block;position:relative;padding-left:26px}
+    .plan li::before{content:'';width:16px;height:16px;position:absolute;left:0;top:3px;border-radius:50%;background:var(--green-soft);background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%237eb88a' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E");background-size:11px;background-repeat:no-repeat;background-position:center}
     .plan .btn{margin-top:auto;justify-content:center;min-height:44px;align-self:end}
     .trial-row{display:flex;flex-wrap:wrap;gap:1rem;align-items:flex-start;justify-content:space-between;margin-top:1.5rem;padding:1.2rem 1.4rem;border:1px dashed rgba(200,180,140,.35);border-radius:14px;color:var(--muted)}
     .trial-row strong{color:var(--text)}
@@ -225,7 +225,7 @@
         <details><summary>What counts as a prospected contact?</summary><p>A person A-Gent researches and drafts outreach for in your workspace. Monthly allowance details are confirmed at checkout.</p></details>
         <details><summary>Does A-Gent ever send without my approval?</summary><p>No. Every outbound message requires approval by a person on your team in the Review Queue before it is sent.</p></details>
         <details><summary>What happens when my trial ends?</summary><p>You can choose Starter or Growth at any point during the 15-day trial. If you cancel during the trial you are not charged. After the trial, the workspace stays on the plan you selected at signup.</p></details>
-        <details><summary>Can I cancel?</summary><p>Yes. You can cancel during the trial with no charge. After you become a paying customer, you can cancel at the end of the current billing period through the Stripe customer portal or by contacting us.</p></details>
+        <details><summary>Can I cancel?</summary><p>Yes. You can cancel during the trial with no charge. After you become a paying customer, you can cancel at the end of the current billing period by contacting us.</p></details>
         <details><summary>Do you offer annual billing?</summary><p>Plans are billed monthly today. Annual billing may be added later.</p></details>
       </div>
     </div>
