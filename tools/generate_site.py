@@ -403,6 +403,7 @@ def footer():
       <a href="/consulting">AI Consulting</a>
       <a href="/platform">Platform</a>
       <a href="/fleet">Fleet</a>
+      <a href="/pricing/">Pricing</a>
       <a href="/assessment">Assessment</a>
       <a href="/signup">Signup</a>
       <a href="/privacy">Privacy</a>
