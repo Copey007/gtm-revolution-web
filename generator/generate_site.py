@@ -11,7 +11,7 @@ SITE = 'https://a-gent.co'
 FLEET = 'https://fleet.a-gent.co/'
 FLEET_LOGIN = 'https://fleet.a-gent.co/login'
 FLEET_PRICING = '/pricing/'
-LASTMOD = '2026-06-13'
+LASTMOD = '2026-11-27'
 
 platform_pages = [
     ('find-and-research', 'Find & Research', 'Fleet identifies qualified accounts and enriches them with credible evidence before a human ever opens a spreadsheet.', 'Prospect discovery, enrichment, signal capture, and account fit scoring become one governed workflow inside A-Gent Fleet.'),
@@ -383,12 +383,25 @@ def head(title, description, path, extra_schema=None):
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- favicon set (W1 / AG-11, @Web Designer head-snippets.md §2) -->
+  <link rel="icon" href="/favicon.ico" sizes="32x32">
+  <link rel="icon" href="/favicon-16x16.png" type="image/png" sizes="16x16">
+  <link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32">
+  <link rel="icon" href="/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#0a0a0c">
   <title>{escape(title)}</title>
   <meta name="description" content="{escape(description)}">
   <link rel="canonical" href="{canonical}">
   <meta property="og:title" content="{escape(title)}">
   <meta property="og:description" content="{escape(description)}">
   <meta property="og:url" content="{canonical}">
+  <meta property="og:image" content="https://a-gent.co/assets/brand/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="A-Gent — Always-on AI agents for GTM execution, plus the team to build them.">
+  <meta name="twitter:image" content="https://a-gent.co/assets/brand/og-image.png">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -398,6 +411,7 @@ def head(title, description, path, extra_schema=None):
   {schema_html}
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to content</a>
 <div class="site-shell">
 '''
 
@@ -405,8 +419,13 @@ def head(title, description, path, extra_schema=None):
 def nav():
     return f'''<header class="nav">
   <div class="container nav-inner">
-    <a class="wordmark" href="/" aria-label="A-Gent home"><img src="/assets/brand/agent-logo-master.svg" alt="A-Gent"></a>
-    <nav class="nav-links" aria-label="Primary navigation">
+    <a class="wordmark" href="/" aria-label="A-Gent home"><img src="/assets/brand/agent-logo-master.svg" alt="" width="1600" height="420"></a>
+    <a class="btn btn-primary nav-cta" data-demo-open href="/#book-demo">Book a Demo</a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" hidden>
+      <span class="nav-toggle-bars" aria-hidden="true"></span>
+      <span class="nav-toggle-label">Menu</span>
+    </button>
+    <nav class="nav-links" id="site-nav" aria-label="Primary navigation">
       <a class="nav-link" href="/consulting">AI Consulting</a>
       <a class="nav-link" href="/platform">Platform</a>
       <a class="nav-link" href="/about">About</a>
@@ -416,6 +435,7 @@ def nav():
     </nav>
   </div>
 </header>
+<div class="nav-scrim" hidden></div>
 '''
 
 
@@ -423,7 +443,7 @@ def footer():
     return f'''<footer class="footer">
   <div class="container footer-grid">
     <div>
-      <a class="wordmark" href="/" aria-label="A-Gent home"><img src="/assets/brand/agent-logo-master.svg" alt="A-Gent"></a>
+      <a class="wordmark" href="/" aria-label="A-Gent home"><img src="/assets/brand/agent-logo-master.svg" alt="" width="1600" height="420"></a>
       <p style="margin-top:.7rem;max-width:520px">A-Gent Fleet is the packaged AI SDR platform. A-Gent Consulting designs bespoke AI revenue systems for teams that need deeper implementation support.</p>
       <p>© 2026 A-Gent. All rights reserved.</p>
     </div>
@@ -440,6 +460,35 @@ def footer():
   </div>
 </footer>
 </div>
+<script>
+(function(){
+  var html=document.documentElement, btn=document.querySelector('.nav-toggle'), nav=document.getElementById('site-nav'),
+      scrim=document.querySelector('.nav-scrim'), header=document.querySelector('.nav'), label=btn&&btn.querySelector('.nav-toggle-label');
+  if(!btn||!nav) return;
+  var mq=window.matchMedia('(max-width: 880px)'); html.classList.add('js-nav'); btn.hidden=false;
+  var outside=[document.querySelector('main'),document.querySelector('footer'),document.querySelector('.skip-link'),document.querySelector('.wordmark'),document.querySelector('.nav-cta')];
+  function focusables(){return [btn].concat([].slice.call(nav.querySelectorAll('a[href],button:not([disabled])')));}
+  function setOpen(open){
+    btn.setAttribute('aria-expanded',String(open)); if(label) label.textContent=open?'Close':'Menu';
+    nav.classList.toggle('is-open',open); header.classList.toggle('is-open',open); html.classList.toggle('nav-locked',open);
+    scrim.hidden=!open; requestAnimationFrame(function(){scrim.classList.toggle('is-open',open);});
+    outside.forEach(function(el){ if(el){ if(open){el.setAttribute('inert','');} else {el.removeAttribute('inert');} } });
+    if(open){ var first=nav.querySelector('a[href]'); if(first) first.focus(); } else { btn.focus(); }
+  }
+  function isOpen(){return btn.getAttribute('aria-expanded')==='true';}
+  btn.addEventListener('click',function(){setOpen(!isOpen());});
+  scrim.addEventListener('click',function(){setOpen(false);});
+  nav.addEventListener('click',function(e){ if(e.target.closest('a')&&mq.matches&&isOpen()) setOpen(false); });
+  document.addEventListener('keydown',function(e){
+    if(!isOpen()) return;
+    if(e.key==='Escape'){ e.preventDefault(); setOpen(false); return; }
+    if(e.key==='Tab'){ var f=focusables(), i=f.indexOf(document.activeElement);
+      if(e.shiftKey&&(i<=0)){ e.preventDefault(); f[f.length-1].focus(); }
+      else if(!e.shiftKey&&i===f.length-1){ e.preventDefault(); f[0].focus(); } }
+  });
+  mq.addEventListener('change',function(e){ if(!e.matches&&isOpen()) setOpen(false); });
+})();
+</script>
 </body>
 </html>
 '''
