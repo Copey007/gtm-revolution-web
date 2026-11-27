@@ -3,6 +3,14 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- favicon set (W1 / AG-11, @Web Designer head-snippets.md §2) -->
+  <link rel="icon" href="/favicon.ico" sizes="32x32">
+  <link rel="icon" href="/favicon-16x16.png" type="image/png" sizes="16x16">
+  <link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32">
+  <link rel="icon" href="/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#0a0a0c">
   <title>A-Gent | AI SDR Platform and AI Consulting for B2B SaaS</title>
   <meta name="description" content="A-Gent offers A-Gent Fleet, a packaged AI SDR platform, and AI Consulting for bespoke revenue automation systems for B2B SaaS teams.">
   <link rel="canonical" href="https://a-gent.co">
@@ -12,23 +20,31 @@
   <meta property="og:image" content="https://a-gent.co/assets/brand/og-image.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="A-Gent — Always-on AI agents for GTM execution, plus the team to build them.">
   <meta name="twitter:image" content="https://a-gent.co/assets/brand/og-image.png">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/assets/css/fleet-master.css">
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"A-Gent","url":"https://a-gent.co","description":"A-Gent builds A-Gent Fleet, an AI SDR platform for B2B SaaS teams, and provides AI consulting for bespoke revenue automation systems.","email":"mark.cope.roarr@gmail.com","sameAs":["https://fleet.a-gent.co/"]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Service","name":"A-Gent Fleet and AI Consulting","url":"https://a-gent.co","provider":{"@type":"Organization","name":"A-Gent","url":"https://a-gent.co"},"areaServed":"B2B SaaS companies","serviceType":"AI SDR platform and AI consulting","description":"A-Gent offers A-Gent Fleet, a packaged AI SDR platform, and AI Consulting for bespoke revenue automation systems for B2B SaaS teams."}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is A-Gent Fleet?","acceptedAnswer":{"@type":"Answer","text":"A-Gent Fleet is the packaged AI SDR platform for researching accounts, generating relevant outreach, reviewing messages, and operating outbound workflows."}},{"@type":"Question","name":"How is AI Consulting different?","acceptedAnswer":{"@type":"Answer","text":"AI Consulting is the bespoke service offer for teams that need custom AI revenue systems, integrations, workflow design, or strategic implementation support."}},{"@type":"Question","name":"Where do users launch the product?","acceptedAnswer":{"@type":"Answer","text":"The Launch Console opens the A-Gent Fleet login and signup route at the Fleet app."}}]}</script>
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to content</a>
 <div class="site-shell">
 <header class="nav">
   <div class="container nav-inner">
-    <a class="wordmark" href="/" aria-label="A-Gent home"><img src="/assets/brand/agent-logo-master.svg" alt="A-Gent"></a>
-    <nav class="nav-links" aria-label="Primary navigation">
+    <a class="wordmark" href="/" aria-label="A-Gent home"><img src="/assets/brand/agent-logo-master.svg" alt="" width="1600" height="420"></a>
+    <a class="btn btn-primary nav-cta" data-demo-open href="/#book-demo">Book a Demo</a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" hidden>
+      <span class="nav-toggle-bars" aria-hidden="true"></span>
+      <span class="nav-toggle-label">Menu</span>
+    </button>
+
+    <nav class="nav-links" id="site-nav" aria-label="Primary navigation">
       <a class="nav-link" href="/consulting">AI Consulting</a>
       <a class="nav-link" href="/platform">Platform</a>
       <a class="nav-link" href="/modules">Modules</a>
@@ -39,18 +55,12 @@
     </nav>
   </div>
 </header>
+<div class="nav-scrim" hidden></div>
 
-<main>
+<main id="main" tabindex="-1">
   <section class="hero">
     <div class="container hero-grid">
       <div>
-        <a href="/assessment#assessment-flow" class="brain-banner">
-          <span class="bb-copy">
-            <span class="bb-label">A-Gent GTM Brain</span>
-            <span class="bb-head">CRO-grade advice against <span class="bb-gold">your data</span> &mdash; upload your CRM data or connect it here.</span>
-          </span>
-          <span class="bb-btn">Analyze my data <span class="bb-arrow">&rarr;</span></span>
-        </a>
         <h1>Always-on <span class="gold">AI agents</span> for GTM — plus the team to build them.</h1>
         <p class="lede">A-Gent is the one place to get both: a packaged AI SDR platform you can launch today, and hands-on AI consulting to design a bespoke revenue system around your stack.</p>
         <div class="cta-row">
@@ -58,6 +68,13 @@
           <a class="btn btn-secondary" href="/consulting">Explore Consulting</a>
         </div>
         <p style="margin-top:.9rem;font-size:.85rem;color:var(--muted)">15-day free trial · or <a data-demo-open href="/#book-demo" style="color:var(--gold);text-decoration:none">book a demo</a></p>
+        <a href="/assessment#assessment-flow" class="brain-banner">
+          <span class="bb-copy">
+            <span class="bb-label">A-Gent GTM Brain</span>
+            <span class="bb-head">CRO-grade advice against <span class="bb-gold">your data</span> &mdash; upload your CRM data or connect it here.</span>
+          </span>
+          <span class="bb-btn">Analyze my data <span class="bb-arrow">&rarr;</span></span>
+        </a>
       </div>
       <aside class="console-card hero-motion-card" style="box-shadow:0 0 60px rgba(227,200,120,.22),0 30px 80px rgba(0,0,0,.55);border:1px solid rgba(227,200,120,.4);transform:scale(1.03)" aria-label="A-Gent AI SDR product motion loop">
         <div class="sdr-motion" role="img" aria-label="Looping product motion showing an AI SDR prospecting, researching, drafting outreach, and updating pipeline.">
@@ -74,7 +91,7 @@
 
     <style>
     @keyframes bbBreathe{0%,100%{box-shadow:0 0 46px rgba(227,200,120,.14),0 0 90px rgba(227,200,120,.05),inset 0 1px 0 rgba(255,255,255,.05)}50%{box-shadow:0 0 62px rgba(227,200,120,.22),0 0 120px rgba(227,200,120,.09),inset 0 1px 0 rgba(255,255,255,.06)}}
-    .brain-banner{position:relative;display:flex;align-items:center;gap:18px;flex-wrap:wrap;margin:0 0 1.6rem;padding:18px 22px;border-radius:16px;text-decoration:none;color:inherit;background:linear-gradient(135deg,rgba(227,200,120,.11),rgba(227,200,120,.03) 45%,rgba(126,184,138,.05));border:1px solid rgba(227,200,120,.42);animation:bbBreathe 6s ease-in-out infinite;overflow:hidden;transition:border-color .25s ease,transform .25s ease}
+    .brain-banner{position:relative;display:flex;align-items:center;gap:18px;flex-wrap:wrap;margin:2rem 0 0;max-width:560px;padding:18px 22px;border-radius:16px;text-decoration:none;color:inherit;background:linear-gradient(135deg,rgba(227,200,120,.11),rgba(227,200,120,.03) 45%,rgba(126,184,138,.05));border:1px solid rgba(227,200,120,.42);animation:bbBreathe 6s ease-in-out infinite;overflow:hidden;transition:border-color .25s ease,transform .25s ease}
     .brain-banner:before{content:"";position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(227,200,120,.85),transparent)}
     .brain-banner:hover{border-color:rgba(227,200,120,.7);animation-play-state:paused;box-shadow:0 0 72px rgba(227,200,120,.26),0 0 130px rgba(227,200,120,.1),inset 0 1px 0 rgba(255,255,255,.08);transform:translateY(-1px)}
     .bb-copy{flex:1;min-width:250px;display:flex;flex-direction:column;gap:5px}
@@ -89,6 +106,8 @@
     @media(max-width:600px){.brain-banner{padding:16px 18px}.bb-btn{width:100%;justify-content:center}}
     .hero{padding-top:9rem}
     @media(max-width:970px){.hero{padding-top:6rem}}
+    @media(max-width:760px){.hero{padding-top:3rem}.hero-grid>div>h1:first-child{margin-top:0}} /* AG-11: H1 within 120px of top at 390px (mobile-nav-spec §6.1) */
+    @media(prefers-reduced-motion:reduce){.brain-banner{animation:none}} /* AG-11: inline banner rule overrides fleet-master.css, so repeat here */
     .os-section .section-header{max-width:760px}
     .os-stage{margin-top:2.75rem;border:1px solid rgba(255,255,255,.08);border-radius:20px;background:radial-gradient(130% 150% at 50% 0%,rgba(26,26,31,.65),rgba(10,10,12,.35));padding:1.75rem 1.5rem;overflow:hidden}
     .os-stage a.osl{cursor:pointer}
@@ -100,7 +119,7 @@
     <div class="container">
       <div class="section-header"><div class="eyebrow">The A-Gent platform map</div><h2>One platform, two ways to deploy &mdash; and everything your GTM motion needs.</h2><p>Hire AI workers, run an always-on AI SDR, and command it all from Mission Control &mdash; on the Fleet platform with its Signal Engine and Loop Engine. Or have our consultants design and build a bespoke version around your stack. Same foundation, your choice of how.</p></div>
       <div class="os-stage">
-        <svg viewBox="0 0 1120 700" width="100%" xmlns:xlink="http://www.w3.org/1999/xlink" role="img" aria-labelledby="osTitle osDesc" preserveAspectRatio="xMidYMid meet">
+        <svg viewBox="0 0 1120 700" width="100%" xmlns:xlink="http://www.w3.org/1999/xlink" role="group" aria-labelledby="osTitle osDesc" preserveAspectRatio="xMidYMid meet">
 <title id="osTitle">The A-Gent platform map</title>
 <desc id="osDesc">Interactive map of A-Gent: products and consulting on one Fleet platform with Signal Engine, Loop Engine, capability groups, and a secure foundation. Each element links to its page.</desc>
 <defs>
@@ -114,7 +133,7 @@
 <ellipse cx="560" cy="48" rx="90" ry="52" fill="url(#gG)" opacity=".3"><animate attributeName="opacity" values=".2;.5;.2" dur="3.6s" repeatCount="indefinite"/></ellipse>
 <line x1="540" y1="60" x2="320" y2="96" stroke="rgba(200,180,140,.4)" stroke-width="1.5"/>
 <line x1="580" y1="60" x2="800" y2="96" stroke="rgba(126,184,138,.4)" stroke-width="1.5"/>
-<a href="/platform" xlink:href="/platform" class="osl"><rect x="488" y="20" width="144" height="56" rx="13" fill="#1a1a1f" stroke="#c8b48c" stroke-width="1"/><image href="/assets/brand/agent-logo-master.svg" xlink:href="/assets/brand/agent-logo-master.svg" x="506" y="33" width="108" height="30" preserveAspectRatio="xMidYMid meet"/></a>
+<a href="/platform" xlink:href="/platform" class="osl" aria-label="A-Gent platform overview"><rect x="488" y="20" width="144" height="56" rx="13" fill="#1a1a1f" stroke="#c8b48c" stroke-width="1"/><image aria-hidden="true" href="/assets/brand/agent-logo-master.svg" xlink:href="/assets/brand/agent-logo-master.svg" x="506" y="33" width="108" height="30" preserveAspectRatio="xMidYMid meet"/></a>
 <a href="/modules" xlink:href="/modules" class="osl"><rect x="120" y="96" width="400" height="48" rx="12" fill="#131316" stroke="rgba(255,255,255,.10)" stroke-width="1"/><text x="144" y="120" font-family="Inter,sans-serif" font-size="11" font-weight="700" fill="#c8b48c" text-anchor="start" letter-spacing="1.5">PRODUCTS</text><text x="144" y="136" font-family="Inter,sans-serif" font-size="12.5" font-weight="400" fill="#8e8e93" text-anchor="start">Packaged — launch today</text></a>
 <a href="/consulting" xlink:href="/consulting" class="osl"><rect x="600" y="96" width="400" height="48" rx="12" fill="#131316" stroke="rgba(255,255,255,.10)" stroke-width="1"/><text x="624" y="120" font-family="Inter,sans-serif" font-size="11" font-weight="700" fill="#7eb88a" text-anchor="start" letter-spacing="1.5">CONSULTING</text><text x="624" y="136" font-family="Inter,sans-serif" font-size="12.5" font-weight="400" fill="#8e8e93" text-anchor="start">Bespoke — built with you</text></a>
 <a href="/fleet" xlink:href="/fleet" class="osl"><rect x="120" y="168" width="192" height="40" rx="10" fill="#1a1a1f" stroke="rgba(255,255,255,.07)" stroke-width="1"/><text x="216" y="193" font-family="Inter,sans-serif" font-size="12.5" font-weight="500" fill="#f0f0f2" text-anchor="middle">AI SDR</text></a>
@@ -209,7 +228,7 @@
 <footer class="footer">
   <div class="container footer-grid">
     <div>
-      <a class="wordmark" href="/" aria-label="A-Gent home"><img src="/assets/brand/agent-logo-master.svg" alt="A-Gent"></a>
+      <a class="wordmark" href="/" aria-label="A-Gent home"><img src="/assets/brand/agent-logo-master.svg" alt="" width="1600" height="420"></a>
       <p style="margin-top:.7rem;max-width:520px">One platform, two ways to deploy &mdash; and everything your GTM motion needs.</p>
       <p>&copy; 2026 A-Gent. All rights reserved.</p>
     </div>
@@ -227,5 +246,34 @@
 </footer>
 </div>
 <script>window.addEventListener("DOMContentLoaded",function(){if(location.hash==="#book-demo"){var el=document.querySelector("[data-demo-open]");if(el)el.click();}});</script>
+<script>
+(function(){
+  var html=document.documentElement, btn=document.querySelector('.nav-toggle'), nav=document.getElementById('site-nav'),
+      scrim=document.querySelector('.nav-scrim'), header=document.querySelector('.nav'), label=btn&&btn.querySelector('.nav-toggle-label');
+  if(!btn||!nav) return;
+  var mq=window.matchMedia('(max-width: 880px)'); html.classList.add('js-nav'); btn.hidden=false;
+  var outside=[document.querySelector('main'),document.querySelector('footer'),document.querySelector('.skip-link'),document.querySelector('.wordmark'),document.querySelector('.nav-cta')];
+  function focusables(){return [btn].concat([].slice.call(nav.querySelectorAll('a[href],button:not([disabled])')));}
+  function setOpen(open){
+    btn.setAttribute('aria-expanded',String(open)); if(label) label.textContent=open?'Close':'Menu';
+    nav.classList.toggle('is-open',open); header.classList.toggle('is-open',open); html.classList.toggle('nav-locked',open);
+    scrim.hidden=!open; requestAnimationFrame(function(){scrim.classList.toggle('is-open',open);});
+    outside.forEach(function(el){ if(el){ if(open){el.setAttribute('inert','');} else {el.removeAttribute('inert');} } });
+    if(open){ var first=nav.querySelector('a[href]'); if(first) first.focus(); } else { btn.focus(); }
+  }
+  function isOpen(){return btn.getAttribute('aria-expanded')==='true';}
+  btn.addEventListener('click',function(){setOpen(!isOpen());});
+  scrim.addEventListener('click',function(){setOpen(false);});
+  nav.addEventListener('click',function(e){ if(e.target.closest('a')&&mq.matches&&isOpen()) setOpen(false); });
+  document.addEventListener('keydown',function(e){
+    if(!isOpen()) return;
+    if(e.key==='Escape'){ e.preventDefault(); setOpen(false); return; }
+    if(e.key==='Tab'){ var f=focusables(), i=f.indexOf(document.activeElement);
+      if(e.shiftKey&&(i<=0)){ e.preventDefault(); f[f.length-1].focus(); }
+      else if(!e.shiftKey&&i===f.length-1){ e.preventDefault(); f[0].focus(); } }
+  });
+  mq.addEventListener('change',function(e){ if(!e.matches&&isOpen()) setOpen(false); });
+})();
+</script>
 </body>
 </html>

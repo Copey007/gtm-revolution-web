@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1200" height="630" viewBox="0 0 1200 630"><title>A-Gent Blog — Playbooks for AI SDRs and revenue automation</title>
+  <defs>
+    <radialGradient id="lift" cx="260" cy="40" r="900" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#1d1c1f"/><stop offset=".55" stop-color="#0f0f12"/><stop offset="1" stop-color="#0a0a0c"/></radialGradient>
+    <radialGradient id="warm" cx="1080" cy="560" r="520" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#c8b48c" stop-opacity=".10"/><stop offset="1" stop-color="#c8b48c" stop-opacity="0"/></radialGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#lift)"/><rect width="1200" height="630" fill="url(#warm)"/>
+  <rect x="0.5" y="0.5" width="1199" height="629" fill="none" stroke="#ffffff" stroke-opacity=".06"/>
+  <g transform="translate(90.24 69.60) scale(0.2302)"><g fill="none" stroke="#c8b48c" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M42 274 L189 74" stroke-width="34"/>
+    <path d="M188 74 L286 277" stroke-width="34"/>
+    <path d="M121 187 L244 158" stroke-width="27"/>
+  </g></g>
+  <text x="176" y="124" font-family="Inter" font-weight="700" font-size="30" letter-spacing="4.2" fill="#c8b48c">A-GENT</text>
+  <text x="338" y="124" font-family="Inter" font-weight="500" font-size="30" letter-spacing="4.2" fill="#8e8e93">/  BLOG</text>
+  <rect x="100" y="172" width="56" height="3" fill="#c8b48c"/>
+  <text x="100" y="282" font-family="Inter" font-weight="700" font-size="66" letter-spacing="-2" fill="#f0f0f2">Playbooks for AI SDRs</text>
+  <text x="100" y="360" font-family="Inter" font-weight="700" font-size="66" letter-spacing="-2" fill="#f0f0f2">and revenue automation</text>
+  <text x="100" y="430" font-family="Inter" font-weight="400" font-size="28" fill="#d4c9a8">Practical strategies for AI in B2B SaaS sales, outbound and RevOps.</text>
+  <line x1="100" y1="508" x2="1100" y2="508" stroke="#ffffff" stroke-opacity=".08"/>
+  <text x="100" y="556" font-family="Inter" font-weight="600" font-size="26" fill="#f0f0f2">a-gent.co/blog</text>
+  <text x="1100" y="555" text-anchor="end" font-family="Inter" font-weight="400" font-size="20" fill="#a1a1a6">AI SDR platform + AI consulting for B2B SaaS</text></svg>
