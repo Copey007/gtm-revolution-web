@@ -8,6 +8,22 @@
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
 
+[[headers]]
+  for = "/*.webmanifest"
+  [headers.values]
+    Content-Type = "application/manifest+json"
+
+[[headers]]
+  for = "/site.webmanifest"
+  [headers.values]
+    Content-Type = "application/manifest+json"
+
+[[headers]]
+  for = "/dashboard/site.webmanifest"
+  [headers.values]
+    Content-Type = "application/manifest+json"
+
+
 # W2-AG-12: keep /security out of search indexes until the page is approved.
 [[headers]]
   for = "/security"
