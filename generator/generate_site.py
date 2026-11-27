@@ -10,7 +10,7 @@ OUT = BASE / 'deploy'
 SITE = 'https://a-gent.co'
 FLEET = 'https://fleet.a-gent.co/'
 FLEET_LOGIN = 'https://fleet.a-gent.co/login'
-FLEET_PRICING = 'https://fleet.a-gent.co/pricing'
+FLEET_PRICING = '/pricing/'
 LASTMOD = '2026-11-27'
 
 platform_pages = [
@@ -451,6 +451,7 @@ def footer():
       <a href="/consulting">AI Consulting</a>
       <a href="/platform">Platform</a>
       <a href="/fleet">Fleet</a>
+      <a href="/pricing/">Pricing</a>
       <a href="/assessment">Assessment</a>
       <a href="/signup">Signup</a>
       <a href="/privacy">Privacy</a>

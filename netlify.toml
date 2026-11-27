@@ -42,6 +42,32 @@
   [headers.values]
     X-Robots-Tag = "noindex, nofollow"
 
+# Hold /pricing out of search indexes until the page is published (mirror /security).
+[[headers]]
+  for = "/pricing"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"
+[[headers]]
+  for = "/pricing/"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"
+[[headers]]
+  for = "/pricing/*"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"
+[[headers]]
+  for = "/dashboard/pricing"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"
+[[headers]]
+  for = "/dashboard/pricing/"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"
+[[headers]]
+  for = "/dashboard/pricing/*"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"
+
 # ava-009
 [[redirects]]
   from = "/assets/blog/ava-009/the-ai-ready-sales-process.mp4"
